@@ -1,0 +1,81 @@
+% ============================================================
+% main.tex —— 《烧掉数学书之后》总装文件
+% 编译：xelatex main.tex（连续编译两次以生成目录）
+% ============================================================
+\documentclass[UTF8,a4paper]{ctexbook}
+\input{preamble}
+
+\title{\heiti 烧掉数学书之后：和初中生一起重造数学}
+\author{}
+\date{}
+
+\setcounter{tocdepth}{0}
+\setcounter{secnumdepth}{1}
+
+\begin{document}
+
+\frontmatter
+\input{frontmatter}
+\tableofcontents
+
+\mainmatter
+
+% ---------- 篇〇 出发前的准备 ----------
+\part{出发前的准备}
+\input{chapters/ch00}   % 序章 如何烧掉一本数学书（不编号）
+
+% ---------- 篇一 初等数论 ----------
+\part{数的骨架：初等数论}
+\input{chapters/ch01}   % 第 1 章 余数王国
+\input{chapters/ch02}   % 第 2 章 铺地砖与辗转相除
+\input{chapters/ch03}   % 第 3 章 素数：整数的原子
+\input{chapters/ch04}   % 第 4 章 素数有无穷多个
+\input{chapters/ch05}   % 第 5 章 时钟算术与韩信点兵
+\input{chapters/ch06}   % 第 6 章 费马小定理与密码锁
+
+% ---------- 篇二 抽象代数 ----------
+\part{运算的规律：抽象代数}
+\input{chapters/ch07}   % 第 7 章 群的诞生
+\input{chapters/ch08}   % 第 8 章 对称动物园：群表
+\input{chapters/ch09}   % 第 9 章 拉格朗日定理
+\input{chapters/ch10}   % 第 10 章 环与域
+\input{chapters/ch11}   % 第 11 章 多项式大厦
+\input{chapters/ch12}   % 第 12 章（选读）尺规作图
+
+% ---------- 篇三 分析 ----------
+\part{变化的艺术：分析}
+\input{chapters/ch13}   % 第 13 章 0.999… 与无穷
+\input{chapters/ch14}   % 第 14 章 刘徽的刀：极限
+\input{chapters/ch15}   % 第 15 章 发明导数
+\input{chapters/ch16}   % 第 16 章 求导工具箱
+\input{chapters/ch17}   % 第 17 章 发明积分
+\input{chapters/ch18}   % 第 18 章 微积分基本定理
+\input{chapters/ch19}   % 第 19 章 e 与自然对数
+
+% ---------- 篇四 解析数论 ----------
+\part{当数论遇见分析：解析数论}
+\input{chapters/ch20}   % 第 20 章 素数人口普查
+\input{chapters/ch21}   % 第 21 章 调和级数
+\input{chapters/ch22}   % 第 22 章 欧拉的筛子
+\input{chapters/ch23}   % 第 23 章 素数定理
+\input{chapters/ch24}   % 第 24 章（选读）黎曼的藏宝图
+
+% ---------- 篇五 微分几何 ----------
+\part{弯曲的空间：微分几何}
+\input{chapters/ch25}   % 第 25 章 曲率
+\input{chapters/ch26}   % 第 26 章 大圆与测地线
+\input{chapters/ch27}   % 第 27 章 蚂蚁几何学
+\input{chapters/ch28}   % 第 28 章 非欧几何与宇宙
+
+% ---------- 篇六 代数几何 ----------
+\part{方程的风景：代数几何}
+\input{chapters/ch29}   % 第 29 章 方程动物园
+\input{chapters/ch30}   % 第 30 章 贝祖定理
+\input{chapters/ch31}   % 第 31 章 射影平面
+\input{chapters/ch32}   % 第 32 章 椭圆曲线
+\input{chapters/ch33}   % 尾声 数学之网（不编号）
+
+% ---------- 附录 ----------
+\input{appendix}        % 附录 A–D
+
+\end{document}
