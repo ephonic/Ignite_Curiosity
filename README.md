@@ -1,4 +1,4 @@
-# After Burning the Books（烧掉数学书之后）
+# After Burning the Textbooks
 
 > 一个"用初学者的数学/物理，重造高等学科"的科普写书项目。
 > 哲学取自 Jason Wilkes 的《烧掉数学书》（*Burn Math Class*）：**数学不是被发现的，是被发明的；看不懂定义，就自己造一个。**
