@@ -39,3 +39,4 @@ angle definition, and chapter 5's final train exercise subtracts the train's
 length where it should be added. These are source issues, not new results
 established by this edition. The original series discloses AI-generated text;
 check important conclusions against standard references.
+See [source review notes](SOURCE_NOTES.md) for chapter-specific issues.

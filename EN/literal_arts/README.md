@@ -52,3 +52,5 @@ the following “twenty-odd chapters,” although the complete book has 114 chap
 The original series discloses AI-generated text. This translation preserves its
 arguments and examples; it does not independently establish the accuracy of
 every historical attribution or cultural generalization.
+See [source review notes](SOURCE_NOTES.md) for specific review points and
+documented pagination changes.

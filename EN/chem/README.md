@@ -42,3 +42,4 @@ That passage is a source claim, not medical guidance from this translation.
 The edition's experiments and health-related statements require independent
 safety review; do not use this book as a medical or laboratory safety manual.
 Read the translated safety front matter before considering any activity.
+See [source review notes](SOURCE_NOTES.md) for chapter-specific issues.

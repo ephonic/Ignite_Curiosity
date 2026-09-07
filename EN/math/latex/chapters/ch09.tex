@@ -105,7 +105,7 @@ However close you demand, I can get that close---and from some step onward, stay
 In mathematical language, this becomes the definition of a sequence's limit.
 
 \begin{dingyi}[The Limit of a Sequence: An Intuitive Version]
-Let $a_1,a_2,a_3,\cdots$ be a sequence and $L$ a number. If, for every positive number $d$, however small, there is a position $N$ after which \textbf{all} terms lie less than $d$ from $L$, so that
+Let $a_1,a_2,a_3,\cdots$ be a sequence and $L$ a number. If, for every positive number $d$, however small, there is a position $N$ such that \textbf{all} terms after position $N$ lie less than $d$ from $L$, so that
 \[
 |a_n-L|<d \quad (n>N),
 \]
@@ -199,7 +199,7 @@ Second, apply the limit definition as $n$ grows. Rewrite this as
 \[
 S_n=\frac{a}{1-r}-\frac{a}{1-r}\,r^n.
 \]
-Since $|r|<1$, the absolute value of $r^n$ shrinks as $n$ increases. For example, with $r=0.1$, $r^n$ runs through $0.1,0.01,0.001,\cdots$. Given any positive $d$, sufficiently large $n$ makes $|r^n|$ small enough that $\left|\dfrac{a}{1-r}\right|\cdot|r^n|<d$. Thus the distance from $S_n$ to $\dfrac{a}{1-r}$ becomes arbitrarily small, so by definition
+Since $|r|<1$, the absolute value of $r^n$ shrinks as $n$ increases. For example, with $r=0.1$, $r^n$ runs through $0.1,0.01,0.001,\cdots$. Given any positive $d$, sufficiently large $n$ makes $|r^n|$ small enough that $\left|\dfrac{a}{1-r}\right|\cdot|r^n|$ is less than $d$. Thus the distance from $S_n$ to $\dfrac{a}{1-r}$ becomes arbitrarily small, so by definition
 \[
 \lim_{n\to\infty}S_n=\frac{a}{1-r}.
 \]
@@ -292,7 +292,7 @@ This chapter's new tools:
 \]
 Record each result, continuing at least through $\dfrac{1}{2^{10}}=\dfrac{1}{1024}$. You obtain $0.5,0.75,0.875,0.9375,\cdots$. Each term added halves the distance to $1$. After how many terms is the distance to $1$ less than $0.001$? In the corridor game, which $N$ corresponds to your demand $d=0.001$?
 
-\textbf{Experiment 2: Building an Approximation Road to $\sqrt{2}$.} Use only arithmetic, without the square-root key. Start with $[1,2]$ and test the midpoint $1.5$. Since $1.5^2=2.25>2$, $\sqrt{2}$ lies in $[1,1.5]$. Test the next midpoint, $1.25$, comparing its square with $2$ to choose the left or right half. Each step halves the interval. Perform $8$ steps and record the endpoints; you will obtain $\sqrt{2}\approx 1.414$. What does this nested-interval process share with the decimal approximations $1,1.4,1.41,\cdots$? If the number line had holes, would the experiment still guarantee a number trapped inside?
+\textbf{Experiment 2: Building an Approximation Road to $\sqrt{2}$.} Use only arithmetic, without the square-root key. Start with $[1,2]$ and test the midpoint $1.5$. Since $1.5^2=2.25>2$, $\sqrt{2}$ lies in $[1,1.5]$. Test the next midpoint, $1.25$, comparing its square with $2$ to choose the left or right half. Each step halves the interval. Perform $8$ steps and record the endpoints; you will obtain $\sqrt{2}\approx 1.414$. What does this nested-interval process share with the decimal approximations to $\sqrt{2}$, namely $1,1.4,1.41,\cdots$? If the number line had holes, would the experiment still guarantee a number trapped inside?
 
 \textbf{Experiment 3 (Optional): A Magical Number.} Calculate $\left(1+\dfrac{1}{n}\right)^n$. For $n=1$ it is $2$; for $n=10$, about $2.594$; for $n=100$, about $2.705$; and for $n=1000$, about $2.717$. It seems to converge to a mysterious number beginning $2.718$. Record the observation; the exercises return to it.
 \end{shiyan}
@@ -308,7 +308,7 @@ Record each result, continuing at least through $\dfrac{1}{2^{10}}=\dfrac{1}{102
 \textbf{Proof}
 \begin{sikao}
   \item Use the corridor game to prove rigorously that $\dfrac{1}{n}$ converges to $0$. For any positive $d$, give an explicit $N$, allowed to depend on $d$, and explain why $n>N$ implies $\left|\dfrac{1}{n}-0\right|<d$. \textbf{Hint}: all you need is $\dfrac{1}{n}<d$. Take reciprocals to see how large $n$ must be.
-  \item Prove that a sequence cannot converge to two different numbers $L$ and $M$. \textbf{Hint}: let their distance be $h>0$. Choose $d=\dfrac{h}{2}$ and draw corridors centred at $L$ and $M$. They do not overlap. What contradiction arises if the sequence must eventually stay in both?
+  \item Prove that a sequence cannot converge to two different numbers $L$ and $M$. \textbf{Hint}: let the distance between $L$ and $M$ be $h>0$. Choose $d=\dfrac{h}{2}$ and draw corridors centred at $L$ and $M$. They do not overlap. What contradiction arises if the sequence must eventually stay in both?
 \end{sikao}
 
 \textbf{Challenge}

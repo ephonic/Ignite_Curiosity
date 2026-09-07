@@ -57,6 +57,7 @@ For example, chapter 2's first graph draws a line whose endpoints do not lie on
 the labeled equation `y = 0.4x + 4`, and its leftmost point label overlaps the
 vertical-axis label. These are present in the Chinese TikZ source and have not
 been redesigned in the translation.
+See [source review notes](SOURCE_NOTES.md) for additional chapter-specific issues.
 
 ## Disclaimer
 
