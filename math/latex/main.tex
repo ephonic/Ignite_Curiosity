@@ -1,0 +1,123 @@
+% !TeX program = xelatex
+\documentclass[11pt,openany,fontset=none]{ctexbook}
+
+% ---------- 字体 ----------
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+% ---------- 版式 ----------
+\usepackage[a4paper,margin=2.4cm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,shapes.geometric}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black}
+
+% ---------- 页眉页脚 ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\leftmark}
+\fancyhead[RO]{\small\rightmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---------- 定理类环境 ----------
+\theoremstyle{definition}
+\newtheorem{dingyi}{定义}[chapter]
+\newtheorem{li}[dingyi]{例}
+\theoremstyle{plain}
+\newtheorem{dingli}[dingyi]{定理}
+\newtheorem{tuilun}[dingyi]{推论}
+\theoremstyle{remark}
+\newtheorem*{zhu}{注}
+
+% ---------- 全书固定视觉元素（tcolorbox）----------
+\newtcolorbox{toolbox}{colback=blue!4,colframe=blue!50!black,
+  title={\sffamily 数学工具箱},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+\newtcolorbox{fanli}{colback=red!4,colframe=red!60!black,
+  title={\sffamily 反例警报},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+\newtcolorbox{lianjie}{colback=green!4,colframe=green!50!black,
+  title={\sffamily 连接线},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+\newtcolorbox{shiyan}{colback=orange!6,colframe=orange!70!black,
+  title={\sffamily 一分钟实验},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+\newtcolorbox{pandeng}{colback=purple!5,colframe=purple!60!black,
+  title={\sffamily 继续攀登},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+\newtcolorbox{shuyu}[1]{colback=gray!5,colframe=gray!60!black,
+  title={\sffamily 术语卡片：#1},fonttitle=\bfseries,
+  boxrule=0.6pt,arc=2mm,left=2mm,right=2mm,top=1.5mm,bottom=1.5mm}
+
+% 思考题环境
+\newlist{sikao}{enumerate}{1}
+\setlist[sikao,1]{label=\arabic*.,leftmargin=2em}
+
+% ---------- 标题 ----------
+\title{\sffamily\bfseries 点燃数学\\[2mm] {\large 给初中生的数学世界漫游}}
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+
+\chapter*{前言：先别急着背公式}
+\addcontentsline{toc}{chapter}{前言}
+这是一本写给初中生的数学漫游书。它不按课本顺序检查你“应该会什么”，而是从一个个真实、好玩的疑问出发，带你看看数学家们如何提出问题、发明概念、寻找证据，并让这些想法彼此连接。
+
+读这本书时，你可以暂时放下标准答案和公式清单——但请保留两样东西：好奇心，和追问“为什么”的习惯。书里的每一个关键结论，我们都给出直观的解释、必要的证明，或者你可以亲手复核的实验。
+
+每章结尾的思考题分为“观察题、证明题、挑战题”三个层次，我们只给提示，不直接给答案。卡住是正常的，卡住正是数学开始的地方。
+
+\mainmatter
+
+\part{从初中代数出发——字母、方程和函数}
+\include{chapters/ch01}
+\include{chapters/ch02}
+\include{chapters/ch03}
+\include{chapters/ch04}
+
+\part{沿着两条主轴深入——多项式、变换和向量}
+\include{chapters/ch05}
+\include{chapters/ch06}
+\include{chapters/ch07}
+\include{chapters/ch08}
+
+\part{从变化走向无限——微积分与分析}
+\include{chapters/ch09}
+\include{chapters/ch10}
+\include{chapters/ch11}
+\include{chapters/ch12}
+
+\part{从整数问题分流——数论与解析数论}
+\include{chapters/ch13}
+\include{chapters/ch14}
+\include{chapters/ch15}
+
+\part{从曲线和空间继续分流——拓扑、微分几何、概率与基础}
+\include{chapters/ch16}
+\include{chapters/ch17}
+\include{chapters/ch18}
+\include{chapters/ch19}
+\include{chapters/ch20}
+
+\appendix
+\include{chapters/appA}
+\include{chapters/appB}
+\include{chapters/appC}
+\include{chapters/appD}
+\include{chapters/appE}
+
+\end{document}

@@ -1,0 +1,110 @@
+% 共用导言：三册书共用的格式定义
+% 编译方式：xelatex（需 TeX Live + ctex + tcolorbox）
+
+% 注意：ctex 的选项（fontset=none, UTF8, scheme=chinese）在 \documentclass 处给出
+\usepackage{ctex}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+% 西文使用默认 Latin Modern，与 Noto CJK 搭配
+
+\usepackage[a4paper,top=2.6cm,bottom=2.6cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{enumitem}
+\usepackage{zhnumber}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- 颜色语法（全书统一的人为编码，颜色不代表真实外观） ----------
+\definecolor{mainblue}{RGB}{31,78,121}     % 主线
+\definecolor{bridgegreen}{RGB}{46,117,80}  % 原理桥梁
+\definecolor{challengepurple}{RGB}{96,60,130} % 深入挑战
+\definecolor{laborange}{RGB}{176,96,32}    % 实验
+\definecolor{warnred}{RGB}{158,42,43}      % 误解警示
+\definecolor{evidenceteal}{RGB}{30,110,110}% 证据故事
+
+% ---------- 化学式快捷写法：\chem{H_2O}、\chem{CO3^{2-}} ----------
+\newcommand{\chem}[1]{\ensuremath{\mathrm{#1}}}
+
+% ---------- 三层阅读标记 ----------
+% 故事主线是正文默认层，无需标记；以下两层用色块标出
+\newtcolorbox{qiaoliang}{% 原理桥梁：定量规律
+  enhanced,breakable,colback=bridgegreen!6,colframe=bridgegreen,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 【原理桥梁】用一点数学看得更深},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=bridgegreen}
+
+\newtcolorbox{tiaozhan}{% 深入挑战：更高层的视野
+  enhanced,breakable,colback=challengepurple!6,colframe=challengepurple,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 【深入挑战】想再往上走一层吗},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=challengepurple}
+
+% ---------- 固定栏目 ----------
+\newtcolorbox{kaichang}{% 开场物品与悬念
+  enhanced,breakable,colback=mainblue!5,colframe=mainblue,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 开场：先拿起一样东西},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=mainblue}
+
+\newtcolorbox{shiyan}{% 安全的家庭/课堂观察实验
+  enhanced,breakable,colback=laborange!6,colframe=laborange,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 动手试一试},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=laborange}
+
+\newtcolorbox{wuqu}{% 常见误解与反例
+  enhanced,breakable,colback=warnred!5,colframe=warnred,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 小心：这里有个常见误解},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=warnred}
+
+\newtcolorbox{zhengju}{% 科学家怎样知道
+  enhanced,breakable,colback=evidenceteal!5,colframe=evidenceteal,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily 科学家怎样知道},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=evidenceteal}
+
+% 想一想（思考题）
+\newlist{sikaoti}{enumerate}{1}
+\setlist[sikaoti,1]{label=\textbf{想一想 \arabic*.},leftmargin=3.2em,itemsep=2pt}
+
+% ---------- 章节样式 ----------
+\ctexset{
+  chapter = {
+    name = {第,章},
+    number = \chinese{chapter},
+    format = \Huge\bfseries\sffamily,
+  },
+  section = {format = \Large\bfseries\sffamily},
+  subsection = {format = \large\bfseries\sffamily},
+}
+
+% 篇（part）命名
+\ctexset{
+  part = {
+    name = {第,篇},
+    number = \chinese{part},
+    format = \Huge\bfseries\sffamily\centering,
+  }
+}
+
+% 页眉页脚
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\sffamily 烧掉化学与生物课本}
+\fancyhead[RO]{\small\sffamily \leftmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% 行距与段落
+\linespread{1.32}
+\setlength{\parskip}{2pt}
+
+% 常用物理量与单位快捷命令
+\newcommand{\ud}[2]{\ensuremath{#1\ \mathrm{#2}}} % \ud{6.02\times10^{23}}{mol^{-1}}
