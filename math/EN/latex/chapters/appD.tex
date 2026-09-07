@@ -1,0 +1,64 @@
+\chapter{Mathematical Experiments and Programming Resources}
+
+Mathematicians have laboratories too, but their equipment is much cheaper: a pen, paper, a spreadsheet, or a computer on which to write a few lines of code. This appendix introduces three accessible experimental tools, each with activities you can try immediately. First, one ground rule: \textbf{experiments provide observations; proofs establish conclusions}. Tools help you see more and make better guesses, but no quantity of observations replaces proof.
+
+\section{Spreadsheets: An Underrated Mathematical Instrument}
+
+You need no specialized software. A spreadsheet on a computer or phone supports serious exploration. Enter a formula, fill it down, and patterns emerge.
+
+\textbf{Activity one: the power of compound interest.} In the first column, enter years $0$ through $30$. Start the second column with a principal of $1000$, then make each following cell equal to the previous one times $1.05$, representing an annual interest rate of $5\%$. Fill down: after $30$ years, the amount is approximately $4322$, more than $4$ times the principal. Better still, it doubles roughly every $14$ years. This is exponential growth, explaining why interest on interest can sound mild yet become striking over time. A useful trick is to keep the interest rate in its own cell and reference that cell in the formula. Change it once and the whole curve changes. Separating an adjustable quantity this way is the mathematical idea of a parameter.
+
+\textbf{Activity two: sifting out primes.} Enter $1$ through $200$ in the first column. In the second, determine whether each number is prime by trying division by earlier primes. Count the primes in each hundred: there are $25$ from $1$ to $100$, but only $21$ from $101$ to $200$. You will see primes becoming sparser, an observation pointing toward a major theorem in number theory.
+
+\section{GeoGebra: Geometry That Moves}
+
+GeoGebra is free dynamic geometry software that you can use in a browser. Its greatest strength is dragging: move a vertex after drawing a figure and every dependent quantity changes in real time.
+
+\textbf{Activity one: an angle sum you cannot drag apart.} Draw any triangle and ask the software to measure its three interior angles and display their sum. Drag the vertices vigorously, making the triangle broad, flat, or sharp. The sum stays at $180^\circ$. This is no proof, but it makes you feel the fact deserves one.
+
+\textbf{Activity two: approach $\pi$ yourself.} Draw a circle and an inscribed regular polygon. Increase the side count from $6$ to $12$, $24$, and $48$, watching the ratio of the polygon's perimeter to the circle's diameter approach $3.14159\dots$. As you move the side-count slider, notice how the gap between polygon and circle shrinks without ever disappearing completely. This is an honest picture of approximation. In minutes on a screen, you can reenact the polygon method mathematicians used to estimate $\pi$ over two thousand years ago.
+
+\begin{shiyan}
+You can experiment without a computer. Wrap string around a circular cup rim, measure the diameter, and compare the string's length with it. The circumference is always a little more than $3$ times the diameter. Try a bottle cap, a bowl, and a plate. The ratio barely changes: you have just observed $\pi$.
+\end{shiyan}
+
+\section{Python: Letting a Computer Count Ten Thousand Times}
+
+Python is a programming language with syntax close to English. Free online environments let you run it without installing anything. For mathematics, its value is tirelessness: it never minds trying a million examples.
+
+\textbf{Activity one: test a conjecture.} Write a small loop checking whether $n^2+n+41$ is prime for $n$ from $1$ to $1000$. Astonishingly, the first several dozen values are prime. This famous prime-generating formula has a run of $40$ successes. But keep going: at $n=40$, the result is $41\times41$, and the pattern collapses. This experiment makes ``many examples are still not a proof'' a lesson you can feel.
+
+\textbf{Activity two: estimate $\pi$ by scattering points.} Have a program place one hundred thousand random points in a square of side length $1$ and count how many lie inside its inscribed circle, closer to the centre than the radius. The circle-to-square area ratio is $\dfrac{\pi}{4}$, so dividing the inside count by the total and multiplying by $4$ estimates $\pi$. More points make the estimate steadier. This illustrates relative frequency approaching probability.
+
+\textbf{Activity three: approximate $\sqrt{2}$.} Begin with $[1,2]$. Take its midpoint, compare the midpoint's square with $2$, and discard the appropriate half, retaining $\sqrt{2}$ in the remaining interval. After $30$ repetitions, the interval is less than a billionth wide: $\sqrt{2}$ is trapped in a tiny gap. This is bisection, an algorithmic form of the limit idea. You never seize the target exactly, but can enclose it in an arbitrarily small cage.
+
+Computational experiments have two basic habits: change parameters and watch what changes. Replace $1000$ in activity one with $100000$, or change the formula to $n^2-n+41$. Predict the outcome, then run it to check. Wrong guesses often teach more than right ones.
+
+\begin{fanli}
+``The computer verified a million examples, so the proposition is true.'' That conclusion does not follow. The prime formula succeeds $40$ times and fails on the $41$st; mathematical history has examples that fail only after hundreds of millions of successes. A program can refute a false conjecture by finding a counterexample or strengthen our confidence. To \textbf{establish} a claim about infinitely many objects requires proof. An experiment is a telescope, not a verdict.
+\end{fanli}
+
+\section{Where to Find These Tools}
+
+Any common office suite provides a spreadsheet. Search for GeoGebra to find its official site and open it in your browser. Search for an online Python interpreter to find an environment requiring no installation. You do not need a hefty tutorial to begin: try this appendix's activities and, when stuck, search for something like ``how to write a spreadsheet formula'' or ``Python for loop.'' Learning while doing is the quickest route. Do not panic at error messages. They tell you what the computer did not understand, which is useful training in logic in itself.
+
+\begin{pandeng}
+Keywords for further exploration: numerical computation (having computers solve equations), Monte Carlo methods (using random sampling to calculate areas and probabilities), and computer-assisted proof. The famous four-colour theorem used a computer to verify many cases, prompting years of debate about what counts as proof. University courses in computational mathematics and scientific computing explore these topics.
+\end{pandeng}
+
+\section*{Reflection Questions}
+
+\textbf{Observation}
+\begin{sikao}
+\item Change the annual interest rate in activity one to $10\%$. Roughly how many years does doubling take? Hint: watch how many rows separate doublings in the second column and compare with $14$ years at $5\%$; exact calculation is unnecessary.
+\end{sikao}
+
+\textbf{Proof}
+\begin{sikao}
+\item Prove that each halving in activity three leaves $\sqrt{2}$ in the retained interval. Hint: split into two cases according to whether the midpoint's square is greater or less than $2$.
+\end{sikao}
+
+\textbf{Challenge}
+\begin{sikao}
+\item Design an experiment to estimate the probability that a needle randomly dropped on paper marked with parallel lines crosses a line: Buffon's needle problem. Hint: first identify what is random when the needle lands. Position is one quantity; what else?
+\end{sikao}
