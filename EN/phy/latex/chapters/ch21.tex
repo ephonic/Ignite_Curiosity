@@ -1,0 +1,265 @@
+% Chapter 21: Current and DC Circuits
+\chapter{Current and DC Circuits}
+
+\step{A Counterintuitive Opening}
+
+You arrive home at night, press the switch, and the ceiling light comes on almost instantly. Too ordinary to notice, until a calculation later reveals that free electrons in ordinary copper wire advance on average only a few millimeters per minute. An electron near the switch would not reach the bulb even if it stayed lit all night. If the charge carriers move so slowly, how can the lamp light immediately?
+
+Do not answer yet. Transmission lines can carry hundreds of thousands of volts, far above a home's 220-volt outlet. Yet birds perch side by side on bare wires, calmly preening. Adults and manuals repeatedly warn against touching the much lower-voltage outlet. If voltage alone determined danger, the birds would already be in trouble.
+
+A third scene is in your pocket. A phone's charging cable sometimes feels warm. A thicker, shorter original cable often charges faster than a thin, long off-brand one. What happens inside that makes both thickness and length matter?
+
+Lamp, bird, and cable ask one question: what moves in a current, how fast, and what drives it? We will take the circuit apart.
+
+\step{Make a Guess First}
+
+Put your intuition on the table and write answers before peeking ahead.
+
+First: a battery drives a small bulb, with current leaving its positive terminal and returning to its negative terminal. Does the same charge pass each second through the filament and the return wire? Many vaguely imagine the bulb consumes electricity, weakening the return flow.
+
+Second: connect two identical bulbs one after another to the same battery, then compare with one bulb alone. Is each brighter, dimmer, or unchanged? What if they occupy separate parallel branches?
+
+Third: why is a bird safe on a high-voltage wire? Insulating feet, distance from Earth, or something else?
+
+Fourth: does charge pass more easily or less easily through a thinner, longer wire? Probably less easily, you think. But how much less: in proportion to length or length squared?
+
+These guesses need no formulas, just your ordinary sense of the world. Physicists begin similarly, then design experiments that force the world to answer.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[A Pencil-Lead Variable Resistor]
+You need one AA cell, or two in series; a small flashlight bulb, or an LED with a roughly hundred-ohm current-limiting resistor; wires, with bare paper clips as possible substitutes; a wooden pencil; and a small knife.
+
+Step 1: shave away one side of the pencil to expose the graphite core along its length. Conducting graphite is the experiment's key material.
+
+Step 2: wire battery and bulb into a circuit with one gap. Clip one gap end to the graphite's end and make the other a sliding contact along the core.
+
+Step 3: slide that contact slowly along the pencil. Brightness changes continuously: shorter graphite in the circuit gives a brighter lamp, longer graphite a dimmer one. You have made a rheostat, the same principle as radio volume controls and continuously adjustable lamps.
+
+Step 4, optional and with care: leave the slider at its brightest position for about a minute, then lightly touch the graphite. It becomes slightly warm. Electrical energy has become heat, not disappeared.
+\end{experiment}
+
+Another experiment needs only people. Have a dozen classmates hold hands in a circle, each a charge. A battery classmate steadily pushes a neighbor, passing the push around. Notice that everyone moves only a little while news of motion spreads almost instantly, and the number passing every location per unit time must match or people accumulate somewhere. These two observations later become laws.
+
+Finally, observe three nearby appliances, a phone charger, electric kettle, and desk lamp. Record nameplate volts and watts. Use our later formula to estimate their working currents, then ask which needs the thickest wires and which internal short circuit has the most serious consequences. Save your answers for checking.
+
+\step{The Old Model Runs into Trouble}
+
+Most people imagine electricity as stuff stored in a battery like tank water. Closing a switch releases it down wires; the bulb uses some up and the remainder returns. A dead battery has emptied its electricity.
+
+Fluent though this sounds, three blows defeat it.
+
+First, experiment. Put an ammeter at different places, near battery, before or after bulb, or along the return. In a single-path circuit, charge passing per second is exactly equal everywhere. The filament's incoming amount matches its outgoing amount. If it consumed charge, the return should carry less, but it does not. The bulb removes something else.
+
+Second, our opening arithmetic, calculated below: electrons advance only a fraction of a meter per hour. If lighting required electricity from the switch to arrive, it would take hours. Something travels fast while carriers crawl. The old model cannot contain both facts.
+
+Third, birds. Hundreds of thousands of volts leave a perched bird unharmed, but directly connecting a 1.5-volt cell's terminals with copper wire can make it painfully hot in seconds and ruin the cell. Low voltage causes danger here. High voltage alone is neither sufficient nor necessary for dangerous consequences; charge amount, energy per charge, and its route through the body matter. The old slogan cannot explain them.
+
+One frequently misused phrase is that a battery uses up electricity. Charge is never used up: it circulates with equal inflow and outflow. The battery's chemical energy is depleted. Energy is transferred and consumed, not charge, a distinction we will repeatedly use.
+
+Retire the old model, but not every part of it. Water flow remains a useful analogy once we identify where it fits and fails.
+
+\step{Inventing New Concepts}
+
+Historically, physicists solved these problems by inventing precise vocabulary. Build it in the needed order.
+
+First, current. In the human circle, flow is naturally measured not by one person's speed but by how many pass a location each second. For charge, count what crosses a wire cross-section per second:
+
+\[
+I=\frac{\Delta Q}{\Delta t},
+\]
+
+over time \(\Delta t\), divide the crossing charge \(\Delta Q\) by that time. Current \(I\) is charge flow rate, in amperes: one ampere is one coulomb per second. Electron speed never appears explicitly. The same current can come from many slow charges or a few fast ones, just as equal pedestrian flow may be a dense slow crowd or sparse fast walkers. That is precisely why current is not electron speed.
+
+Second, drift velocity. Free electrons already move chaotically through wire at speeds around a hundred thousand meters per second, but random directions average to no net progress. With no current there is bustle, not flow. Closing a circuit adds a tiny directed crawl, a few millimeters per minute, to this motion: drift velocity. Thermal motion, drift, and signal propagation are three different things, individual random steps, collective average advance, and news that the switch closed.
+
+Third, electric-field drive and near-light-speed signals. Closing a switch lets the battery's voltage establish a field around the circuit. Electrons do not run from the switch to do this; charge distribution readjusts along the wire at nearly light speed. Like the human wave, the first person need not reach the end before the whole circle starts. Think of an already-full water pipe: opening a valve produces water at the outlet immediately because water is already throughout, while pressure changes propagate at sound speed. Do not imagine an empty pipe waiting for water from the source. Free electrons already fill wires and filament, so when the field arrives, local electrons start drifting and the bulb lights. The first puzzle is answered.
+
+Fourth, voltage is an energy step per charge. Chapter 20 defined potential difference; here emphasize its circuit role. Voltage is not current's pressure, but energy gained or surrendered per unit charge crossing between points. One volt across a bulb means each coulomb surrenders one joule as light and heat. Distinguish potential, one point's height relative to a chosen zero; potential energy, charge times that height; and voltage, the height difference. Circuits use the third: differences do work, not absolute values. The bird's secret lies here.
+
+Fifth, resistance. The same battery drives large current through short, thick copper but much less through thin, long graphite. Material, thickness, and length determine how difficult it is to drive charge. Define resistance as
+
+\[
+R=\frac{V}{I},
+\]
+
+in ohms. Greater resistance means not stopping current, but less current at the same voltage, or more voltage needed for the same current. The pencil's slider changes the resistance included in the circuit.
+
+Sixth, a battery is a chemical pump. Each circuit lap transfers energy to filament and wires; somewhere it must be restored or flow stops. Chemical reactions in the battery continually move positive charge from lower to higher potential, like a pump lifting water, maintaining the terminal difference. Energy supplied per coulomb is electromotive force. Despite force in its name, it is measured in volts and is energy, not force. A dead battery lacks usable chemicals to drive this transfer, not charge.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+A circuit is a closed conveyor: chemical energy pumps charge uphill in the battery; charge flows around, delivering energy to bulbs, resistors, and wires, then returns for another climb. Equal charge passes each cross-section per unit time, and energy rises and falls sum to zero around a loop: Kirchhoff's current and voltage laws, respectively.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Translate intuition into calculable expressions, interrogating each with extreme cases.
+
+\textbf{First: current and drift velocity.} A wire has cross-section \(A\), number density \(n\) of carriers of charge \(q\), drifting at \(v\). In time \(\Delta t\), all carriers in volume \(Av\Delta t\) cross the section, giving \(\Delta Q=nqAv\Delta t\), so
+
+\[
+I=nqAv.
+\]
+
+Real scales: household circuits often use copper about a millimeter in diameter, area \(A\) around \(8\times10^{-7}\) square meters. Copper's free-electron density \(n\) is about \(8.5\times10^{28}\) per cubic meter; electron charge \(q\) is about \(1.6\times10^{-19}\) coulombs. For substantial current \(I=1\) ampere,
+
+\[
+v=\frac{I}{nqA}\approx\frac{1}{8.5\times10^{28}\times1.6\times10^{-19}\times8\times10^{-7}}\approx9\times10^{-5}\ \text{m/s}.
+\]
+
+That is 0.09 millimeters per second, roughly five per minute. Zero current gives zero drift, though random motion remains. Greater area gives slower drift for equal current, like more leisurely flow in a broad pipe. This is our opening arithmetic: immediate lighting depends on field establishment near light speed, not traveling electrons.
+
+Expose a shopping-unit trick. Power banks advertise ten thousand milliampere-hours. Current times time, by \(I=\Delta Q/\Delta t\), is charge: 36,000 coulombs, about \(2\times10^{23}\) electrons' charge. Charge is not energy. Equal charge at a 3.7-volt cell and five-volt output carries different energy. Compare watt-hours, energy, not just milliampere-hours, charge. Charge circulates conserved; energy is what gets depleted and priced.
+
+\textbf{Second: Ohm's law.} Many conductors at approximately fixed temperature have measured current proportional to applied voltage:
+
+\[
+V=IR.
+\]
+
+This gives voltage needed to drive \(I\) through \(R\). Let \(R\) approach zero, as in shorting battery terminals with copper. It predicts infinite current. Real internal and wire resistances prevent infinity, but can let wire heat red in seconds, which is why batteries must never be shorted and fuses exist. An open circuit has effectively infinite \(R\), giving zero current. Ohm's law is empirical for broad material classes under ordinary conditions, not universal like Newton's laws. Resistance \(R\) may change with temperature or current; its limits follow later.
+
+\textbf{Third: series and parallel.} First standardize the language. Engineers draw circuits rather than objects: a battery as long and short parallel lines, long positive; a switch as a closable gap; bulbs and resistors as circles or rectangles; wires as straight lines. Here is our battery, switch, and lamp:
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=1.0]
+  % Wire loop
+  \draw (0,0) -- (6,0) -- (6,1.15);
+  \draw (6,1.85) -- (6,3) -- (3.35,3);
+  \draw (2.65,3) -- (0,3) -- (0,1.7);
+  \draw (0,1.3) -- (0,0);
+  % Battery: long thin line positive, short thick line negative
+  \draw[thick] (-0.5,1.7) -- (0.5,1.7);
+  \draw[line width=2.5pt] (-0.25,1.3) -- (0.25,1.3);
+  \node[left] at (-0.5,1.7) {$+$};
+  \node[left] at (-0.5,1.3) {$-$};
+  \node[left] at (0,0.7) {Battery};
+  % Switch above
+  \fill (2.65,3) circle (1.5pt);
+  \fill (3.35,3) circle (1.5pt);
+  \draw (2.65,3) -- (3.3,3.45);
+  \node[above] at (3,3.45) {Switch};
+  % Bulb: crossed circle
+  \draw (6,1.5) circle (0.35);
+  \draw (5.75,1.25) -- (6.25,1.75);
+  \draw (5.75,1.75) -- (6.25,1.25);
+  \node[right] at (6.45,1.5) {Bulb};
+  % Current arrow
+  \draw[->,thick] (1.2,0) -- (2.2,0);
+  \node[below] at (1.7,0) {$I$};
+\end{tikzpicture}
+\end{center}
+
+Conventional current \(I\) leaves the positive terminal through the external circuit and returns negative. This historical convention opposes actual electron drift in metals but gives equivalent effects. Series puts components on one path; parallel connects them separately across one pair of nodes.
+
+Two series resistors share current \(I\), since charge has no alternative path. Their voltage drops add, so
+
+\[
+R_{\text{series}}=R_1+R_2.
+\]
+
+Each receives voltage proportional to resistance, \(V_1=V\,R_1/(R_1+R_2)\), voltage division. Parallel resistors share voltage \(V\), while their currents add, giving
+
+\[
+\frac{1}{R_{\text{parallel}}}=\frac{1}{R_1}+\frac{1}{R_2}.
+\]
+
+Branch current is inversely proportional to resistance: current division. Check series: zero resistance in one component leaves the total well-defined; one open component, infinite resistance, stops the whole path. Hence one failed bulb darkens an old series holiday-light string. In parallel, one open branch leaves others working. Household lights, refrigerators, and outlets share mains in parallel; switching off a lamp does not affect the refrigerator. Adding an appliance lowers total resistance and raises supply current. Prediction 2 follows: two identical series bulbs double resistance, halve current, and dim each; parallel bulbs keep the same voltage and nearly unchanged brightness with an ideal battery, doubling its load.
+
+\textbf{Fourth: Kirchhoff's two laws.} Series and parallel rules are special cases of broader principles.
+
+Current law: total current entering any node equals total leaving. No new natural law, only no charge accumulation or spontaneous creation, generalizing the human-circle observation.
+
+Voltage law: voltage rises and drops sum to zero around every closed loop. Again no new law: each unit charge returns to its original potential energy, an energy-conservation account.
+
+Together they solve, in principle, any DC network of batteries and resistors. Assign unknown branch currents, write equations, solve.
+
+\begin{mathbridge}
+Consider a case beyond simple series/parallel reduction: batteries \(V_1=6\) volts and \(V_2=3\) volts with resistors \(R_1=2\), \(R_2=4\), and \(R_3=2\) ohms in a two-loop network. Branch currents \(I_1\) and \(I_2\) give the third automatically as \(I_1+I_2\), or their difference depending on directions. Apply loop laws:
+
+\[
+6=2I_1+2(I_1+I_2),\qquad 3=4I_2-2(I_1+I_2).
+\]
+
+Solve the two linear equations for \(I_1\) and \(I_2\). A negative result simply reverses the assumed arrow, another directional check handled automatically by signs. More importantly, Kirchhoff turns circuits into linear systems. Larger circuits add equations for a computer, exactly what circuit simulators solve daily.
+\end{mathbridge}
+
+\textbf{Fifth: electrical power and Joule heating.} Each coulomb crossing voltage \(V\) releases \(V\) joules, and \(I\) coulombs pass per second. Power is therefore
+
+\[
+P=VI.
+\]
+
+For an ohmic load, also \(P=I^{2}R\) or \(P=V^{2}/R\). In resistive elements nearly all becomes Joule heat. A 220-volt, 2,000-watt kettle draws \(I=P/V\approx9.1\) amperes and has \(R=V^{2}/P\approx24\) ohms. Heating 1.5 liters from twenty Celsius to boiling needs about 500,000 joules, so 2,000 watts takes about 250 seconds, just over four minutes, matching kitchen experience. Consumption is about 0.08 kilowatt-hours, costing only a few cents at ordinary electricity rates. Another estimate: a five-volt, two-amp charger supplies ten watts. A poor thin cable might have one ohm resistance, dissipating \(I^{2}R\approx4\) watts in one conductor and dropping voltage needed by the phone. Charging slows and the cable warms, solving puzzle 3.
+
+\textbf{A counterexample that trips intuition.} Compare \(P=I^{2}R\) and \(P=V^{2}/R\). One says greater resistance means more heating; the other says less. Both are right under different fixed conditions. At equal imposed current, as among series components, greater resistance heats more; a loose high-resistance connection can burn. At equal voltage, as with parallel mains appliances, greater resistance means lower power, so high-power appliances have low resistance. Before comparing, ask what stays fixed. This also explains high-voltage transmission. For fixed \(P=VI\), greater voltage reduces current, while line heating \(I^{2}R\) falls with its square. Hundreds of thousands or millions of volts save heat, not merely inspire fear.
+
+A car battery supplies another realistic example. Only twelve volts, yet hundreds of amperes during engine starting, thousands of watts for a few seconds. Its capability comes from tiny internal resistance, not high voltage. Neither voltage nor current alone describes energy throughput.
+
+Joule heat is hazard or tool according to location. Rice cookers, kettles, and heaters deliberately pass current through heating elements; household safeguards prevent heat elsewhere. A fuse is a low-melting metal section in series that melts first under excess current, sacrificing itself to open the circuit. Circuit breakers use electromagnetic or thermal-expansion mechanisms to trip and can reset. Ground wires connect appliance metal casings to Earth, giving leakage a low-resistance route before your hand provides one. Residual-current protection compares outgoing live and returning neutral current, equal normally by Kirchhoff. A difference above tens of milliamperes indicates leakage, possibly through a person, triggering disconnection within a tenth of a second. Even life-saving devices use these conservation laws. Human thresholds are real too: a few milliamperes tingle, while tens through the heart region can kill. This is why safety-voltage references use below thirty-six volts in dry conditions.
+
+\step{The Model's Limits}
+
+Every model has a range. Here are four main boundaries.
+
+First, Ohm is empirical, not universal. Metals approximately obey at fixed temperature, but a filament heated from room temperature past two thousand Celsius increases resistance severalfold. Switch-on current is therefore greatest, explaining frequent failure at turn-on. Plot current versus voltage: an ohmic conductor gives a straight line through the origin; a filament bends:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.6,>=Stealth]
+  \draw[->] (0,0) -- (2.6,0) node[below] {$U$};
+  \draw[->] (0,0) -- (0,1.8) node[left] {$I$};
+  \draw[thick,blue!60!black] (0,0) -- (2.2,1.35) node[right,align=left] {Ohmic conductor\\ (straight)};
+  \draw[thick,red!60!black] (0,0) .. controls (0.7,0.65) and (1.5,0.8) .. (2.2,0.9) node[right,align=left] {Filament\\ (curved)};
+\end{tikzpicture}
+\end{center}
+
+Curvature means equal added voltage produces smaller added current at higher voltage: resistance increases. A diode is more extreme, almost open forward and blocked backward, far from linear. Graphite, electrolytes, and bodies each have their own behavior. Before \(V=IR\), ask whether the material is ohmic.
+
+Second, voltage quietly assumes a conservative electric field with zero potential change around a loop. This is excellent for steady or slowly changing circuits. Chapter 23's varying magnetic fields create circulating fields whose loop sum is nonzero; measured voltage between two points can depend on the measuring wires' route. Voltage must then expand into electromotive force and loop integrals. Our voltage law is the steady limit of a broader rule.
+
+Third, wires were ideal zero-resistance connections. Ordinary experiments tolerate this, but large currents or long transmission distances require wire resistance, as charging cables already showed.
+
+Fourth, drift velocity is a statistical average. Each electron's actual path is tangled motion plus slow advance, not orderly marching. Negative electrons moving left are equivalent in current effect to positive charge moving right. Conventional current follows positive motion, opposite metal-electron drift. This is convention, not error, worth remembering across old and new books.
+
+Fifth, the battery was an ideal constant-voltage pump. Real internal resistance takes more voltage at higher current, lowering terminal voltage. New batteries have low internal resistance; depleted old ones higher. Thus an old battery can test well unloaded and collapse under load. Its no-load meter reading approaches emf; connected loads reveal the internal drop. Increased internal resistance in cold conditions partly explains phones losing charge rapidly or shutting down suddenly.
+
+\begin{mathbridge}
+Why do metals obey Ohm? A coarse microscopic picture has field-accelerated electrons collide with lattice vibrations and defects, surrender directed kinetic energy, then accelerate again. Let mean collision time be \(\tau\). Average directed velocity acquired between collisions is proportional to \(E\), so drift \(v\propto E\) and current density \(J=nqv\propto E\), or
+
+\[
+J=\sigma E,
+\]
+
+where \(\sigma\) is conductivity. Ohm's \(V=IR\) is this microscopic relation for an entire wire, with \(R=L/(\sigma A)\), proportional to length and inverse area. Prediction 4 is linear length dependence, not squared. Heating intensifies lattice vibrations and collisions, shortening \(\tau\) and raising resistance, explaining filaments. The picture is not rigorous, requiring quantum mechanics for that, but points correctly.
+\end{mathbridge}
+
+\begin{challenge}
+Where is the electric field when current flows? Inside the wire pushing electrons is only half the answer. Full electromagnetism, the Poynting vector and Chapter 25's energy flow, says energy travels from battery to appliance through electromagnetic fields in space around wires, not inside copper alongside electrons. Wires guide the energy route. For parallel wires powering a distant lamp, most flow occurs in the space between them, not within metal. Electrons crawl millimeters per minute while field energy arrives near light speed. The complete answer to immediate lighting belongs to fields. Circuit laws remain useful because steady field and circuit descriptions agree exactly; circuits are low-frequency shorthand for fields.
+\end{challenge}
+
+\step{Explaining the Opening Phenomenon}
+
+Review our three puzzles.
+
+Why immediate light? The filament already contains free electrons. Closing the switch establishes a field at near light speed, starting local drift and current without particles running from switch to bulb. It resembles an already-full pipe releasing outlet water when a valve opens, not an empty pipe awaiting supply. Limit the analogy: it explains immediate flow and equal flow rates, but not resistance-proportional voltage division or spatial field propagation. There formulas take over.
+
+Why is the bird safe? Harm comes from current through the body, driven by potential difference. Feet a few centimeters apart on a very low-resistance wire have a difference around one ten-thousandth volt, giving negligible body current. High voltage is relative to Earth; the bird is nearly equipotential. In theory a person touching only one line while insulated from Earth and every other conductor would also avoid shock. Reality usually connects people to ground through floors, walls, or damp skin, and one mains terminal is grounded, making the body a route. Tens of milliamperes through the heart region can kill. The danger is a body bridging different potentials, not the phrase high voltage alone.
+
+Why warm, slow-charging thin cables? Wire resistance dissipates \(I^{2}R\) as heat and loses \(IR\) of the phone's intended voltage. At equal current, longer thinner wire has more resistance, heat, and drop. Thick fast-charge cables reduce it.
+
+Three puzzles, one model, all recovered. A model must not merely produce numbers but reclaim the phenomena that first puzzled us.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[A Circuit from Earth to the Moon]
+Imagine two wires stretching 380,000 kilometers to a lunar lamp, with switch and battery on Earth. Close the switch: when does it light? Neither immediately nor after electrons crawl there. Field-establishment news travels near light speed, about 300,000 kilometers per second, so the lamp lights a little over a second later, not hours later and not faster than light. What if a long rod mechanically pushed a lunar switch, or a shout triggered a sound switch? The rod transmits force at material sound speed, thousands of meters per second; sound cannot cross vacuum. Three signals have radically different speeds, none exceeding light. This pushes our signal-versus-carrier distinction to its extreme and anticipates Chapter 28's rule that no influence or message travels faster than light.
+\end{thought}
+
+\begin{puzzles}
+\item Add a second identical bulb in parallel to an ideal zero-internal-resistance battery already powering one. Does the first's brightness change instantly? Does battery load change? How does a real battery with substantial internal resistance alter the conclusion? Hint: what sets bulb voltage? Internal resistance acts as a series resistor, taking a larger voltage drop at greater current.
+\item Old series light strings fail entirely when one filament breaks. A clever design places across each bulb a filament normally insulating but breaking down to conduct after bulb failure. Others then stay lit. What is the cost? Hint: the failed position becomes nearly shorted, lowering total resistance and raising current. Remaining bulbs receive slightly higher voltage and become brighter and more vulnerable. More failures brighten survivors, beginning a vicious cycle.
+\item Treat your phone's charging as a black box: five volts, two amperes on the charger; slightly over an hour from empty to full; nominal battery capacity fifteen watt-hours. An hour's charger output is about ten watt-hours. Do the accounts match, and where did the difference go? Hint: watt-hours measure energy. Compare full-session average power, not maximum power. Losses heat the charger and phone, explaining fast-charging warmth.
+\item Suppose free electrons in every copper wire worldwide suddenly drifted in one agreed direction, aligning current globally. What conservation law would immediately be violated? Hint: recall the deeper law behind Kirchhoff's current rule. Charges cannot disappear and must accumulate somewhere, creating strong restoring fields. Steady circuits are dynamic charge balances constrained by conservation.
+\end{puzzles}

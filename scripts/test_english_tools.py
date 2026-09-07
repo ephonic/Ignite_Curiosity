@@ -14,6 +14,15 @@ from assemble_liberal_arts import source_fragments, SOURCE
 
 
 class StructureTests(unittest.TestCase):
+    def test_only_explicit_source_glyph_examples_are_allowed(self):
+        allowed = check_english.HAN_EXAMPLES["ch014.tex"]
+        check = check_english.has_untranslated_han
+        self.assertFalse(check(r"The character \mbox{妈} means mother.", "妈", allowed))
+        self.assertTrue(check("Unmarked 妈", "妈", allowed))
+        self.assertTrue(check(r"\mbox{未翻译}", "未翻译", allowed))
+        self.assertTrue(check(r"\mbox{妈}", "not present in source", allowed))
+        self.assertTrue(check(r"\mbox{妈}", "妈"))
+
     def test_fragments_reconstruct_source(self):
         fragments = source_fragments()
         self.assertEqual("".join(text for _, text in fragments), SOURCE.read_text(encoding="utf-8"))

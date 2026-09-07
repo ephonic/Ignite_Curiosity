@@ -101,3 +101,71 @@ These notes record potential inconsistencies noticed during translation, not a c
 - The phase-space cell estimate has a formula `3\times10^{31}` but the following Chinese verbal number “三亿亿亿亿” denotes `3\times10^{32}`. Both are translated as written. A literal minimum-area cell/fuzzy patch of area `h` is also a heuristic, not a precise general quantum-state statement.
 - The categorical impossibility of Hamiltonian descriptions of damping through coordinate changes needs qualification, particularly for time-dependent formulations. Likewise, instantaneous energy contours and universally conserved Hamiltonians presume appropriate time independence.
 - Layout flag: the original phase-space diagram has long right-hand state labels extending past its ellipses; coordinates and label styles are unchanged.
+
+## Chapter 16
+
+- The opening recommends pushing at the swing's highest point, whereas the energy section later recommends the lowest point. The latter also says the same force over the same distance does more work at higher speed, confusing distance with time.
+- The final swing exercise reverses the standing/crouching sequence used in Chapter 14, and its explanation of work costs warrants review.
+- The slow-motion paragraph first describes the lowest point as fast, then describes both upper and lower endpoints as slow, apparently confusing equilibrium with the lower endpoint.
+- Car-suspension stiffness calculation uses a passenger-induced two-centimeter deflection with the whole car's quarter-mass load. The accompanying abdominal-organ resonance explanation of carsickness is an unverified oversimplification.
+- Although the limitations correctly distinguish Tacoma flutter from ordinary resonance, the closing explanation again foregrounds vortex-driven resonance.
+- Displacement-time diagram marks points at `(1.0,1.2)` and `(3.0,1.2)` above troughs of the plotted cosine. Geometry preserved.
+- The spring-at-equilibrium discussion later calls the spring unstretched/original shape, although the vertical example previously correctly says equilibrium is stretched.
+
+## Chapter 17
+
+- The text calls `v=f\lambda` dependent on small-amplitude linearity or globally uniform speed; these restrictions are stronger than the basic phase relation requires.
+- The bottle-blowing example applies the fixed-end string expression `f_n=nv/(2L)` to an air bottle, omitting different acoustic boundary conditions/Helmholtz resonance.
+- The standing-wave discussion characterizes most other frequencies as disordered noise; phase and boundary conditions merit clarification.
+- Stadium-wave reaction-time arithmetic is inconsistent: half-meter spacing at tens of meters per second implies hundredths, not several tenths, of a second per spectator.
+- The closing speech discussion identifies a familiar person's voice with frequency alone, rather than its full spectrum/timbre.
+- Sound-reflection exercise asks whether a wave inverts without distinguishing pressure from particle-displacement waves.
+- Group velocity is equated universally with signal/information speed; dispersive cases need qualification.
+- Claims that particles always stay local omit mean flow/drift qualifications for real water and gases; idealized wording retained.
+
+## Chapter 18
+
+- **Safety-sensitive source claim:** the rail-listening paragraph presents placing an ear on railway tracks as useful advance warning of a train. This is preserved source content, not endorsed behavior; root was notified for an adjacent safety-warning decision.
+- **Safety-sensitive source claim:** the lightning timing paragraph says lightning beyond three kilometers means the rain will not reach the reader yet. Timing does not establish storm safety or rainfall reach; root was notified. The following cold-air distance comparison also has the sign reversed for a fixed assumed sound speed.
+- Sun--Earth sound-travel estimate says 14,000 years; the stated 150 million kilometers and 340 meters per second imply roughly 14 years. The following “over ten thousand years” claim is preserved too.
+- Density comparison says steel is 8,000 times denser than air; given ordinary air/steel densities this is only rough and overlarge. Sun-source audibility is categorically denied from distance alone without specifying source strength or attenuation.
+- The Doppler diagram's wavefront circles and arrow annotations appear inconsistent with the stated subsonic geometry and crowded-front claim; all geometry is retained.
+- Fourier spectrum diagram labels its bars intensity while their plotted ratio follows the waveform amplitudes, not their squares.
+- The section describes decibels as not purely physical and as incorporating hearing perception; the unweighted intensity-level formula itself is a physical logarithmic ratio.
+- Statements about shore voices becoming clearer underwater, universally better solid sound transmission, and sound never leaving the atmosphere are simplified and need qualifications.
+- Solar surface vibration is described with the general term asteroseismology rather than the more specific helioseismology; translated as written.
+
+## Chapter 19
+
+- Source says the field grows as already charged sweater/hair layers separate, without accounting for geometry and fixed charge versus fixed potential.
+- The printer-paper example says same-sign charges cause sheets to stick together, contradicting its stated like-charge repulsion.
+- Point-charge divergence is explained categorically by all real charges having finite size/distribution; this is not an adequate general statement about elementary particles.
+- Electrostatic equilibrium says all charge lies on a conductor surface, rather than specifying excess net charge and qualifications about cavities.
+- Faraday's pail experiment is presented chiefly as a direct charge-conservation test, with simplified insertion/induction behavior.
+- Balloon-surface atom count, electron-transfer fraction, Coulomb torsion-fiber history, and static-discharge engineering examples are preserved estimates/claims, not independently validated.
+- The experiment labels itself entirely safe, an absolute statement requiring contextual caution near flammable material; the source itself warns about vapors and dust.
+
+## Chapter 20
+
+- **Safety-sensitive source claim:** boundary 1 says a grounded person is safe provided they do not touch both transmission wires simultaneously. Contact with one energized conductor can be lethal; root was notified for an adjacent safety-note decision. This source claim must not be treated as practical electrical guidance.
+- **Safety-sensitive source claim:** the opening and concluding calculation categorically describe a 200-kV Van de Graaff/0.4-J discharge as harmless. Safety depends on apparatus, discharge path, current, medical circumstances, and operating procedures; root was notified.
+- The danger calculation describes voltage times total charge times duration as an energy account, multiplying by time twice if charge is already the total transferred quantity.
+- Electronvolt example says moving an electron from lower to higher electric potential requires positive external energy, reversing the relevant potential-energy sign.
+- Charger-plug sparks are described as evidence of roughly3kV across1mm. Ordinary plugging arcs do not justify that inferred supply voltage; root was notified.
+- The chapter announces three mathematical expressions but supplies four.
+- Claims that any real charge has nonzero size, potential cannot be defined at all with changing magnetic fields, and capacitors do not store charge at all are stronger than the qualified physical descriptions warrant.
+- Equipotential crowding is used without always specifying equal potential intervals; source point-charge diagram uses equally spaced radii instead.
+- The two-positive-charge exercise asks for a path along their joining line from infinity to the midpoint without addressing passage through an ideal point charge.
+
+## Chapter 21
+
+- **Safety-sensitive contextual limitations:** source discusses a supposedly safe below36V threshold, touching one wire while insulated, current thresholds, grounding, and protective-device response times without comprehensive conditions. These are translated educational claims, not instructions or verified safety specifications. The source also explicitly prohibits battery shorting.
+- The pencil experiment recommends leaving its brightest/lowest-resistance setting powered for a minute and touching graphite; current, power, temperature, and cell limitations are not quantified.
+- Circuit diagram's bottom current arrow points from the negative-terminal side toward the bulb, opposite its prose conventional-current direction. Original geometry retained.
+- Two-loop worked example uses shared-current sum with opposite shared-resistor signs in its two loop equations; source supplies no diagram clarifying a physically consistent topology. Equations preserved.
+- Kettle estimate says500kJ corresponds to0.08kWh; it is about0.14kWh. Charging exercise's15Wh battery and roughly10Wh input mismatch cannot be resolved by losses, as its hint seems to suggest.
+- Limits section announces four boundaries but lists five.
+- Emf is called energy rather than energy per charge in one sentence, despite a preceding correct per-coulomb definition.
+- Current uniformity statements need the stated single-path/steady-state conditions; the final all-electrons-drift exercise describes charge accumulation as a conservation-law violation, though accumulation itself can conserve charge.
+- Free-electron rapid motion is described purely as thermal motion; metallic-electron quantum statistics and Fermi velocities are omitted.
+- The Earth--Moon thought experiment references Chapter28 for the speed-of-light limit, inconsistent with the book's later relativity chapter numbering.

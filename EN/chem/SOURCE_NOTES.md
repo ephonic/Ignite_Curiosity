@@ -200,6 +200,46 @@ These notes identify potential inconsistencies encountered while translating. Th
 - “回到那杯”: sea-ice melting is said not to change sea level, and land-ice entry is identified as the cause, omitting density/salinity nuance and thermal expansion.
 - Exercise 1 asks for only three neighbors but four hydrogen-bond “hands.” Exercise 3 applies a 4°C lake stratification picture to a flowing river without qualification. Chapter 28's entropy and Chapter 51's membrane references need cross-checking.
 
+## Chapter 24 — ch24.tex
+
+- “看得见的秩序”: wax/paraffin and plastics are grouped unqualified with noncrystalline glass; many are crystalline or semicrystalline/mixed. Snowflakes are categorically six-armed. Melting-point explanations treat every crystal particle as having identical surroundings, ignoring distinct sites, boundaries, and phase equilibrium.
+- **Food safety — source review needed:** White chocolate bloom is categorically declared not mold and safe to eat, repeated in an exercise. Fat/sugar bloom must not be confused with spoilage solely from appearance.
+- The salt calculation displays 6 × 10¹⁸ ions but spells 六十亿亿 (6 × 10¹⁷); both source magnitudes are preserved.
+- “四种排队方式”: the five-column crystal table likely needs English layout inspection. No column specifications or styles changed. The text categorically says no isolated SiO₂ molecule exists; the claim should be restricted to quartz/network solids.
+- “金刚石与石墨”: diamond is described as having no weak structural links, omitting cleavage; graphite's delocalized electron is described as not participating in layer bonding. Pencil graphite purity is overstated before later explaining added clay.
+- “玻璃”: room-temperature glass viscosity/flow over longer-than-universe times is categorical and composition-dependent; old-window installation and historical-lens examples should be checked. “科学家怎样知道” again says no microscope can resolve atomic scales.
+- “新材料” and “边界”: comparisons such as graphene hundreds of times stronger by equal weight, all ceramic behavior explained by bonding, one impurity atom changing an entire ingot's conductivity, and chips impossible without defects are simplified. The quasicrystal narrative says natural meteorites without clarifying the mineral/meteorite setting.
+- **Experiment safety:** Hot-water burn and alum non-ingestion warnings are preserved. General permission to drain-dispose alum solution is a source instruction and should be checked against local rules and amounts.
+
+## Chapter 25 — ch25.tex
+
+- **Health/safety — source review needed:** Opening and salt-recovery passages ask tasting; distinguish clean food preparation from laboratory solutions. Laser-pointer colloid testing lacks eye-safety instructions. Saline is described as exactly matching body-fluid osmotic pressure and universally preferred for dehydration; preserve as source teaching, not infusion advice. Raw-egg non-ingestion and eye-rinsing warnings remain.
+- The osmotic mechanism is reduced to solute blocking membrane-contact positions; chemical potential and solvent/membrane interactions require a more accurate explanation. Turning a U-tube upside down does not refute attraction, and gravity still affects hydrostatic equilibrium.
+- The history places van 't Hoff measurements around 1885 before attributing their explanation to Arrhenius's 1884 thesis, and mentions X-ray crystallography in the evidence leading toward a 1903 prize although crystallography followed in 1912. Debye–Hückel is presented as a concentrated-solution correction although its limiting law is dilute.
+- Colloid sizes/examples (milk globules, blood, clouds, viruses) and the blue-sky claim conflate colloidal scattering with molecular Rayleigh scattering. Exercise 5 cannot uniquely distinguish clear water from saltwater using only the stated light test.
+- The text says liquids have no free electrons and all solutions never settle/change; these are broad generalizations. “aq” denotes aqueous, not exclusively a hydrated ionic state.
+- The conclusion calls blood and cytoplasm simply solutions, after earlier classifying blood as a colloid. Cell membranes are assigned one-way water pumps, rather than distinguishing water channels from active solute transport. Marine/freshwater fish interchange is categorically fatal, omitting euryhaline species.
+- The road-salt challenge says no amount works below −10°C, conflating practical rate/effectiveness with the NaCl–water eutectic limit. The sand-grain comparison and default home reverse-osmosis claim are unverified generalizations.
+
+## Chapter 26 — ch26.tex
+
+- **Safety — source review needed:** Introductory demonstrations mention open concentrated hydrochloric acid, burning candles under sealed glass, and ignition of gram quantities of hydrogen/oxygen without consistently distinguishing demonstration-only from student activity. The household balloon experiment has quantities and flexibility, and explicitly prohibits more vigorous sealed experiments; those warnings remain.
+- The inflated-balloon weighing claim neglects buoyancy changes. Two spoonfuls (~5 g) bicarbonate are used to predict 1.4 L CO₂ from the soda alone despite only 50 mL vinegar, potentially acid-limited at common concentrations.
+- Lavoisier's sealed-vessel result is said to directly disprove phlogiston escape through a mass decrease, although retained phlogiston in a sealed system would need separate reasoning. The account dates established atom theory over a century after the 1770s, without distinguishing Dalton's early theory from later confirmation.
+- The rocket mixture is universally assigned stoichiometric hydrogen:oxygen mass ratio 1:8; actual engines often run fuel-rich. Yield rising 60% to 90% does give 50% more product but not generally half the waste.
+- **Health/safety — source review needed:** Drug dosing is explained primarily by particle stoichiometry, and the sodium-azide airbag example gives a specific legacy charge without current-design context. Translate as source explanatory examples, not medical dosing or airbag construction instructions.
+- The mass-conservation statement allows only boundary leaks or nuclear reactions if mass changes, omitting the tiny chemical mass–energy change noted earlier. State-symbol example implies hydrogen gas necessarily ignites without naming oxygen.
+
+## Chapter 27 — ch27.tex
+
+- **Health/safety — source review needed:** Drain-cleaner heating example, classroom barium-salt demonstration, hydrogen/oxygen “safe for years” language, and ammonium-nitrate experiment design require hazard/supervision review. Existing concentrated-acid teacher-only, acid-into-water, toxic-barium teacher-only, sealed-bubbling-mixture prohibition, and hot/cold-pack medical-use warnings are retained. The closing question literally suggests putting a hand inside a cold pack.
+- Product bonds are individually called stronger than reactant bonds, including H–O versus O=O, whereas total bond-number/energy accounting is what matters. Gas-phase per-mole energies are at points described as energies of two individual bonds.
+- The displayed word equation for net energy is long in English and may need root's wording/layout inspection without formula/style changes.
+- The biscuit calorie-label/bomb-calorimeter account equates gross combustion with metabolizable energy and identical biological endpoints, omitting digestibility, nitrogen products, and labeling calculations. A bomb calorimeter primarily measures constant-volume internal-energy change, requiring correction to enthalpy.
+- Standard enthalpy is assigned 1 atmosphere rather than the standard-pressure convention, and enthalpy existence is conflated with conditions under which heat equals ΔH. The Hess/caloric-history account is simplified.
+- The hand-warmer's two-hundred-plus kJ is said sufficient to bring two liters nearly to boiling, inconsistent with room-temperature starting water. Salt/water are described as slowing rust, though their acceleration relative to dry iron should be distinguished from controlled oxygen delivery.
+- Exercise 3 already mixes 100 g + 100 g = 200 g solution, then asks about changing to 200 g; the ambiguous comparison is retained. Cold packs are categorically assigned ammonium nitrate, although formulations vary.
+
 ## Verified safety reference supplied during translation
 
 - Chapter 4's fever alcohol-rub claim: root checked Poison Control's warning that rubbing alcohol is not a safe fever treatment, particularly for children. Reference: [Rubbing alcohol only looks like water](https://www.poison.org/articles/rubbing-alcohol-only-looks-like-water). Root owns any separately labeled translator safety notices in the English PDFs.

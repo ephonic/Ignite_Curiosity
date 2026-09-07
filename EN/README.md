@@ -1,13 +1,14 @@
 # Ignite Curiosity — English editions
 
 English translations of the four Chinese titles in this repository, with the
-same subject-directory structure. Translation and compilation are in progress;
-the complete English PDFs will be added after all chapters are translated and
-verified.
+same subject-directory structure. Mathematics is translated and its complete
+PDF is included. Translation and compilation of the other titles are in
+progress; each complete English PDF is added after that book is translated
+and verified.
 
 | Directory | English title | Chinese source |
 |---|---|---|
-| [`math/`](math/) | *Igniting the Mathematical Spark* | [`../math/`](../math/) |
+| [`math/`](math/) | *Igniting the Mathematical Spark* — [English PDF](math/Igniting_the_Mathematical_Spark.pdf) | [`../math/`](../math/) |
 | [`phy/`](phy/) | *Igniting the Physics Spark* | [`../phy/`](../phy/) |
 | [`chem/`](chem/) | *Igniting the Chemistry and Biology Spark* (three volumes) | [`../chem/`](../chem/) |
 | [`literal_arts/`](literal_arts/) | *Igniting the Liberal Arts Spark* (three volumes) | [`../literal_arts/`](../literal_arts/) |
@@ -19,6 +20,9 @@ visible labels and prose are translated into English.
 Oversized tables may be split across pages with repeated headers, as approved
 by the contributor; these pagination fixes preserve the original table styles
 and all rows and are documented in each affected subject's README.
+Language-specific examples are translated with pronunciation guides and English
+glosses. Where character shapes are the subject, explicitly allowlisted original
+glyphs remain as examples; this does not exempt surrounding prose from translation.
 
 ## Source edition and incremental updates
 

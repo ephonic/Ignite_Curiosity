@@ -75,7 +75,7 @@ On a plane, direction is an arrow, a vector. But where does an arrow on a sphere
 \end{center}
 
 \begin{dingyi}
-A surface's \textbf{tangent plane} at $P$ touches the surface there and contains all its directions at that point. A vector in this plane starting at $P$ is a \textbf{tangent vector} to the surface at $P$.
+A surface's \textbf{tangent plane} at $P$ touches the surface at $P$ and contains all its directions at that point. A vector in this plane starting at $P$ is a \textbf{tangent vector} to the surface at $P$.
 \end{dingyi}
 
 Tangent vectors solve a real difficulty: they make taking a small step in a particular direction precise. The step itself curves along the surface, but when infinitesimal it differs negligibly from a straight segment in the tangent plane: the error shrinks faster than the step length. This is the role of "differential": infinitesimally locally, a curved surface and its tangent plane are the same.
@@ -127,11 +127,11 @@ In particular, its angle sum exceeds $\pi$, or $180^\circ$, and the excess $A+B+
 \begin{proof}
 The proof has three steps, each visible in a diagram.
 
-\textbf{Step 1: Area of a lune.} Two intersecting great circles divide the sphere into four crescent-shaped regions called lunes. A lune of angle $A$ radians occupies the fraction $A/(2\pi)$ of the sphere: imagine slicing a watermelon by longitude through $2\pi$ radians and taking $A$ radians. Since the whole sphere has area $4\pi R^2$, the lune's area is
+\textbf{Step 1: Area of a lune.} Two intersecting great circles divide the sphere into four crescent-shaped regions called lunes. A lune of angle $A$ radians occupies the fraction $A/(2\pi)$ of the sphere: imagine slicing a watermelon by longitude through $2\pi$ radians and taking $A$ radians. Since the whole sphere has area $4\pi R^2$, the lune of angle $A$ has area
 \[ 4\pi R^2 \cdot \frac{A}{2\pi} = 2R^2 A. \]
 Check: at $A=\pi$, the lune is a hemisphere, and the formula gives the correct area $2\pi R^2$.
 
-\textbf{Step 2: Three pairs of lunes cover the sphere.} Let triangle $T$ have angles $A$, $B$, and $C$. The great circles containing its two sides at $A$ enclose a pair of opposite lunes of angle $A$, each with area $2R^2 A$. Likewise obtain pairs for $B$ and $C$. These six lunes cover the sphere with overlaps: $T$ is covered $3$ times, as is its congruent antipodal triangle, while every other point is covered exactly $1$ time.
+\textbf{Step 2: Three pairs of lunes cover the sphere.} Let triangle $T$ have angles $A$, $B$, and $C$. The great circles containing its two sides at $A$ enclose a pair of opposite lunes of angle $A$, each with area $2R^2 A$. Likewise obtain pairs for $B$ and $C$. These six lunes cover the sphere with overlaps: $T$ is covered $3$ times, and the congruent triangle antipodal to $T$ is also covered $3$ times, while every other point is covered exactly $1$ time.
 
 \textbf{Step 3: Write the equation.} The total area of the six lunes equals the sphere's area plus $4$ extra copies of $T$: $2$ extra copies of $T$ and $2$ of its antipodal partner:
 \[ 2\,(2R^2 A + 2R^2 B + 2R^2 C) = 4\pi R^2 + 4S. \]
@@ -202,12 +202,12 @@ The torus deserves more discussion. Its outside is sphere-like with positive cur
 \centering
 \begin{tabular}{llll}
 \toprule
-Surface & Triangle angle sum & Geodesics & Flattens without stretching? \\
+Surface & Triangle angle sum & Geodesics & \shortstack[l]{Flattens without\\stretching?} \\
 \midrule
 Plane & Exactly $180^\circ$ & Straight lines & Already flat \\
-Sphere & Above $180^\circ$; larger excess for larger triangles & Great-circle arcs & No: it splits \\
-Cylinder & Exactly $180^\circ$ & Straight when unrolled; possibly helices & Yes \\
-Saddle & Below $180^\circ$ & Outward-diverging curves & No: it wrinkles \\
+Sphere & \shortstack[l]{Above $180^\circ$; greater excess\\for larger triangles} & Great-circle arcs & No: it splits \\
+Cylinder & Exactly $180^\circ$ & \shortstack[l]{Straight when unrolled;\\possibly helices} & Yes \\
+Saddle & Below $180^\circ$ & \shortstack[l]{Outward-diverging\\curves} & No: it wrinkles \\
 \bottomrule
 \end{tabular}
 \end{table}

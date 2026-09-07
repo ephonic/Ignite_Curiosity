@@ -84,3 +84,57 @@ These notes record issues noticed while translating the Chinese mathematics chap
 - `math/latex/chapters/ch14.tex:37`: the multiplication principle needs the stated number of second-step choices to remain available for each first-step choice; the informal wording does not explicitly state this condition.
 - `math/latex/chapters/ch14.tex:161,165`: listing permutations is described as `O(n!)` without accounting for the cost of outputting n entries per permutation. The discussion also treats upper-bound notation as if it necessarily implied a lower bound or inherent infeasibility.
 - `math/latex/chapters/ch14.tex:165,175`: the descriptions of travelling-salesman and factoring algorithms as essentially enumeration are loose. Known exact travelling-salesman algorithms improve substantially on factorial enumeration, and classical factoring has subexponential methods. The unresolved P versus NP question concerns polynomial-time solution versus verification, not merely improvement over enumeration.
+
+## Chapter 15
+
+- `math/latex/chapters/ch15.tex:116,123`: the ratio is said never to turn back as it approaches one, although the displayed first two values increase from 1.15 to 1.16. Asymptotic convergence does not assert monotonicity.
+- `math/latex/chapters/ch15.tex:140`: the thousand-composite construction is called astronomically long; its location is astronomical, but its length is only one thousand integers.
+- `math/latex/chapters/ch15.tex:217,219`: counts of verified zeros and the Earth–Moon analogy are source-era illustrative claims, not independently updated measurements. The Riemann-hypothesis error bound concerns the logarithmic-integral approximation, not the coarser `x/log(x)` approximation discussed earlier.
+- `math/latex/chapters/ch15.tex:245`: the mean consecutive-prime gap below 100 is `(97-2)/24`, approximately 3.96, not 4.3.
+- `math/latex/chapters/ch15.tex:278`: the logarithm-of-product hint suppresses the minus sign in `-log(1-p^-s)`; the positive leading reciprocal term arises with that minus sign included.
+
+## Chapter 16
+
+- `math/latex/chapters/ch16.tex:29–40,55,83`: the seven-bridges drawing has degrees A=5, B=4, C=3, D=2, not the stated 5,3,3,3. Its two odd vertices allow an open Euler trail, contradicting the subsequent claim that this drawing has four odd vertices. The original TikZ edges and the original prose counts are both retained.
+- `math/latex/chapters/ch16.tex:69`: theorem item 2 allows a route that need not return but requires exactly two odd vertices. With that wording, zero odd vertices must also be allowed; exactly two is correct for distinct endpoints.
+- `math/latex/chapters/ch16.tex:99`: the letter classification is not a homeomorphism classification. A, D, O, P, Q, and R can share a loop count while differing in endpoints and branch points; E also differs from T and Y as a thin-line graph. Font conventions further affect these examples.
+- `math/latex/chapters/ch16.tex:135–149`: Euler-characteristic counts require suitable cell subdivisions, with disc-like faces; an arbitrary connected graph on a torus does not suffice. The formula `chi=2-2g` requires closed connected orientable surfaces. The planar proof counts bounded regions only, despite initially describing plane regions without clearly excluding the unbounded one.
+- `math/latex/chapters/ch16.tex:156`: cutting a Mobius strip along its centre produces a longer band with two full twists under the usual ribbon-twist convention, not the source's one full twist.
+- `math/latex/chapters/ch16.tex:7,9,45,47,83,99,110,154,168,170`: Markdown-style double asterisks appear literally in the LaTeX source. They are retained rather than converted into new styling commands.
+
+## Chapter 17
+
+- `math/latex/chapters/ch17.tex:99–103`: spherical sections must be normal sections through the centre to all be great circles. A cylinder's intrinsic geometry agrees locally, not globally in every measurement, with the plane.
+- `math/latex/chapters/ch17.tex:117`: the historical dating of the spherical triangle area formula to the early nineteenth century is too late; the formula is associated with Girard's seventeenth-century work.
+- `math/latex/chapters/ch17.tex:171`: a 3500-kilometre saving is not more than a Beijing–Urumqi round trip.
+- `math/latex/chapters/ch17.tex:199`: the intrinsically flat torus obtained by identifying rectangle sides is an abstract metric quotient; an ordinary smooth doughnut surface in three-dimensional space is not an isometric realisation of that flat metric.
+- `math/latex/chapters/ch17.tex:246–248`: with a 120-degree longitude difference, the triangle's angles are 120,90,90 degrees, not three equal angles as the hint claims.
+- `math/latex/chapters/ch17.tex:260–262`: the great-circle intersection claim needs the circles, and hence their defining planes, to be distinct.
+- `math/latex/chapters/ch17.tex:266–268`: the side–side–side challenge needs a convention for minor arcs and the chosen interior region. Standard nondegenerate minor-arc spherical triangles do obey side–side–side congruence.
+
+## Chapter 18
+
+- `math/latex/chapters/ch18.tex:17,52–56`: the birthday calculation assumes independent birthdays as well as uniformity. The frequency-based probability definition is intuitive rather than an axiomatic definition; a rigorous treatment distinguishes limits of random frequencies from the probability measure itself.
+- `math/latex/chapters/ch18.tex:85`: Bayes' formula also requires `P(A)>0`; the statement only specifies positive probabilities for the partition events.
+- `math/latex/chapters/ch18.tex:153`: with full marks 100 and failure below 60, half full marks and half failing cannot average exactly 80.
+- `math/latex/chapters/ch18.tex:151,158,171`: universal claims about negative player expectation, the equivalence of high risk with high expected returns, and nearly deterministic aggregate insurance payouts are simplified, conditional illustrations rather than unrestricted guarantees.
+- `math/latex/chapters/ch18.tex:176`: the central limit theorem is stated without centring/scaling, finite-variance or comparable hypotheses, or restrictions preventing one contribution from dominating. Independence alone does not imply normal convergence for arbitrary distributions.
+- `math/latex/chapters/ch18.tex:242`: blind pencil marks are not guaranteed to be uniform in the square, and rejecting marks outside the paper is not the same as rejecting marks outside the square. Pooling observations improves statistical precision under the model but need not improve each realised estimate.
+
+## Chapter 19
+
+- `math/latex/chapters/ch19.tex:13–15,55,264`: `2^68` is approximately 2.95e20, whereas the Chinese verbal number is three hundred-million squared, 3e16 (thirty quadrillion). Both the displayed bound and inconsistent verbal count are retained. The final claim of checking that many values in a blink is likewise unsupported. Verification bounds and record-prime descriptions are source-era claims, not updated records.
+- `math/latex/chapters/ch19.tex:25`: the prime list following `n=4,5,6,...` starts with the values for n=2 and n=3, misaligning inputs and outputs.
+- `math/latex/chapters/ch19.tex:37–39`: the Polya-conjecture history compresses the 1958 disproof and later identification of the least counterexample into one account.
+- `math/latex/chapters/ch19.tex:125–129`: incompleteness is described as having appeared earlier, but its full discussion is in the following chapter. The argument from completeness to a halting decider also needs effective axiomatisation and appropriate consistency/soundness conditions; completeness alone is insufficient.
+- `math/latex/chapters/ch19.tex:139,234`: the binary-search bounds omit rounding/final-comparison conventions. Finding a target among 16 positions can require a fifth equality comparison; four comparisons can identify it if the sole remaining candidate is inferred without checking. The later exercise gives the safer ceiling-plus-one bound.
+- `math/latex/chapters/ch19.tex:143–150`: P and NP formally classify decision problems with specified input encodings. The Sudoku illustration needs variable-size generalisation, and polynomial time is an asymptotic category, not an unconditional practical speed guarantee.
+- `math/latex/chapters/ch19.tex:179–183`: plotted growth curves are explicitly schematic; the final exponential coordinate is not a value of the preceding scaled exponential curve.
+
+## Chapter 20
+
+- `math/latex/chapters/ch20.tex:52`: enumerating positive fractions needs duplicate removal, then inclusion of zero and negative rationals, to establish the claimed bijection with all rationals. Those steps are implicit, not stated in the source.
+- `math/latex/chapters/ch20.tex:69–71,85`: the infinite decimal diagonal proof needs a digit convention avoiding alternative expansions such as trailing nines versus terminating decimals. Simply changing digits can produce a different expansion of the same real number; the finite five-digit experiment does not resolve that infinite issue.
+- `math/latex/chapters/ch20.tex:132`: the informal Godel argument moves directly from proving a false statement to inconsistency. General consistency is not the same as arithmetic soundness; the actual incompleteness argument uses the special provability encoding and appropriate formal hypotheses.
+- `math/latex/chapters/ch20.tex:135`: continuum-hypothesis independence from ZFC is conditional on consistency of the underlying theory. Calling it an instance of a specifically true-but-unprovable statement also suppresses questions of model and interpretation. The fifty-year chronology between Godel's coding and computer self-analysis is not a literal historical dating.
+- `math/latex/chapters/ch20.tex:202–204`: the least-time/least-action discussion is an introductory simplification. General variational principles concern stationary values and do not universally imply a minimum; arbitrary variational optimisation is not continuous greedy optimisation.

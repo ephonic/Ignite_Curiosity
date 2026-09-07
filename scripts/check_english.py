@@ -14,6 +14,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BOOKS = ("math", "phy", "chem", "literal_arts")
 HAN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
+# Explicit, source-present glyph examples are necessary when a chapter explains
+# character shapes. Only these exact boxed examples are exempt from the prose
+# translation check; they are NOT removed from structural/style comparison.
+HAN_EXAMPLES = {
+    "ch014.tex": ("日", "山", "妈", "女", "马", "铜", "钅", "同", "喷嚏", "嚏"),
+}
 ENVIRONMENT = re.compile(r"\\(begin|end)\{([^{}]+)\}")
 REFERENCE = re.compile(r"\\(label|ref|eqref|pageref|include|input)\{([^{}]+)\}")
 HEADING = re.compile(r"\\(chapter|section|subsection|subsubsection|part)(\*?)\s*[\[{]")
@@ -62,6 +68,13 @@ def without_comments(text):
     return re.sub(r"(?<!\\)%[^\n]*", "", text)
 
 
+def has_untranslated_han(text, source, allowed=()):
+    for example in allowed:
+        if example in source:
+            text = text.replace("\\mbox{" + example + "}", "")
+    return bool(HAN.search(text))
+
+
 def check_book(book, partial):
     source_dir = ROOT / book / "latex"
     target_dir = ROOT / "EN" / book / "latex"
@@ -85,7 +98,8 @@ def check_book(book, partial):
             continue
         if not english.strip():
             errors.append(f"{name}: empty translation")
-        if HAN.search(english):
+        allowed = tuple(example for examples in HAN_EXAMPLES.values() for example in examples) if book == "literal_arts" else ()
+        if has_untranslated_han(english, original, allowed):
             errors.append(f"{name}: contains untranslated Chinese; review any intentional quotations")
         for label, pattern in (
             ("environment sequence", ENVIRONMENT),

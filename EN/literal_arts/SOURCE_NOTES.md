@@ -141,6 +141,79 @@ script can split into comparison fragments.
   explanations. The nested-sentence examples preserve their nesting relation
   in readable English rather than mechanically copying Chinese word order.
 
+## Chapter 11
+
+- The source's analysis of “It's a little cold” labels several contextual
+  inferences as presuppositions; the distinction from pragmatic inference
+  merits specialist review. Its summary of Grice also overgeneralizes the
+  role of departing from conversational maxims.
+- The Chu Long account attributes a key sentence to the Queen Dowager and
+  claims he never subsequently mentions the hostage. Those details should
+  be checked against the primary text before treating the scene as literal
+  historical transcription.
+- Cultural speech-style examples are generalized illustrations, not universal
+  descriptions of Japanese, Javanese, British, American, or Chinese speakers.
+  The claim that AI cannot recognize implied hesitation is likewise the source's
+  broad claim, not independent testing of contemporary systems.
+
+## Chapter 12
+
+- The source repeatedly treats Chinese aspect marking as mandatory tense and
+  presents direction and evidential marking as compulsory in every utterance
+  of the languages discussed. These are overbroad teaching formulations;
+  the translation does not silently rewrite the linguistic argument.
+- The account of Whorf's Hopi claims, Malotki's response, basic color-term
+  universals, and the status or repeatability of later experimental effects
+  compresses contested research into a particularly decisive narrative. It
+  remains the source author's interpretation, not a new literature review.
+- The quoted Homeric expression is rendered as the source's literal gloss,
+  “wine-colored,” rather than importing a particular copyrighted translation.
+  The Book of Songs example retains `qing` with an English explanation so its
+  wider color range remains visible.
+- The snow-vocabulary discussion repeats a historical essay title and the
+  source's terminology; these are not intended as a preferred current name
+  for all distinct Arctic Indigenous peoples or languages.
+
+## Chapter 13
+
+- The source fixes Pompeii's eruption in August and compresses the development
+  of spoken Latin case endings and Romance languages into a simple chronology.
+  These historical details remain points for primary-source review.
+- The comparative-method discussion illustrates shared ancestry with Latin
+  and English; it should not be read as saying English descended from Latin.
+  The source's arrows among modern Romance examples are comparisons, not a
+  literal chain in which one modern language produced the next.
+- The description of earlier Chinese classifier usage, the claimed character
+  count of the Analects passage, and the location of the Lord's Prayer within
+  Matthew 6 are imprecise. English describes the passage as brief without
+  inventing an English-word equivalent to its source's character count.
+- The pidgin-to-creole narrative, claims about Latin and Hebrew being “dead,”
+  and numerical language-loss forecasts are simplified and sometimes overly
+  categorical. The source's later caveats about the bioprogram hypothesis are
+  retained in full; no demographic estimates have been newly updated.
+- Dated source examples (the 1983 letter, forty-year interval, 1985 pronunciation
+  review, and 1993 ration-coupon reference) are retained, not advanced to the
+  translation date. Etymologies and institutional roles remain review points.
+
+## Chapter 14
+
+- The source identifies Walter Ong as Canadian (he was American), calls the
+  Hammurabi stele basalt, and presents its legal provisions as applying equally
+  despite the code's status distinctions. These are source-review issues, not
+  silently revised historical claims.
+- The claim that one clay tablet cannot hold a letter contradicts the opening
+  complaint-letter example. Both passages remain represented in translation.
+- The account of writing's origins, the token hypothesis, alphabet ancestry,
+  kana as syllabic rather than more precisely moraic, and classification of
+  scripts into three levels are pedagogical simplifications. The book retains
+  its caveats about preservation bias and technological determinism.
+- Character-shape examples retain a small exact allowlist of source-present
+  Chinese glyphs with English glosses, including semantic/phonetic components.
+  They use the original CJK font, not a new style or image replacement.
+- The printing chronology, material costs, Nanni letter details, and global
+  literacy estimates remain source claims. The child “born literate” passage
+  is a metaphor, not a claim that literacy itself requires no learning.
+
 ## Pagination changes
 
 The contributor approved pagination fixes without changing table styles.

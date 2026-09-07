@@ -5,9 +5,11 @@
 English translation of the [Chinese mathematics edition](../../math/README.md).
 See [the English edition README](../README.md) for the source commit and update workflow.
 
-Translation is in progress. This directory is not yet a complete English
-edition, and no complete English PDF is being published. The partial checker
-below reports current chapter coverage as work advances.
+All 20 chapters and five appendices are translated.
+[Read the compiled English PDF](Igniting_the_Mathematical_Spark.pdf) (251 pages).
+It was built from the source snapshot recorded above with Tectonic 0.17.0;
+complete source coverage, references, and glyph checks pass. Representative
+pages, diagrams, contents, and the adjusted tables were visually reviewed.
 
 The English LaTeX sources retain the original document class, fonts, page
 geometry, packages, theorem environments, box styles, table column definitions,
@@ -21,8 +23,8 @@ Run the completeness check from the repository root before a release build:
 python3 scripts/check_english.py math
 ```
 
-This deliberately fails until every mathematics source is translated. To check
-only the existing translations during development:
+This requires all 26 mathematics LaTeX files. To check only existing
+translations during incremental development:
 
 ```sh
 python3 scripts/check_english.py math --partial
@@ -58,6 +60,11 @@ the labeled equation `y = 0.4x + 4`, and its leftmost point label overlaps the
 vertical-axis label. These are present in the Chinese TikZ source and have not
 been redesigned in the translation.
 See [source review notes](SOURCE_NOTES.md) for additional chapter-specific issues.
+
+Long English cells in the chapter 17 surface-comparison table and chapter 20
+six-lens table use explicit line breaks. All rows, column specifications,
+fonts, and rules remain unchanged. The final build retains only two sub-point
+contents-line overflow warnings; no content is clipped there.
 
 ## Disclaimer
 

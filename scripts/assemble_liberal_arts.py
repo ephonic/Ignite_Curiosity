@@ -48,7 +48,7 @@ def main():
         print(f"Extracted {len(fragments)} source fragments into {args.extract}")
         return 0
 
-    from check_english import ENVIRONMENT, HEADING, REFERENCE, HAN, STYLE, without_comments, normalize_pagination
+    from check_english import ENVIRONMENT, HEADING, REFERENCE, STYLE, without_comments, normalize_pagination, HAN_EXAMPLES, has_untranslated_han
 
     translated = []
     missing = []
@@ -65,7 +65,7 @@ def main():
         except ValueError as error:
             errors.append(f"{name}: {error}")
             continue
-        if not english_clean.strip() or HAN.search(english_clean):
+        if not english_clean.strip() or has_untranslated_han(english_clean, source_clean, HAN_EXAMPLES.get(name, ())):
             errors.append(f"{name}: empty or contains Chinese requiring translation/review")
         for pattern in (ENVIRONMENT, HEADING, REFERENCE, STYLE):
             if pattern.findall(source_clean) != pattern.findall(english_clean):
