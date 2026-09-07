@@ -1,4 +1,4 @@
-\chapter{Numbers and Letters: Turning Specific Problems into Portable Models}
+\chapter{Numbers and Symbols: Turning Specific Problems into Portable Models}
 
 \section{A Hundred-Yuan Shopping List}
 
@@ -14,7 +14,7 @@ Start with a guess. Ten notebooks cost sixty yuan, leaving forty yuan for exactl
 
 This question can leave you stuck. Unlike ``How much do $10$ notebooks and $10$ pens cost?'', it cannot be answered with a single calculation. You have to find \emph{all} the answers and explain why none are missing. Calling out a number on instinct is not enough. You say there are $8$ ways; your classmate says $9$. Who is right? How do you decide?
 
-That is where this chapter begins. We will start by patiently trying arithmetic and see how the work gets out of hand. Then we will introduce our main characters---\emph{letters}---and turn ``each individual problem'' into ``a whole class of problems.'' Finally, you will have a small model that solves more than this shop's problem. You can carry it, unchanged, into taxi fares, mobile phone plans, mixing drinks, dividing New Year gift money, and many other situations that seem unrelated.
+That is where this chapter begins. We will start by patiently trying arithmetic and see how the work gets out of hand. Then we will introduce our main characters---\emph{algebraic symbols}---and turn ``each individual problem'' into ``a whole class of problems.'' Finally, you will have a small model that solves more than this shop's problem. You can carry it, unchanged, into taxi fares, mobile phone plans, mixing drinks, dividing New Year gift money, and many other situations that seem unrelated.
 
 \section{The Arithmetic Approach: When Trying Every Case Gets Out of Hand}
 
@@ -51,7 +51,7 @@ Take a sheet of paper and repeat the enumeration above with a budget of $120$ yu
 
 \section{A Quick Roll Call: The Numbers We Already Know}
 
-Before bringing letters onstage, let's greet some old friends. From this chapter onward, they will often appear together in the same expression.
+Before bringing algebraic symbols onstage, let's greet some old friends. From this chapter onward, they will often appear together in the same expression.
 
 The \emph{natural numbers} $0,1,2,3,\dots$ are the counting numbers. Counting notebooks or sharing sweets belongs to their territory. The \emph{integers} add the negative numbers $-1,-2,-3,\dots$, which describe quantities in the ``opposite direction'': three degrees below zero, a debt of five yuan, the second basement floor in a lift. Place the integers on a straight line and you get our familiar number line:
 
@@ -71,9 +71,9 @@ Each kind of number has its own character. Division can take you outside the nat
 
 Why this roll call? Because whenever we write an expression, we must first decide which numbers its quantities are allowed to take. Numbers of stationery items must be natural numbers; temperatures can be integers or fractions; discounts are percentages. \emph{The world of numbers a problem lives in often determines whether it has a solution and how many solutions it has.} If buying ``$3.5$ notebooks'' were allowed, the hundred-yuan problem would suddenly have endlessly many possibilities---but the shop does not sell half a notebook. We will use this point again shortly.
 
-\section{Naming What We Don't Know: Letters and Algebraic Expressions}
+\section{Naming What We Don't Know: Symbols and Algebraic Expressions}
 
-Return to the hundred-yuan list. Each step in our enumeration did the same thing: suppose we buy some number of notebooks, calculate, and then adjust. Long ago, mathematicians realized that instead of repeatedly writing ``suppose we buy some number,'' we could give this as-yet-unknown number a temporary name: a letter.
+Return to the hundred-yuan list. Each step in our enumeration did the same thing: suppose we buy some number of notebooks, calculate, and then adjust. Long ago, mathematicians realized that instead of repeatedly writing ``suppose we buy some number,'' we could give this as-yet-unknown number a temporary name: a symbol, usually written as a letter.
 
 Call the number of notebooks $x$ and the number of gel pens $y$. The money spent is
 \[
@@ -86,19 +86,19 @@ and the requirement to spend exactly one hundred yuan becomes
 
 Pause to look at this line. It accomplishes our first major step: \emph{that entire table and all those divisions have been compressed into one line}. The line makes no particular guess about how many notebooks to buy. It speaks about every possible purchase at once. Has the budget become a hundred and twenty yuan? No need to rethink the problem; replace the right-hand side with $120$: $6x+4y=120$. Have the unit prices changed? Replace $6$ and $4$. The expression's skeleton stays exactly the same.
 
-An expression such as $6x+4y$, made from numbers, letters, and operation symbols, is called an \emph{algebraic expression}.
+An expression such as $6x+4y$, made from numbers, symbols representing numbers, and operation symbols, is called an \emph{algebraic expression}.
 
 \begin{shuyu}{Algebraic Expression}
-\textbf{Intuitive explanation}: The skeleton left when you replace the changing parts of an arithmetic problem with letters.\\
-\textbf{Formal definition}: An expression joining numbers and letters that represent numbers through operations such as addition, subtraction, multiplication, division, and powers.\\
+\textbf{Intuitive explanation}: The skeleton left when you replace the changing parts of an arithmetic problem with symbols.\\
+\textbf{Formal definition}: An expression joining numbers and symbols that represent numbers through operations such as addition, subtraction, multiplication, division, and powers.\\
 \textbf{An example}: With notebooks at $6$ yuan each and pens at $4$ yuan each, the total cost of $x$ notebooks and $y$ pens is the algebraic expression $6x+4y$. Set $x=10$ and $y=10$, and it becomes the ordinary arithmetic calculation $6\times10+4\times10=100$.
 \end{shuyu}
 
-A letter's first role here is an \emph{unknown}: a particular number whose value we do not yet know and must uncover using the conditions. In $6x+4y=100$, $x$ and $y$ are two unknowns. The shop's restriction that ``$x,y$ are both positive integers''---remember how the world of numbers matters---will help narrow the answers to a finite set.
+A symbol's first role here is to represent an \emph{unknown}: a particular number whose value we do not yet know and must uncover using the conditions. In $6x+4y=100$, $x$ and $y$ are two unknowns. The shop's restriction that ``$x,y$ are both positive integers''---remember how the world of numbers matters---will help narrow the answers to a finite set.
 
 Do not underestimate the step of giving something a name. Mathematicians worked toward it for over a thousand years. Early mathematical texts had no symbolic notation; a problem occupied a whole paragraph of everyday language: ``There is a quantity. Take three times that quantity and add two. The result is fifty. What is the quantity?'' Before calculating, the reader had to decipher the prose. Mathematicians in different places invented their own abbreviations and marks, could not read one another's ``codes,'' and circulated many arguments about which notation was more convenient. Only as letter notation gradually became standardized could the same problem be compressed into the seven symbols $3x+2=50$. The triumph of notation was not about saving ink. Once all the conditions live in an expression, reasoning can operate directly on that expression without relying on a mental ledger. Every transformation, solution, and generalization later in this chapter benefits from that triumph.
 
-Writing conditions with letters has another immediate benefit: we can \emph{reason} directly with expressions instead of repeatedly counting money. Consider why an odd number of notebooks is impossible. The expression $6x+4y$ is always even: $6x$ is even, $4y$ is even, and their sum is even. Since $100$ is also even, parity alone gives no contradiction. But the remainder when $6x$ is divided by $4$ depends on $x$. For odd $x$, $6x$ takes values such as $6,18,30$, each a multiple of $4$ plus $2$. Adding $4y$ leaves remainder $2$, whereas $100$ leaves remainder $0$: a contradiction. Thus $x$ must be even. A short argument replaces the eight crossed-out attempts in the table.
+Writing conditions with symbols has another immediate benefit: we can \emph{reason} directly with expressions instead of repeatedly counting money. Consider why an odd number of notebooks is impossible. The expression $6x+4y$ is always even: $6x$ is even, $4y$ is even, and their sum is even. Since $100$ is also even, parity alone gives no contradiction. But the remainder when $6x$ is divided by $4$ depends on $x$. For odd $x$, $6x$ takes values such as $6,18,30$, each a multiple of $4$ plus $2$. Adding $4y$ leaves remainder $2$, whereas $100$ leaves remainder $0$: a contradiction. Thus $x$ must be even. A short argument replaces the eight crossed-out attempts in the table.
 
 \section{The Rules of the Balance: Transforming Equations and Finding a Unique Solution}
 
@@ -168,16 +168,16 @@ Why? One look at the number line explains it. $2<3$ means $2$ lies to the left o
 \begin{fanli}
 Alert one: ``Multiplying both sides of an inequality by the same number preserves its direction.'' Wrong. Try multiplying by $-1$. Starting with $5<7$, it would be absurd to conclude $-5<-7$; the correct result is $-5>-7$. Only a \emph{positive} multiplier preserves direction. A negative multiplier reverses it, and multiplying by zero turns both sides into $0$, making the strict inequality collapse.
 
-Alert two: ``A letter represents a hidden unknown and becomes useless once you solve for it.'' Also wrong. In $6x+4y=100$, $x,y$ can take $8$ different pairs of values; the letters represent all the candidates. In the next section, you will see letters stand for any natural number. Thinking of a letter only as one concealed number misses much of its power.
+Alert two: ``An algebraic symbol represents a hidden unknown and becomes useless once you solve for it.'' Also wrong. In $6x+4y=100$, $x,y$ can take $8$ different pairs of values; the symbols represent all the candidates. In the next section, you will see symbols stand for any natural number. Thinking of a symbol only as one concealed number misses much of its power.
 \end{fanli}
 
 Inequalities and equalities often work together. Return to the three-item problem: notebooks at $6$ yuan, pens at $4$ yuan, stickers at $2$ yuan, buying all three kinds and spending exactly one hundred yuan. If we buy $z$ stickers, the first two quantities must satisfy $6x+4y=100-2z$, with $x\geq1$ and $y\geq1$. Those inequalities limit $z$: $100-2z$ must cover at least one notebook and one pen, so $100-2z\geq10$, giving $z\leq45$; also $z\geq1$. Thus $z$ ranges only from $1$ to $45$. For each $z$, solve a two-unknown problem we already understand. Inequalities have trimmed a daunting three-unknown enumeration into a bounded task we can handle in batches.
 
-\section{Another Job for Letters: Representing a Whole Class of Numbers}
+\section{Another Job for Symbols: Representing a Whole Class of Numbers}
 
-So far, letters have stood for particular numbers that are not yet known. But they have a second, perhaps more important job: speaking about \emph{all} numbers at once.
+So far, symbols have stood for particular numbers that are not yet known. But they have a second, perhaps more important job: speaking about \emph{all} numbers at once.
 
-Consider an old pattern. What is the sum of the natural numbers from $1$ to $100$? Brute force requires $99$ additions. Legend says that the young Gauss answered $5050$ within seconds in class. The story's details may have been embellished, but its underlying idea is sound, and letters express it in a single sentence.
+Consider an old pattern. What is the sum of the natural numbers from $1$ to $100$? Brute force requires $99$ additions. Legend says that the young Gauss answered $5050$ within seconds in class. The story's details may have been embellished, but its underlying idea is sound, and symbols express it in a single sentence.
 
 \begin{dingli}[The Sum of Consecutive Natural Numbers]
 For every positive integer $n$,
@@ -201,7 +201,7 @@ Each vertical pair sums to $n+1$: first $1+n$, then $2+(n-1)$, and so on, ending
 and dividing both sides by $2$ using the balance principle gives the result. This completes the proof.
 \end{proof}
 
-Substitute $n=100$: $\dfrac{100\times101}{2}=5050$, just as in the legend. But the theorem says much more than how to add from $1$ to $100$. It works when $n$ is $7$, $1000$, or $1000000$. \emph{One letter, $n$, combines infinitely many addition problems into one.} That is a letter's second job: representing any member of an entire class of numbers, rather than one unknown.
+Substitute $n=100$: $\dfrac{100\times101}{2}=5050$, just as in the legend. But the theorem says much more than how to add from $1$ to $100$. It works when $n$ is $7$, $1000$, or $1000000$. \emph{One symbol, $n$, combines infinitely many addition problems into one.} That is a symbol's second job: representing any member of an entire class of numbers, rather than one unknown.
 
 The formula also has a geometric face. Picture $1+2+\cdots+n$ as an arrangement of dots: $1$ in the first row, $2$ in the second, and so on to $n$ in the last, forming a triangle. Take two identical dot triangles and turn one over. Together they form a rectangle with $n$ rows and $n+1$ columns:
 
@@ -234,7 +234,7 @@ Distinguishing these three roles is a key step from solving one problem to build
 
 \section{A Different Perspective: Models Can Travel}
 
-Looking back, this chapter has done one thing: translate a specific problem into a model made of letters, equalities, and inequalities. The same model repeatedly appears in very different settings. This is what makes algebra so rewarding.
+Looking back, this chapter has done one thing: translate a specific problem into a model made of symbols, equalities, and inequalities. The same model repeatedly appears in very different settings. This is what makes algebra so rewarding.
 
 A taxi fare: the initial charge is $10$ yuan, followed by $2$ yuan per kilometre. For a journey of $x$ kilometres, with $x\geq3$ and the first $3$ kilometres covered by the initial charge, the fare is $2(x-3)+10$, or $2x+4$ yuan. With only $30$ yuan, how far can you go? Solve $2x+4\leq30$ to get $x\leq13$. A mobile phone plan: a monthly fee of $19$ yuan includes $10$ GB of data, with additional data charged at $3$ yuan per GB. With a monthly spending limit of $50$ yuan, how much data can you use? Let the extra amount be $x$ GB. Then $19+3x\leq50$, giving $x\leq\frac{31}{3}$, or at most $10$ whole extra GB. Mixing a drink: concentrate and water are mixed in the ratio $1:5$. How much concentrate makes $1.2$ litres? If the concentrate is $x$ litres, then $x+5x=1.2$, so $x=0.2$ litres.
 
@@ -243,7 +243,7 @@ See the common thread? Strip away the details of fares, data, and drinks, and ea
 Here is the sentence this chapter most wants you to take away: \emph{algebra is not about calculating one problem faster; it is about solving many similar problems at once}. Enumeration grows with the size of the problem: double the budget and the table doubles. The effort of building a model is spent once; each new problem becomes a routine matter of changing parameters and solving an equation. Arithmetic asks for this problem's answer. Algebra asks what the answers to a whole class of problems look like. Moving from one case to a class is exactly what ``portable'' means in this chapter's title.
 
 \begin{lianjie}
-This ability to translate is one of the modern world's fundamental technologies. Navigation software turns a road network into constraints between variables and solves an enormous ``how do I arrive fastest?'' problem. Online shopping systems turn stock levels, coupons, and discount rules into hundreds or thousands of expressions like $6x+4y\leq100$, automatically deciding whether an order can go through and what to charge. Every variable you declare in a program is an electronic incarnation of this chapter's letters. Each later chapter adds another language to this translator: Chapter 2 adds change, Chapters 3 and 4 add shape, and later come randomness and infinity.
+This ability to translate is one of the modern world's fundamental technologies. Navigation software turns a road network into constraints between variables and solves an enormous ``how do I arrive fastest?'' problem. Online shopping systems turn stock levels, coupons, and discount rules into hundreds or thousands of expressions like $6x+4y\leq100$, automatically deciding whether an order can go through and what to charge. Every variable you declare in a program is an electronic incarnation of this chapter's algebraic symbols. Each later chapter adds another language to this translator: Chapter 2 adds change, Chapters 3 and 4 add shape, and later come randomness and infinity.
 \end{lianjie}
 
 We should also state a model's boundaries honestly. Compressing a taxi journey into $2x+4$ ignores traffic and detours. Comparing discounts through $x-25$ and $0.75x$ assumes you really will spend at least one hundred yuan. \emph{A model translates reality, and every translation involves choices.} A good model captures the main structure and omits irrelevant details. Judging those choices is a shared task for modelers and mathematicians. Chapters 2 and 18 will revisit it.
@@ -255,7 +255,7 @@ Every thread in this chapter leads to a larger world. Equations whose unknowns m
 \begin{toolbox}
 Keep the new tools from this chapter:
 \begin{itemize}
-\item \textbf{Introduce letters}: Name an unknown number or an arbitrary member of a class of numbers. This is the first step in modeling.
+\item \textbf{Introduce symbols}: Name an unknown number or an arbitrary member of a class of numbers. This is the first step in modeling.
 \item \textbf{Algebraic expressions}: Isolate what changes and retain a reusable skeleton, such as $6x+4y$.
 \item \textbf{The balance principle}: Adding, subtracting, multiplying, or dividing equally on both sides preserves equality, provided the divisor is nonzero. This underlies equation solving.
 \item \textbf{Transforming inequalities}: Reverse the sign when multiplying or dividing by a negative number. Equalities describe exact matches; inequalities describe ranges. They often work together.

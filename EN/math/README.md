@@ -48,6 +48,12 @@ review. Build previews are development artifacts, not finished books.
 
 ## Editorial notes
 
+Throughout the book, “symbols” is used for algebraic notation, and “variables”
+where that is the more precise term. “Letters” is retained when the text discusses
+alphabetic characters themselves, such as Greek-letter names, the history of
+letter notation, and the topology of printed capitals. Chapter 1 is titled
+“Numbers and Symbols.” This terminology review changes no formulas or styles.
+
 The Chinese text in chapter 2 calls the completing-square term “half the square”
 of the linear coefficient, while its displayed formula correctly uses the square
 of half the coefficient. The English prose follows the existing formula.
