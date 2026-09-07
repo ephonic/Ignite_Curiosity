@@ -19,6 +19,8 @@ HAN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 # translation check; they are NOT removed from structural/style comparison.
 HAN_EXAMPLES = {
     "ch014.tex": ("日", "山", "妈", "女", "马", "铜", "钅", "同", "喷嚏", "嚏"),
+    "ch032.tex": ("卜",),
+    "ch036.tex": ("習", "羽"),
 }
 ENVIRONMENT = re.compile(r"\\(begin|end)\{([^{}]+)\}")
 REFERENCE = re.compile(r"\\(label|ref|eqref|pageref|include|input)\{([^{}]+)\}")
@@ -44,6 +46,13 @@ PAGINATION_BLOCKS = {
         "\\bottomrule\n\\end{tabularx}\n\n"
         "\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
         "Tool & First use & Main use \\\\\n\\midrule\n"
+    ),
+    "empire-comparison": (
+        "\\bottomrule\n\\end{tabularx}\n\n"
+        "\\begin{tabularx}{\\linewidth}{llllX}\n\\toprule\n"
+        "Empire & Money & \\shortstack[l]{Appoint-\\\\ments} & "
+        "\\shortstack[l]{Routes and\\\\language} & Approach to difference \\\\\n"
+        "\\midrule\n"
     ),
 }
 PAGINATION = re.compile(

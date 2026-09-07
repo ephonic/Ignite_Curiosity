@@ -214,13 +214,103 @@ script can split into comparison fragments.
   literacy estimates remain source claims. The child “born literate” passage
   is a metaphor, not a claim that literacy itself requires no learning.
 
+## Chapter 15 — Translation
+
+- The translation-hall scene is a reconstruction. Attribution of the first
+  Chinese forms of prajna and bodhisattva to Xuanzang, the derivation of the
+  “five cases of non-translation”, and broad claims about Buddhist vocabulary
+  require historical qualification. The source's claims remain represented.
+- The Diamond Sutra comparison treats six versus nine images as simply three
+  deletions, although its lists also substitute “shadow”. It assumes identical
+  Sanskrit originals and simplifies the histories of the two Chinese versions.
+- Accounts of the Baghdad translation movement, Luther, Japanese coinages,
+  Lin Shu, diplomatic interpreting incidents, and the intoxicado medical case
+  are source narratives, not independently verified case histories.
+- Chinese wordplay and names are romanised with English meanings; the pun on
+  qing (clear weather/affection) is explicitly explained. The source's categorical
+  claims about machine translation, puns, and five-layer perfection are retained
+  as its argument, not a current capability assessment.
+
+## Chapter 16 — Language Standards
+
+- The Welsh classroom is explicitly a reconstruction, not a transcript about
+  an identified child. Broader claims about Welsh Not, French schools, Chinese
+  classrooms, and Japanese accents retain the source's generalisations.
+- The source links literacy, dictionaries, and printing categorically to
+  standardisation and attributes Turkish literacy gains broadly to script
+  reform. These causal claims need qualification.
+- The gloss of African American English habitual be as continuous work is
+  imprecise. Labov's r is described as word-final despite fourth's internal r;
+  store-specific findings and the claimed middle-store overtaking also need
+  review. The English retains the source claims rather than silently revising
+  their analysis.
+- Naming-taboo anecdotes, the chronology of Ms and sexual harassment, and
+  categorical machine-accent/dialect-loss claims require qualification.
+  The unusual online label “fifty steps” is retained from the source, not
+  silently replaced by a different political label.
+
+## Chapter 17 — Oral Tradition
+
+- The text first describes speech as tens of thousands of years old, then
+  refers to hundreds of thousands of pre-writing generations. Both magnitudes
+  are retained, despite their inconsistency.
+- Parry/Lord's coffeehouse is a reconstructed scene. The source conflates
+  recording wires and aluminium discs and situates the singer's setting around
+  present-day Bosnia; equipment and geographical details need checking.
+- The Homeric poems' eighth-century written fixation is stated categorically
+  before the chapter acknowledges uncertainty about fixation. Claims about
+  textual immutability, formulaic composition never failing, Grimm revision,
+  and near-universal modern literacy are source generalisations.
+- Oral-literary excerpts are translated fully with their repeated patterns.
+  Solar-term mnemonics and Chinese catchphrases receive English explanations
+  because their sound/abbreviation mechanism cannot be carried over intact.
+- The claims that legends are ordinary people's only history, that Mali left
+  no written national history, and that writing is unafraid of floods require
+  qualification; the latter remains the source's rhetorical contrast.
+
+## Chapter 18 — Narrative Structure
+
+- The Mulan section's heading says twelve omitted years, the prose says ten,
+  and its two five-character lines are called fourteen characters. The opening
+  four lines do not themselves state all circumstances attributed to them.
+  All these source mismatches remain visible in translation.
+- The fixed-material genre experiment actually adds characters, incidents,
+  and objects in its variants. The assertion that only narration changes is
+  therefore inconsistent with its own examples.
+- The Odyssey chronology conflates the seven years with Calypso and the total
+  ten-year return. Generalisations about Propp's functions, genre mechanisms,
+  story templates, and chatbot capacities are retained as source arguments.
+- Story excerpts are rendered in English; character-count claims remain claims
+  about the Chinese wording, not counts of English words.
+
+## Chapter 19 — Voice and Viewpoint
+
+- The basketball incident is a constructed teaching example. Its initial
+  “nobody lies” premise and later role-based versions illustrate selection,
+  not independent witness verification.
+- Free indirect discourse is listed alongside grammatical persons although
+  it is a discourse technique. The discussion sometimes collapses distinctions
+  between narrator, implied author, and actual author; these simplifications
+  are retained for separate editorial review.
+- The source calls Diary of a Madman the first vernacular Chinese story without
+  adequately qualifying “modern”, treats its narrator's truth metaphorically,
+  and generalises about censorship, historical silence, and griot patronage.
+- In a Grove is paraphrased rather than treated as a verified case. The source's
+  summaries simplify contradictory testimony and assert hard facts about a
+  blade despite the story's uncertainty. The Odyssey framing also compresses
+  the chronology of the homecoming and banquet narration.
+- Source distinctions between author/narrator/character and all quoted literary
+  passages are retained; this is not a comprehensive narratology revision.
+
 ## Pagination changes
 
 The contributor approved pagination fixes without changing table styles.
-Two back-matter tables are split at row boundaries with repeated headers:
+Tables are split at row boundaries with repeated headers:
 
 - `latex/fragments/front004.tex`: ten recurring objects, split after the poem.
 - `latex/fragments/front005.tex`: thinking tools, split after close reading.
+- `latex/fragments/ch034.tex`: five empires, split after Assyria (three rows
+  followed by two). Long cells use explicit line breaks with all wording kept.
 
-All original rows remain, with the same `llX` column specification and booktabs
-rules. The exact added boundaries are allowlisted in the structural checker.
+All original rows remain, with the same `llX` or `llllX` column specifications
+and booktabs rules. Exact added boundaries are allowlisted in the checker.

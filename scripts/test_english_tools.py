@@ -29,6 +29,12 @@ class StructureTests(unittest.TestCase):
         self.assertEqual(sum(name.startswith("ch") for name, _ in fragments), 114)
 
     def test_only_exact_pagination_block_is_allowed(self):
+        for name, content in check_english.PAGINATION_BLOCKS.items():
+            with self.subTest(name=name):
+                block = f"% EN-PAGINATION-BEGIN {name}\n{content}% EN-PAGINATION-END {name}\n"
+                self.assertEqual(check_english.normalize_pagination(block), "")
+                with self.assertRaises(ValueError):
+                    check_english.normalize_pagination(block.replace("\\toprule", "\\hline"))
         name = "thinking-tools"
         content = check_english.PAGINATION_BLOCKS[name]
         block = f"% EN-PAGINATION-BEGIN {name}\n{content}% EN-PAGINATION-END {name}\n"

@@ -39,6 +39,9 @@ are retained rather than silently revised.
 
 Chapter 4 also includes a fever-treatment claim involving alcohol rubbing.
 That passage is a source claim, not medical guidance from this translation.
+Contributor-approved “Translator safety note” paragraphs now warn against this
+and other hazardous source advice beside the relevant passages. They cite safety
+guidance while leaving the original translated claims visible and styles intact.
 The edition's experiments and health-related statements require independent
 safety review; do not use this book as a medical or laboratory safety manual.
 Read the translated safety front matter before considering any activity.

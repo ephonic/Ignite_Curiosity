@@ -1,0 +1,262 @@
+% Chapter 24: Maxwell Unifies Electricity and Magnetism
+\chapter{Maxwell Unifies Electricity and Magnetism}
+
+\step{A Counterintuitive Opening}
+
+You come home at night, flip a switch, and your desk lamp lights up. Here is an almost unnecessarily simple question: along what route does energy travel from the outlet, ultimately from a power station hundreds of kilometers away, to the filament?
+
+Almost everyone answers: along the wire. Current flows inside a wire like water inside a pipe, so naturally energy travels inside it too. The answer seems beyond doubt. You can touch the wire and see it connecting switch and bulb; cut it, and the light goes out.
+
+Consider something equally familiar. At noon in summer, sunlight heats your skin. Between Sun and Earth lie a hundred and fifty million kilometers of nearly empty space, without wires or material conduits, yet energy arrives continuously. The solar power reaching the whole Earth is thousands of times greater than the combined output of all human power stations. Radios and phones are similar: no wire connects an antenna to the broadcasting station, yet programs arrive.
+
+Put the two together and a question emerges: where there is no wire, how does energy cross a vacuum? And where there is a wire, does energy really travel inside it?
+
+This chapter gives an answer that makes many people uncomfortable. Even in an ordinary desk-lamp circuit, energy flows \textbf{not} inside the wire but into the bulb through the surrounding space. The wire resembles railway tracks: it specifies the route without carrying the cargo. Supporting this answer is Maxwell's unification in the 1860s: electricity and magnetism are not two loosely related subjects, but two aspects of one object, the \textbf{electromagnetic field}.
+
+\step{Make a Guess First}
+
+Before continuing, write your guesses for three questions. We will return to them afterward.
+
+First: how does energy get from the source to a desk lamp's filament? (a) Electrons act as porters, carrying packets of energy through the wire. (b) Energy rushes through the wire's interior as some kind of wave. (c) Energy travels through space outside the wire, which merely guides it.
+
+Second: how are electrical and magnetic phenomena related? (a) They are independent phenomena that interact in certain circumstances. (b) They are two aspects of the same thing.
+
+Third: can a changing electric field produce a magnetic field, as a current can? Before 1860, all known experiments recognized only magnets and currents as magnetic-field sources. Does your intuition say yes or no? Notice that no direct experimental evidence then answered this question; reasoning alone had to do it.
+
+Consider the historical situation. Ørsted discovered current deflecting a magnetic needle in 1820; Faraday discovered changing magnetic fields producing current in 1831. Over the next thirty years, electricity and magnetism each grew into a flourishing subject: Coulomb's law, Ampère's circuital law, and Faraday's induction law all worked well. When Maxwell began in the 1860s, his raw materials were those individually valid laws plus a tiny crack most people had missed. Remember your answers, especially the third.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Hear Electricity Sneeze on a Radio]
+Materials: a radio receiving medium-wave AM, whether an old radio or a speaker with a tuner; a flashlight or small fan with a switch; and, if available, a piezoelectric lighter, which works even better.
+
+First tune the radio to a medium-wave frequency with no station and turn up the volume. You should hear faint static.
+
+Second place it on a table and repeatedly switch the flashlight or fan on and off within half a meter. Listen closely: at the \textbf{instant} of each switch action, the radio clicks. While the device remains on, it is quiet.
+
+Third try the lighter beside the radio. Each ignition produces a much clearer click: the electric spark is speaking.
+
+Fourth move the lighter gradually farther away and listen to the change. Then try FM: the sound is much weaker or absent.
+
+Safety note: use only small, low-power objects at hand. Do not dismantle outlets or make sparks with mains electricity.
+\end{experiment}
+
+Pause over what is strange: there is \textbf{no connecting wire} between lighter and radio. At switch-on, current jumps from zero to some value, and the radio somehow learns about it across space. The messenger crosses the air and, experimentally, seems to need no medium at all.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not approach transmission lines or raise a tube or any object toward them to reproduce this observation. Electrical contact and arcing can be fatal. See \href{https://www.osha.gov/etools/poultry-processing/plant-wide-hazards/electrical-hazards}{OSHA electrical-hazard guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+There are many similar everyday experiences. Speakers near a phone often buzz seconds before an incoming call. An old fluorescent tube held beneath high-voltage transmission lines can glow faintly at night, with neither end connected: the electric field in space pushes its charges. While a microwave oven heats food, WiFi operating in the same \(2.4\)-gigahertz band often slows noticeably: the door mesh does not stop that small escaping electromagnetic disturbance, and the router hears it. All these phenomena share one premise: space itself can carry electrical and magnetic effects, without wires.
+
+Keep three observations for later: clicks occur at the \textbf{instant} of switching, not throughout operation; they weaken with distance; and FM nearly eliminates them.
+
+\step{The Old Model Runs into Trouble}
+
+Take inventory. Electromagnetism now has four cornerstones:
+
+Charges produce electric fields (Chapter 19). Gauss's law expresses the overall account: the electric field's net outward passage through a closed surface depends on its enclosed net charge. Magnetic fields have no magnetic charges as sources, and their lines always close (Chapter 22). Current produces a field around a wire; Ampère's law says its circulation around a closed loop is proportional to current through a surface bounded by that loop. Changing magnetic fields produce circulating electric fields, with Faraday's law supplying another overall account (Chapter 23).
+
+Each law has survived extensive testing. The trouble comes when we assemble them.
+
+\textbf{First trouble: a capacitor exposes a hole in Ampère's law.} Consider a charging capacitor, with current \(I\) flowing along a wire toward a plate. Draw a circular loop \(L\) around the wire. Ampère's law says the magnetic circulation around \(L\) equals \(\mu_0\) times the current through \textbf{any} surface bounded by \(L\). A flat circular surface intersects the wire, giving current \(I\), with no problem. But the law says any surface, so choose a bowl-shaped surface bulging rightward and passing between the capacitor plates. The gap is insulating, and \textbf{no charge crosses this bowl surface}, so its current is zero. One loop, one magnetic field, but two surfaces give contradictory answers, \(I\) and \(0\). The law fights itself.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+  \draw[thick] (-0.5,0) -- (2.6,0);
+  \draw[thick] (3.4,0) -- (6.3,0);
+  \draw[very thick] (2.6,-0.9) -- (2.6,0.9);
+  \draw[very thick] (3.4,-0.9) -- (3.4,0.9);
+  \node at (3.0,-1.35) {Plate gap};
+  \draw[->,thick] (0.2,0.32) -- (1.3,0.32) node[midway,above]{$I$};
+  \fill[blue!10] (1.8,0) ellipse (0.5 and 1.3);
+  \draw[thick] (1.8,0) ellipse (0.5 and 1.3);
+  \node at (1.8,1.7) {Loop $L$};
+  \node at (1.8,-1.8) {Surface A: crosses wire};
+  \draw[dashed,thick] (1.8,1.3) .. controls (3.2,1.7) and (4.4,0.9) .. (4.4,0)
+                      .. controls (4.4,-0.9) and (3.2,-1.7) .. (1.8,-1.3);
+  \node at (5.0,1.1) {Surface B: bulges through gap};
+\end{tikzpicture}
+\end{center}
+
+This is not nitpicking. Ampère's law came from experiments with \textbf{steady} currents, whose circuits always close and never encounter a break. In a charging circuit, conduction current ends at a plate. Extrapolate the old law there, and it hits a wall. This is a typical failure of an empirical law: intact within its tested domain, contradictory beyond it.
+
+\textbf{Second trouble: a symmetry gap.} Faraday says changing magnetic fields generate electric fields. Naturally we ask whether changing electric fields generate magnetic fields. Symmetry is a clue, not evidence; the universe owes us no symmetry. Yet this question and the first trouble seem to point toward one repair.
+
+\textbf{Third trouble: the ghost of instantaneous action.} In Coulomb's law, moving a charge seems to change a distant force immediately. We introduced the field in Chapter 19 to banish action at a distance, yet none of the old laws explains how field changes propagate or how fast. An unopened letter hides inside the model.
+
+\step{Inventing New Concepts}
+
+Maxwell's repair came from looking again at the bowl surface. No charge crosses it between the plates, true, but something does change: the \textbf{electric field}. Every coulomb delivered to the upper plate strengthens the field in the gap. Its rate of increase is exactly proportional to the wire current. Gauss's law from Chapter 19 shows this: electric flux \(\varPhi_E\) between the plates equals plate charge divided by \(\varepsilon_0\), so
+
+\[
+\varepsilon_0\frac{d\varPhi_E}{dt}=\frac{dQ}{dt}=I,
+\]
+
+exactly the wire current, no more and no less!
+
+This is why displacement current is the crucial repair. It is not decoration added to beautify the equations; two existing accounts, Gauss's law and charge conservation, demand it together. Without it, Ampère's law contradicts itself at the gap. With it, all surfaces automatically agree. One repair solving two problems is usually a sign that physics is on the right track.
+
+Maxwell proposed replacing ``current through the surface'' in Ampère's law by conduction current plus \(\varepsilon_0\) times the rate of electric-flux change. He named the second term \textbf{displacement current}. The name is unfortunate, as the limits section will explain, but the effect is immediate. On flat surface A, conduction current is \(I\), the electric field is nearly zero, and displacement current is zero, totaling \(I\). On bowl surface B, conduction current is zero and displacement current is exactly \(I\), again totaling \(I\). The contradiction vanishes. Charge conservation's account closes too: precisely where conduction current ends at a plate, the changing field takes over. Every page balances.
+
+With this addition, Maxwell assembled all known electromagnetic experimental laws into four equations. First state each in regional-account language; the formulas can wait:
+
+One, \textbf{Gauss's law for electricity}: net electric flux through any closed surface equals enclosed net charge divided by \(\varepsilon_0\). Charge is the electric field's only source; its lines begin on positive charges and end on negative ones.
+
+Two, \textbf{Gauss's law for magnetism}: net magnetic flux through any closed surface is identically zero. No isolated magnetic charge has been found; magnetic field lines have no ends and must close on themselves or extend to infinity.
+
+Three, \textbf{Faraday's law}: electric circulation around any closed loop equals minus the rate of magnetic-flux change through its bounded surface. Changing magnetic fields create circulating electric fields. The minus sign is Lenz's law: induction opposes the change itself.
+
+Four, \textbf{the Ampère--Maxwell law}: magnetic circulation around any closed loop equals \(\mu_0\) times conduction plus displacement current through the bounded surface. Both currents and changing electric fields create circulating magnetic fields.
+
+Together these end the separation between electricity and magnetism. Even in a region without charges or currents, the third and fourth bind the fields together: a time-varying electric field requires surrounding magnetic circulation, and a time-varying magnetic field requires electric circulation. Beware the popular simplification that an electric field creates a magnetic field, which creates another electric field, relaying the disturbance forward. Maxwell's equations do not say this. They say \textbf{the spatial field distribution and its time variation must satisfy these constraints simultaneously}. Only fields meeting them are valid. The constraints have an astonishing consequence: they permit a field distribution independent of charges and currents, self-sustaining in vacuum and propagating outward at a definite speed. This is an electromagnetic wave, the subject of Chapter 25. Here we merely erect the signpost.
+
+The field's status rises too. In Chapter 19 you could still regard it as bookkeeping, but no longer. Between capacitor plates there is empty space, yet real physics occurs there: a changing electric field produces magnetic circulation just as a current does. Energy crosses vacuum containing not even air. Fields carry energy and momentum. Like a charged ball, a field is a full member of the physical world, not a construction line on scratch paper.
+
+Finally, delimit the overall-account analogy. \textbf{Where it works}: each equation says an accumulated quantity on a boundary is determined by sources inside, like a tank's inflow and outflow account. Fix the boundary and the account cannot escape. \textbf{Where it fails}: the tank contains flowing water, but here we accumulate fields along boundaries. The interior source may be charge or current, or another field's time variation. And the account holds exactly at every point and instant, not approximately at month's end.
+
+One historical postscript. When Maxwell published these equations in 1865, displacement current and electromagnetic waves were paper conclusions, and many colleagues doubted them. Only in 1887 did Hertz actually transmit and receive waves with laboratory spark apparatus, an experimental answer to the third initial guess more than twenty years late. Chapter 25 gives the experiment's details. Here remember that the repair was ultimately judged correct by experiment, not merely self-consistent.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Charge is the electric field's only source; magnetic fields have no sources. Changing magnetic fields create electric circulation, while currents and changing electric fields create magnetic circulation. Electricity and magnetism are two aspects of one field that carries its own energy and momentum and can exist and travel independently of charges.
+\end{oneline}
+
+Read that three times. First focus on sources: two equations govern them; charge monopolizes the electric-field source entry, while the magnetic entry remains blank. Second focus on circulation: each field's circulation is constrained by the other's time variation and by current. These are simultaneous spatial and temporal constraints, not a relay race. Third focus on independence: once a field exists, it has its own energy, momentum, and evolution laws. Charges are its sources and recipients, not its containers.
+
+\step{The Mathematical Translator}
+
+Now write the four accounts as equations. For each, ask what it describes, why it has this form, when it holds, and when it fails, then immediately check special cases.
+
+\textbf{Equation one (Gauss's law for electricity):}
+\[
+\oint_S \vec E\cdot d\vec A=\frac{Q_{\text{inside}}}{\varepsilon_0}
+\]
+Read the left side as net outward electric flux through closed surface \(S\): add the field's outward-normal component over every small surface patch. The right side is enclosed net charge divided by \(\varepsilon_0\). Why this form? The inverse-square law and superposition make outward flux depend only on total charge, not its arrangement inside; the mathematical bridge explains why. When does it hold? Always within Maxwell's framework, whether fields vary with time or not. When does it fail? The classical law itself has no known failure case, but drawings with field-line counts proportional to charge are only sketches, not literal counting devices. Check: \(Q_{\text{inside}}=0\) gives zero net outward flux. Net matters: lines may still enter and leave. An outside charge contributes lines that enter and exit, totaling zero. Reverse all enclosed charges and the flux reverses, passing the directional check.
+
+\textbf{Equation two (Gauss's law for magnetism):}
+\[
+\oint_S \vec B\cdot d\vec A=0
+\]
+What does it describe? Magnetic net outward flux is always zero: magnetic fields have no sources. Why zero? Every search for isolated magnetic charges, magnetic monopoles, has so far failed. This is experimental fact, not logical necessity. When does it hold? In every known experiment. When would it fail? Finding magnetic charge tomorrow would replace the right side by enclosed magnetic charge divided by some constant. The equation's structure readily accepts this change; experiments keep saying no. Check: enclose a whole magnet, and lines leaving N all return to S, either directly or after crossing outside the surface, leaving zero net flux. Replacing the magnet with a current-carrying coil changes nothing.
+
+\textbf{Equation three (Faraday's law):}
+\[
+\oint_L \vec E\cdot d\vec l=-\frac{d\varPhi_B}{dt},\qquad \varPhi_B=\int_S \vec B\cdot d\vec A
+\]
+The left side is the electric field's total work moving unit charge around loop \(L\), the emf; the right side is minus the magnetic-flux change rate through the bounded surface. Chapter 23 covered its meaning and use; add two boundary points. When does it hold? Directly for a fixed loop. When is care needed? If the loop moves in a magnetic field, total emf also contains a motional part, fundamentally the Lorentz force from Chapter 22. Neither double-count nor omit it. Check: constant \(\varPhi_B\) gives zero circulation, matching an electrostatic field's zero work around a closed path and hence Chapter 20's definition of potential. A uniformly increasing field gives constant emf; an induction cooktop uses this to produce sustained circulating fields in its pot base. Reverse the field and the emf reverses, checking Lenz's minus sign.
+
+\textbf{Equation four (the Ampère--Maxwell law):}
+\[
+\oint_L \vec B\cdot d\vec l=\mu_0\left(I_{\text{through}}+\varepsilon_0\frac{d\varPhi_E}{dt}\right)
+\]
+What does it describe? Two sources sustain magnetic circulation: conduction current through a surface and its electric-flux change rate. Why this form? Without the second term, the capacitor's two surfaces disagree; with it, both charge conservation and the magnetic account close. When does it hold? Throughout classical physics. When does it fail? See the limits section. Check: time-independent fields give \(\varepsilon_0\,d\varPhi_E/dt=0\), restoring old Ampère's law, not overthrowing it but adopting it as a special case. Flat surface A and bowl surface B of a charging capacitor both give \(\mu_0 I\), as already calculated, removing the contradiction. \textbf{Inside} a wire, electric flux changes very slowly, and \(\varepsilon_0\) is tiny, about \(8.85\times10^{-12}\), so displacement current is negligible beside conduction current. Thus old Ampère's law works excellently in low-frequency circuits, explaining why the contradiction waited years for serious attention.
+
+Next come two formulas about fields themselves.
+
+\textbf{Field energy density:}
+\[
+u=\frac{1}{2}\varepsilon_0 E^{2}+\frac{B^{2}}{2\mu_0}
+\]
+What does it describe? Energy stored per unit field volume. Why this form? The first term is Chapter 20's capacitor energy per unit volume; the second is Chapter 23's inductor energy per unit volume. This merges two old accounts rather than introducing a hypothesis. Check: no field gives \(u=0\); doubling field strength quadruples energy. Squaring keeps energy positive regardless of field direction, passing the reversal check.
+
+\textbf{The Poynting vector (energy flux density):}
+\[
+\vec S=\frac{1}{\mu_0}\,\vec E\times\vec B
+\]
+What does it describe? Electromagnetic energy crossing a perpendicular unit area per unit time, in watts per square meter. Accumulate \(\vec S\) over any closed surface to find electromagnetic energy leaving per second. Why a cross product? Net energy flow requires both electric and magnetic fields, with nonparallel directions. A purely electric or purely magnetic field stores energy but does not transport it. When is care needed? Strictly, adding any field that circulates locally to \(\vec S\) leaves all closed-surface totals unchanged, so only the total-account aspect of the exact energy route is physical. Yet the directional and magnitude picture is indispensable in engineering. Check: parallel \(\vec E\) and \(\vec B\) give \(\vec S=0\), with energy staying put. Reverse \(\vec B\) and \(\vec S\) reverses, so transport reverses too.
+
+Try real scales. Sunlight at Earth's orbit has energy flux density about \(S\approx1360\) watts per square meter. Using the electric--magnetic ratio for electromagnetic waves, given in Chapter 25, this corresponds to peak electric field about \(1000\) volts per meter, comparable to fields near household wiring, and peak magnetic field about \(3.3\) microteslas, less than a tenth of Earth's field. We bathe daily in sunlight's electric field without feeling it because its direction reverses about \(10^{15}\) times per second and the body as a whole is electrically neutral.
+
+\begin{mathbridge}
+First derive displacement current rigorously. Apply electric Gauss's law to bowl surface B: its electric flux equals the net charge inside the bowl divided by \(\varepsilon_0\). The bowl encloses the upper plate; the wire delivers \(I\) coulombs per second and no charge leaks through the bottom. Enclosed charge therefore grows at rate \(I\), giving \(\varepsilon_0\,d\varPhi_E/dt=I\). Displacement current is not a guessed symmetry term; Gauss's law and charge conservation demand it.
+
+Now translate integrals into differential language. Shrink a closed surface to a point: the limit of net outward flux divided by volume is the \textbf{divergence} there. Shrink a loop to a point: circulation divided by area in the limit, taking the orientation giving the maximum, defines the \textbf{curl}. The divergence and Stokes theorems rewrite the four integral equations point by point. Electric Gauss's law becomes electric divergence equals charge density divided by \(\varepsilon_0\); Faraday's law becomes electric curl equals minus the magnetic field's time derivative. The other two translations belong to the challenge layer.
+\end{mathbridge}
+
+\begin{challenge}
+Maxwell's equations in pointwise form are
+\[
+\nabla\cdot\vec E=\frac{\rho}{\varepsilon_0},\qquad
+\nabla\cdot\vec B=0,
+\]
+\[
+\nabla\times\vec E=-\frac{\partial\vec B}{\partial t},\qquad
+\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\frac{\partial\vec E}{\partial t}.
+\]
+Look closely at the curl equations: for \(\vec E\) and \(\vec B\), they cross-link \textbf{spatial} and \textbf{temporal} changes. In a region without charge or current (\(\rho=0\), \(\vec J=0\)), take the curl of the third equation and substitute the fourth, or vice versa. A vector identity then gives wave equations for both \(\vec E\) and \(\vec B\), with speed
+\[
+v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}.
+\]
+Insert the measured values available then: \(v\approx3\times10^{8}\) meters per second, matching the known speed of light within uncertainty. Maxwell concluded in 1865 that light is an electromagnetic wave. Notice that the derivation never invokes a relay of electric field making magnetic field making electric field. A wave solution is a spacetime distribution satisfying all four constraints \textbf{simultaneously}.
+
+One extra challenge: suppose magnetic charge exists with density \(\rho_m\). The second equation's right side becomes proportional to \(\rho_m\), and the third acquires a magnetic-current term. The equations become almost perfectly symmetric between electricity and magnetism. Dirac later proved that even one magnetic monopole anywhere in the universe could explain electric-charge quantization. This enticing symmetry still lacks experimental evidence: the zero in equation two remains an account awaiting judgment.
+\end{challenge}
+
+\step{The Model's Limits}
+
+First, displacement current does not mean charges flowing through vacuum. Between the plates there are no carriers, no drift velocity, and no Joule heating. It plays the role of current only in producing a magnetic field and closing the charge-conservation account. ``Displacement'' comes from Maxwell's old elastic mechanical model of a medium; the model was abandoned but the name remained. What should you \textbf{regard it as}? A rate of change magnetically equivalent to current. What should you not imagine? Particles moving, or an ammeter measuring it in vacuum.
+
+Second, circuit laws have limits. Kirchhoff's laws assume that at one instant, current is equal everywhere along a branch. This holds only under \textbf{quasistatic} conditions: the time for a disturbance to cross the circuit must be much shorter than the characteristic current-change time. An electromagnetic wave could circle Earth seven and a half times in a second; crossing a tabletop circuit takes only nanoseconds, far faster than \(50\)-hertz mains variation, making the approximation astonishingly good. But transmission lines thousands of kilometers long and gigahertz phone circuits require the full Maxwell equations, implemented as transmission-line theory. In one sentence: system size must be much smaller than disturbance speed times characteristic time.
+
+Third, Maxwell's equations govern fields, not materials. Charge motion also requires the Lorentz force (Chapter 22), and material charge response requires dielectric and conduction laws. The equations do not explain charge quantization or why \(\varepsilon_0\) and \(\mu_0\) have their particular values. They form an exceptionally strict net around field--source relationships, not all of physics.
+
+Fourth, classical fields themselves can fail. Very weak light delivers energy to detectors in discrete portions; the photoelectric effect and blackbody-radiation crisis (Chapter 42) ultimately require field quantization. Extremely strong fields also produce new vacuum phenomena beyond the classical equations. Yet across everyday and engineering applications from radios to power grids, Maxwell's equations are almost mercilessly precise, among classical physics' most successful survivors.
+
+Fifth, the four equations above assume vacuum. Inside a medium, \(\varepsilon_0\) and \(\mu_0\) must be replaced by material parameters, and electromagnetic disturbances propagate more slowly. This plants the question of why light slows in glass, which Chapter 36 takes up.
+
+\step{Explaining the Opening Phenomenon}
+
+Return to the desk lamp and follow the entire energy route using the Poynting vector.
+
+The battery pumps positive and negative charges toward opposite circuit ends, establishing a delicate surface-charge distribution throughout the wire network. These charges create fields inside and outside the wires. Inside, \(\vec E\) runs along the wire, driving current (Chapter 21); immediately outside the surface, \(\vec E\) also runs roughly along it. The current's magnetic field \(\vec B\) circles the wire. Thus \(\vec S=\vec E\times\vec B/\mu_0\): near the battery, \(\vec S\) points \textbf{outward}, with energy entering space through the battery's sides. Beside connecting wires, \(\vec S\) points roughly along them toward the bulb, escorting energy through space \textbf{outside} them. Beside the filament, \(\vec S\) points \textbf{inward}: energy enters through its sides and becomes heat and light.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth]
+  \draw[thick] (0,0) -- (6.4,0);
+  \draw[->,thick] (0.5,0.35) -- (1.7,0.35) node[midway,above]{Current $I$};
+  \draw[->,thick,blue!60!black] (2.5,0.95) -- (3.9,0.95) node[midway,above]{$\vec E$ along wire};
+  \draw[thick] (3.2,0) ellipse (0.26 and 0.72);
+  \node at (3.2,-1.15) {$\vec B$ around wire};
+  \draw[->,very thick,red!70!black] (5.1,1.25) -- (4.4,0.22);
+  \draw[->,very thick,red!70!black] (5.1,-1.25) -- (4.4,-0.22);
+  \node[red!70!black] at (5.6,0.75) {$\vec S$};
+  \node[red!70!black] at (5.35,-0.85) {Energy enters from the sides};
+\end{tikzpicture}
+\end{center}
+
+We can check the account. A \(60\)-watt lamp on \(220\) volts draws about \(0.27\) amperes. At \(1\) millimeter from its power wire, the current's field is about \(5\times10^{-5}\) tesla, only a thousandth of Earth's field. The electric field escorting the energy is only a few hundred volts per meter. Invisible and intangible, these fields nonetheless deliver a real \(60\) joules toward the filament each second.
+
+For a cleaner theoretical check, take a wire segment of length \(L\), voltage drop \(V\), current \(I\), and radius \(a\). At its surface, \(E=V/L\) and \(B=\mu_0 I/(2\pi a)\), giving energy flux density
+\[
+S=\frac{EB}{\mu_0}=\frac{VI}{2\pi aL},
+\]
+directed into the wire. Multiply by its lateral area \(2\pi aL\), and total energy entering per second is exactly \(VI\), precisely the wire's Joule-heating power. This is an exceptionally strong special-case check of the Poynting picture: energy entering from space matches heat generated inside to the last penny.
+
+Now delimit the railway analogy. \textbf{Where it works}: wires determine energy's destination; rewire and you change it, as tracks determine where trains go. \textbf{Where it fails}: trains travel on tracks, but energy travels through \textbf{space beside the wires}. More decisively, electron drift is only a few tenths of a millimeter per second, while energy arrives through space at nearly light speed. Those two numbers rule out the porter picture completely. If you chose (c) in the initial guesses, you can now confirm it.
+
+Settle the Sun and radio accounts too. Even without charges or currents in vacuum, Maxwell's equations permit coupled electric--magnetic wave solutions traveling at \(1/\sqrt{\mu_0\varepsilon_0}\), with no medium. That is how sunlight crosses a hundred and fifty million kilometers. The experiment's click is similar: switches and sparks abruptly change current, and the changing current and electric field send a small electromagnetic disturbance into space. An AM antenna picks it up and amplifies it into sound. Why that disturbance travels at light speed, and why it belongs to light's family, is Chapter 25's story.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[The Light You Cannot Catch]
+Not long after Maxwell's equations appeared, sixteen-year-old Einstein posed himself a question: if I could chase an electromagnetic wave at light speed, what would I see?
+
+Intuitively, catching up should make the wave stationary. I would see electric and magnetic fields that do not vary with time but undulate in space, like frozen ripples.
+
+Let Maxwell's equations judge. For time-independent fields, the time derivatives on the right sides of equations three and four vanish, forbidding electric and magnetic circulation. Frozen ripples do not satisfy the equations; they are not valid solutions. Either the equations are wrong, or the premise of catching a light beam at light speed is flawed. Chapter 38 gives the ending: the equations survived, and our concepts of time and space changed. Maxwell's equations are therefore not merely a summary of electromagnetism, but a doorway to relativity.
+\end{thought}
+
+Since electromagnetic fields carry momentum as well as energy, light exerts radiation pressure on objects. At Earth's orbit, sunlight on a perfect reflector produces about \(9\) micropascals, almost laughably small. Extreme scales make it interesting: a square solar sail \(14\) meters on a side receives about \(2\) millinewtons, only the weight of a few sesame seeds. Yet it needs no fuel and pushes continuously, day and night; Japan's IKAROS spacecraft used it for interplanetary flight in 2010. Try a laser account: a \(1\)-kilowatt laser on a perfect reflector exerts \(F=2P/c\approx7\) micronewtons. Lifting an egg weighing about \(0.5\) newtons would require roughly \(75\) megawatts of laser power, a large power station's output all converted to light. Field momentum was a paper conclusion in Maxwell's day; today it is a spacecraft design parameter.
+
+\begin{puzzles}
+\item Where does the electromagnetic energy around the wires go when you switch off a lamp? Hint: can field energy vanish instantaneously? The disturbance spreads at finite speed. Most energy enters the filament as final heat while the light goes out; a small part leaves as electromagnetic waves, explaining why switch sparks are audible on a radio.
+\item Does the magnetic field produced by displacement current in a charging capacitor's gap circle the same way as the field from conduction current in its wire, or oppositely? If plate area increases at fixed charging current, how does the gap field at a given point change? Hint: compare directions with the right-hand rule, then use continuity of the current account. Greater area spreads displacement current more thinly, weakening the local field, but the total account for the bounded loop remains \(\mu_0 I\).
+\item A large charged capacitor rests on a table, storing substantial energy in a strong but constant electric field between its plates. Is there a magnetic field around it? Does it continuously radiate energy? Hint: check \(d\varPhi_E/dt\) in equation four, then the Poynting vector: if \(\vec B\) is zero, what is \(\vec S\)? Storing energy is not radiating it.
+\item If an experiment conclusively discovers magnetic charge tomorrow, which equations change, and how? Would electricity and magnetism then become more or less symmetric? Hint: which equation should express magnetic charge as a magnetic-field source? Would moving magnetic charge, magnetic current, produce electric circulation as electric current produces magnetic circulation, and which equation should contain it?
+\end{puzzles}
+
+\section*{Chapter Summary}
+
+Maxwell performed no new experiments. He assembled Coulomb's, Ampère's, and Faraday's laws and found them contradicting each other at a capacitor. To repair the crack, he put changing electric fields on an equal footing with current in producing magnetic fields: displacement current was born. The repaired four equations say charge is the electric field's only source, magnetic fields have no sources, changing magnetic fields create electric circulation, and currents plus changing electric fields create magnetic circulation. The electromagnetic field carries energy and momentum, traveling independently through vacuum; energy moves through space, not inside wires. These four lines are nineteenth-century physics' greatest achievement, wrapping two gifts: electromagnetic waves (Chapter 25) and relativity (Chapter 38).

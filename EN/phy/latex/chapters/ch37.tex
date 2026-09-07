@@ -1,0 +1,205 @@
+% Chapter 37: A Unified Picture of Optics
+\chapter{A Unified Picture of Optics}
+
+\step{A Counterintuitive Opening}
+
+Chapter 33 introduced the pinhole camera: an opaque box, a tiny hole in one side, tracing paper opposite, and an inverted image of a tree outside. Straight-line propagation explained everything. Each tree point emits light in all directions, but only a narrow cone through the hole reaches the screen. Object point corresponds neatly to image point.
+
+Extend that reasoning and a categorical prediction follows: a smaller hole selects a narrower cone from each point, producing smaller image spots and a sharper picture. At the extreme, a mathematical point-sized hole admits one ray per object point, supposedly giving perfect sharpness, merely dimmer. ``Smaller holes mean sharper images'' seems to flow directly and indisputably from straight propagation.
+
+Yet anyone who has actually made a pinhole camera knows that a needle-fine hole softens and blurs the image instead of making it razor-sharp, as though viewed through frosted glass. That faithful old servant, straight-line light, betrays itself at its own limit.
+
+Three everyday observations share the frustration. Phone cameras boast fifty million pixels, yet moving tiny print closer eventually reaches an ineradicable detail ceiling. Even expensive optical microscopes cannot resolve a virus's shape: a roughly hundred-nanometer virus is smaller than a visible wavelength. FM radio still sounds behind a building, while a wall firmly blocks visible light. Both are waves; why such different treatment?
+
+Neither rays nor waves alone, as presented so far, answer all four. This chapter fuses apparently separate textbooks of ray and wave optics into one map: not two kinds of light, but two photographs of the same equations at different magnifications.
+
+\step{Make a Guess First}
+
+Before continuing, explain why smaller holes blur. Which hypothesis seems closest?
+
+First, workmanship: edge burrs and thickness scatter the light; a precision laser-cut round hole would avoid the blur.
+
+Second, compromise: two opposing influences compete, one dominant for large holes, the other for small ones, leaving an optimal aperture between them where blur gives way to sharpness.
+
+Third, waves: light does not travel entirely straight; straightness is an approximation that worsens as the hole shrinks.
+
+A hypothesis is not enough; bet on a number. Would an optimal aperture resemble a hair, about \(0.05\) millimeters, a sewing-needle eye, about \(0.5\) millimeters, or pencil lead, about \(2\) millimeters? Record both votes. At the end we will calculate the optimum as well as check answers. Guessing its order of magnitude means your intuition has already touched this chapter's most substantial formula.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Three Holes and Rings of Light]
+Materials: thick black card or aluminum foil, a sewing needle, a toothpick, tape, two telescoping cardboard tubes or a shoebox, tracing or wax paper, and a laser pointer.
+
+Step one: make a three-hole pinhole camera. Pierce three holes side by side: a coarse toothpick hole about \(2\) millimeters wide; a normal needle hole about \(0.5\) millimeters; and a barely light-transmitting pinhole, about \(0.1\) to \(0.2\) millimeters, made by gently rotating the needle tip against the surface. Cover one tube end with the card and the other with tracing paper.
+
+Step two: point the tube toward bright outdoor scenery in daylight, or a desk lamp, admitting light through only one hole at a time. Compare images: the large hole is bright but blurred, the middle sharpest, and the tiny one dim and soft with fuzzy edges. Score brightness and sharpness separately. ``The middle hole gives the clearest image'' is the fact missed by the smaller-is-sharper prediction.
+
+Step three: in a dark room, aim the laser through the smallest hole onto a white wall two or three meters away. Instead of a red dot, a bright spot surrounded by concentric rings appears. Smaller holes give larger patterns; repeat with the coarse hole and the rings shrink almost to a point. Watch the rings for a full minute: how can straight-flying things draw circles outside the aperture?
+\end{experiment}
+
+Take away three observations: an optimum exists; a tiny hole produces a pattern rather than an image; and pattern size varies inversely with aperture. Now see how the old models respond.
+
+\step{The Old Model Runs into Trouble}
+
+Let Chapter 33's rays defend themselves first. Their prediction is monotonic: decreasing diameter \(d\) proportionally decreases each point's geometrical blur, so sharpness only improves. There is no entry for optimal aperture, let alone rings. Why would straight-flying things turn outward around the hole? Rays explain coarse-hole blur but cannot explain tiny-hole blur. They are not wholly wrong, but we have reached a boundary of their jurisdiction.
+
+Now let Chapter 35's waves respond. They know diffraction: waves spread after holes and rings are the resulting interference. But three embarrassments remain. First, what theorem produces their old friend, straight propagation? Why does sound bend around pillars while light insists on straightness? Second, where does Chapter 34's imaging fit in wave language? Why can glass gather spreading waves into a point? Third, why do two flashlights never produce stripes? Why do some waves qualify for interference and others not? Waves have a pocketful of phenomena but lack an overall map.
+
+Do both models share a master? Yes, already introduced in Chapter 25: Maxwell's equations. Light is one kind of electromagnetic-field motion, and both the field's spatial distribution and time evolution obey those equations. Waves are natural solutions. The remainder of this chapter identifies rays, diffraction, imaging, and coherence as consequences of this common starting point.
+
+\begin{mainline}
+The unified picture is one equation: \textbf{one object, the electromagnetic field, plus one set of equations, Maxwell's, plus boundary conditions, apertures, slits, lenses, and screens, equals all optical phenomena.} Rays are not overthrown but assigned the zero-wavelength limit. Diffraction is the inevitable deformation of a clipped wavefront; imaging results from carefully designing boundary conditions into lenses.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+Four tools connect equations to observations: wavefront, phase, coherence, and spatial frequency. Build the first three here and reserve the fourth for the mathematical translator.
+
+\textbf{Wavefront and phase}. Every field point carries amplitude, its maximum possible oscillation, and phase, its current position in the cycle. Phase resembles each singer's metronome reading in a class chorus. Joining equal readings gives a \textbf{wavefront}. Point sources produce concentric spherical fronts; far away, a small portion appears flat, giving a plane front. Think of terraced-landscape contours: contours join equal heights, wavefronts equal phases, with fastest change perpendicular to each. But remember the difference: hills stand still while fronts advance at light speed, and phase is cyclic, returning to zero after a full turn, not a height.
+
+Now the central definition: \textbf{a ray is a normal to a wavefront}. Rays are derived marks, not light's substance. Draw a line in the direction a front advances. Plane-front normals are parallel, giving straight rays in uniform space; spherical-front normals radiate outward from a point source, giving sharp shadows. Straight propagation now has an origin: it is a consequence of wavefront geometry, not an axiom.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  \fill (0,0) circle (1.6pt) node[below=2pt] {Point source};
+  \foreach \r in {0.7,1.4,2.1} {\draw (0,0) circle (\r);}
+  \foreach \a in {15,75,135,195,255,315} {\draw[->] (\a:2.1) -- (\a:2.95);}
+  \node at (135:1.8) [above left] {Wavefronts: equal-phase surfaces};
+  \node at (15:3.1) [right] {Rays: wavefront normals};
+\end{tikzpicture}
+\end{center}
+
+Chapter 35's Huygens construction now becomes a formal tool. Every front point emits hemispherical wavelets whose shared outer envelope gives the next front. Straight propagation, reflection, refraction, and aperture spreading can all be drawn with this compass and ruler. This is no extra hypothesis: when phase varies far more than amplitude within a wavelength, it follows from Maxwell's equations. A sketch appears in the challenge section.
+
+\textbf{Coherence and lasers}. Why do two flashlights on one wall never produce stripes? Countless atoms radiate independently, reshuffling the whole beam's phase at extremely short intervals. Fringe positions jump a quadrillion times per second, so eyes and film record only the thoroughly mixed average. Ordinary light has an extremely short \textbf{coherence length}, only micrometers; two beams must arrive nearly synchronously to recognize their kinship.
+
+A laser is another species. For now, observe without explaining its origin. Shine a laser on a white wall: its spot is not uniform red but fine bright and dark grains that move as your head shifts. This is \textbf{speckle}: an uneven wall reflects innumerable wavelets with stable phase relations, which interfere before your eyes. An ordinary lamp produces none because its phases are too disorderly. Laser phases are unusually organized, with coherence lengths of tens of centimeters or more, making interference and diffraction effects visible to the eye. Why can lasers organize phases? That requires Chapter 55's microscopic account of light and atoms. Here retain the observation: highly phase-ordered waves exist, and coherence determines which waves can interfere stably.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Light is an electromagnetic field obeying Maxwell's equations. Boundaries, apertures, slits, and lenses, determine its wavefronts. Rays are merely normals in the short-wavelength limit; diffraction inevitably follows clipping a front, while imaging decomposes and recombines spatial-frequency components through lenses.
+\end{oneline}
+
+Read this in two passes. First, short wavelength: rays are not dead but incorporated as a limit, and every formula here should reduce to Chapter 33 as wavelength vanishes. Second, boundaries determine spreading: pinholes, slits, lenses, and gratings are different ways of operating on a wavefront. Designing those operations is the optical engineer's craft.
+
+\step{The Mathematical Translator}
+
+With intuition ready, translate. First express the wave mathematically. Chapter 25 derived the wave equation from Maxwell's equations; in one dimension,
+\[
+  \frac{\partial^2 E}{\partial x^2}=\frac{1}{c^2}\frac{\partial^2 E}{\partial t^2}.
+\]
+The left measures spatial field curvature, the right its rate of time variation, with light speed \(c\) the sole exchange rate. One clean solution is
+\[
+  E=E_0\cos(kx-\omega t),
+\]
+where \(k=2\pi/\lambda\) is wavenumber, wavelengths packed per unit length; \(\omega=2\pi f\) is angular frequency, phase swept per unit time; and \(\omega/k=c\).
+
+Check special cases. Fix \(x=0\): \(E=E_0\cos(-\omega t)\), a local oscillation of frequency \(f\), sensible. Pause at \(t=0\): \(E=E_0\cos kx\), a spatial cosine of period \(\lambda\), sensible. Follow a crest by fixing \(kx-\omega t=\text{constant}\): solving gives \(x=(\omega/k)t=ct\), a crest moving right at light speed. Replace the argument by \(kx+\omega t\) and it moves left, passing the direction-reversal check. One equation describes temporal oscillation, spatial periodicity, propagation direction, and speed: the wave equation's power.
+
+Second, diffraction angle. Clip both sides of a front with an aperture of width \(D\), and it no longer stays flat but spreads over an angular range. Huygens' construction establishes the single-slit first minimum at
+\[
+  \sin\theta=\frac{\lambda}{D}
+\]
+(a circular aperture gives \(1.22\lambda/D\), a slightly different coefficient but the same scale; throughout this chapter use \(\theta\approx\lambda/D\)). This answers ``how widely does the hole spread light?'' Wavelength \(\lambda\) belongs to the wave; aperture \(D\) is your clipping scale.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  \draw[very thick] (0,1.0) -- (0,2.6);
+  \draw[very thick] (0,-1.0) -- (0,-2.6);
+  \draw[<->] (-0.18,-1.0) -- (-0.18,1.0) node[midway,left] {$D$};
+  \draw[->] (0,1.0) -- (4.0,2.6);
+  \draw[->] (0,-1.0) -- (4.0,2.6);
+  \draw[dashed] (0,1.0) -- (2.2,1.0);
+  \draw (1.6,1.0) arc[start angle=0,end angle=27,radius=1.6];
+  \node at (14:2.1) {$\theta$};
+  \draw[very thick] (4.0,0.4) -- (4.0,3.4);
+  \node at (4.0,3.6) {Distant screen};
+  \node at (2.0,-1.8) {Edge-wavelet path difference $\lambda$: cancellation in direction $\theta$};
+\end{tikzpicture}
+\end{center}
+
+Check limits: as \(\lambda\) vanishes, \(\theta\) vanishes and light obediently goes straight, restoring rays. As \(D\) grows without bound, \(\theta\) vanishes: an infinite hole is no clipping and no spreading. When \(D\) approaches a wavelength, \(\theta\) is of order a radian; the hole is effectively a point source radiating all around. All three directions make sense.
+
+Third, the optimal pinhole, this chapter's signature calculation. For diameter \(d\), screen distance \(L\), and a distant subject, geometrical blur is about \(d\), larger holes spreading each object point more; diffraction blur is about \(\lambda L/d\), with narrower holes or larger \(L\) spreading light farther. Total blur is approximately their sum:
+\[
+  \text{blur}\approx d+\frac{\lambda L}{d}.
+\]
+The first term grows with \(d\), the second as \(d\) shrinks. Their equality minimizes the total, giving optimum
+\[
+  d^{*}\approx\sqrt{\lambda L}.
+\]
+Insert visible wavelength \(\lambda\approx 550\) nanometers and tube length \(L=20\) centimeters: \(d^{*}\approx\sqrt{1.1\times10^{-7}\ \mathrm{m}^2}\approx 0.33\) millimeters. This is the experiment's sharp middle hole and the guess sheet's needle-eye scale. Intuition, experiment, and equation meet.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.35,>=Stealth]
+  \draw[->] (0,0) -- (3.6,0) node[right] {Aperture $d$};
+  \draw[->] (0,0) -- (0,2.4) node[above] {Blur size};
+  \draw[domain=0.05:3.2,smooth] plot (\x,{0.55*\x}) node[right] {Geometry $\sim d$};
+  \draw[domain=0.35:3.2,smooth] plot (\x,{0.62/\x}) node[right] {Diffraction $\sim\lambda L/d$};
+  \draw[dashed,domain=0.32:3.2,smooth] plot (\x,{0.55*\x+0.62/\x});
+  \fill (1.06,1.17) circle (1.4pt);
+  \draw[dotted] (1.06,0) node[below] {$d^{*}$} -- (1.06,1.17);
+\end{tikzpicture}
+\end{center}
+
+Check limits: vanishing \(\lambda\) gives vanishing \(d^{*}\), restoring ``smaller is better.'' Rays' monotonic prediction returns intact and both models shake hands at the limit. Larger \(L\) requires larger \(d^{*}\): longer cameras need slightly larger holes, also reasonable.
+
+Calculate the eye too. Pupil diameter is about \(2\) millimeters by day and \(7\) at night; take \(4\) as an intermediate value. Diffraction angle \(\theta\approx\lambda/D\approx 550\ \mathrm{nm}/4\ \mathrm{mm}\approx1.4\times10^{-4}\) radians is about half an arcminute, while the gap in the \(1.0\) eye-chart row subtends about one arcminute. Retinal receptor spacing is just sufficient for the information diffraction delivers, no more and no less. Resolution ends not because cells are inadequate but because wave nature draws the line.
+
+\begin{mathbridge}
+Complex numbers best keep phase accounts. Write the complex field amplitude \(A\mathrm e^{\mathrm i\varphi}\), using Euler's formula \(\mathrm e^{\mathrm i\varphi}=\cos\varphi+\mathrm i\sin\varphi\), and take the real part for the physical field. Phase becomes a complex-plane angle, superposition complex addition, and intensity squared modulus. Double-slit interference is one line: add two complex amplitudes and square their modulus. The cross term automatically supplies \(\cos\Delta\varphi\) and every fringe. The imaginary unit \(\mathrm i\) is not mysterious; it abbreviates a quarter-cycle phase delay.
+\end{mathbridge}
+
+\begin{mathbridge}
+Spatial frequency is the fourth tool. Listen to an image as a chord across space: broad smooth brightness is bass, low spatial frequency; fine textures and sharp edges are treble, high spatial frequency, measured in line pairs per millimeter. Far-field diffraction gives a remarkable result: \textbf{the pattern beyond an aperture is the Fourier transform of its shape}. Direction corresponds to spatial frequency. A lens turns direction into position, Chapter 35's intuition, so its focal plane is a spectrum plane: one parallel bundle, one spatial direction, focuses at one point. Imaging can therefore be redescribed as decomposing an object into spatial frequencies and recombining them in the image plane. But finite aperture admits only moderate angles, losing excessively high frequencies. \textbf{Every imaging system is a low-pass filter}, leaving images slightly blunter than objects. Abbe explained microscopy this way in 1873: frequencies carrying a virus's hundred-nanometer detail correspond to angles the lens cannot collect, so those details never join the reconstruction. This theory still forms the constitution of microscope and lithography design.
+\end{mathbridge}
+
+\begin{challenge}
+The Fresnel number \(F=D^2/(\lambda L)\) separates near and far fields. For \(F\gg1\), the near-field pattern is an aperture-shaped geometrical shadow with fuzzy edges. For \(F\ll1\), the far field becomes the aperture's Fourier transform, subsequently enlarging proportionally without changing shape. A laser spot about \(2\) millimeters across at wavelength \(650\) nanometers has transition distance \(D^2/\lambda\) about \(6\) meters, placing tabletop experiments near that boundary. Deeper still, spatial frequencies carrying subwavelength structure decay exponentially along propagation instead of oscillating. These evanescent waves never leave home. Diffraction's true root is not ``waves spread'' but ``fine detail does not travel.'' A near-field microscope brings a tiny probe within tens of nanometers of a sample, intercepting evanescent waves before they die. It bypasses, rather than breaks, the diffraction limit.
+\end{challenge}
+
+\begin{challenge}
+Huygens' principle can be made rigorous. Kirchhoff showed that the field at any point beyond a screen is a weighted sum of aperture fields and their rates of change. The weights include an obliquity factor, explaining why wavelets form a forward envelope rather than flow backward. Rays also emerge from the wave equation: when phase changes far more rapidly than amplitude within a wavelength, the equation reduces to a phase equation, the eikonal equation. Straight propagation, reflection, and refraction follow. All three geometrical-optics laws are consequences of the zero-wavelength limit.
+\end{challenge}
+
+\step{The Model's Limits}
+
+Even a unified picture has boundaries. List them clearly.
+
+The ray approximation works only when device scales greatly exceed wavelength. A building is merely a narrow slit to meter-wavelength FM, which calmly bends around it. To visible light of roughly half a micrometer, the same building spans ten football fields, and rays work extraordinarily well, giving knife-sharp shadows. Radio going behind buildings while light does not is not a difference in personality, but \(\theta\approx\lambda/D\) at two scales, a counterexample designed to trip intuition.
+
+The scalar approximation treats the field as one number. This works for paraxial, small-angle behavior, but strong focusing and large angles require restoring Chapter 36's polarization and a vector field.
+
+The diffraction limit assumes free propagation to the far field. Near-field detection and specially designed lenses can bypass it using the same Maxwell equations. The equations are unbroken; the premise of free propagation is what changes.
+
+Coherence requires stable phase differences for stable fringes. Excessive source area or color spread washes them out. Speckle is both a medal and a nuisance of coherence; laser projectors need a special frosted-glass element to suppress it.
+
+The classical field reaches its ceiling at extreme low light, where the detector records separate clicks rather than a uniformly fading glow. A continuously distributed field predicts incorrectly. This is Maxwell's boundary, not a typo: light's energy exchange has a separate quantum ledger, opened in Chapter 42's disasters of classical physics. Likewise, this chapter promises without paying the microscopic reason for laser coherence, reserved for Chapter 55.
+
+\step{Explaining the Opening Phenomenon}
+
+Settle the four opening cases.
+
+The three pinholes: geometrical blur proportional to \(d\) dominates the large hole; diffraction blur proportional to \(\lambda L/d\) dominates the tiny one. The middle near \(d^{*}\approx\sqrt{\lambda L}\approx 0.3\) millimeters balances them for maximum sharpness. The compromise and wave hypotheses are two halves of one answer; workmanship loses. Edge burrs add some noise, but waves are the main force. The concentric wall rings are the small aperture's far-field diffraction pattern: a circular Fourier transform gives a central spot and alternating rings, enlarging as the hole shrinks, exactly as observed.
+
+Phone pixels' ceiling: small lens aperture \(D\) gives a diffraction spot of about \(\lambda f/D\), covering several pixels. Extra pixels merely count the same blur more finely. Manufacturers enlarging the sensor format are increasing not pixel count but \(D\).
+
+Microscopes missing viruses: frequencies carrying hundred-nanometer detail fall outside the lens's accepted angles and never enter reconstruction. Electron microscopes substitute matter waves tens of thousands of times shorter than visible light. Why electrons are waves opens Chapters 42 and 43.
+
+Radio behind buildings: meter wavelengths relative to building width make \(\lambda/D\) huge, leaving no chance for a shadow. Light and radio share one ruler, not different temperaments.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Meter-Wavelength Light and an Earth-Sized Telescope]
+Play two opposite scale games. First, suppose visible wavelength becomes one meter with everything else unchanged. Pupils are far smaller than wavelength, reducing each eye to a point brightness detector. Imaging, shadows, and pinhole cameras fail; straight propagation leaves everyday vocabulary, and civilization probably invents wave optics first. Our wavelengths happen to be much smaller than daily objects, so childhood physics begins with rays. Rays are the environment's gift, not light's true face.
+
+Now reverse the scale and make aperture Earth-sized. Humanity actually did this in 2019: eight globally distributed radio telescopes observed synchronously, with an effective aperture about ten thousand kilometers at \(1.3\) millimeters. Resolution \(\theta\approx\lambda/D\approx1.3\times10^{-10}\) radians, about twenty-five microarcseconds, resolved the roughly forty-microarcsecond outline of M87's black-hole shadow. Diffraction is an invitation, not a prison, inviting all the world's antennas to become one instrument. Why that shadow curves into a ring belongs to Chapter 41's curved spacetime.
+\end{thought}
+
+\begin{puzzles}
+\item Squinting sharpens a blurry blackboard by narrowing the pupil and reducing defocus blur, but squinting too tightly blurs it again. Explain the optimal slit width and estimate its scale. (Hint: treat eyelids as an adjustable aperture and use the pinhole tradeoff \(d^{*}\approx\sqrt{\lambda L}\), with \(L\) the eyeball's length.)
+\item With the same pinhole camera, is a red-light or blue-light photograph sharper? Should optimum aperture change with color? (Hint: geometrical blur is color-independent, diffraction blur proportional to wavelength; \(d^{*}\approx\sqrt{\lambda L}\), so red prefers a larger hole.)
+\item FAST has a five-hundred-meter aperture. Compared with an ordinary one-meter optical telescope, which has better angular resolution, and by how many orders of magnitude? (Hint: compare \(\lambda/D\), not aperture alone. Take radio wavelength of order \(0.1\) meters and visible light \(5\times10^{-7}\) meters: aperture grows five hundredfold, wavelength hundreds of thousands-fold.)
+\item What sets speckle-grain size when a laser illuminates a white wall? Does wearing or removing spectacles distort the grains? (Hint: speckle is not on the wall but throughout the space before your eyes. Grain size depends on diffraction at the receiving pupil, roughly its diffraction-spot size.)
+\end{puzzles}

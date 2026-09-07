@@ -29,6 +29,11 @@ Compiler success does not replace proofreading and visual review.
 
 ## Source notes
 
+Contributor-approved paragraphs labeled “Translator safety note” appear beside
+hazardous source advice, with links to relevant safety guidance. Original prose
+remains visible. These annotations are not a comprehensive safety certification;
+do not follow an experiment that the adjacent note tells you not to attempt.
+
 The source ends with four unfinished appendix placeholders. Their translation
 retains that status rather than inventing the missing material.
 

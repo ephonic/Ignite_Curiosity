@@ -23,6 +23,10 @@ and all rows and are documented in each affected subject's README.
 Language-specific examples are translated with pronunciation guides and English
 glosses. Where character shapes are the subject, explicitly allowlisted original
 glyphs remain as examples; this does not exempt surrounding prose from translation.
+With the contributor's approval, clearly labeled translator safety notes appear
+beside hazardous advice in the physics and chemistry sources. These cite safety
+guidance and distinguish it from the retained source text; they do not silently
+rewrite the original claims or change the LaTeX styles.
 
 ## Source edition and incremental updates
 

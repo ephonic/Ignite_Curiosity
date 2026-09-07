@@ -1,0 +1,239 @@
+% Chapter 31: Statistical Physics: Probability for Vast Populations
+\chapter{Statistical Physics: Probability for Vast Populations}
+
+\step{A Counterintuitive Opening}
+
+Pump a bicycle tire and watch its gauge settle motionless at one mark. Ordinary-looking, but one extra second of thought makes it miraculous.
+
+Air inside is no quiet wall. The molecular picture makes it tens of quintillions of flying balls, each racing at four or five hundred meters per second, repeatedly striking and rebounding from the tire. Pressure is their combined effect. At ordinary pressure, a square centimeter of wall receives roughly \(10^{23}\) impacts per second, a one followed by twenty-three zeros. Every impact's timing, location, and angle is irregular; no molecule knows where it should strike.
+
+How does a population of utterly irregular individuals produce a total so steady that even precision instruments see no fluctuation? Why no needle jitter? Enlarge the scene: atmosphere's pressure on each ground square centimeter is the same unruly army's account, yet your eardrums feel no random hammering. How can disorder manufacture order, of the most reliable and impartial kind?
+
+This is no philosophical question, but a physical rule testable with coins, dice, and a cup of air. You already know its shadow: a city of ten million can plan electricity, water, and emergency-care demand a week ahead without anyone directing every resident, while absences and overtime in a ten-person office are unpredictable. Individual unpredictability and collective stability coexist. We will learn to count states without following particles, predicting pressure, temperature, reaction rates, even ice melting and the Sun's slow burning.
+
+\step{Make a Guess First}
+
+Write your intuition before seeing answers, for comparison at the end.
+
+First: toss ten coins together. How likely are exactly five heads and five tails? Many think the most balanced result should exceed fifty percent; others guess a third.
+
+Second: toss a thousand coins. How likely is the head fraction outside \(49\%\) to \(51\%\)? Intuition says more coins approach half, so departures should be rare.
+
+Third: could every air molecule in your room suddenly occupy its left half, leaving your right-side nostril no air? No mechanical law forbids each molecule flying left. Most answer never. But why never, if every molecule flies randomly? What supports that confidence?
+
+Probability distributions, fluctuations, and microstate counting hide the answers. Have you written your bets? Only committed intuition feels the sting of error, and that sting teaches well. Now experiment.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[A Coin Army]
+\textbf{Materials:} ten coins, or ten identical buttons or bottle caps, paper, and pen.
+
+\textbf{Procedure:}
+\begin{enumerate}[itemsep=2pt]
+  \item Shake all ten in your hands, toss them on a table, count heads, and record. That is one trial.
+  \item Repeat fifty times, obtaining fifty numbers between \(0\) and \(10\).
+  \item Draw a histogram: label the horizontal axis \(0,1,2,\dots,10\), count occurrences, and draw bars.
+  \item Add the fifty numbers and divide by fifty for the mean.
+  \item Extra: divide the trials chronologically into five groups of ten, calculate each group's mean, and compare them.
+\end{enumerate}
+
+\textbf{What you see:} individual results jump unpredictably, but the histogram has a stable central hump and low tails. Most outcomes lie between \(3\) and \(7\), exactly half heads occurs only about a quarter of the time, and all heads probably never appears. The five group means differ, fluctuating around \(5\). A classmate's histogram differs in detail but shares the shape. Details belong to luck; shape to law.
+
+\textbf{Meaning:} without controlling any coin, you obtained a predictable, drawable law belonging to the population rather than the individual. This opens statistical physics.
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+Mechanics accustomed us to a worldview: know an object's position, velocity, and forces, and calculate its future. Nearly perfect for one billiard ball, why not repeat for every tire molecule?
+
+First, numbers. A liter of air contains roughly \(2.7\times10^{22}\) molecules. Merely storing three positions and three velocity components each would require a machine larger than all the world's computers combined, let alone measuring them without disturbance. For scale, a cup of water has many orders of magnitude more molecules than all Earth's beaches have sand grains; lined up, they would span Earth--Sun countless times.
+
+Second, more fundamentally, many-body systems are extremely sensitive to initial conditions. Slight velocity differences amplify after collisions; within dozens, errors defeat prediction. Mechanics calls this chaos. Even complete instantaneous data would lose detailed predictive value almost immediately.
+
+Third comes liberation: we do not want such detail. Tire makers need pressure, not the whereabouts of molecule number \(8000\) times ten quadrillion. Epidemiologists want citywide fever curves, not whether one person coughs today. Traffic engineers need bridge throughput per minute, not each car's arrival time. Asking individual-soldier questions of an army is the wrong question.
+
+An insurance analogy helps. Insurers neither know nor need to know which customer will crash next year; large numbers let them predict total claims accurately enough to profit. But unlike molecules, people respond to advertisements, relocate, and change habits, altering behavior in response to statistics itself. Molecular statistics are constrained by strict mechanics and conservation, firmer than social statistics. Leave the analogy there and use physical language.
+
+Keep three levels distinct. A steady gauge is experimental fact; ceaseless random molecular motion is its physical explanation; a mathematically shaped heads histogram is a model. Each has its own source and cannot impersonate another. Know which level you occupy at every step.
+
+\step{Inventing New Concepts}
+
+Invent tools like nineteenth-century physicists, digging five levels into our coins.
+
+\textbf{See it:} the central hump and low tails are a shape, not an accident.
+
+\textbf{Describe it:} the key variable is heads count. Exactly five of ten heads specifies a \textbf{macrostate}, a total without individual identities. Coins \(1,3,4,7,9\) heads and all others tails specify a \textbf{microstate}, identifying each member. Many microstates realize one macrostate: five-and-five has \(252\) arrangements, all heads only one.
+
+\textbf{Draw it:} for \(0\) through \(10\) heads, the counts are \(1,10,45,120,210,252,210,120,45,10,1\). Plot them to explain the histogram.
+
+\begin{center}
+\begin{tikzpicture}[x=0.95cm,y=0.85cm]
+  \draw[-{Stealth}] (-0.4,0) -- (11.6,0);
+  \node[below] at (5.5,-0.1) {Number of heads};
+  \draw[-{Stealth}] (0,-0.3) -- (0,3.1) node[above] {Arrangements};
+  \foreach \x/\h in {0/0.01,1/0.10,2/0.45,3/1.20,4/2.10,5/2.52,6/2.10,7/1.20,8/0.45,9/0.10,10/0.01}
+    \fill[blue!45] (\x-0.32,0) rectangle (\x+0.32,\h);
+  \foreach \x in {0,1,2,3,4,5,6,7,8,9,10} \node[below] at (\x,0) {\scriptsize \x};
+  \node at (5,2.75) {\scriptsize \(252\)};
+  \node at (4,2.32) {\scriptsize \(210\)};
+  \node at (6,2.32) {\scriptsize \(210\)};
+  \node[align=left] at (9.4,2.5) {\scriptsize Microstate counts for\\[-2pt]\scriptsize each head count in ten coins};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Calculate it:} equally likely arrangements give probability as multiplicity divided by total \(2^{10}=1024\). Expose the assumption: why equal likelihood? Not logic, but symmetry. The faces have no relevant distinction, and exchanging any two coins leaves physics unchanged. With no reason to discriminate, treat equally. This bold, useful statistical step ultimately needs experimental backing. Five-and-five has probability \(252/1024\approx 24.6\%\), the first answer, far below half. Intuition confused most likely with very likely. It is the likeliest single result, but must still share the pie with over nine hundred other arrangements.
+
+\textbf{Follow it through:} replace \(10\) coins with \(N\). Equal microstate chances make macrostate probability proportional to contained microstates \(W\). Check with dice: sum \(7\) has \(6\) realizations, sum \(2\) only \(1\), making seven most frequent in casinos. Repeated throws revealed combinatorics before formal study. This is statistical physics' foundation, engraved by Boltzmann on his tomb: nature tracks no individual particle but selects the macrostate with most realizations. Uniform room air is not molecular peace-loving, but astronomically greater multiplicity than all-left, suppressing that alternative beyond a cosmic lifetime.
+
+Look beyond coins. Student heights, grade-wide scores on each exam question, and rush-hour intersection counts often make central-humped bell histograms. Why alike? They sum many unrelated small factors: height combines genes, nutrition, sleep, and more; traffic combines thousands of drivers' departure choices. The central limit theorem ensures that sufficiently many independent contributions approach one bell shape. Again three levels: observed histogram, mathematical central limit theorem, and the explanation that height adds many small influences. Bells are everywhere because summation is everywhere, not because the world likes bells.
+
+Second concept: \textbf{fluctuations}. Ten coins often give \(3\) to \(7\) heads; a million often give 499,000 to 501,000. Absolute variation grows from a few to thousands, but relative variation shrinks sharply. A general rule is absolute fluctuations growing approximately as \(\sqrt{N}\), relative fluctuations shrinking as \(1/\sqrt{N}\). This is the quantitative face of large numbers: stability comes from spreading deviations across the population, not better-behaved individuals.
+
+Third, why high-energy molecules are scarce. Imagine fixed gas energy as a fixed bonus divided among molecules. Concentrating riches on a few has few arrangements; spreading them roughly evenly has many. Nature votes by multiplicity, making high-energy molecules rarer. The analogy works in countable allocations and conserved total. It fails because money divides arbitrarily while molecules exchange energy through collisions, often in whole quantum portions. Those portions foreshadow Volume III's quantum theory. Now turn intuition into a formula.
+
+\step{The Model in One Sentence}
+
+Three concepts: distributions assign outcome shares, fluctuations say the mean's authority grows with particle number according to \(1/\sqrt{N}\), and microstate counting identifies favored macrostates. Together they form one core statement:
+
+\begin{oneline}
+We cannot and need not follow each particle. Collective behavior depends on which macrostate has the most microscopic realizations. Counting states gives laws more reliable than individual trajectories, increasingly reliable with more particles.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Assign symbols. A system's \(i\)th microstate has probability \(p_i\). All probabilities sum to \(1\), because something must happen:
+\[
+\sum_i p_i = 1 .
+\]
+Check: one possible state has probability \(1\), reducing to \(1=1\). If a \(p_i\) exceeds \(1\), or the total is below \(1\), you have missed states, not found broken mathematics.
+
+For any microstate-dependent quantity \(A\), energy or heads count, the mean is a weighted sum:
+\[
+\langle A \rangle = \sum_i p_i A_i .
+\]
+Check: if \(A\) always equals \(A_0\), then \(\langle A\rangle = A_0\sum_i p_i = A_0\), sensibly itself. For coins, multiply each heads count by its multiplicity, sum, and divide by \(1024\). Symmetry pairs \(0\) with \(10\), each multiplicity \(1\), and \(4\) with \(6\), each \(210\). Pairing gives exactly \(5\), near your fifty-trial mean and increasingly close with more tosses to \(5\). Symmetry saves work: sometimes the mean is visible without summing every term.
+
+Relative standard deviation measures fluctuations; for \(N\) independent individuals it is about \(1/\sqrt{N}\). Extremes: \(N=1\) gives roughly \(100\%\), an unrepresentative single measurement; \(N\to\infty\) makes fluctuations vanish and the average ironclad. This is the gauge's secret, formally settled later.
+
+Now the central formula. In contact with a large reservoir at temperature \(T\), a system's relative probability for a particular microstate of energy \(E\) is proportional to
+\[
+e^{-E/(k_{\mathrm B} T)},
+\]
+where \(k_{\mathrm B}\approx 1.38\times10^{-23}\,\mathrm{J/K}\) is Boltzmann's constant. Comparing two energy levels, use
+\[
+\frac{p_2}{p_1} = e^{-(E_2-E_1)/(k_{\mathrm B} T)} .
+\]
+The left asks how much rarer high energy is. On the right, \(E_2-E_1\) is an energy tax and \(k_{\mathrm B}T\) the temperature-issued pocket-money scale, about \(4\times10^{-21}\,\mathrm{J}\) at room temperature. Higher tax relative to money means fewer affordable states, exponentially: double the tax and probability squares downward, not merely halves.
+
+Four checks. \(E_2=E_1\) gives ratio \(1\), equally costly states equally common. \(E_2<E_1\) gives positive exponent and ratio above \(1\), favoring lower energy. As \(T\to 0\), any \(E_2>E_1\) gives vanishing ratio, freezing everything into the ground state, the third law's statistical face. As \(T\to\infty\), ratio approaches \(1\), unlimited pocket money making levels equal. Four sensible limits validate the formula.
+
+\begin{center}
+\begin{tikzpicture}[x=1.1cm,y=0.9cm]
+  \draw[-{Stealth}] (0,0) -- (6.4,0) node[right] {Energy \(E\)};
+  \draw[-{Stealth}] (0,0) -- (0,3.4) node[above] {Relative probability};
+  \draw[thick,domain=0:6,samples=60] plot (\x,{3*exp(-\x)});
+  \draw[thick,dashed,domain=0:6,samples=60] plot (\x,{3*exp(-0.35*\x)});
+  \node at (4.4,0.3) {\scriptsize Cold: high energy strongly penalized};
+  \node at (5.1,1.6) {\scriptsize Hot: weaker penalty};
+  \node[left] at (0,3) {\scriptsize \(1\)};
+\end{tikzpicture}
+\end{center}
+
+Heating flattens the curve but never reverses it. High-energy states always remain rarer, only less so, a monotonicity underlying the second law. Compare widths: adult-height distribution spans roughly seven centimeters, under five percent of the mean, because only so many independent influences determine height. Tire-pressure relative fluctuations are of order \(10^{-12}\), backed by \(10^{23}\) molecules. Distribution width itself reveals underlying population size.
+
+The Boltzmann factor reveals a recurring tug-of-war: \textbf{energy versus entropy}. Energy favors sinking lower; entropy favors more realizations. Temperature referees. Ice locks molecules into a low-energy crystal with few arrangements; water lets them wander at higher energy but with astronomically many arrangements. Cold favors energy, unable to pay melting's tax, and ice wins. Heat favors entropy, realizing water's multiplicity advantage. At one temperature they tie: the melting point. Free energy keeps the score. Spontaneous evolution minimizes neither energy alone nor maximizes entropy alone, but minimizes free energy. Ice melts exactly at \(0\,^\circ\mathrm{C}\) because the ledger changes page there, not because molecules agreed.
+
+Phase change introduces \textbf{emergence}. A magnet contains billions of tiny needles, each interacting only with neighbors and tending to follow their direction. At high temperature, thermal motion wins and random orientations give no bulk magnetism. Cool below a critical temperature and neighbor-following snowballs into collective alignment: magnetism emerges. No needle commands; local rules repeatedly applied create a whole-system property. It resembles an uncommanded stadium wave, but people watch, hesitate, and cheer, while needles only align with neighbors. Such simple rules let physicists calculate critical behavior with simple models.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.62]
+  % Hot: disordered
+  \foreach \x/\r in {0/30,1/120,2/75,3/200,4/310,5/15,6/160,7/260,8/95,9/340,10/55,11/140,12/225,13/10,14/185,15/290}
+    \draw[-{Stealth},thick] ({mod(\x,4)*1.1},{-int(\x/4)*1.1}) -- ++(\r:0.75);
+  \node at (1.65,-4.6) {\scriptsize Hot: random, no bulk magnetism};
+  % Cold: ordered
+  \begin{scope}[xshift=7.2cm]
+    \foreach \x in {0,...,15}
+      \draw[-{Stealth},thick] ({mod(\x,4)*1.1},{-int(\x/4)*1.1}) -- ++(88:0.75);
+    \node at (1.65,-4.6) {\scriptsize Cold: alignment, magnetism emerges};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+Emergence extends outward: no car wants congestion, yet traffic jams propagate as waves; leaderless birds form orderly flocks; one water molecule has no wetness, yet a cup is wet. From Chapter 32's information and life to Volume III's quantum statistics, populations reveal properties absent in individuals, not merely stability.
+
+\begin{mathbridge}
+\textbf{From distribution to speed, temperature, and pressure.} Apply Boltzmann weighting to kinetic energy for the Maxwell speed distribution. Mean squared speed satisfies
+\[
+\tfrac12 m\,\overline{v^2} = \tfrac32 k_{\mathrm B} T .
+\]
+Temperature thus measures average translational kinetic energy, in a large-population sense. One molecule has kinetic energy, not temperature. For oxygen mass \(m\approx5.3\times10^{-26}\,\mathrm{kg}\) at \(T\approx300\,\mathrm{K}\), root-mean-square speed is about \(480\,\mathrm{m/s}\), above sound speed. This explains prompt perfume detection, yet asks why scent does not instantly fill the room. Collisions continually redirect each molecule, making diffusion a drunken random walk. Mean free path names the average distance between collisions, only about \(0.1\) micrometers in ordinary air, a few hundred molecular diameters: collision almost immediately after starting. Room-scale scent therefore travels mainly by airflow; diffusion alone takes hours.
+
+Add wall-impact momentum changes to derive
+\[
+p = \tfrac13 n\, m\,\overline{v^2},
+\]
+where \(n\) is molecules per unit volume. Combining gives \(pV = N k_{\mathrm B}T\), the experimentally established ideal-gas law. Statistics has derived a macroscopic law by counting, not merely fitted it.
+\end{mathbridge}
+
+\begin{challenge}
+\textbf{The partition function: a catalog of all possible states.} Boltzmann factors give relative probabilities; normalization gives absolute ones. Define
+\[
+Z = \sum_i e^{-E_i/(k_{\mathrm B} T)},
+\]
+summing every microstate. Then \(p_i = e^{-E_i/(k_{\mathrm B}T)}/Z\). The \(Z\) partition function has a modest name and remarkable status: a complete state catalog with temperature-dependent prices. From \(Z\), derivatives of its logarithm give mean energy, entropy, and pressure. Helmholtz free energy is \(F = -k_{\mathrm B}T\ln Z\), condensing the energy--entropy contest into one function. Statistical entropy appears too:
+\[
+S = k_{\mathrm B}\ln W,
+\]
+with \(W\) the microstates belonging to a macrostate. Remember strictly: entropy counts states logarithmically, not vaguely disorder. If a tidy hospital room has few tidy realizations, small \(W\), its entropy is low. An untidy room's high entropy comes from multiplicity, not appearance; visible disorder is merely that multiplicity's projection. Finally, as particle number tends to infinity, the partition function can become nonsmooth at a particular temperature. That mathematical sharp point is phase change, macroscopically ice melting exactly at \(0\,^\circ\mathrm{C}\).
+\end{challenge}
+
+\step{The Model's Limits}
+
+This state-counting machine is powerful, with four operating conditions.
+
+First, many particles. Stability comes from \(1/\sqrt{N}\) fluctuations; small \(N\) weakens the mean's authority. Here intuition stumbles: averages seem always right, so we expect every tiny gas sample to share uniform bulk pressure and density. Wrong. One cubic micrometer of air, a thousandth of a millimeter per side, contains about \(2.7\times10^{7}\) molecules, with density fluctuations about \(0.02\%\). A hundred-nanometer cavity contains only tens of thousands, approaching one-percent fluctuations. In virus-sized cavities tens of nanometers across, pressure jitters visibly in time, with no steady instrument reading. Uniformity is a large-number effect, not matter's birthright.
+
+Second, fluctuations need not be invisible. Brown's 1827 microscopic pollen jitter was experimental fact. Some thought the pollen alive, but boiled pollen and inorganic dust jittered too. Einstein's 1905 random-liquid-impact calculation predicted amplitudes, subsequently confirmed by Perrin, upgrading a molecular hypothesis to a tested model. Again distinguish levels: motion observed, molecules inferred, quantitative agreement tested. Brownian motion is visible fluctuation, with a microscope, and early direct evidence for statistical physics. Diluted milk or ink shows it today, reminding us that calm is a large-scale illusion.
+
+Third, equilibrium or near-equilibrium. Boltzmann describes bonuses already settled. Hurricanes, flames, torrents, and living cells continuously exchange energy and remain far from equilibrium, outside direct use of this distribution. Their harder nonequilibrium statistics remains a frontier. Even cooling water has temperature strictly only insofar as each small region is approximately equilibrated, local equilibrium, a bridge lending equilibrium tools to nonequilibrium worlds.
+
+Fourth, low enough temperature or high enough density defeats classical counting. We counted exchanging identical molecules as a new arrangement, but quantum identical particles carry no identity labels; exchange creates no new state. Counting indistinguishable particles as distinguishable gives wrong entropy, the Gibbs paradox that demanded correction before quantum mechanics existed. Bose and Fermi statistics then produce radically different results, such as metal electrons retaining large mean energy near absolute zero. Volume III tells that story. Here remember the assumptions: distinguishable particles, near-equilibrium, large numbers.
+
+One more boundary hides in averaging. Equipartition, \(\tfrac12 k_{\mathrm B}T\) per motion degree of freedom, was extended to molecular rotation and vibration, with disastrous consequences: thermal radiation should diverge at short wavelengths, the ultraviolet catastrophe. Experiment instead turns downward. The mistaken account assumes continuously divisible energy. Planck's 1900 whole-portion exchange finally reproduced blackbody radiation and launched quantum theory. Statistical physics' greatest gift of failure made its boundary a new-physics doorway.
+
+\step{Explaining the Opening Phenomenon}
+
+Settle the tire gauge. A tire contains order \(10^{23}\) molecules, giving relative pressure fluctuations \(1/\sqrt{10^{23}}\approx3\times10^{-12}\). Sensing that needs eleven decimal places. The needle's jitter is smaller than an atom, not absent. Averaging dilutes disorder beyond sight; individual randomness and collective stability are complementary. Independent impacts make deviations cancel according to \(\sqrt{N}\).
+
+Second guess: a thousand coins have heads standard deviation \(\sqrt{1000}/2\approx16\), or \(1.6\%\). Falling outside \(49\%\) to \(51\%\) therefore has over forty-percent probability, far from rare. Approaching half means slowly shrinking relative deviation, not disappearing absolute deviation or overwhelming probability in any chosen narrow interval.
+
+Third: all-left air has probability about \(2^{-N}\), with \(N\) of order \(10^{27}\). Even a cosmic-age wait falls vastly short. No law forbids it; counting buries it.
+
+Two applications follow. First, pressure cooking. Many cooking and reaction rates scale as \(e^{-E_{\mathrm a}/(k_{\mathrm B}T)}\), with activation threshold \(E_{\mathrm a}\). Take \(E_{\mathrm a}\approx50\,\mathrm{kJ/mol}\), warming from boiling \(373\,\mathrm{K}\) to pressure-cooker \(393\,\mathrm{K}\). The rate multiplier is
+\[
+e^{\frac{E_{\mathrm a}}{R}\left(\frac1{373}-\frac1{393}\right)} \approx e^{0.82} \approx 2.3
+\]
+Twenty degrees leverages an exponential to more than halve stewing time. Cooks and engineers unknowingly use Boltzmann factors. Second, the Sun. Its core near fifteen million degrees has \(k_{\mathrm B}T\) only about \(1.3\,\mathrm{keV}\), while proton Coulomb barriers reach MeV scales. Average molecules cannot cross. Rare fast molecules in the high-energy tail, aided by tunneling, permit slow fusion. Nearly five billion years of solar burning without exhaustion owes to exponential scarcity: the distribution tail determines stellar lifetime.
+
+A third engineering application is electronic thermal noise. Randomly moving resistor carriers fluctuate in number, producing tiny terminal-voltage fluctuations even with nothing connected, growing directly with temperature. This is statistical physics appearing in circuits, not poor instruments. It sets measurement floors for microphone hiss, radio-telescope sensitivity, and phone reception. Engineers respond statistically: cool receivers, often to liquid-helium temperature, or average repeated measurements to suppress noise through \(1/\sqrt{N}\).
+
+Summarize the harvest. Pressure averages impacts until fluctuations disappear; temperature measures mean kinetic energy and sets the energy-tax rate; entropy is the logarithm of a macrostate's microstate count; free energy scores the energy--entropy contest. Four core thermal concepts grow from counting states. That is the weight of the formula on Boltzmann's tomb.
+
+\step{Thought Experiments and Challenges}
+
+Our main thread now closes, from motionless gauge through counting to Boltzmann factors and free energy, using logic testable with coins at home. An extreme thought experiment probes statistical vocabulary's limits; four challenges test state-counting reasoning with little calculation. Each has a hint: try arguing it out yourself first.
+
+\begin{thought}[A Room with Only Ten Molecules]
+Imagine evacuating a room until ten molecules remain. What does a thermometer say? You can still calculate their mean kinetic energy, hence some temperature, but its fluctuations are \(1/\sqrt{10}\approx30\%\): twenty degrees one moment, different after a few molecules depart. Does one molecule have temperature? No: kinetic energy, not a population average. Like \(1.7\) children per family, no family literally has \(1.7\), yet thousands together give the number meaning. Keep evacuating: two molecules make pressure two occasional impacts; with one, even saying it follows Boltzmann's distribution needs care, because distributions describe population shares, not individual fate. Pressure, temperature, and entropy are statistical vocabulary that fails for too few particles. This also previews the final chapter's emergence: macroscopic properties are new collective attributes, not merely magnified microscopic ones.
+\end{thought}
+
+\begin{puzzles}
+\item Ten heads occur consecutively. Someone says tails is now due and probability will compensate. Are they right? What then does long-run half-and-half mean?\\\textbf{Hint:} The coin has no memory; next chances remain equal. Large numbers dilute rather than compensate. Ten existing deviations remain fixed while thousands of new outcomes overwhelm them. The denominator grows; no balance actively corrects itself.
+
+\item At roughly 5500 meters altitude, atmospheric pressure is about half sea level. Without an atmospheric formula, estimate using this chapter: convert height into a nitrogen molecule's potential-energy difference \(mgh\) and compare \(k_{\mathrm B}T\).\\\textbf{Hint:} The Boltzmann energy tax is now gravitational. Take \(m\approx4.7\times10^{-26}\,\mathrm{kg}\), \(g\approx10\,\mathrm{m/s^2}\), \(h\approx5.5\times10^3\,\mathrm{m}\), and \(T\approx270\,\mathrm{K}\). Then \(mgh/(k_{\mathrm B}T)\approx0.7\), so \(e^{-0.7}\approx0.5\). Atmosphere is a Boltzmann-stacked molecular tower.
+
+\item Does asking one water molecule whether it is ice or steam make sense? Why does water boil exactly at \(100\,^\circ\mathrm{C}\), rather than becoming slightly boiling from \(95\,^\circ\mathrm{C}\)?\\\textbf{Hint:} Phases belong to molecular arrangements, not individuals. Energy, entropy, and interactions compete collectively; infinite particle number allows partition-function non-smoothness at a specific temperature, giving a sharp macroscopic boundary. One molecule occupies neither side: the boundary belongs to the population.
+
+\item Why do two cups at \(50\,^\circ\mathrm{C}\) not combine into \(100\,^\circ\mathrm{C}\)? Conversely, is half a cup at \(50\,^\circ\mathrm{C}\) hotter than a full cup at \(50\,^\circ\mathrm{C}\)?\\\textbf{Hint:} Temperature measures mean kinetic energy and is intensive: doubling identical systems doubles number, not average. Extensive quantities such as energy and microstate count double. Distinguishing population-scaling from population-independent quantities is statistics' best gift to everyday language.
+\end{puzzles}

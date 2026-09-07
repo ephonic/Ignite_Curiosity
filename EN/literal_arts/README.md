@@ -10,8 +10,9 @@ The document class, fonts, packages, heading styles, volume-page macros, and
 table column styles are retained. Prose and visible labels are translated.
 With the contributor's approval, oversized tables may be divided at row
 boundaries with repeated headers so that content is not clipped by page edges.
-The recurring-objects table in `fragments/front004.tex` and thinking-tools
-table in `fragments/front005.tex` use this pagination fix.
+The recurring-objects table in `fragments/front004.tex`, thinking-tools
+table in `fragments/front005.tex`, and empire comparison in `fragments/ch034.tex`
+use this pagination fix. All original rows and column specifications remain.
 Their precisely marked, allowlisted boundaries are checked separately rather than
 being mistaken for a change to the book's content structure.
 See [the English editions README](../README.md) for the exact Chinese source
