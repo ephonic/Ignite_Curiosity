@@ -260,7 +260,7 @@ def main():
   \markboth{#1}{#1}%
 }
 
-\title{\zihao{0}\bfseries 点燃博雅\\[0.5em] \zihao{2}\mdseries ——给初中生的文科漫游}
+\title{\zihao{0}\bfseries 点燃博雅之火\\[0.5em] \zihao{2}\mdseries ——给初中生的文科漫游}
 \author{}
 \date{}
 
