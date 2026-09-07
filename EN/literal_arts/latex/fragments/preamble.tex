@@ -1,0 +1,58 @@
+\documentclass[UTF8,fontset=fandol,zihao=-4,openany]{ctexbook}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[unicode,hidelinks]{hyperref}
+
+\ctexset{
+  chapter/name = {Chapter\space,},
+  chapter/number = \arabic{chapter},
+  part/name = {Part\space,},
+  part/number = \Roman{part},
+  contentsname = {Contents},
+  figurename = {Figure},
+  tablename = {Table},
+}
+
+% Volume title pages
+\newcommand{\volumediv}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}%
+  \vspace*{\fill}
+  {\centering\zihao{0}\bfseries #1\par}
+  \vspace*{\fill}
+  \phantomsection
+  \addcontentsline{toc}{part}{#1}
+  \cleardoublepage
+}
+
+% Unnumbered chapters in the front and back matter
+\newcommand{\frontchapter}[1]{%
+  \chapter*{#1}%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{#1}%
+  \markboth{#1}{#1}%
+}
+
+\title{\zihao{0}\bfseries Igniting the Liberal Arts Spark\\[0.5em] \zihao{2}\mdseries ---A Humanities Tour for Middle School Students}
+\author{}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{quote}\itshape
+Why do people speak, tell stories, believe in the sacred, seek truth, build states, and launch revolutions? And why can a poem, a ruin, or a melody move us?
+\end{quote}
+\vspace*{\fill}
+\cleardoublepage
+
+\tableofcontents
+\cleardoublepage
+
+\begin{quote}
+Why do people speak, tell stories, believe in the sacred, seek truth, build states, and launch revolutions? And why can a poem, a ruin, or a melody move us?
+\end{quote}

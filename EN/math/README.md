@@ -2,11 +2,12 @@
 
 *A Tour of Mathematics for Middle School Students*
 
-English translation of the [Chinese mathematics edition](../README.md).
+English translation of the [Chinese mathematics edition](../../math/README.md).
+See [the English edition README](../README.md) for the source commit and update workflow.
 
-Translation is in progress. The preface, chapters 1–2, and appendices A–E
-are translated. Chapters 3–20 remain untranslated. This directory is not yet
-a complete English edition, and no complete English PDF is being published.
+Translation is in progress. This directory is not yet a complete English
+edition, and no complete English PDF is being published. The partial checker
+below reports current chapter coverage as work advances.
 
 The English LaTeX sources retain the original document class, fonts, page
 geometry, packages, theorem environments, box styles, table column definitions,
@@ -35,8 +36,7 @@ Run XeLaTeX enough times to resolve the contents and references, or use
 Tectonic, which uses the XeTeX engine and handles repeat passes, is also supported:
 
 ```sh
-tectonic --keep-logs math/EN/latex/main.tex
-python3 scripts/check_english.py math --log math/EN/latex/main.log
+python3 scripts/build_english.py math --publish
 ```
 
 LaTeX can silently skip missing `\include` files and still produce a PDF.

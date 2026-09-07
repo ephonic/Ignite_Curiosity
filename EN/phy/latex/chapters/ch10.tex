@@ -1,0 +1,209 @@
+% Chapter 10: Momentum: Accounting for Collisions
+\chapter{Momentum: Accounting for Collisions}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Two identical eggs in a kitchen are released from the same height. One hits a tiled countertop and cracks; the other lands on a thick dishwashing sponge, bounces once, and remains intact.
+
+Nothing strange, you might say: sponge is soft. But ask more carefully. Both eggs fall from the same height and have the same speed just before impact. Both eventually stop afterward. Their transition from motion to rest has identical starting and ending points. The tile does not stop its egg more completely; both end stationary, with exactly the same velocity change.
+
+What differs, then? What hits harder in the tile landing?
+
+Consider the reverse example. A karate performer breaks a brick with a hand strike. If instead they slowly press with all their strength, it stays intact. Same hand and brick: why such a difference between fast and slow?
+
+Perhaps you have seen this on a pool table or in a video: a cue ball hits an identical stationary ball squarely, then stops while the other rolls away at nearly its original speed. It is as though the cue ball transferred all its motion. Can motion pass from one object to another like a parcel, counted out intact on delivery?
+
+This chapter answers these questions through a new physical quantity. Once it arrives, collisions, explosions, rockets, and recoil reveal themselves as entries in the same ledger.
+\end{mainline}
+
+\step{Make a Guess First}
+
+Place three bets as usual. Write them down for checking at the end.
+
+Question one. Identical eggs fall from the same height onto tile and sponge, both stopping. Which has the larger velocity change? (a) Tile, because it stops more abruptly; (b) sponge, because it bounces; (c) equal.
+
+Question two. An empty truck and a passenger car collide head-on. Which experiences greater impact force? (a) The car, lighter and disadvantaged; (b) the truck, sturdy enough to withstand it; (c) equal.
+
+Question three. A stationary firecracker suspended in air explodes into two pieces, one left and one right. Which moves faster? (a) The heavier half; (b) the lighter; (c) equal; (d) it depends on propellant distribution.
+
+Do not read further until you answer with a sentence of reasoning. The reason matters more than the choice.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Collision Deliveries on a Tabletop]
+\textbf{Materials}: seven or eight identical coins, preferably one-yuan coins; a ruler; a smooth table; a raw egg; thick sponge or several folded towel layers; and optionally a slow-motion phone camera.
+
+\textbf{Part one: how many come out?} Line up four touching coins on the table. Put the ruler behind the row and slide a fifth along its edge, keeping it straight, into the rear coin. The frontmost \emph{one} shoots out, the others barely move, and the incoming coin stops. Now send two coins together side by side: \emph{two} come out. Try three. A simple rule appears: the number entering equals the number leaving, and departing coins carry nearly all the incoming motion. The middle coins seem merely to pass it along.
+
+\textbf{Part two: two egg landings.} Put the sponge on the counter and drop the egg about thirty centimeters onto it: intact. Try twice more; the sponge is reliable. Then drop from the \emph{same} height onto the hard counter. To avoid wasting an egg, substitute a thin water-filled plastic bag filmed in slow motion falling from the same height onto sponge and counter. Watch how long each takes from first contact to a complete stop. Stopping on sponge is visibly prolonged.
+
+\textbf{Think}: equal numbers in and out suggest exact transfer of something. What? Why not velocity itself, since two outgoing coins each move more slowly than in a single-coin impact? In part two, incoming velocities and final rest match, differing only in stopping \emph{time}. What relationship connects time and outcome?
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+Our tools from Chapters 5 and 6 are position, velocity, acceleration, and Newton's second law linking net force to acceleration. They conquer slopes, projectiles, and circles, but collisions expose three weaknesses.
+
+First, \emph{we do not know the collision force}. During the brief egg--tile impact, how large is the force and how does it change? How large at first contact or when cracks appear? Nobody knows, nor needs to. The force is huge, brief, complicated, and hard even to measure. Newton's law needs force at every instant to predict motion at every instant, while collisions conceal that input.
+
+Second, \emph{energy conservation supplies too few equations}. Chapter 9 gave an energy ledger. Can it solve pool? A cue ball at \(v\) hits an identical stationary ball; what are both final velocities? Conservation provides one equation for two unknowns, insufficient. Worse, many collisions do not conserve kinetic energy: colliding clay sticks together and loses much of it to heat and deformation. The overall energy ledger balances, but its kinetic account shrinks. Energy conservation alone cannot even reliably sketch the aftermath.
+
+Third, \emph{some processes hardly invite force onstage}. Exploding propellant pushes a firecracker's halves apart internally; a person walking from a boat's bow to stern makes the boat shift oppositely; a firing gun recoils into a shoulder. The forces are internal affairs with tangled details, yet outcomes are remarkably orderly, with something always unchanged.
+
+All three expose one gap: we need a quantity ignoring millisecond collision details while tracking totals \emph{before and after}, transferred between objects without any change in the sum. We need a new ledger.
+
+\step{Inventing New Concepts}
+
+Invent it as physicists historically did.
+
+The coin clue says equal counts entering and leaving mean the transferred quantity is proportional to \emph{coin count}, hence mass. You also noticed each outgoing coin is slower when two enter, suggesting a fixed total spread across two coins. Combine them: what transfers contains mass and velocity, roughly \emph{mass times velocity}. Name it \emph{momentum}:
+\[
+p=mv .
+\]
+Momentum has velocity's direction. A large value can mean heavy or fast: a slow large truck and a speeding bullet can have comparable momentum. This precisely expresses heavy, fast things being hard to stop.
+
+Now the eggs. Both change velocity from the same \(v\) to \(0\), with identical momentum change \(mv\). Sponge lengthens stopping time; tile crowds the same change into a short interval. Guess that \emph{force is momentum changed per unit time}. The same change in less time means a harsher force:
+\[
+F=\frac{\Delta p}{\Delta t},\qquad\text{or}\qquad F\,\Delta t=\Delta p .
+\]
+This is no new law, only Chapter 6's \(F=ma\) rewritten. At fixed mass, \(\Delta p=m\Delta v\); dividing by \(\Delta t\) yields \(F=ma\). Yet rewriting illuminates something: \(F\Delta t\) on the left is \emph{impulse}, force accumulated over time, and the right is momentum change. It reveals what \(F=ma\) hides: \emph{a force's effect depends on how long it persists}. A tap and a prolonged shove can have equal peak force but transfer different momentum through different durations.
+
+Momentum leaves only a thin veil over collision secrets. Let \(A\) and \(B\) collide. The third law says the force of \(B\) on \(A\) equals and opposes that of \(A\) on \(B\), and the pair \emph{starts and ends together}, acting through identical \(\Delta t\). Thus the impulses received by \(A\) and \(B\) are equal and opposite; what \(A\) gains in momentum is exactly what \(B\) loses. The total never changes:
+\[
+p_{A}+p_{B}=\text{constant}.
+\]
+This is \emph{momentum conservation}. We assumed almost nothing: neither elastic nor plastic force, sticking nor separation, not even known magnitude. Only paired interactions lasting together. Momentum conservation can know nothing about collision details and still hit the target because details never enter its business.
+
+Conservation has a condition visible in the derivation: only forces between \(A\) and \(B\) were counted. A \emph{third party}, such as floor friction, wall contact, or strong gravity, contributes external impulse and changes the total. Precisely, \emph{a system's total momentum is conserved when total external impulse is zero or negligible over the process of interest}. System now deserves serious attention. Boundary choice decides which forces are internal transfers and which are external additions or withdrawals. Choosing it is the first step in momentum accounting, not a word game.
+
+Add a whole-system perspective. Conserved total momentum means conserved total-momentum-divided-by-total-mass velocity. What moves at that velocity? For masses \(m_1,m_2\) at \(x_1,x_2\), define
+\[
+x_{\text{CM}}=\frac{m_1x_1+m_2x_2}{m_1+m_2},
+\]
+the \emph{center of mass}, a mass-weighted mean position drawn toward the heavier object. The mathematical bridge verifies that its velocity is total momentum over total mass. Conservation therefore equivalently says \emph{however violent internal collisions or explosions become, zero external impulse lets the center of mass continue uniformly straight}. Fireworks burst at their highest point, scattering fragments chaotically, yet their combined center of mass continues along the original parabola as though nothing exploded.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Momentum \(p=mv\) accounts for quantity of motion; force transports it and impulse \(F\Delta t\) records the delivery. Internal collisions and explosions merely transfer momentum within a system; without external interference the total never gains or loses a penny.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Write the ledger as equations and test every one with extremes.
+
+\textbf{Momentum: \(p=mv\).} What it describes: how much motion an object carries and which way. Why this form: coins suggest proportionality to both mass and velocity; multiplication is the simplest fit. Check: \(v=0\) gives \(p=0\), no motion quantity at rest. Double \(m\) and \(p\) doubles, so two incoming coins require two outgoing. Reverse velocity and momentum becomes negative, allowing left and right to cancel and an explosion's total to remain zero. At a large extreme, a ten-thousand-tonne train at walking speed has \(p=10^{7}\times1=10^{7}\) kilogram-meters per second, comparable to a car at two thousand times sound speed. That is why a slowly creeping locomotive can flatten a car.
+
+\textbf{Impulse and the momentum theorem: \(F\Delta t=\Delta p\).} What it describes: momentum deposited or withdrawn during force action. Why this form: multiply \(F=ma\) by time and rearrange, changing viewpoint without new physics. When it holds: directly for constant force, or after accumulating instantaneous forces for variable force, as in the bridge. When it fails: almost never in itself, but a badly guessed duration ruins an estimate. Check: tiny \(\Delta t\) with fixed \(\Delta p\) sends \(F\) very high, the tile's mathematical portrait. Spread the same \(\Delta p\) over long \(\Delta t\) and \(F\) becomes gentle, the sponge's portrait. Impulse is also area under a force--time graph. The two eggs' curves look very different but enclose equal areas.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=0.9]
+  % Left: hard landing
+  \draw[->] (0,0) -- (4.6,0) node[right]{$t$};
+  \draw[->] (0,0) -- (0,3.0) node[above]{$F$};
+  \draw[very thick,red!70!black] (0.4,0) .. controls (0.7,2.6) and (0.9,2.6) .. (1.2,0);
+  \fill[red!15] (0.4,0) .. controls (0.7,2.6) and (0.9,2.6) .. (1.2,0) -- cycle;
+  \node at (0.8,-0.5) {Tile: narrow and tall};
+  % Right: soft landing
+  \begin{scope}[xshift=6.2cm]
+  \draw[->] (0,0) -- (4.6,0) node[right]{$t$};
+  \draw[->] (0,0) -- (0,3.0) node[above]{$F$};
+  \draw[very thick,blue!70!black] (0.3,0) .. controls (1.3,1.0) and (2.7,1.0) .. (3.7,0);
+  \fill[blue!15] (0.3,0) .. controls (1.3,1.0) and (2.7,1.0) .. (3.7,0) -- cycle;
+  \node at (2.0,-0.5) {Sponge: broad and low};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\textbf{Conservation in one-dimensional collisions.} Two objects move along one line with pre-collision velocities \(v_1,v_2\), then \(v_1',v_2'\). Momentum conservation is
+\[
+m_1v_1+m_2v_2=m_1v_1'+m_2v_2' .
+\]
+This is a \emph{signed} equation: negative leftward velocities handle direction automatically.
+
+An \emph{elastic collision}, conserving kinetic energy too, as in hard pool-ball or coin impacts, has an elegant result derived in the bridge:
+\[
+v_1'=\frac{m_1-m_2}{m_1+m_2}v_1+\frac{2m_2}{m_1+m_2}v_2,\qquad
+v_2'=\frac{2m_1}{m_1+m_2}v_1+\frac{m_2-m_1}{m_1+m_2}v_2 .
+\]
+Check three cases. Equal masses \(m_1=m_2\) give \(v_1'=v_2,\ v_2'=v_1\): \emph{velocities exchange}. This stops the cue ball while the target takes all its speed and explains equal coin counts. A light object hitting a stationary wall, \(m_1\ll m_2\) and \(v_2=0\), gives \(v_1'\approx -v_1\), rebounding at original speed. The wall barely moves but takes \(2m_1v_1\) momentum; reversing a ball changes its momentum by \(2mv\), all transferred to wall and attached Earth. Third, most counterintuitive, \emph{heavy hits light}, \(m_1\gg m_2\) and \(v_2=0\), gives \(v_2'\approx 2v_1\). The stationary light object can depart at \emph{twice} the incoming object's speed! Intuition says it cannot outrun what hit it; the equation disagrees. Bowling pins flying and small nails struck by a heavy hammer show traces of this.
+
+A \emph{perfectly inelastic collision} leaves objects stuck together, like clay or a bullet embedded in wood. Their common final velocity follows directly:
+\[
+v'=\frac{m_1v_1+m_2v_2}{m_1+m_2}.
+\]
+Check: initially stationary, enormous \(m_2\) gives tiny \(v'\). A bullet enters Earth, which hardly moves but accepts all its momentum. Now the kinetic ledger: initial \(\tfrac12 m_1v_1^2\), final \(\tfrac12(m_1+m_2)v'^2\), with substitution giving \emph{necessarily less} afterward. Heat, sound, and permanent deformation receive the deficit. This is our most important contrast: \emph{momentum and kinetic-energy conservation are independent ledgers}. With negligible external force, collision momentum is conserved while much kinetic energy can disappear. Explosives conversely gain kinetic energy from chemistry while momentum stays conserved: zero before, fragments summing to zero afterward. Replacing momentum conservation with energy conservation in a collision is like trying to reconcile expenses using income records alone.
+
+\textbf{An estimate with real data.} A car hits a wall at sixty kilometers per hour, about 16.7 meters per second, and a sixty-kilogram driver stops with it using a belt. Momentum changes by \(\Delta p=60\times16.7\approx1000\) kilogram-meters per second. Chest striking steering wheel and stopping in 0.05 seconds gives mean \(F\approx1000/0.05=20000\) newtons, two tonnes' weight on the chest, enough to break ribs. An airbag stretching the stop to about 0.3 seconds lowers mean force to about 3300 newtons: painful but survivable. It removes none of the momentum change, only \emph{spreads the same impulse over more time}. Belts, helmet liners, long-jump sandpits, hands moving backward while catching baseballs, and cats bending their legs on landing all apply this principle.
+
+\begin{mathbridge}
+\textbf{Impulse of a variable force.} Split a collision into short intervals with nearly constant force and impulses \(F_i\Delta t_i\). Summing in the limit gives
+\[
+J=\int_{t_1}^{t_2} F(t)\,dt=\Delta p .
+\]
+This is the rigorous meaning of the area under the curve.
+
+\textbf{Deriving elastic-collision formulas.} Combine momentum conservation \(m_1v_1+m_2v_2=m_1v_1'+m_2v_2'\) with kinetic conservation \(\tfrac12 m_1v_1^2+\tfrac12 m_2v_2^2=\tfrac12 m_1v_1'^2+\tfrac12 m_2v_2'^2\). Rearrange and divide to get the simple intermediate \(v_2'-v_1'=v_1-v_2\): separation speed equals approach speed, equivalent to kinetic conservation but easier to use. Combine with momentum conservation and solve two linear equations for two unknowns to recover the main result.
+
+\textbf{Center-of-mass velocity.} Take time rates of change on both sides of \(x_{\text{CM}}=(m_1x_1+m_2x_2)/(m_1+m_2)\):
+\[
+v_{\text{CM}}=\frac{m_1v_1+m_2v_2}{m_1+m_2}=\frac{p_{\text{total}}}{m_{\text{total}}}.
+\]
+Conserved total momentum is equivalent to uniform straight center-of-mass motion. External impulse changes precisely that motion, whether the system contains two people, ten thousand fragments, or a gas cloud. Add more summation terms for many objects: \(x_{\text{CM}}=\sum_i m_ix_i/\sum_i m_i\).
+\end{mathbridge}
+
+\step{The Model's Limits}
+
+Momentum conservation is powerful but has three boundaries.
+
+First, \emph{external forces' accounts must be honored}. Conservation requires zero or negligible total external impulse. Table friction quietly takes momentum before a pool collision. A cushion collision transfers it through table to Earth, whose huge mass conceals motion. When may we pretend external forces vanish? During very brief collisions, ordinary frictional impulses \(F\Delta t\) are negligible, making momentum approximately conserved immediately before and after. That is why bullet-and-block problems conserve first and consider friction afterward.
+
+Second, \emph{momentum is directional}. Failure of total conservation does not mean failure in every component. An obliquely thrown firework explodes while gravity continually adds vertical impulse, so vertical momentum is not conserved. With no horizontal external force, horizontal momentum remains conserved and the center of mass keeps its uniform horizontal motion. Separate directional accounts give the word vector its practical meaning.
+
+Third, \emph{classical momentum has a speed limit}. Near light speed, \(p=mv\) no longer suffices. Under constant force, \(F\Delta t=m\Delta v\) predicts unlimited velocity growth, while experiments find acceleration increasingly difficult and light speed unreachable. Momentum conservation is not wrong; its \emph{definition} needs upgrading, because momentum and velocity are no longer simply proportional. This book keeps mass itself fixed and changes that relationship, detailed in Chapter 40. Accelerator physicists reconcile collisions with the upgraded ledger daily and still balance it exactly. Momentum conservation outlives Newtonian mechanics' domain.
+
+Finally, two common misuses. Calling momentum stored force, as in a bullet carrying a huge force through wood, is wrong. It carries momentum; force exists only during interaction with the board and depends on how quickly momentum changes. And conserved momentum does not guarantee an undamaged collision: two cars conserve total momentum while \emph{each one's} momentum changes enormously, with no broken rib spared. Conservation protects the total, not safety.
+
+\step{Explaining the Opening Phenomenon}
+
+Now reconcile the accounts.
+
+The eggs have identical incoming \(mv\) and final zero, identical momentum change, impulse, and graph area. Tile crowds the impulse into milliseconds and peak force exceeds shell strength. Sponge spreads it over tens of times longer, lowering the peak into a tolerable range. What kills the egg is not stopping more completely but stopping more quickly. Question one's answer is equal changes.
+
+Karate applies the same principle in reverse: a fast downward hand carries momentum; supports hold the brick, requiring transfer in a brief interval and producing enormous peak force that breaks it. Slowly pressing transfers momentum gently and steadily, with a force peak far below what the brick can withstand.
+
+The cue ball's transfer is equal-mass elastic exchange of velocities. It gives its entire momentum to the target, like the coins. Question two's answer is equal forces, because interactions pair. The lighter car suffers not from greater force but from greater velocity change under it: in \(F\Delta t=m\Delta v\), smaller \(m\) gives larger \(\Delta v\), causing deformation and casualties.
+
+The firecracker starts with zero total momentum and must end with zero: \(m_1v_1+m_2v_2=0\), so the lighter half is faster, question three's answer. Gun recoil and a boat retreating when you jump ashore follow the same rule.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[What Does a Rocket Push in Space?]
+On Earth, oars push water, wheels push ground, and feet push ground: advancing means pushing something backward and receiving opposite momentum. A rocket outside the atmosphere has vacuum, no water to row and no ground to push. What does it push?
+
+It pushes what it carries. Fuel becomes gas expelled backward at several kilometers per second; each parcel takes backward momentum and gives the rocket equal forward momentum. It is not pushing vacuum but continually \emph{throwing things backward}, specifically hot gas, fast and hard. Saturn V weighed about three thousand tonnes at launch and its first stage burned about thirteen tonnes of fuel each second, following this primitive account.
+
+An unwelcome but important consequence: fuel must accelerate not only the satellite but \emph{the remaining unburned fuel}. More speed needs more fuel, whose acceleration requires still more effort. That is why a lunar trip takes a three-thousand-tonne rocket to send a module of a few dozen tonnes. Space charges momentum taxes harshly, quantified in the challenge track.
+\end{thought}
+
+\begin{challenge}
+\textbf{The rocket equation.} At one instant a rocket has mass \(m\) and velocity \(v\). Over a brief interval it expels mass \((-dm)\) backward at constant speed \(u\) relative to itself. Conserve rocket-plus-gas momentum with negligible external force, expand, and discard second-order terms:
+\[
+m\,dv=-u\,dm .
+\]
+Integrating from ignition to burnout gives Tsiolkovsky's rocket equation:
+\[
+\Delta v=u\ln\frac{m_0}{m_{\text{final}}} .
+\]
+This quantifies harsh taxes: doubling \(\Delta v\) requires \emph{squaring} the mass ratio \(m_0/m_{\text{final}}\). Logarithmic growth makes fuel requirements explode. Staging and discarding spent casings fights this logarithm for every penny.
+
+\textbf{Light has momentum too.} Chapters 25 and 40 show that even light without rest mass carries momentum and exerts tiny pressure on illumination. Solar sails aim to use it for interplanetary travel without a gram of fuel. Conservation governs light too. Chapter 58 will reveal the ledger's ultimate origin: spatial equality, physical laws unchanged by translation. Our accounting method will become one of physics' deepest principles.
+\end{challenge}
+
+\begin{puzzles}
+\item A familiar sailing cartoon puts a powerful fan on deck blowing hard into its own sail. Can the boat move forward? What if the fan turns a hundred and eighty degrees and blows aft into the air? \emph{Hint}: draw the system around boat, fan, and sail. Is air blown by the fan and intercepted by the sail an internal or external affair? Are the boundaries identical in both cases?
+\item An open flatbed rail wagon glides uniformly without friction on level straight tracks. Heavy rain suddenly falls vertically into it and accumulates. Does it speed up, slow down, or stay unchanged? After rain stops, a hole drains all the water. What happens then? \emph{Hint}: what horizontal velocity do drops have before landing, and where does their horizontal momentum afterward come from? What horizontal velocity does draining water have when it leaves?
+\item A ball strikes a wall fixed to Earth perpendicularly and rebounds at the same speed. Kinetic energy is conserved but ball momentum reverses, changing by \(2mv\). Does this violate conservation? Where did the momentum go, and why does wall plus Earth acquire almost no visible kinetic energy? \emph{Hint}: momentum is \(mv\), kinetic energy \(\tfrac12 mv^2\). Give the same momentum to a mass \(10^{20}\) times larger: by what factors do velocity and energy shrink?
+\item You and a friend twice your weight face each other on perfectly smooth ice, push hard, and slide apart. Who moves faster and travels farther in the same time? Where is your combined center of mass, and does it move? \emph{Hint}: equal, opposite forces act together for equal durations. What relation holds between their impulses? Would choosing a different coordinate origin change whether the center of mass moves?
+\end{puzzles}

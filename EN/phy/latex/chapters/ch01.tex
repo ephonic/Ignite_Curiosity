@@ -1,0 +1,234 @@
+% Chapter 1: The World Is Not a Formula: What Physics Actually Does (complete text)
+\chapter{The World Is Not a Formula: What Physics Does}
+
+Many people think physics is a book full of formulas, and studying physics means memorizing them and plugging them into problems. This book wants to do the opposite: set the formulas aside first and return to the scene before a formula appeared---someone staring at a phenomenon, puzzled, then beginning to measure, guess, make mistakes, and measure again. Formulas are the destination of that process, not its starting point. This chapter introduces no particular physical law. We will tackle a more fundamental question: what is physics actually doing? On what grounds does it claim to ``know''?
+
+\step{A Counterintuitive Opening}
+
+Imagine this scene, and preferably try it yourself later. Person A holds the upper end of a thirty-centimeter ruler, letting it hang vertically. Person B holds their thumb and index finger apart on either side of the zero mark, without touching the ruler. A releases it without warning; B closes their fingers as quickly as possible to catch it, then reads the mark where they caught it.
+
+First attempt: eighteen centimeters. Second: eleven. Third: twenty-three. Fourth: sixteen.
+
+Here is the strange part. The same person, the same nerves and muscles, the same ruler, yet a different catching point each time. Perhaps B is not concentrating? Have B concentrate as hard as possible and repeat ten times---the readings still spread out. You might suggest taking an average: surely that is B's ``real reaction speed.'' But measure again the next day and the average changes; take a nap and measure again, and it changes again. Ask the class sports representative, who has the fastest reactions, to try: their readings spread out too, though they are generally smaller.
+
+This seems too trivial to mention, yet it exposes a weak spot in our picture of physics. We tend to assume that every quantity in the world has a definite ``true value,'' quietly waiting to be read, like height or shoe size. But the quantity ``your reaction time'' seems unwilling to settle down. Similar troubles are everywhere: the same bathroom scale can differ by a kilogram between morning and evening; a navigation app predicts a different arrival time every day for the same commute; electronic timing in a hundred-meter final resolves thousandths of a second, but the same athlete never gets exactly the same result when running again; the blue dot representing your position on a phone map slowly drifts even when you stand still, giving slightly different coordinates each time.
+
+The world never hands us ``the number,'' only a collection of numbers that do not quite agree. Faced with such messy data, what does ``knowing'' mean? What entitles physicists to draw conclusions? That is the question this chapter will answer.
+
+\step{Make a Guess First}
+
+Before reading on, write down your intuitive predictions as clearly as possible. We will return to check each of them.
+
+First, if you carefully measure your reaction time ten times, about how much will the fastest and slowest differ? Does your intuition say ``less than a few percent,'' or ``possibly by a factor of two''?
+
+Second, if A calls ``Ready!'' before releasing the ruler, will B do better? Will the readings spread out more or less?
+
+Third, should testing your left hand and your right hand give the same result?
+
+Fourth, and most crucially: if you measure a hundred or a thousand times and take the average, can you obtain the ``true reaction time'' to three decimal places?
+
+Most people's intuitive answer to the fourth question is yes: measure enough times and the average will approach the true value indefinitely. That intuition is half right and half headed for a fall. Where it falls is the most important lesson of this chapter. Note your four answers in a corner of your paper---the most valuable thing in physics is not a correct answer, but a clearly stated guess that can be judged.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Ruler Reaction Time]
+\textbf{Materials}: a thirty-centimeter ruler (plastic is fine), paper and a pen, and a phone calculator.
+
+\textbf{Procedure}:
+\begin{enumerate}[leftmargin=2em]
+  \item Ask a family member or classmate to hold the ruler at its upper end so it hangs vertically, with the zero mark at the bottom.
+  \item Hold your thumb and index finger about three centimeters apart, loosely on either side of the zero mark. \textbf{Do not touch the ruler}.
+  \item Your partner releases it without warning. Catch it as quickly as you can, read the mark at the catching point, and write it down.
+  \item Repeat ten times, returning the ruler to its original position each time.
+  \item Calculate the mean of the ten readings, find the largest and smallest, and record their difference (called the \textbf{range}).
+\end{enumerate}
+
+\textbf{Sample data}: one of the author's trials gave \(12, 15, 16, 17, 18, 18, 19, 21, 23, 27\) (in centimeters), with a mean of \(18.6\) centimeters and a range of \(15\) centimeters. Your data will almost certainly differ, but if the fastest and slowest differ by less than two or three centimeters, it is worth wondering whether there was a warning each time.
+
+\textbf{Variation}: many phone app stores offer reaction-time tests that replace the ruler with a touchscreen and report milliseconds directly. Try one. Compare the spread from the two methods and think about why they differ.
+\end{experiment}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \draw[thick] (0,0) rectangle (0.9,5.4);
+  \foreach \y in {0,0.9,...,5.4} \draw (0,\y) -- (0.22,\y);
+  \node[left] at (0,0) {\small \(0\)};
+  \node[left] at (0,5.4) {\small \(30\)};
+  \node[rotate=90] at (0.45,2.7) {\small Ruler};
+  \draw[thick] (-0.35,5.05) -- (0,5.05);
+  \draw[thick] (1.25,5.05) -- (0.9,5.05);
+  \node[above] at (0.45,5.5) {\small A holds the top and releases at random};
+  \draw[thick] (-0.6,0.15) -- (0,0.15);
+  \draw[thick] (1.5,0.15) -- (0.9,0.15);
+  \node[below] at (0.45,-0.15) {\small B's fingers wait on either side of zero};
+  \draw[dashed] (0,3.3) -- (1.75,3.3);
+  \draw[<->,>=Stealth] (1.75,0) -- (1.75,3.3) node[midway,right]{\small Reading \(h\)};
+\end{tikzpicture}
+\end{center}
+
+This experiment has no dangerous steps, yet it contains the entire skeleton of physical research: a phenomenon (where the ruler is caught), an agreed procedure (how to hold it, wait, and read it), a series of data (ten readings), and a temptation---to squeeze a ``conclusion'' from the data. Let us see what trouble intuition encounters in that series of numbers.
+
+\step{The Old Model Runs into Trouble}
+
+Faced with ten different readings, intuition brings out two old models to help. Let us watch them fall, one at a time.
+
+\textbf{Old model one: ``Every quantity has a true value; measurement simply reads it off, and an inaccurate reading means a mistake.''} This model implies that at most one of the ten readings is right and the other nine are ``errors.'' But look at the shape of the data: most readings cluster in the middle, with few far away. That does not look like nine mistakes; it looks as though some rule governs the spread. Worse, the spread does not disappear when you try harder. Give the same person precision equipment with electronic timing and photoelectric sensors and repeat the test: the last digit still jumps around. If spread were merely carelessness, care should eliminate it. In fact it can only be reduced, never eliminated. This old model has another debt to pay: it cannot explain why taking more readings and averaging them makes sense, or how many decimal places to report. What use is a model that cannot even supply operating instructions?
+
+\textbf{Old model two: ``Studying physics means memorizing formulas, and formulas are the world itself.''} This model runs deeper and is more stubborn. A historical fact deals it a fatal blow: Ptolemy's geocentric system placed the Sun and planets in motion around Earth, with the planets also moving along nested small circles called epicycles. Today we regard this model as wrong. Yet, with patient adjustments of those circles' sizes and rotation rates, its predictions of planetary positions were accurate enough to guide calendars, navigation, and astrology for fourteen hundred years---for many practical purposes it worked very well. A wrong model can perform beautifully within a limited range. Conversely, usefulness cannot prove that a model reveals the world as it really is. A formula is not the world; it is our portrait of the world. A portrait can capture a likeness, distort it, or resemble its subject from one angle and distort it from another.
+
+One everyday version of an old idea also deserves dismantling: ``The finer the measurement, the better.'' Intuition says that reporting more digits means better measurement. Here is a counterexample: someone measures their height with an ordinary meter rule marked in millimeters, then reports ``172.3418 centimeters.'' The third and fourth decimal places were never measured; the calculator produced them while averaging. A still more telling counterexample is a bathroom scale that has not been zeroed. Its pointer reads two kilograms with nothing on it. Stand on it ten thousand times and average the results: the average remains firmly two kilograms off. Intuition says that ten thousand measurements must be accurate. Wrong---repetition can reduce fluctuations that go up and down, but averaging ten thousand times cannot cure a fault that always shifts the reading in the same direction. These two kinds of trouble need different treatment. That is our next task.
+
+\step{Inventing New Concepts}
+
+Where old models fall, new concepts are born. Physics uses a set of words with distinct jobs to split ``knowing'' into several operations. First remember the differences between these five words; the whole book depends on them.
+
+\begin{mainline}
+\textbf{Facts}: what actually happens in the world, together with repeatable, verifiable records of observations. ``An apple falls when released'' and ``These are B's ten ruler-catching readings'' belong to the factual level. Facts do not depend on a theory, but recording them requires conventions about instruments and where to take readings.
+
+\textbf{Measurement}: translating phenomena into numbers using instruments and conventions. Measurement always has a resolution: a meter rule reads to millimeters, a micrometer to hundredths of a millimeter. No instrument supplies infinitely many significant digits.
+
+\textbf{Model}: a simplified story we invent about how the world works, usually accompanied by mathematics. A model deliberately discards many details and retains only the relationships it considers important.
+
+\textbf{Law}: a relationship within a model that has been tested repeatedly in many experiments and has never failed within a specified domain. For example, ``Near Earth's surface, how fast objects fall does not depend on their weight.'' Laws still belong to the level of models rather than facts; they are simply the model's best-performing parts.
+
+\textbf{Explanation}: the process of making sense of a fact within a model. ``The apple falls because Earth's gravity pulls it'' is an explanation, not the fact itself. Several explanations can compete for the same fact, with new experimental predictions deciding between them.
+\end{mainline}
+
+Run the ruler experiment through these five operations. Facts: the ten readings on the paper and the observation that readings always spread out. Measurement: reading from the zero mark to the catching point, with an agreement to estimate to half a centimeter. Model: ``Reaction time has a typical level, and each measurement fluctuates randomly around it.'' That sentence is itself a model: it discards what you ate for breakfast, whether a car honked outside, and every other detail. This chapter does not yet reach the level of a law, but in Chapter 5, ``Falling distance is proportional to the square of time'' will become a law you can test. Explanation: a particularly large reading might be explained as ``My attention wandered that time.'' Whether this explanation is right must be decided by a new experiment---such as giving a ``Ready!'' signal and checking whether readings generally shrink---not by whether it sounds reasonable.
+
+Return to the apple. ``Objects fall'' is a fact that can be checked repeatedly; ``why they fall'' requires a model. You can say ``Earth pulls it through gravity'' (Newton's model), or ``Earth curves the surrounding spacetime, and the apple follows the straightest path through curved spacetime'' (Einstein's model). Both explain falling, but the latter also explains details the former cannot, such as small discrepancies in Mercury's orbit. Which is ``the truth''? Physicists rephrase the question: whichever model's predictions agree more accurately with experiments over a wider range is ahead for now. Models receive annual report cards, not lifetime achievement awards.
+
+Next come three idealized concepts used throughout the book. From the next chapter onward, they will appear constantly.
+
+\textbf{Point particle}: when studying Earth's orbit around the Sun, treat Earth, more than twelve thousand kilometers across, as a point with no size. Absurd? The orbital radius is about a hundred and fifty million kilometers, so Earth's bulk is only of order one ten-thousandth of the distance involved. Discard it, and a calculation immediately becomes a few lines of algebra instead of an impossible task, while the predicted orbital position barely changes.
+
+\textbf{Frictionless plane}: real tabletops always have friction, but when studying questions such as ``What happens to an object when nothing pushes it?'', friction conceals the central rule. First imagine a plane with zero friction, identify the rule, and then restore friction as a correction. In Chapter 6, on Newton's first law, you will see that without this idealization humanity might still believe that objects need a force to keep moving.
+
+\textbf{Inextensible string}: every real string stretches a little, but when studying pendulums and pulleys, ignoring that stretch immediately clarifies the problem. When studying bungee jumping, however---where the cord's stretch is precisely what saves your life---this must be the first idealization to go.
+
+Why are these idealizations useful? Here is the book's first formal analogy. \textbf{A model is like a map}: a map that reproduced every street and tree at a scale of one to one would be useless. A map's value comes precisely from omission---discarding details you do not care about and highlighting relationships you do. The analogy breaks down because a map only depicts places that already exist, whereas a physical model must go further: it must predict experiments not yet performed and situations not yet measured, and submit to judgment. A model that can never be scored by a new measurement is not physics, however beautiful it may be.
+
+Finally, let us formally name the two kinds of measurement trouble you have already met in the unzeroed scale. One is \textbf{random fluctuation}: readings vary upward or downward with no fixed direction, and averaging can reduce it. The other is \textbf{systematic bias}: every reading shifts in the same direction, perhaps because a scale has not been zeroed, a ruler has expanded in heat, or you habitually read from an angle above the mark. Averaging does nothing to this; it can only be removed by improving the instrument and procedure. The quality of a measurement is characterized by \textbf{uncertainty}. This is not an apology saying ``I was wrong,'' but a quantitative statement of the interval in which the true value is likely to lie. Alongside uncertainty come the rules for \textbf{significant figures}: the last digit reported must be justified by the instrument's resolution and the spread of the data. Extra digits are self-deceptive decoration. A practical rule of thumb is that the final digit of the result should be of the same order as the uncertainty. If ten ruler readings have a range of fifteen centimeters, reporting a mean of ``18.6 centimeters'' is already a stretch; reporting ``18.624 centimeters'' merely gilds the calculator's digits. Conversely, if a precision balance measures to 0.001 grams and you report only ``about two grams,'' that is also wasteful: you have thrown away information the instrument worked hard to obtain.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Physics is not memorizing formulas, but a procedure: observe a phenomenon, invent a simplified model, derive testable predictions, and let experiments score them; models have no certificate of ``true'' or ``false,'' only a report card stating ``within what range, and to what accuracy.''
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Intuition says ``Let's take an average.'' Mathematics asks: what is an average, and why should it represent ten measurements? Translate the first sentence into symbols. Let the readings be \(x_1, x_2, \ldots, x_n\) (here \(n=10\)); the mean is defined as
+\[
+\bar{x}=\frac{x_1+x_2+\cdots+x_n}{n}\,.
+\]
+
+By this chapter's rules, every formula must answer four questions. \textbf{What does it describe?} The central position of a set of measurements. \textbf{Why write it this way?} Adding and dividing equally is the only algorithm that treats every reading equally and makes the mean rise by exactly the same amount when all readings rise together; any algorithm favoring a particular reading has no right to represent the whole. \textbf{When does it apply?} When you want to summarize repeated measurements under the same conditions, with nothing else mixed into the data, such as a different person taking over halfway through. \textbf{When does it fail?} When the data come from two different distributions---for instance, you measure five times and then a faster-reacting classmate measures five times. The pooled mean represents neither of you. And when systematic bias is present, however precise the mean becomes, it faithfully inherits the bias.
+
+Now check special cases, a routine we will use throughout this book. \textbf{All equal}: if all ten readings are \(18\), the mean is \(18\), as it should be. \textbf{Overall shift}: add \(2\) to every reading (perhaps the ruler was placed two centimeters lower each time), and the mean rises by exactly \(2\), faithfully following the overall change. \textbf{One outlier}: if a slip produces a reading of \(50\) centimeters, the mean is pulled noticeably upward. This reminds you that means are vulnerable to outliers; investigate the procedure before blindly calculating with anomalous data. \textbf{\(n=1\)}: with only one measurement, the mean is that measurement. The formula reduces naturally, but exposes a fact: a single measurement tells you absolutely nothing about the size of the spread.
+
+Plot the author's data as ``the number of readings in each interval,'' and the shape is immediately visible: high in the middle and low on either side, like a small hill.
+
+\begin{center}
+\begin{tikzpicture}[xscale=1.1,yscale=0.5]
+  \draw[->,>=Stealth] (0,0) -- (5.4,0) node[right]{\small Reading \(h\) (cm)};
+  \draw[->,>=Stealth] (0,0) -- (0,7) node[above]{\small Count};
+  \draw[fill=black!20] (0.2,0) rectangle (1.2,1);
+  \draw[fill=black!20] (1.2,0) rectangle (2.2,6);
+  \draw[fill=black!20] (2.2,0) rectangle (3.2,2);
+  \draw[fill=black!20] (3.2,0) rectangle (4.2,1);
+  \node[below] at (0.7,0) {\small 10--15};
+  \node[below] at (1.7,0) {\small 15--20};
+  \node[below] at (2.7,0) {\small 20--25};
+  \node[below] at (3.7,0) {\small 25--30};
+  \foreach \y in {1,...,6} \node[left] at (0,\y) {\scriptsize \y};
+\end{tikzpicture}
+\end{center}
+
+This little hill is what physicists call a \textbf{distribution}. It is the real protagonist of measurement: the mean is merely the position of the hill's center of gravity, while its width and shape also carry information. You will meet it again in Volume II, on thermal physics---the speeds of billions of molecules also form such a hill---and it will return in a deeper form in Volume III, on quantum physics.
+
+How do we translate spread? On the main track, use the range: maximum minus minimum, or \(27-12=15\) centimeters for the author's data. The range is simple but relies too heavily on the two extremes. A more stable measure belongs in the mathematical bridge.
+
+\begin{mathbridge}
+Square each reading's deviation from the mean, average, and take the square root to obtain the \textbf{standard deviation}:
+\[
+u=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}\left(x_i-\bar{x}\right)^2}\,.
+\]
+\textbf{What does it describe?} The typical size of fluctuations around the mean. \textbf{Why write it this way?} Deviations can be positive or negative, so adding them directly makes them cancel. Squaring makes them all positive, amplifying large fluctuations and reducing small ones; the square root restores the original unit of centimeters. \textbf{When does it apply?} When fluctuations in individual measurements are independent and show no clear trend. \textbf{When does it fail?} If the data have a trend---you become more practiced and the readings decrease steadily---the standard deviation mistakes improvement for fluctuation.
+
+Check special cases: if all readings are equal, all deviations are zero and \(u=0\)---no spread, as expected. Add \(2\) to every reading, and the deviations and \(u\) remain unchanged---an overall shift does not change spread. Change units from centimeters to millimeters, and every deviation, hence \(u\), is multiplied by ten---it scales with the units like a proper ruler.
+\end{mathbridge}
+
+\begin{challenge}
+The formula divides by \(n-1\), not \(n\): this is Bessel's correction. The intuition is that \(\bar{x}\) was itself calculated from these \(n\) numbers and has already borrowed one piece of information from them. Of the \(n\) deviations, only \(n-1\) remain truly independent: the sum of the \(n\) deviations is identically zero, so knowing the first \(n-1\) fixes the last. Dividing by \(n\) systematically underestimates the spread. A rigorous proof requires a little probability theory; for now, remember that information borrowed from the data must be paid back when calculating spread.
+\end{challenge}
+
+Now for an estimate using real data. How do we turn a ruler reading into a reaction time? We need the law of free fall, which is Chapter 5's job, so here we simply quote the result: released from rest, a ruler takes the following time to fall a distance \(h\):
+\[
+t=\sqrt{\frac{2h}{g}}\,,\qquad g\approx 9.8\ \mathrm{m/s^2}\,.
+\]
+Substitute \(h=18.6\) centimeters \(=0.186\) meters to get \(t\approx\sqrt{2\times0.186/9.8}\approx 0.19\) seconds. This agrees with human reaction times measured directly by electronic devices, about \(0.15\) to \(0.25\) seconds. Check special cases: at \(h=0\), \(t=0\); the fingers are already at zero, so zero time makes sense. Quadruple \(h\), and \(t\) only doubles---\textbf{time is not proportional to falling distance}. Intuition often gets this wrong: if your classmate's ruler reading is twice yours, their reaction time is not twice yours, but about \(\sqrt{2}\approx1.4\) times yours. Comparing reaction speeds directly from ruler readings can be unfair.
+
+This estimate has an immediate practical use. A car at a hundred kilometers per hour travels about 27.8 meters per second. A driver takes about half a second from seeing danger to pressing the brake, including decision time---much longer than catching a ruler. The car has already traveled about fourteen meters in that interval: this is the physical origin of the safe following distance in traffic rules. An autonomous driving system that reduces that reaction to less than a tenth of a second saves more than four-tenths of a second: at a hundred kilometers per hour, it saves over ten meters of life-saving space. Engineering's reaction-time budget grows directly out of the distribution you and I discover while catching a ruler.
+
+\step{The Model's Limits}
+
+Now set boundaries for each of this chapter's concepts. This discipline is more important than inventing them.
+
+\textbf{Where idealizations fail}. A point-particle model can calculate Earth's orbit, but when studying its rotation, day and night, or tides, Earth's size and shape become central, and the model immediately fails. A frictionless plane reveals the laws of motion, but curling players sweep the ice precisely to alter friction; erase it and you will never understand curling. An inextensible string is a good friend to a swing and a killer as a bungee cord: bungee safety depends entirely on the cord's stretch spreading the impact force over a longer time. An idealization is not a lie but a tool with instructions saying what it ignores. Read those instructions before use.
+
+\textbf{Where wrong models can legitimately be used}. Ptolemy's system was wrong but good enough to guide calendars for fourteen hundred years. ``The ground is flat'' is wrong, but treating Earth as a plane when building a house or a sports field introduces negligible error. Ignoring air resistance is wrong, but has little consequence when analyzing a book dropped from a height of one meter. A model's range and degree of accuracy are part of our knowledge of that model. Maturity in physics means providing every model with a clear domain of applicability, rather than finding an ultimately correct model. Extrapolating beyond that domain is a breeding ground for both engineering and scientific accidents.
+
+Weather forecasting is the most public demonstration of this principle. Weather centers divide the atmosphere into tens of millions of cells, use equations for fluids, heat, and water-vapor exchange to calculate interactions between them, and let supercomputers evolve the enormous model several days forward before translating it into the rain probability on your phone. This model is plainly not the actual atmosphere, which has no grid. But as finer grids and better equations are continually tested against observations, it becomes more useful within its domain. Meanwhile, everyone knows to take forecasts beyond seven days with a grain of salt: the public has quietly learned to read a model's domain of applicability.
+
+\textbf{Where statistics are misused}. A mean represents a typical level, not the value on every occasion. Your mean reaction time being two-tenths of a second does not mean it will be that tonight when you drive exhausted. A large spread is itself important information; reporting a mean without the spread is like concealing a medical condition. However many significant figures you report, you cannot exceed what the instrument's resolution and the data's spread justify.
+
+\textbf{A confusion that must be cleared up immediately}. The measurement uncertainty in this chapter is classical: it concerns instrument resolution, environmental disturbances, and a person's condition, and can in principle be continually reduced through better technology. Volume III's quantum mechanics introduces the famous uncertainty principle. The names sound similar, but the substance is entirely different: that principle says that certain pairs of physical quantities, such as position and momentum, inherently cannot simultaneously possess arbitrarily precise values. This is not caused by crude instruments, and even perfect instruments cannot evade it; it is part of nature's structure. Confusing these two is among the most common mistakes in popular science. From now on this book distinguishes them strictly: this chapter asks ``How accurately can we measure?'', while the quantum question is ``Do simultaneously definite values exist?''
+
+\textbf{The stubbornness of systematic bias}. Repeated measurements can reduce random fluctuations, but not systematic bias. An unzeroed scale remains two kilograms off after ten thousand readings; a ruler expanded by heat gives biased cloth measurements all year. There is no statistical shortcut to eliminating systematic bias, only a laborious route: cross-check with different instruments, methods, and laboratories. Many famous scientific blunders were caused by systematic biases that nobody had thought to question.
+
+\step{Explaining the Opening Phenomenon}
+
+Now return to the ruler with these new concepts.
+
+The opening puzzle---why the same person's reaction time changes on every attempt---is no longer a puzzle in the new language, but perfectly normal. Your reaction time was never a single number. It is a distribution, with a center (the mean, about two-tenths of a second), a width (the standard deviation, typically tens of milliseconds), and a shape high in the middle and low on the sides. Every measurement samples this distribution once. Readings spread out not because the measurement went wrong, but because the measured thing itself has width. Small differences in nerve-signal transmission, wandering attention, and the initiation of finger movement are truly present in every reaction. Even the finest instrument can only report that width faithfully.
+
+We can now check the four opening guesses. First, a factor-of-two difference among ten readings is normal, because the spread comes from the person, not a fault in the ruler. Second, ``Ready!'' shortens the mean reaction time and narrows the spread by focusing attention: this is a testable prediction of the model, and you can verify it at home. Third, the dominant hand is usually slightly faster, with a difference of roughly the same order as the spread, so many paired comparisons are needed to see it. Fourth, where intuition stumbled: averaging a thousand measurements does make the mean stabilize, but only the mean stabilizes; the spread of individual measurements does not shrink at all. Worse, if the catching method has a systematic bias---for example, you always read from an angle above---the mean stabilizes in the wrong place. Infinitely many measurements can reduce random fluctuations arbitrarily, but can do nothing about systematic bias. That is why physics requires different ways of measuring as well as more measurements.
+
+The opening mystery is resolved. Measurements differ not because physics is powerless, but because reaction time itself is a summary of a collection of fluctuations. Physics does not pretend the world consists of numbers nailed in place. It invents distributions, means, and uncertainties to describe the world's fluctuations honestly and extract stable, reliable patterns from them. This language also belongs outside laboratories: reference intervals on medical reports, opinion polls' margins of error, and effectiveness rates on medicine labels all speak in distributions and uncertainty. Learn this chapter and you can already see through much of the everyday bluffing that hides behind numbers.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Squeezing Earth into a Point]
+This chapter says that when studying Earth's orbit, we can treat Earth, about twelve thousand seven hundred and forty-two kilometers in diameter, as a point particle. How good is that approximation? The Earth--Sun distance is about a hundred and fifty million kilometers, so Earth's diameter is roughly one ten-thousandth of it. In other words, squeezing an enormous object into a sizeless point produces an uncertainty in orbital position of only order one ten-thousandth---far below the precision of ancient astronomical observations, and beyond even nineteenth-century observers' ability to find fault.
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[fill=yellow!50] (0,0) circle (0.45);
+  \node[below=10pt] at (0,-0.45) {\small Sun};
+  \draw[dashed] (0,0) circle (3);
+  \draw[<->,>=Stealth] (0,0) -- (2.12,2.12) node[midway,above left=-2pt]{\small About \(1.5\) hundred million km};
+  \fill (3,0) circle (0.05);
+  \node[right] at (3.05,0) {\small Earth (treated as a point)};
+\end{tikzpicture}
+\end{center}
+
+Now zoom to an extreme: suppose future astronomers want to predict an eclipse ten thousand years ahead precisely---which city and street the shadow cone will cross as the Moon blocks sunlight. Treating Earth as a point now becomes disastrous. The shadow's track on the surface is only a few hundred kilometers wide, while saying ``Earth is a point'' amounts to accepting twelve thousand kilometers of ambiguity in its position. The same idealization is brilliant for orbital motion and useless for eclipse prediction. A model's value is never written on the model itself, but on the question you use it to answer.
+\end{thought}
+
+\begin{puzzles}
+\item Xiaoming measures reaction time ten times with an ordinary ruler; Xiaohong also measures ten times, using a precision electronic device with photoelectric sensors. Must Xiaohong's readings have a smaller spread?
+
+\textbf{Hint}: distinguish the two sources of spread: instrument resolution and fluctuations in the object being measured. Which contributes most to the spread of reaction time? Which part can a more precise instrument reduce?
+\item A laboratory reports: ``We measured this material's strength as \(137.4281\) megapascals; the range of ten repeated measurements was \(9\) megapascals.'' Find the contradiction in this report.
+
+\textbf{Hint}: can the mean legitimately have more significant figures than the data's spread allows? With a range of \(9\) megapascals, what is the fourth decimal place saying?
+\item Someone mocks physics: ``Since you admit every measurement differs, physics cannot really determine anything. Science is just a faith.'' Refute this using the chapter's concepts in no more than five sentences.
+
+\textbf{Hint}: does the spread itself follow a pattern? Is uncertainty something that can be quantified, reduced, and cross-checked? What separates ``cannot determine arbitrarily many digits'' from ``cannot determine anything''?
+\item Given a ruler marked in millimeters, estimate the thickness of a sheet of paper and state your uncertainty. You cannot directly measure one sheet with the ruler, so what can you do? Does your method work against systematic bias?
+
+\textbf{Hint}: if one sheet cannot be measured, what about a stack of five hundred? Dividing the total thickness by the number of sheets spreads the instrument's resolution over how many sheets? Then consider whether averaging can help if one sheet is markedly thicker, or if the ruler has expanded in heat.
+\end{puzzles}
+
+At the end of this chapter, copy the book's three recurring questions onto the first page of your notebook: \textbf{What state is the system in now? What laws determine how that state changes? How do we know through measurement?} They will recur from the next chapter onward. Reaction time has already sketched the answers: the state is a distribution, the law concerns how its center and width change with conditions, and measurement means sampling, averaging, assessing uncertainty, and investigating systematic bias. When we discuss quantum probabilities in Volume III and the statistical laws of billions of molecules in Volume II, you will return to this ruler and discover that Chapter 1's troubles foretold the grammar of all physics: the world never hands over answers directly, only data, and physics is the discipline of reading them.

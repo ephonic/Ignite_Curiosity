@@ -17,6 +17,45 @@ HAN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 ENVIRONMENT = re.compile(r"\\(begin|end)\{([^{}]+)\}")
 REFERENCE = re.compile(r"\\(label|ref|eqref|pageref|include|input)\{([^{}]+)\}")
 HEADING = re.compile(r"\\(chapter|section|subsection|subsubsection|part)(\*?)\s*[\[{]")
+STYLE = re.compile(
+    r"\\(?:documentclass|usepackage)(?:\[[^\]]*\])?\{[^{}]*\}"
+    r"|\\(?:geometry|setmainfont|setsansfont|setmonofont|setCJKmainfont|"
+    r"setCJKsansfont|setCJKmonofont)(?:\[[^\]]*\])?\{[^{}]*\}"
+    r"|\\definecolor\{[^{}]*\}\{[^{}]*\}\{[^{}]*\}"
+)
+
+# User-approved pagination adds only this exact repeated table boundary/header.
+# Remove it for structural comparison, never arbitrary marked text. This also
+# works in the assembled liberal-arts entrypoint. Fonts and column styles stay
+# unchanged, and every original row remains subject to the normal checks.
+PAGINATION_BLOCKS = {
+    "recurring-objects": (
+        "\\bottomrule\n\\end{tabularx}\n\n"
+        "\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
+        "Object & First seen & Later connections \\\\\n\\midrule\n"
+    ),
+    "thinking-tools": (
+        "\\bottomrule\n\\end{tabularx}\n\n"
+        "\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
+        "Tool & First use & Main use \\\\\n\\midrule\n"
+    ),
+}
+PAGINATION = re.compile(
+    r"^% EN-PAGINATION-BEGIN ([a-z-]+)\n(.*?)"
+    r"^% EN-PAGINATION-END \1\n", re.MULTILINE | re.DOTALL
+)
+
+
+def normalize_pagination(text):
+    def remove_verified_block(match):
+        name, content = match.groups()
+        if name not in PAGINATION_BLOCKS or content != PAGINATION_BLOCKS[name]:
+            raise ValueError(f"unrecognized or modified pagination block: {name}")
+        return ""
+    normalized = PAGINATION.sub(remove_verified_block, text)
+    if "EN-PAGINATION-" in normalized:
+        raise ValueError("malformed pagination marker")
+    return normalized
 
 
 def without_comments(text):
@@ -25,7 +64,7 @@ def without_comments(text):
 
 def check_book(book, partial):
     source_dir = ROOT / book / "latex"
-    target_dir = ROOT / book / "EN" / "latex"
+    target_dir = ROOT / "EN" / book / "latex"
     sources = sorted(source_dir.rglob("*.tex"))
     missing = []
     errors = []
@@ -38,8 +77,12 @@ def check_book(book, partial):
             continue
         translated += 1
         original = without_comments(source.read_text(encoding="utf-8"))
-        english = without_comments(target.read_text(encoding="utf-8"))
-        name = f"{book}/EN/latex/{relative}"
+        name = str(target.relative_to(ROOT))
+        try:
+            english = without_comments(normalize_pagination(target.read_text(encoding="utf-8")))
+        except ValueError as error:
+            errors.append(f"{name}: {error}")
+            continue
         if not english.strip():
             errors.append(f"{name}: empty translation")
         if HAN.search(english):
@@ -48,6 +91,7 @@ def check_book(book, partial):
             ("environment sequence", ENVIRONMENT),
             ("reference/include identifiers", REFERENCE),
             ("heading sequence", HEADING),
+            ("document/package/font/color settings", STYLE),
         ):
             if pattern.findall(original) != pattern.findall(english):
                 errors.append(f"{name}: changed {label}")

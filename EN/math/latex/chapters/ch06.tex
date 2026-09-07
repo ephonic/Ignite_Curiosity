@@ -1,0 +1,247 @@
+\chapter{Transformations and Symmetry: From Moving Figures to Groups}
+
+\section{Putting a Square Back into Its Frame}
+
+Many places still keep the New Year tradition of cutting paper decorations for windows. Fold a sheet of red paper in half, then in half again, snip a few notches with scissors, and unfold it. An astonishing pattern appears: whatever is on the left must also be on the right; whatever is above appears again when you turn the paper. The person cutting never designed these repetitions. The folds supplied them for free.
+
+A kaleidoscope makes the effect even more immediate. A few fragments of coloured glass inside a tube lined with three mirrors create patterns as orderly as precision machinery. Turn the tube and the patterns change endlessly, yet always retain an unmistakable order. Why flowers with six or twelve petals, rather than seven or thirteen? Because the angles between the mirrors are fixed. The glass fragments are reflected repeatedly, each reflection adding another copy, and the angles determine how many copies appear. The broken glass is random; the mirrors' angles impose the order.
+
+Behind these kinds of order lies the same mathematical question. In this chapter we will investigate it through an even simpler game.
+
+Prepare a stiff square card and label its corners $1$, $2$, $3$, and $4$ on both sides, making sure each corner can be identified from either face. Draw a square frame of the same size on the table. How many different ways can you put the card exactly back into its frame?
+
+Remember the rule: you may flip the card over, so consider more than rotations.
+
+Guess first. Many people guess $4$, counting rotations through $0^\circ$, $90^\circ$, $180^\circ$, and $270^\circ$. But the card can also turn over, so there are at least $8$. And that is not the end of the matter. The interesting questions are just beginning.
+
+If I perform ``rotate $90^\circ$'' and ``reflect across the vertical midline'' in succession, does their result count as a new placement? Could there be a ninth? Further, is rotating and then reflecting the same as reflecting and then rotating?
+
+This sounds like a tiny playground puzzle, but it has challenged serious thinkers. While studying equations in the nineteenth century, mathematicians were forced to examine successive actions carefully. From them they extracted a new mathematical concept: the group. It later became a common language throughout modern mathematics and physics. Classifying crystals, naming elementary particles, and solving a Rubik's cube all depend on it. And it really can begin with the square card on your table.
+
+\section{First Guess, Then Go Wrong}
+
+Before inventing any terminology, let us see where intuition can lead us astray.
+
+The first common guess is that order does not matter when combining a rotation and a reflection. After all, addition and multiplication commute: $3+5=5+3$. Why should actions be different? This guess fails decisively. Start with corner $1$ in the upper left of the frame. Rotate $90^\circ$ anticlockwise, and corner $1$ moves to the lower left; reflect across the vertical midline, and corner $1$ reaches the lower right. Reverse the order: first reflect across the vertical midline, moving corner $1$ to the upper right; then rotate $90^\circ$ anticlockwise, bringing corner $1$ to the upper left. The two orders put corner $1$ in different places. Order matters when actions are composed.
+
+\begin{fanli}
+Warning: ``When two actions are performed in succession, either order gives the same result.''
+
+The card experiment refutes this: rotate $90^\circ$ then reflect, or reflect then rotate $90^\circ$, and corner $1$ ends in different places. This is fundamentally different from multiplying numbers, where $3\times5=5\times3$ is unquestioned. For actions, reversing the order can completely change the outcome. You already know this in daily life: putting on shoes and then socks is quite different from putting on socks and then shoes.
+\end{fanli}
+
+A second common guess is that a square has just two symmetry axes, one horizontal and one vertical. Many students draw the two midlines and stop, forgetting that folding along either diagonal also makes the halves coincide exactly. A square has four symmetry axes, not two. Missing axes means missing half the reflected placements.
+
+A subtler third guess is that because actions can be repeated again and again, there must be infinitely many placements. This overlooks returning to the start. Four $90^\circ$ rotations leave the card exactly as if it had never moved; two reflections do the same. Actions can continue indefinitely, but their \emph{results} repeat. We are counting final \emph{states}, not sequences of actions, of which there are indeed infinitely many. Understanding that distinction finally pins down the problem.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  \draw[thick] (-2,-2) rectangle (2,2);
+  \node at (-2.4, 2.4) {$1$};
+  \node at ( 2.4, 2.4) {$2$};
+  \node at ( 2.4,-2.4) {$3$};
+  \node at (-2.4,-2.4) {$4$};
+  \draw[gray, dashed] (-3,0) -- (3,0);
+  \draw[gray, dashed] (0,-3) -- (0,3);
+  \draw[gray, dashed] (-2.6,-2.6) -- (2.6,2.6);
+  \draw[gray, dashed] (-2.6,2.6) -- (2.6,-2.6);
+  \draw[-{Stealth}, thick] (50:3.4) arc (50:140:3.4);
+  \node at (0,4.1) {$r$};
+  \node at (0,-4.3) {Four symmetry axes (dashed) and rotation $r$ through $90^\circ$ anticlockwise};
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+Three failures have given three clues: composition depends on order, reflections come in several kinds, and returning to the start makes the total finite. To weave these clues together, we need to make actions themselves mathematical objects we can calculate with.
+
+\section{Making Actions into Mathematical Objects}
+
+When we say ``turn the figure,'' we usually mean a process. The mathematician's crucial step is to regard that process as a \emph{rule}: every point in the plane is sent to a new position.
+
+\begin{dingyi}[Transformation]
+A \emph{transformation} of the plane is a rule sending each point $P$ to a definite point $P'$, with distinct points sent to distinct points and every point reached from some point (no omissions and no collisions). The point $P'$ is called the \emph{image} of $P$ under the transformation.
+\end{dingyi}
+
+What difficulty does this definition resolve? It lets us examine individual points instead of staring at an entire figure. To decide whether a transformation returns a square to itself, we check where its points go---in fact, a few key points suffice. The requirements of no omissions and no collisions are not pedantry. If two points could collide at one destination, the transformation could not be undone: we could not tell where the new point came from. Without undoing, the later story of inverse transformations would fail.
+
+The familiar transformations of middle-school geometry gather here:
+
+\begin{itemize}
+  \item \emph{Translation}: all points move the same distance in the same direction, as when the whole card slides three centimetres rightward.
+  \item \emph{Rotation}: all points turn through the same angle about a fixed point, the centre of rotation.
+  \item \emph{Reflection} (also called axial symmetry): all points flip across a line, the axis of symmetry, as in a mirror.
+  \item \emph{Scaling}: distances from a centre are all enlarged or reduced by the same factor.
+\end{itemize}
+
+The first three share a property: the distance between any two points remains unchanged. Such transformations are called \emph{congruence transformations}, or isometries; they turn figures into congruent figures. Scaling differs: distances change while shape remains the same and size changes, producing a \emph{similar} figure. This chapter focuses on the first three, but scaling will return in a new form next chapter.
+
+\begin{dingyi}[Composition]
+Let $a$ and $b$ be transformations. The combined effect of first performing $b$ and then $a$ is another transformation, written $ab$ and called the \emph{composition} of $a$ and $b$.
+\end{dingyi}
+
+Remember this convention especially: $ab$ means \emph{first $b$, then $a$}. Multiplication-like notation is convenient, but read it from right to left. The convention comes from function notation: in Chapter 2, $f(g(x))$ also meant calculating $g$ before $f$. If it feels unfamiliar, a couple of card experiments will help.
+
+Composition pays off immediately. Two successive translations still amount to one translation: three centimetres rightward followed by two upward becomes a single diagonal move whose distance and direction we can calculate. What about two rotations? Turning $30^\circ$ then $45^\circ$ about the \emph{same} centre is a $75^\circ$ rotation about that centre---simply add the angles. With different centres, things become interesting: the result is still a rotation or a translation, but finding the new centre may take several auxiliary lines. That is why successive actions deserve study: each step is simple, but together they can surprise us.
+
+There is also the laziest transformation: do nothing, leaving every point in place. This is the \emph{identity transformation}, written $e$. Do not underestimate it: its role in the theory resembles that of $1$ in multiplication.
+
+\begin{dingyi}[Symmetry Transformation]
+If a transformation sends every point of a figure $F$ to a point in $F$, leaving the transformed figure exactly coincident with the original, it is called a \emph{symmetry transformation} of $F$.
+\end{dingyi}
+
+Pay attention to ``exactly coincident.'' Rotating a square $45^\circ$ is not a symmetry transformation: its corners stick out. Translating it three centimetres rightward is not one either: the figure moves away. A symmetry transformation is a special isometry that preserves both distances and the figure as a whole.
+
+An intriguing contrast appears here: a square has only a few symmetries, whereas a circle has infinitely many. Rotate a circle through any angle about its centre and it coincides with itself; reflect across any diameter and the same holds. Intuitively we say that a circle is more symmetrical than a square. We now have a precise measure: the more symmetry transformations a figure has, the more symmetrical it is. The square's degree of symmetry is a finite list we can soon inventory completely.
+
+The card problem now has precise language: we are asking how many symmetry transformations a square has, and successive actions are compositions of those symmetries.
+
+\begin{toolbox}
+Keep these new tools handy:
+\begin{itemize}
+  \item \emph{Transformation}: translate moving a figure into a rule transporting every point, so actions can be compared precisely.
+  \item \emph{Composition} $ab$: first $b$, then $a$; successive actions become expressions we can calculate.
+  \item \emph{Identity transformation} $e$: doing nothing provides the reference point for counting and comparison.
+  \item \emph{Inverse transformation}: undoing an action. The inverse of a $90^\circ$ rotation is a $270^\circ$ rotation; a reflection is its own inverse.
+  \item \emph{Symmetry transformation}: a transformation making a figure coincide with itself, an entry in our inventory of order.
+\end{itemize}
+\end{toolbox}
+
+\begin{shuyu}{Inverse Transformation}
+\emph{Intuition}: an action's undo button. \emph{Formal definition}: if transformations $a$ and $b$ satisfy $ab=e$ and $ba=e$, then $b$ is the inverse of $a$, written $a^{-1}$. \emph{Example}: the inverse of a $90^\circ$ anticlockwise rotation is a $90^\circ$ clockwise rotation, or $270^\circ$ anticlockwise. A reflection in any axis is its own inverse, because reflecting twice restores the original position.
+\end{shuyu}
+
+\section{Eight, and No More}
+
+Return to the card. We can now give the complete answer and \emph{prove} it.
+
+Write $r$ for a $90^\circ$ anticlockwise rotation about the square's centre, and $f$ for reflection in the vertical midline. Then $r^2=rr$ rotates $180^\circ$, $r^3$ rotates $270^\circ$, and $r^4=e$. We seem able to create more and more actions, but the following theorem says they all belong to these eight.
+
+\begin{dingli}[The Symmetries of a Square]
+A square has exactly $8$ symmetry transformations:
+\[
+e,\quad r,\quad r^2,\quad r^3,\quad f,\quad rf,\quad r^2f,\quad r^3f,
+\]
+namely four rotations, including the identity, and four reflections.
+\end{dingli}
+
+\begin{proof}
+First show there are at most $8$. Let $T$ be any symmetry of the square. A symmetry preserves distances, and the centre, where the diagonals meet, is the unique point equidistant from the four vertices, so $T$ must send the centre to itself. Thus the four vertices can only be sent to vertices. Corner $1$ has at most $4$ possible images. Once that image is fixed, consider its neighbour, corner $2$. Since $T$ preserves distance, the image of corner $2$ must be adjacent to the image of corner $1$, giving at most $2$ choices. Finally, fixing the images of corners $1$ and $2$ uniquely determines the whole square's position: by side--side--side congruence, there is only one placement of a square having these adjacent vertices as a side, leaving the other vertices nowhere else to go. Thus $T$ has at most $4\times2=8$ possibilities.
+
+Now show that all $8$ are achievable. The four rotations $e,r,r^2,r^3$ are clearly symmetries. The transformation $f$ reflects in the vertical midline. The transformation $rf$ first reflects in that midline and then rotates $90^\circ$; checking the vertices directly shows that it equals reflection in a diagonal. Similarly, $r^2f$ and $r^3f$ equal reflections in the horizontal midline and the other diagonal. The square has exactly four symmetry axes, so these are four symmetries, distinct from one another and from the four rotations. Altogether there are exactly $8$, no more and no fewer.
+\end{proof}
+
+\begin{tuilun}
+Every symmetry of the square has an inverse, and that inverse is among the same eight transformations.
+\end{tuilun}
+
+\begin{proof}
+The inverse of $r$ is $r^3$, since $rr^3=r^4=e$. The inverse of $r^2$ is itself. Each reflection is its own inverse, since reflecting twice in the same axis returns everything to its original position. The inverse of $e$ is $e$. All eight members have inverses, and none of those inverses leaves the collection.
+\end{proof}
+
+\begin{zhu}
+The proof's claim that side--side--side congruence fixes the square's placement expresses a more general fact: a plane isometry is completely determined by the images of three noncollinear points. The square has four vertices, but watching two adjacent ones suffices because its centre is already fixed, constraining the third point. That is why the little multiplication $4\times2$ controls the entire figure.
+\end{zhu}
+
+Remember this counting method: to count actions, we need not perform each one. We need only track the \emph{images of key points}. The destinations of two adjacent vertices determine the whole square. The idea of fixing a whole object with a small amount of information will recur.
+
+Having counted the eight transformations, take the step that best captures this chapter's spirit: calculate \emph{all} their compositions and put them in a table. The entry in row $x$ and column $y$ is $xy$, meaning first $y$ and then $x$.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|cccc|cccc}
+\toprule
+ & $e$ & $r$ & $r^2$ & $r^3$ & $f$ & $rf$ & $r^2f$ & $r^3f$\\
+\midrule
+$e$     & $e$ & $r$ & $r^2$ & $r^3$ & $f$ & $rf$ & $r^2f$ & $r^3f$\\
+$r$     & $r$ & $r^2$ & $r^3$ & $e$ & $rf$ & $r^2f$ & $r^3f$ & $f$\\
+$r^2$   & $r^2$ & $r^3$ & $e$ & $r$ & $r^2f$ & $r^3f$ & $f$ & $rf$\\
+$r^3$   & $r^3$ & $e$ & $r$ & $r^2$ & $r^3f$ & $f$ & $rf$ & $r^2f$\\
+\midrule
+$f$     & $f$ & $r^3f$ & $r^2f$ & $rf$ & $e$ & $r^3$ & $r^2$ & $r$\\
+$rf$    & $rf$ & $f$ & $r^3f$ & $r^2f$ & $r$ & $e$ & $r^3$ & $r^2$\\
+$r^2f$  & $r^2f$ & $rf$ & $f$ & $r^3f$ & $r^2$ & $r$ & $e$ & $r^3$\\
+$r^3f$  & $r^3f$ & $r^2f$ & $rf$ & $f$ & $r^3$ & $r^2$ & $r$ & $e$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This table deserves ten minutes of close study. Look at the upper-left $4\times4$ block: composing rotations gives rotations, following the rule of adding angles and resetting to zero at $360^\circ$. It is an addition table in disguise. In the lower-right $4\times4$ block, composing two reflections produces a rotation. Looking in two mirrors with different axes has the effect of rotating through twice the angle between those axes. You can see this yourself with two small mirrors placed at an angle.
+
+Two more observations matter. First, every entry is one of the same eight members. The actions are \emph{closed} under composition: however many steps we take, we cannot escape them, so no ninth placement exists. Second, the table is \emph{not symmetric} about its main diagonal: row $r$, column $f$ contains $rf$, but row $f$, column $r$ contains $r^3f$. Thus
+\[
+fr \;=\; r^3 f \;\neq\; rf.
+\]
+This is the card experiment's algebraic form: composition is not commutative.
+
+\begin{shiyan}
+Verify one table entry physically. Label your card's corners $1,2,3,4$. Reflect first in the vertical midline, performing $f$, then rotate $90^\circ$ anticlockwise, performing $r$. Record the corners' positions: you have performed $rf$. Reset the card and reverse the order: rotate $90^\circ$, then reflect, giving $fr$. Compare with the table: do $r^3f$, listed for $fr$, and $rf$ indeed produce different corner positions? Check three more entries until the table has earned your trust.
+\end{shiyan}
+
+Step back and consider the eight actions as a \emph{whole}. They satisfy four properties: closure under composition (no outsiders in the table), an identity element $e$ (composing with it leaves any action unchanged), inverses for every action (each row and column contains $e$ exactly once; a $90^\circ$ rotation pairs with $270^\circ$, a reflection with itself), and associativity of composition: $(ab)c=a(bc)$, because both mean first $c$, then $b$, then $a$. The brackets merely alter how we group the description.
+
+Associativity deserves another word. It may sound obvious, but it is a foundation of the whole system. Because of it, the sequence first $c$, then $b$, then $a$ can be written simply $abc$, without semicolons or brackets and without arguing over which portion to calculate first. Subtraction lacks this property: $(8-5)-2=1$, while $8-(5-2)=5$, so repeated subtraction must keep its brackets. Composition is naturally associative. That is fortunate for us, and one reason the language of groups can be so concise.
+
+A system with these four properties has a special name.
+
+\begin{shuyu}{Group}
+\emph{Intuition}: a bag of actions that can be composed and undone, with every composition staying inside the bag. \emph{Formal definition}: a set $G$ equipped with an operation that is closed, has an identity element, gives each element an inverse, and is associative. Such a pair $(G,\text{operation})$ is called a \emph{group}. \emph{Example}: the eight symmetries of a square, with composition, form its symmetry group. It has $8$ elements and is not commutative.
+\end{shuyu}
+
+This is the group in our chapter title. It was forced into existence by our questions, rather than arriving as arbitrary terminology: investigating successive actions brought these four properties to the surface. Mathematicians later found that the symmetry systems worth studying---of figures, equations, crystals, and particles---all satisfy them. Groups became a unified language for symmetry.
+
+\section{What Is Symmetry Good For?}
+
+You know a new concept has become useful when it lets you do something previously out of reach. Groups and symmetry have contributed to at least three major achievements.
+
+\emph{First: classifying patterns.} Folding paper once before cutting gives one symmetry axis; folding twice usually gives two, sometimes more. Wallpaper, floor tiles, and fabrics have patterns repeating throughout the plane. Mathematicians asked how many types of repeating plane patterns exist when classified by their symmetries. The answer is astonishing: exactly $17$. From ancient Egyptian murals to modern tiles, however elaborate the design, every repeating plane pattern has one of these $17$ symmetry structures. In three dimensions, for arrangements of atoms in crystals, the answer becomes $230$, and chemists still use this catalogue. The proofs go beyond our scope, but you have already met their counting tools: closure, inverses, and identity.
+
+\begin{lianjie}
+Looking back, Chapter 3's congruent triangles mean precisely that an isometry carries one triangle onto the other. Chapter 5's Vieta relations will reappear below as an expression of symmetry among equation roots. Looking ahead, Chapter 7 will show how rotations, reflections, and scalings can be recorded in numerical arrays called matrices and calculated directly. Symmetry connects algebra, geometry, and physics.
+\end{lianjie}
+
+\emph{Second: solving equations.} This achievement is especially beautiful and unexpected. Consider $x^2-5x+6=0$, with roots $2$ and $3$. Perform an action: exchange the roots. Which expressions remain unchanged? $x_1+x_2=5$ and $x_1x_2=6$ do, because swapping two numbers preserves their sum and product. But $x_1-x_2$ changes sign. Thus $x_1+x_2$ and $x_1x_2$ are \emph{symmetric expressions} under exchanging roots. Vieta's relations say precisely that these expressions can be read from the equation's coefficients without first finding its roots.
+
+Extending this idea to cubics and quartics, mathematicians discovered that solvability by radicals depends on the internal structure of a symmetry group of the roots. The group structure of the general quintic is too complicated, so it has no solution by radicals. The proof of this result, which shook mathematics, uses the very concept illustrated by our eight actions on the table. The young mathematicians who created the theory faced the doubts of the mathematical establishment. Their insight that symmetry determines solvability later became a main branch of algebra.
+
+\emph{Third: taming the Rubik's cube.} For a scrambled three-by-three cube, the number of possible colour configurations is $43{,}252{,}003{,}274{,}489{,}856{,}000$, approximately $4.3\times10^{19}$, or roughly forty-three quintillion. Random turning could take longer than the age of the universe to solve it. But the cube's moves form a group: each turn is a transformation, and moves can be composed and undone. Group theory lets players describe an operation that exchanges just two edge pieces while leaving everything else fixed. Such operations affecting very few pieces are called \emph{commutators}, the ingredients of cube algorithms. With computers, mathematicians also proved that any scrambled state can be solved in at most $20$ moves, counting a $180^\circ$ turn as one move. This number was established by using group structure to organize the astronomical number of positions into equivalence classes and checking them systematically.
+
+All three achievements use the same key: track \emph{transformations between objects}, rather than every individual object, and ask about shared structure as well as shared shape.
+
+What is shared structure? Take a small example. The square's four rotations $e,r,r^2,r^3$ form a closed group of their own. Elsewhere, consider addition modulo $4$ on a clock with marks $0,1,2,3$: $1+2=3$, $2+3=1$, and $3+3=2$. One system consists of geometrical actions, the other arithmetic; their members are entirely different. But match $r$ to $1$, $r^2$ to $2$, $r^3$ to $3$, and $e$ to $0$, and their operation tables are identical. Rotating $90^\circ$ then $180^\circ$ gives $270^\circ$, just as $1+2\equiv3\pmod 4$. The tables have different labels but the same framework. We call the groups \emph{structurally identical}, or isomorphic.
+
+This is a substantial leap. Geometrical actions and integer addition look unrelated, yet structurally they are the same. Mathematics draws strength from this ability to change labels: whenever the structure matches, a theorem proved on one side transfers immediately to the other. For example, repeatedly adding $1$ modulo $4$ produces every element, so repeatedly composing $r$ produces all four rotations. A group in which one member generates the whole family is called cyclic. The full eight-element symmetry group has no such member: $r$ cannot produce reflections, and repeatedly applying $f$ gives only itself and $e$. Looking at structure makes the difference between the eight-action family and its four-rotation subfamily clear.
+
+Looking back over the chapter, we started from sameness of shape (congruence), passed through sameness under actions (symmetry transformations), and arrived at sameness of structure (groups and isomorphism). Each level is more abstract, but each lets us see more at once.
+
+\begin{pandeng}
+For further climbing, remember these signposts: \emph{group theory}, the study of symmetry structures; \emph{isomorphism}, the precise meaning of shared structure; \emph{Galois theory}, using groups to decide solvability by radicals; \emph{permutation groups}, the mathematical model of the Rubik's cube; \emph{wallpaper groups and space groups}, the stories of $17$ and $230$ types; and \emph{Lie groups}, continuous symmetries and a language of physics. For now these are only signposts, but they all lead out from a square card.
+\end{pandeng}
+
+\section*{Questions to Think About}
+
+\paragraph{Observation}
+\begin{sikao}
+  \item Replace the square with an equilateral triangle. Count its symmetries, separating rotations from reflections. Hint: imitate the theorem's proof. How many images can vertex $1$ have? How many choices remain for its neighbour?
+  \item In the square's composition table, find and count all elements satisfying $x^2=e$. Hint: besides the four reflections, a rotation also returns to the start when performed twice.
+\end{sikao}
+
+\paragraph{Proof}
+\begin{sikao}
+  \item Prove that if $a$ and $b$ are symmetries of a figure $F$, then their composition $ab$ is also a symmetry of $F$. Hint: return to the definition and check whether the figure still coincides with itself after two steps.
+  \item Prove the shoes-and-socks rule: $(ab)^{-1}=b^{-1}a^{-1}$. Hint: compose $ab$ with $b^{-1}a^{-1}$ and use associativity to cancel step by step to $e$. Then consider why the order reverses: socks before shoes in the morning means shoes before socks in the evening.
+\end{sikao}
+
+\paragraph{Challenge}
+\begin{sikao}
+  \item A Rubik's cube is played using turns of its six faces. How many \emph{rotational} symmetries preserve the cube as a whole, with reflections forbidden? Hint: watch one face. How many destinations can it have? Once it is fixed, about which axis can the cube still rotate? The answer is a satisfying two-digit number.
+  \item Design a two-element system of actions that forms a group, and write its composition table. Hint: start with a reflection and the identity, or with adding odd and even numbers, and verify the four group properties.
+\end{sikao}
+
+\section*{The Door to the Next Chapter}
+
+This chapter turned rotations and reflections into objects we can tabulate and calculate. Yet you may feel a quiet dissatisfaction: checking a composition still means manipulating a card, and locating a point after rotation still requires drawing and measuring. Actions remain \emph{handwork}.
+
+Can transformations become arithmetic? If each plane point is located by $(x,y)$, can a $90^\circ$ rotation about the origin become a fixed algorithm on those two numbers, immediately producing the new coordinates for any input? What about translating three centimetres rightward, or doubling the scale? If this works, composing transformations means running two algorithms in succession. Formulas could generate the composition table automatically, and the card could retire.
+
+It can be done. We need a new protagonist: a quantity with both magnitude and direction, the \emph{vector}, and a numerical array that manipulates it, the \emph{matrix}. Next chapter, two-dimensional arrows will lead us into linear algebra, where this chapter's rotations, reflections, and scalings become neat rows of numbers.

@@ -1,0 +1,180 @@
+% Chapter 2: Units Are the Grammar of the Physical World
+\chapter{Units Are the Grammar of the Physical World}
+
+The previous chapter said that physics begins with measurement. But have you ever considered that the string of digits a measurement produces means nothing on its own? If a kitchen scale displays ``500,'' is that 500 grams, 500 milligrams, or 500 jin? The little tail following the number---the unit---is the sentence's real predicate. This chapter sets aside new laws to discuss something seemingly trivial but potentially fatal: every number in the physical world must speak with a unit attached, and behind units lies an entire grammar. Learn it, and you can spot errors in formulas without solving equations and estimate a city's water consumption using only common sense.
+
+\step{A Counterintuitive Opening}
+
+On September 23, 1999, NASA's Mars Climate Orbiter finally reached Mars after traveling more than six hundred million kilometers over more than nine months. Its task was simple: slow down and enter orbit around Mars. Ground controllers sent the command, the engine fired, and then---the signal vanished, never to return.
+
+The subsequent investigation examined the engine, fuel, communications, and software. Its eventual finding left everyone unsure whether to laugh or cry: the spacecraft had not failed; a unit conversion had. The team that built it calculated engine thrust in the imperial unit ``pound-force,'' while the navigation team's software assumed the data arrived in the metric unit ``newton.'' The units differ by a factor of about 4.45. Thus, with each trajectory correction, the spacecraft received a push more than four times larger or smaller than the navigation software believed. The discrepancy accumulated millimeter by millimeter. More than nine months later, the spacecraft thought it was still safely over two hundred kilometers above Mars, when it actually plunged into the atmosphere and burned up.
+
+The spacecraft cost more than three hundred million dollars. No component malfunction, no program crash: what killed it was the wrong little tail after a number.
+
+If a space accident seems remote from everyday life, consider a passenger jet. In July 1983, Air Canada Flight 143, a Boeing 767, was flying more than ten thousand meters up when both engines flamed out in succession. Again the cause was units. This aircraft was among Canada's first to measure fuel in kilograms rather than pounds. Following old habits, the ground crew treated ``more than twenty thousand kilograms required'' as ``more than twenty thousand pounds required'' and loaded less than half the needed fuel. Fortunately, the captain was a recreational glider pilot. He managed to glide the unpowered wide-body jet for more than ten minutes and land it on an abandoned runway, with no deaths aboard. The plane later acquired the nickname ``Gimli Glider.'' The same grammatical mistake burned three hundred million dollars at Mars and brought more than three hundred people to death's door in the sky.
+
+You might say that is an engineer's problem, not yours. Try a closer example: a prescribed tablet is labeled ``0.25 per tablet.'' Would you swallow it without asking for the unit? There is a thousandfold difference between 0.25 grams and 0.25 milligrams. Or change your phone's instruction ``Turn right in 500 meters'' to ``Turn right in 500'' and it becomes meaningless. Every meaningful statement in physics involves not just a number, but a number multiplied by an agreed standard. Keep this opening puzzle in mind: why did some of the world's smartest engineers stumble over something an elementary-school pupil can do? By the end of the chapter we will find that their failure was grammatical, not arithmetic.
+
+\step{Make a Guess First}
+
+Before reading further, honestly write down your intuitive answers to these questions without looking anything up:
+
+\begin{itemize}[leftmargin=1.8em]
+  \item Who decided what ``one meter'' is? If the General Conference on Weights and Measures voted tomorrow to make it twice as long, what would happen to the world?
+  \item Suppose everything in the universe, including you, your meter rule, Earth, and atoms, quietly doubled in size last night. Could we discover it this morning?
+  \item Which is more ``fundamental,'' a kilogram or a second? Can seconds be used to define meters?
+  \item ``Light-year'' sounds like a unit of time. Is it? Does ``kilowatt-hour'' mean ``how many kilowatts per hour''?
+\end{itemize}
+
+Write your guesses down. At the end of this chapter, we will revisit them one by one. If some questions seem bizarre or impossible even to guess at, that is useful: your intuition has not yet built a model of units, and this chapter will supply one.
+
+\step{Hands-on Experiment}
+
+Units are learned through comparison, not memorization. This experiment needs only a thin string, a key (or a nut), a tape measure, and a phone with a stopwatch.
+
+\begin{experiment}[A Key Reveals the Grammar of Time]
+Step one: experience the trouble with private units. Without using the tape measure, measure your desk in handspans---the distance from your outstretched thumb to middle finger---and record the result. Ask a family member to measure the same desk with their handspan. Your ``desk lengths'' will almost certainly differ. Neither of you measured wrongly; the problem is that a handspan is a private unit, useless for communicating outside its owner. Now feel your pulse and count the beats in a minute. Your minute might be 75 beats; an athlete's might be only 50. Even time has a private-unit problem.
+
+Step two: make a pendulum. Tie the key to one end of the string and hold the other end so the key can swing freely. You now have a simple pendulum. Pull it aside through a small angle and release it. Use the phone to time 10 complete back-and-forth swings, then divide by 10. The time for one complete swing is called the period.
+
+Step three: change the pendulum's length. Use string lengths, measured from your fingers to the key's center, of about 25, 50, and 100 centimeters, and measure the period for each. You will find that quadrupling the length does not quadruple the period: it roughly doubles it. Doubling the length increases the period by about 1.4 times.
+
+Step four: guess the relationship. What mathematical relation turns a factor of four into a factor of two? A square root: the square root of $4$ is $2$. We can therefore boldly guess that the square of the period is proportional to length, or that the period is proportional to the square root of length. String and a key have uncovered this relationship, but it is incomplete: what else does the period depend on? Would the same pendulum move faster or slower on the Moon, where gravity is only one-sixth of Earth's? Record your intuition; in ``The Mathematical Translator,'' we will force an answer using dimensions.
+
+Step five: test a counterintuitive prediction. Most people expect a heavier hanging object to pull the pendulum into a faster swing. Attach two keys to the same string, doubling the mass while keeping the length unchanged, and measure again. The period hardly changes. Remember that ``hardly changes'': in ``The Mathematical Translator,'' we will see that dimensional analysis predicted it in advance. Mass, our suspect, cannot enter the formula at all. Try another variable too: increase the release angle from small to large, almost horizontal. The period becomes noticeably longer. Our guess therefore applies only at small angles. Physical formulas often come with such conditions, which ``The Model's Limits'' will discuss explicitly.
+\end{experiment}
+
+This experiment did two things: it let you experience why communication needs agreed units, and it left you with an unresolved formula shape. Remember how ``four becomes two'' felt; it will be our testing ground for dimensional analysis later in the chapter.
+
+\step{The Old Model Runs into Trouble}
+
+Most people carry three old models of units in their heads. They work well enough most of the time in everyday life, so they have never been overturned. Now let each run into trouble.
+
+\textbf{Old model one: ``A measurement is a number.''} This works well when buying apples: the vendor says ``three jin,'' you pay, and nobody asks what three jin means. Historically, though, the trouble has been substantial. In ancient China, a chi was about 17 modern centimeters in the Shang dynasty, 23 in the Han, and 32 in the Qing. If a Qing craftsman followed a drawing to make a component ``three chi long'' for a Han-era site, his piece would be nearly half again as long as the original. Qin Shi Huang's standardization of weights and measures entered history not because he liked tidiness, but because the same number meaning different quantities in different places makes taxation, engineering, and trade chaotic. Modern international trade is still more extreme: a tanker ships crude oil from America to Europe under a contract in barrels, settles payment in tonnes, and delivers to a refinery measuring cubic meters. Three sets of standards lie behind the numbers; misassign a unit anywhere and losses run into millions of dollars. A measurement has always been a number multiplied by an agreed standard. Without that standard, the number is scrap paper.
+
+\textbf{Old model two: ``Unit conversion is just elementary arithmetic.''} Memorizing ``1 meter equals 100 centimeters'' is not understanding units. Everyone on the Mars Climate Orbiter team knew conversion tables, yet they lost three hundred million dollars. Consider two household examples. The first trips up intuition: you buy a portable hard drive labeled 500 GB, plug it in, and the computer reports only ``465 GB.'' Is the manufacturer cheating? No. The manufacturer uses SI prefixes, with 1 GB equal to $10^9$ bytes. Many operating systems count in binary internally, displaying ``GB'' when they mean GiB, equal to $2^{30}$ bytes, about $10.7$ hundred million bytes. The drive's 500 GB is $5\times10^{11}$ bytes; divided by $2^{30}$, that is about 465 GiB. Both calculations are right, but use different dictionaries. The second example is the electricity bill. Your household has used 120 ``units'' this month; the formal name for such a unit is a kilowatt-hour. It means kilowatts \textbf{times} hours, not kilowatts \textbf{per} hour: a 1000-watt heater running for 1 hour consumes 1 kilowatt times 1 hour of energy. It is an energy unit, equal to $3.6\times10^6$ joules. Reading it as ``kilowatts per hour'' is as grammatically wrong as reading square meters as ``per meter.''
+
+\textbf{Old model three: ``Choose any units; you can always convert.''} True in principle, but potentially costly in practice. Light travels in vacuum at about $3\times10^8$ meters per second, or about $1.08\times10^9$ kilometers per hour. The latter number is perfectly correct and perfectly useless, because people have no feel for a billion kilometers per hour. More deeply, bad unit choices can make natural laws look hideous. Chapter 9 will discuss energy conservation. Mix joules, calories, and kilowatt-hours in the same equation, and ugly conversion factors clutter the law until you begin doubting the law itself. Choosing units is a kind of language design: good units reveal laws, bad units conceal them.
+
+When these three old models collapse, a gap appears: we have never seriously answered what a physical quantity actually is.
+
+\step{Inventing New Concepts}
+
+Let us fill that gap as metrologists would. There are only three layers of concepts.
+
+\textbf{Layer one: measurement is comparison.} Saying ``the desk is 1.2 meters long'' does not mean the desk has ``1.2'' engraved on it. It means comparing its edge against a globally agreed length standard, one meter, and finding that it is 1.2 times that standard. Every physical quantity has this form:
+\[
+\text{Physical quantity} = \text{a number} \times \text{an agreed standard (unit)}.
+\]
+The number is a ratio; the unit is the reference sample used for comparison. This statement can be tested: if something you call a measurement cannot be split into these two parts, it is not a physical quantity.
+
+\textbf{Layer two: base quantities and derived quantities.} There are thousands of physical quantities, yet surprisingly, mechanics needs only three fundamental samples to construct them all: length, mass, and time. The International System of Units (SI) specifies seven base quantities: length (meter), mass (kilogram), time (second), electric current (ampere), temperature (kelvin), amount of substance (mole), and luminous intensity (candela). The units of all other quantities can be formed by multiplying base units together; these are derived units. Velocity is meters per second, acceleration is meters per second squared, and the force unit, the newton, breaks down into kilograms times meters per second squared. It is like building with blocks: seven basic blocks construct the whole vocabulary of physics.
+
+\textbf{Layer three: dimensions, the parts of speech of physical quantities.} The base quantities that make up a physical quantity, and the powers to which they are raised, determine its dimensions, written in square brackets. Length has dimension $[L]$, time $[T]$, and mass $[M]$. Velocity has dimensions $[L]/[T]$, and force $[M][L]/[T]^2$. Here is this chapter's most important analogy; as required, we will say both where it works and where it does not. Dimensions are like grammatical parts of speech---nouns, verbs, and adjectives. ``I eat a table'' is ill-formed because the verb takes the wrong kind of word after it; ``velocity equals force'' is wrong because the two sides of the equals sign have incompatible parts of speech. Unit conversion, however, is like switching dialects: the same noun is ``meters'' in one dialect and ``centimeters'' or ``inches'' in another. The part of speech and meaning remain the same; only the pronunciation changes. The analogy fails because human grammar is a social convention, and poets can break it deliberately for beauty. Dimensions are not a convention: they reflect the structure of the quantities themselves. Mismatched dimensions make a formula definitively wrong, with no poetic license available.
+
+Finally, a short history of unit definitions shows how humanity gradually moved its standards from the human world to nature. The original meter came from Earth: in the late eighteenth century, the French defined it as one ten-millionth of the meridian arc from the North Pole to the equator. The ideal was grand, but Earth's surface is uneven and changes, and surveying has errors. People settled for casting a platinum-iridium prototype meter bar, marking two lines on it, and declaring the interval one meter. The second's history is similar. It was initially $1/86400$ of a mean solar day, but tidal friction is slowing Earth's rotation, and today's day is longer than a day in the age of dinosaurs. Using something that slows down as a clock standard is like measuring cloth with a ruler that lengthens. The escape route is the same: find an unchanging process in the microscopic world. Since 1967, a second has been defined as 9192631770 periods of a particular oscillation of cesium atoms; since 1983, a meter has been the distance light travels in vacuum in $1/299792458$ of a second.
+
+In 2019 this migration was finally complete: all seven base units came to be defined through natural constants. Before then, the kilogram standard was a platinum-iridium cylinder in a safe outside Paris, against which all the world's balances ultimately had to compare. But metal collects dust and wears away. If its mass changed, did kilograms throughout the universe change, or had the cylinder become defective? This logical loophole troubled people for more than a century. Today's definition reverses the approach: set Planck's constant to exactly $6.62607015\times10^{-34}$ joule-seconds and the vacuum speed of light to exactly $299792458$ meters per second, then generate kilograms and meters from these unchanging constants. A standard is no longer an artifact that can rust, but a law written into the universe's fabric. This is itself a profound physical declaration: we trust natural laws more than manufactured samples. Why constants remain constant, and why atoms across the universe follow the same ledger, must wait for the quantum chapters. For now, accept this conviction as a gift.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+A physical quantity $=$ a number $\times$ an agreed standard; changing units switches dialects, while mismatched dimensions are a grammatical error---so whenever you see a formula, first check that the dimensions on both sides of the equals sign agree.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Grammar is not just for admiration; it should catch errors automatically. Dimensional analysis is that error-catching machine. Its three techniques need only middle-school mathematics.
+
+\textbf{Technique one: reconcile both sides of the equals sign.} Equality imposes an iron rule: the left-hand dimensions must match the right-hand dimensions. Consider the familiar displacement formula for uniformly accelerated motion:
+\[
+s = \frac{1}{2} a t^2 .
+\]
+On the left, $s$ is a length with dimension $[L]$. On the right, $a$ has dimensions $[L]/[T]^2$, while $t^2$ has $[T]^2$. Multiplication gives $[L]/[T]^2 \times [T]^2 = [L]$. They match. A pure number such as $\frac{1}{2}$ has no dimensions and takes no part in the check. Now deliberately write it wrongly: if someone remembers $s = \frac{1}{2} a t$, the right-hand dimensions are $[L]/[T]$, a velocity, incompatible with the length on the left. Without calculating a single number, we have ruled the formula out. Addition and subtraction have a corresponding rule: only quantities of the same dimensions may be added. Three meters plus five seconds is not eight; it is meaningless.
+
+Practice a basic conversion, which is another form of reconciliation. What is 90 kilometers per hour in meters per second? Treat units as factors in a fraction and cancel them: 90 kilometers per hour $= 90 \times \dfrac{1000\ \text{meters}}{3600\ \text{seconds}} = 25$ meters per second. Convert kilometers to meters and hours to seconds, canceling factors, and the remaining units give the answer. Such chained cancellation is dependable because every step is dimensionally allowed. Consider another quantity we will meet constantly: energy. Chapter 9 gives kinetic energy $\frac{1}{2}mv^2$, with dimensions $[M][L]^2/[T]^2$. Chapter 40 gives $E = mc^2$, where $c$ is a speed, so the right-hand side again has dimensions $[M][L]^2/[T]^2$. Formulas separated by three hundred years speak the same grammar. This is no coincidence: energy consistently names the same thing in physics. Joules, calories, kilowatt-hours, and electronvolts are its different dialects.
+
+\textbf{Technique two: interrogate a formula with special cases.} Matching dimensions is not enough. Immediately test zero, very large values, and reversal of direction. For $s = \frac{1}{2} a t^2$, setting $t = 0$ gives $s = 0$: motion has not begun, so zero displacement is reasonable. Double $a$ and $s$ doubles: a harder push means going farther. Give $a$ a negative sign (braking), and the growth of $s$ slows or even becomes negative: reversal also makes physical sense. If a formula fails such interrogation---at $t = 0$, for instance, giving $s = 5$ meters---it probably contains unstated terms.
+
+\textbf{Technique three: work backward and use dimensions to guess a formula.} This is the most remarkable technique. Return to the pendulum experiment. What might its period $T$ depend on? List the suspects: bob mass $m$, pendulum length $L$, and gravitational acceleration $g$, which determines how strongly it is pulled downward and has dimensions $[L]/[T]^2$. Set the swing angle aside for now; the experiment used small angles. How can $m$, $L$, and $g$ combine to give something with dimension $[T]$? Mass $m$ contains no $[T]$ and cannot create time however it is multiplied, so $T$ does not depend on $m$. Before doing the experiment, your intuition may have said the opposite: that is the power of dimensional analysis. This leaves $L$ and $g$. Dividing $L$ by $g$ gives dimensions $[L] \div ([L]/[T]^2) = [T]^2$; taking the square root gives $[T]$. A unique answer is therefore forced on us:
+\[
+T = C\sqrt{\frac{L}{g}},
+\]
+where $C$ is a dimensionless number that dimensional analysis cannot determine. The complete theory, derived in Chapter 16, gives $C = 2\pi$. Check special cases immediately: as $L$ approaches zero, so does $T$; without a pendulum there is no swinging period. Larger $g$ gives smaller $T$: stronger gravity means a faster swing. On the Moon, $g$ is one-sixth of Earth's and the period becomes about 2.4 times as long, answering the experiment's unresolved question. Compare your data: increasing $L$ from 25 to 100 centimeters is a factor of four, and $\sqrt{4} = 2$, so the period should double. The relationship guessed with string and a key agrees with the formula demanded by dimensions.
+
+\begin{mathbridge}
+Writing the guessing process symbolically shows why the answer is unique. Suppose $T \propto m^{\alpha} L^{\beta} g^{\gamma}$, and take dimensions on both sides:
+\[
+[T] = [M]^{\alpha}\, [L]^{\beta}\, \left([L][T]^{-2}\right)^{\gamma}
+    = [M]^{\alpha}\, [L]^{\beta+\gamma}\, [T]^{-2\gamma}.
+\]
+Compare the powers of each base quantity to obtain three equations: $\alpha = 0$, $\beta + \gamma = 0$, and $-2\gamma = 1$. Their solution is $\alpha=0$, $\gamma=-\tfrac12$, and $\beta=\tfrac12$, giving $T \propto \sqrt{L/g}$, with no alternative. This method of constructing dimensional equations is dimensional analysis. Fluid mechanics and astrophysics use it to try out the forms of laws governing complicated phenomena on paper before measuring coefficients experimentally. Its deeper basis is that physical laws must not depend on whether humans choose meters or feet: both sides of an equation must hold simultaneously in any unit system. This already hints at Chapter 57's idea that symmetry determines the form of laws.
+\end{mathbridge}
+
+\textbf{Orders of magnitude and scientific notation.} Dimensions ask whether a quantity is of the right kind; orders of magnitude ask how big it is. Physics spans enormous numerical ranges, expressed uniformly with powers of 10: the speed of light is $3\times10^8$ meters per second, while an atom's diameter is about $10^{-10}$ meters. The order of magnitude comes from the exponent: $3\times10^8$ and $8\times10^8$ are of the same order, whereas $3\times10^8$ and $3\times10^5$ differ by three orders, a factor of one thousand. In rough estimates, we care mainly about the exponent: that is the essence of Fermi estimation.
+
+\begin{center}
+\begin{tikzpicture}[font=\small]
+  \draw[-{Stealth}] (0,0) -- (12.8,0) node[right]{Length (m)};
+  \foreach \x/\p/\name/\pos in {
+    0/{10^{-10}}/{Atom diam.}/above,
+    1.67/{10^{-5}}/{Cell}/below,
+    3.33/{10^{0}}/{Human height}/above,
+    5.67/{10^{7}}/{Earth diam.}/below,
+    7/{10^{11}}/{Earth--Sun gap}/above,
+    8.67/{10^{16}}/{One light-year}/below,
+    10.33/{10^{21}}/{Milky Way diam.}/above,
+    12/{10^{26}}/{Observable universe}/below}
+    { \draw (\x,0.1) -- (\x,-0.1);
+      \node[\pos=3pt, align=center] at (\x,0) {\name\\ $\p$}; }
+\end{tikzpicture}
+\end{center}
+
+This diagram is spaced by powers of ten, spanning 36 orders of magnitude from atoms to the observable universe. Find your own position, then the positions of a human hair, about $5\times10^{-5}$ meters, and a grain of rice, about $5\times10^{-3}$ meters. Every branch of physics occupies some stretch of this ruler.
+
+\textbf{An estimate with real data: how many times does your heart beat in a lifetime?} Without consulting references, use common-sense scales: a resting heart rate of about 75 beats per minute; $365\times24\times60 \approx 5\times10^5$ minutes per year; and an 80-year life, about $4\times10^7$ minutes. Multiplication gives $75 \times 4\times10^7 = 3\times10^9$ beats: three billion. This is of the same order as medical observations' average. Try another Fermi question: how much tap water does a city of ten million people use each day? Allow 200 liters per person daily for drinking, cooking, bathing, and flushing. Then $10^7$ people times 200 liters gives $2\times10^9$ liters, or two million cubic meters, roughly a cube of water 126 meters on a side. Actual large-city daily water supplies are indeed of order millions of cubic meters. Guessing scales first and examining structure next resembles physicists' everyday work more closely than memorizing any formula.
+
+Practice a classic question: are there more grains of sand on Earth or stars in the sky? Start with sand: take a grain's diameter as half a millimeter, giving a volume of about $10^{-10}$ cubic meters. Suppose the total volume of sand in coastlines, deserts, and shallow seas is $10^{15}$ cubic meters. This is the least certain step, possibly wrong by two or three orders of magnitude; that is all right. The total is about $10^{25}$ grains. For stars, the Milky Way has about $10^{11}$, and the observable universe about $10^{11}$ galaxies, giving $10^{22}$ stars. The conclusion is surprisingly robust: even if the sand estimate is wrong by a factor of a thousand, there are still far fewer than one star for each grain of terrestrial sand. The value of Fermi estimation is never precision, but discovering which factors matter and which can be guessed freely without overturning the result. Engineering is similar: when a chipmaker says ``7-nanometer process,'' it is telling you that transistor dimensions occupy the $10^{-8}$-meter stretch of the ruler, only two orders of magnitude above atoms. That is also the fundamental reason chipmaking keeps getting harder.
+
+\begin{challenge}
+In particle physics, theorists effectively burn away units: they set the vacuum speed of light $c = 1$ and the reduced Planck constant $\hbar = 1$. Length and time can then be measured with the same ruler: $c$ is length divided by time, so setting it to 1 gives time the dimension of length. Mass, energy, and momentum likewise merge into the same kind of quantity, and the mass--energy relation shortens from $E = mc^2$ to $E = m$. This is not laziness but a profound statement: the differences between seconds and meters, and kilograms and joules, belong to human measurement habits rather than nature. Chapter 38 will show that relativity underlies the use of one ruler for space and time; Chapter 40 will derive $E=mc^2$ anew. For now, remember that units are human choices, while the structures behind dimensions belong to nature. Some conversion factors, such as $c$, are actually natural constants whose existence hints that quantities we treat as separate might be aspects of the same thing.
+\end{challenge}
+
+\step{The Model's Limits}
+
+Dimensional analysis catches errors, but has definite blind spots. Push it too far and it fails. Remember four boundaries.
+
+\textbf{Boundary one: correct dimensions do not guarantee a correct formula.} Dimensional analysis cannot see $2\pi$ in the pendulum formula or $\frac{1}{2}$ in the displacement formula. Still more elusive are dimensionless functions: if the pendulum period contains an extra factor depending on the swing angle, as it indeed does and Chapter 16 will show, dimensional analysis is powerless because angle is dimensionless. The correct claim is that wrong dimensions guarantee a wrong formula; right dimensions only earn admission to the examination, not a passing grade.
+
+\textbf{Boundary two: do not replace physics with dimensional analysis.} Consider a cautionary example: a raindrop falls from 1000 meters, and $v = \sqrt{2gh}$ gives an impact speed of about 140 meters per second. The units pass perfectly. Real raindrops, however, hit the ground at only a few meters per second. The grammar is fine; the physical model omitted air resistance. Dimensional analysis checks whether a sentence makes sense, not whether it is true. As Chapter 1 said, experiments ultimately judge models.
+
+\textbf{Boundary three: some quantities are inherently dimensionless.} Angles in radians, refractive indices, percentages, and probabilities are ratios whose units cancel. They can multiply a quantity of any dimensions without leaving a dimensional trace. This lets dimensionless coefficients evade checking and makes them easy to misuse: ``120\% efficiency'' is grammatically unobjectionable, but thermodynamics will condemn it in Chapter 30.
+
+Another difficulty comes from neighboring quantities with similar names but different dimensions. A power bank labeled 10000 mAh gives milliampere-hours: milliamperes are current, hours are time, and current times time is electric charge, not energy. To know its stored energy, multiply by the battery voltage. Voltage means energy carried per amount of charge, as Chapter 20 will explain carefully. Advertisers exploit this confusion, deliberately or otherwise, while dimensional analysis exposes it at a glance: reporting charge without voltage is like reporting a bucket of water without saying from what height it is poured.
+
+\textbf{Boundary four: unit systems themselves have scales at which they fail.} Keep dividing length by 10 until reaching about $1.6\times10^{-35}$ meters, the Planck length, and time until about $5.4\times10^{-44}$ seconds, the Planck time. Our current theories, general relativity and quantum mechanics, fail together there. Nobody knows whether the base quantities length and time still make sense at those scales. This foreshadows Chapter 41. Thus, although this chapter's grammar works across 36 orders of magnitude, it still has frontiers. Acknowledging them is part of scientific honesty.
+
+\step{Explaining the Opening Phenomenon}
+
+Now reconsider the Mars Climate Orbiter accident through the lens of dimensions.
+
+During an engine correction, the quantity that determines the change in the spacecraft's trajectory is impulse: thrust multiplied by the time it acts. Every second, the navigation software received a number reporting engine impulse and inserted it into orbital calculations as newton-seconds. The engine report, however, used pound-force-seconds. One pound-force is about 4.45 newtons, so the software misread the true impulse by a factor of 4.45 every time. In this chapter's language, the teams exchanged bare numbers without units, skipping the reconciliation step. One side used metric newton-seconds and the other imperial pound-force-seconds. Their parts of speech, the dimensions, happened to agree, but their dialects differed, and the software did not translate. Each error was only a factor of a few, yet the spacecraft corrected its course repeatedly over more than nine months, carrying the same systematic error each time. Its trajectory was gradually pulled toward Mars until the entry altitude was wrong by more than a hundred kilometers and it struck the atmosphere.
+
+The simplest corrective recommendation afterward sounded just like an exercise from this chapter: every item of data exchanged through an interface must explicitly carry units, and software must check unit consistency before calculation. More than three hundred million dollars bought the lesson from our opening paragraph: a physical quantity is a number multiplied by an agreed standard. Bare numbers do not belong aboard spacecraft.
+
+We can also answer the opening guesses. Who defines a meter? Once it was a metal bar; now it is the distance light travels in vacuum in $1/299792458$ of a second. Seconds and a natural constant define meters, so the second is more fundamental than the meter. If everything, including rulers and atoms, doubled in size together, we could in principle never detect it: measurement is comparison, and all comparisons remain unchanged. This suggests that ratios between quantities carry the real physical meaning, while a bare scale itself may be a redundant description---an idea that becomes important in Chapter 38. A light-year is not time but the distance light travels in a year, about $9.5\times10^{15}$ meters. A kilowatt-hour is not kilowatts per hour but power times time, hence energy. How many did you guess correctly?
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[How to Explain One Meter to Aliens]
+Pioneer 10, launched in 1972, carried a gold-anodized aluminum plaque for any alien civilization that might intercept it. Its designers immediately faced this chapter's central difficulty: engraving ``This person is 1.7 meters tall'' would be useless, since alien meters have nothing to do with ours. No human-made unit can be translated. Their solution was beautiful: use no artificial units, only pictures. The plaque depicts the radiation emitted by a hydrogen atom's spin-flip transition, a physical process identical everywhere in the universe, with a wavelength of about 21 centimeters and a period of about $7\times10^{-10}$ seconds. An alien physicist who recognizes the diagram receives a ruler and a clock at once: the human figure's height is eight wavelengths by that ruler, immediately understandable. This thought experiment shows that units may be human inventions, but ratios between physical quantities are a universal language. Why hydrogen emits radiation of such a definite wavelength, and why hydrogen is the same across the universe, belong to the quantum story of Chapters 51 and 52. Go one step further: if future humans discovered that a natural constant was slowly changing, what would happen to a system of units based on constants? This is not science fiction; contemporary cosmology is actually testing the question.
+\end{thought}
+
+\begin{puzzles}
+\item A student derives a free-fall result: ``The falling distance is $h = v^2 g / 2$,'' where $v$ is the final speed and $g$ gravitational acceleration. Without redoing the calculation, can you immediately tell that it is wrong? What form should the correct relationship take? (Hint: write the dimensions of both sides and compare, then assemble the correct dimensional combination. Can dimensions alone determine the factor $\frac{1}{2}$?)
+\item An astronaut wants to compare gravitational acceleration on the Moon and Earth, with only a string, a nut, a tape measure, and a stopwatch. What can they do? Must they know the string's precise length? (Hint: how do $L$ and $g$ appear together in the pendulum formula? What ratio of the two measurements can eliminate error?)
+\item Estimate how many times all the hair of your school's students, joined strand to strand, could encircle Earth's equator, assuming each student has hair 10 centimeters long. State every assumption and order of magnitude, and report only a power of 10 at the end. (Hint: estimate Earth's circumference from the scale diagram; boldly estimate the student population. The point is not the answer, but whether you can proceed with incomplete information.)
+\item Suppose a country passes a law measuring time in heartbeats, one average heartbeat per unit, and length in strides. Would the law change the laws of physics? What would change and what would remain the same? (Hint: distinguish a law's numerical form from the law itself. What happens to the numerical value of $g$ in the pendulum formula, and to its dimensions?)
+\end{puzzles}
+
+This chapter taught no new law, but gave you a lifelong tool: for any formula, first ask the dimensions of every symbol; for any number, first ask its unit. Beginning in the next chapter, we will set physical quantities in motion and let graphs explain how position changes with time. You will find that every axis label must obey the grammar established today.
