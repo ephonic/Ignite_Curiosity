@@ -1,0 +1,278 @@
+% Chapter 20: Electric Potential: A Field's Contour Map
+\chapter{Electric Potential: A Field's Contour Map}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} This museum example is not permission to touch high-voltage equipment. Use only an organized demonstration following its apparatus-specific safety procedures; painful discharges and pacemaker hazards require precautions. See \href{https://physicslabs.colorado.edu/demos/electricity-and-magnetism/electrostatics/electrostatic-machines/dissectible-van-de-graaff/}{University of Colorado demonstration warnings}.
+% END TRANSLATOR SAFETY NOTE
+
+A classic science-museum exhibit is the Van de Graaff generator. A visitor places a hand on a large metal sphere as a demonstrator turns a handle, raising its voltage to 200,000 volts. Long hairs stand upright like a startled hedgehog, yet the visitor steps away unharmed, with only a little static on their trousers.
+
+Now return home. An ordinary wall outlet supplies only 220 volts, about one thousandth as much. Yet every adult has warned you since childhood never to touch it: it can kill.
+
+Harmless contact at 200,000 volts, lethal contact at 220? If more volts means more danger, one story must be false. If volts do not matter, what does the meter measure?
+
+Two more puzzles. A bird rests comfortably on a transmission wire at hundreds of thousands of volts, but would die if it touched the tower while keeping one foot on the wire. Same wire, same voltage: what differs? And in a thunderstorm, cloud--ground voltage exceeds a hundred million volts. Why does lightning follow a crooked branching path rather than the shortest straight line, as though probing its way?
+
+Try another yourself. Rub a plastic comb in your hair and bring it near paper scraps. They jump across the air and stick. The comb has done work lifting them. Who paid? Your rubbing hand. But how was that energy stored in air around the comb, ready to be cashed in when paper arrived?
+
+We will unpack the overused word volt and draw an invisible contour map of the electric field. Once drawn, it will unravel each puzzle.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Write intuitive judgments on these three statements before reading on:
+
+\begin{itemize}
+  \item A 200,000-volt static sphere does not kill. Is the meter reading misleading, the quantity of electricity too small, or something else responsible?
+  \item A bird safely perches on a high-voltage wire. Are its feet insulating, is the wire coated, or is some difference across its body nearly zero?
+  \item A balloon rubbed on a sweater sticks to a wall but falls hours or days later. Has its electricity run out, or has the holding force disappeared? Are those the same thing?
+\end{itemize}
+
+One spoiler: all three answers point to a familiar concept encountered whenever you climb a hill, renamed in an electric field.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Seeing an Invisible Slope]
+You need a plastic comb or balloon, fingernail-sized scraps of wastepaper, and a tap producing a very fine stream. Drier weather works better.
+
+First, work across a gap. Rub the comb vigorously through dry hair or a sweater about a dozen times, then approach paper without touching. At some distance scraps leap and stick. Notice that they \emph{accelerate} through the air, pushed before contact rather than merely sticking afterward. The comb does work across air.
+
+Second, watch terrain bend water. Make a continuous thread-thin stream, rub the comb again, and approach from the side without touching. Water visibly bends toward it. The comb has not stolen electrons from the water; the intact stream continues, yet every molecule receives a remote push.
+
+Third, wait for the paper to change sides. After a few seconds some scraps abruptly jump off. Attraction has become repulsion. Chapter 19's contact charging already suggests why: paper receives charge of the comb's sign after sticking.
+
+Take away this feeling: invisible terrain surrounds the comb, and incoming paper or water slides in a particular direction. Your arm supplied energy stored in that terrain, ready for an entering charged object. The rest of this chapter draws and calibrates the map.
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+Chapter 19 supplied Coulomb's law and electric fields. Given charges, calculate the field everywhere, then force on any test charge, then motion step by step. In principle that describes all electrostatics. What happens when we use it here?
+
+First, cumbersome calculation. Each little move requires recalculating force magnitude and direction in a position-dependent field. Following an electron between charged plates resembles mountain travel without a map: you measure the slope underfoot at each step, never knowing what waits miles ahead. Physicists want a map, not isolated glimpses.
+
+Second, a curious account. Eighteenth-century mathematicians found that moving a test charge from A to B gives exactly the same total field work along every route, straight, curved, or around Earth and back. Every closed circuit gives strictly zero work. This echoes climbing: gentle trail or rock face, gravity's work from base to summit depends only on height difference; a round trip gives zero. Every path-independent force hides a height table.
+
+Third, hidden energy. Paper gains kinetic energy as the comb attracts it, which must come from a reserve. Where? The comb feels ordinary. Energy is deposited in surrounding air, but the old language has no word for that inventory.
+
+All three point to the same solution: instead of asking force at each point, ask how much higher one point is than another. A field height would provide map, ledger, and reserve. What exactly is that height?
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+Build the concept layer by layer, following historical physicists.
+
+First, \textbf{electric potential energy}. A charge at a field point has potential energy that field force can turn into kinetic energy on release. Define its decrease as the positive work done by the field. This parallels a falling stone: gravity does work, potential falls, and kinetic energy rises. Electric potential energy belongs to the charge--field partnership.
+
+Second, \textbf{electric potential}. At one point, two coulombs have twice one coulomb's energy. That depends on both location and visitor, whereas a map should describe terrain independently of whether a table-tennis ball or shot put climbs it. Divide potential energy by charge. Potential \(V\) is energy per unit charge at a point, a property of space determined by source charges, whether or not a test charge is present. Joules per coulomb has a special name: volts.
+
+Third, \textbf{potential difference}, everyday voltage. Why name the difference? Every voltmeter has two probes and measures only between points. Absolute zero can be chosen freely, usually infinity in theory and Earth in engineering, while point-to-point differences are physical facts. Choose sea level or your living-room floor as altitude zero; Everest's height above your roof remains unchanged.
+
+Now our central analogy: potential is field altitude, and its distribution a contour map. As usual, explain both where the analogy fits and where it does not.
+
+It fits because potential resembles elevation and field resembles slope: steeper means stronger, with field directed downhill. Positive charges resemble rolling balls pushed toward lower potential. Motion along contours does no work; moving charge along an equipotential surface gives zero field work.
+
+Remember four differences. Elevation is usually positive, but potential can have either sign: a negative charge makes a well below infinity's zero. Real balls roll downhill, but no potential itself flows. Voltage does not flow; charge does. Saying voltage flowed is as meaningless as saying height difference flowed. Negative charges are antigravity balls, pushed toward higher potential, opposite positive charges on the same map. Finally, a hillside is a two-dimensional surface, while potential fills invisible three-dimensional space, surveyed with test charges.
+
+Fit these ideas to our recurring questions. What is the state? Each spatial point has a potential value; the whole map describes the electrostatic system. What governs change? Charge distribution determines terrain, and local slope then determines force on a charge. How do we measure? A voltmeter places two probes at two points and reports their elevation difference. Invisible terrain can nevertheless be measured difference by difference.
+
+Join equal-potential points into \textbf{equipotential surfaces}, or lines in a plane. Since field force does no work along them, it has no tangential component: \textbf{the electric field is perpendicular to equipotentials everywhere}, like steepest slope perpendicular to contours. Field lines run from higher to lower potential, downhill for positive test charges. Closer equipotentials mean steeper slopes and stronger fields.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.1]
+  \fill (0,0) circle (2.5pt) node[below=4pt] {$+Q$};
+  \foreach \r in {0.9,1.7,2.5}
+    \draw[dashed] (0,0) circle (\r);
+  \foreach \a in {0,45,90,135,180,225,270,315}
+    \draw[-{Stealth},thick] (\a:0.25) -- (\a:2.9);
+  \node at (2.05,1.15) {Equipotentials: dashed};
+  \node at (2.3,-1.9) {Field lines: solid};
+\end{tikzpicture}
+\caption{A positive point charge's contour map: dashed equipotentials become lower outward, like mountain contours. Solid radial field lines are perpendicular to them, pointing down the steepest slope.}
+\end{figure}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Potential is a field's altitude: field work on a charge depends on the endpoint height difference, voltage, not the route; positive charges are pushed downward, negative ones upward, and stored height differences supply a capacitor's energy.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+Translate three intuitions into three expressions, asking of each what it describes, why its form, when it holds, and when it fails.
+
+First: \textbf{field work} \(=\) \textbf{charge amount} \(\times\) \textbf{potential drop}:
+\[
+W_{A\to B} = q\,(V_A - V_B) .
+\]
+It describes work moving charge \(q\) from A to B. Work is cargo amount times per-unit drop: \(q\) is the cargo, \(V_A - V_B\) the drop, precisely the property built into potential's definition. It holds in electrostatics, without changing electric fields or changing magnetic fields. Its failure involves a crack in the foundation revealed under limits.
+
+Check negative \(q\): the right side reverses automatically, matching opposite downhill directions without changing the formula. Equal potentials, \(V_A = V_B\), give \(W=0\) regardless of the intervening detour, the contour's no-work property. Conversely, \(W=0\) with \(q\neq 0\) requires \(V_A = V_B\): no-work travel has no net climb. All pass.
+
+Second: \textbf{field is potential slope}. In a uniform field, such as between parallel capacitor plates, points separated by \(d\) along it have voltage
+\[
+V = E\,d .
+\]
+This describes volts lost per meter along the field, a rate equal to field strength \(E\). Thus \(E\) may be measured in newtons per coulomb or volts per meter: force per charge and potential drop per distance express the same thing. The form is ordinary map slope, height difference over distance. It holds for uniform fields; nonuniform fields require tiny segments, as the mathematical bridge explains. Strongly time-varying fields demand the same caution as above.
+
+Check \(d=0\): \(V=0\), no drop without displacement. Double \(d\) and \(V\) doubles, twice the distance giving twice the climb. Reverse travel and \(V\) changes sign, downhill becoming uphill. Plot position horizontally and potential vertically: parallel plates give a straight descending line whose steepness is field strength. Just as terrain readers infer wind direction from slopes, this profile gives field direction and magnitude at a glance.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.2]
+  \draw[-{Stealth}] (0,0) -- (4.6,0) node[right] {Position \(x\)};
+  \draw[-{Stealth}] (0,0) -- (0,2.9) node[above] {Potential \(V\)};
+  \draw[thick] (0,2.4) node[left] {\(V_{+}\)} -- (3.8,0.3);
+  \draw[dashed] (3.8,0.3) -- (3.8,0) node[below] {\(d\)};
+  \draw[dashed] (3.8,0.3) -- (0,0.3) node[left] {\(V_{-}\)};
+  \node at (2.1,1.75) {Steepness \(=\) field strength \(E\)};
+\end{tikzpicture}
+\caption{Potential between parallel plates falls uniformly along the field, producing a straight profile. Greater steepness means more voltage over the same distance and a stronger field.}
+\end{figure}
+
+\begin{mainline}
+Real numbers: dry-air breakdown occurs around \(3\times10^{6}\) volts per meter. Wires a millimeter apart may spark above roughly three thousand volts. Sweater sparks several millimeters long imply tens of thousands of volts, yet you remain unharmed; the opening explanation will account for that.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.15]
+  \draw[thick] (-2,1.5) -- (2,1.5) node[right] {$+Q$ plate};
+  \draw[thick] (-2,-1.5) -- (2,-1.5) node[right] {$-Q$ plate};
+  \foreach \x in {-1.5,-0.9,...,1.5}
+    \draw[-{Stealth},thick] (\x,1.35) -- (\x,-1.35);
+  \foreach \y in {-0.75,0,0.75}
+    \draw[dashed] (-1.9,\y) -- (1.9,\y);
+  \node at (-2.55,0) {Dashed: equipotentials};
+\end{tikzpicture}
+\caption{Uniform field between parallel plates: straight, equally spaced downward field lines and horizontal, equally spaced dashed equipotentials map a uniform slope, lower in potential downward.}
+\end{figure}
+
+\begin{mainline}
+Third: \textbf{point-charge potential}. Taking infinity as zero, charge \(Q\) creates a potential at distance \(r\) that decreases outward more slowly than force: force falls as \(1/r^2\), potential as \(1/r\). Double distance and force quarters while potential halves. Its exact expression needs more than multiplication and follows in the bridge. Keep the picture: a positive charge is an infinitely high spike, a negative one an infinitely deep well, with concentric contours crowding near the charge where slopes steepen.
+\end{mainline}
+
+\begin{mathbridge}
+The exact point-charge potential is
+\[
+V(r) = \frac{kQ}{r},\qquad k = 9\times10^{9}\ \text{N m}^2/\text{C}^2 .
+\]
+Its relationship to \(E(r) = kQ/r^2\) is height versus slope. Potential accumulates field along the radial direction by integration; field is potential's negative radial derivative. Hence potential loses one power of distance more slowly than force.
+
+Four questions: it tabulates terrain heights around a point charge. Its form comes from accumulating Coulomb work radially from infinity to \(r\), giving \(kQ/r\). It applies to point charges and outside spherical distributions, like gravity's shell result. Check limits: \(r\to\infty\) gives \(V\to 0\), matching our zero. But \(r\to 0\) gives \(V\to\infty\), an alarm: real charge has size, and when \(r\) is smaller, point idealization fails. Divergence is not disaster in the world but a model boundary announcing itself.
+\end{mathbridge}
+
+\begin{mainline}
+Fourth: \textbf{capacitors store separation, not charge}. Parallel metal plates carrying \(+Q\) and \(-Q\) have an approximately uniform field between them. Define capacitance
+\[
+C = \frac{Q}{V},
+\]
+charge accommodated per volt. It measures the device's capacity for charge separation. Voltage proportional to charge is an experimental fact for unchanged materials; capacitance is the associated ratio. This holds without dielectric breakdown or material changes, and fails when voltage breaks insulation or charge density overwhelms the material.
+
+How much energy is stored? The result is
+\[
+U = \frac{1}{2}QV = \frac{1}{2}CV^2 .
+\]
+Where does \(\frac{1}{2}\) come from? Move charge onto the plates in batches. At first no voltage opposes you; halfway, it is \(V/2\); at the end, full \(V\). The average opposing drop is only \(V/2\), so work equals average voltage times total charge, \(\frac{1}{2}QV\). Check \(V=0\), giving \(U=0\): uncharged means no stored energy. Double \(V\) and \(U\) quadruples, not doubles, because twice the cargo climbs twice the average height. Both factors multiply.
+
+Where is the energy? Not in plates or wires but \textbf{in the electric field between the plates}. A frequently misstated point: the capacitor does not store net charge; its positive and negative plates still total zero. It stores forced charge separation and the energy you or a battery paid to separate them. This matches our recurring principle: electricity does not get used up by a battery. Energy transfers and is stored; charge remains conserved.
+
+Real-data estimate 1, a camera flash: typical capacitance \(150\) microfarads, charged to \(300\) volts:
+\[
+U=\frac12\times 1.5\times10^{-4}\times 300^2 \approx 7\ \text{J} .
+\]
+Seven joules is roughly an apple's kinetic energy after falling seven meters. Delivered into a flash tube in a millisecond, it makes a bright, brief flash. A medical defibrillator releases 150--360 joules in milliseconds through the chest, tens of times more, to restart disordered cardiac electrical activity. The same terrain map serves a moment's illumination or a life-saving intervention.
+
+Estimate 2 foreshadows later chapters. Moving an electron of charge \(e = 1.6\times10^{-19}\) coulombs from one volt lower to one volt higher requires \(1.6\times10^{-19}\) joules. Tiny in mechanics, this is standard atomic small change, named the \textbf{electronvolt}. Chemical bond formation and breaking, battery voltage steps, and atomic light colors involve a few electronvolts. Chapter 21's batteries and later atomic emission will use it constantly.
+\end{mainline}
+
+\begin{mainline}
+Complete the microscopic picture with \textbf{dielectrics and polarization}. Insert paper or glass between capacitor plates and capacitance increases: more charge fits at the same voltage. Why?
+
+Insulator electrons are tethered to their nuclei, unable to roam as in conductors. A field still nudges them, pushing positive charge centers toward lower potential and negative centers higher. A tiny separation makes each molecule a dipole, positive at one end and negative at the other: \textbf{polarization}. Some molecules, such as water, already have two polar ends; the field aligns them. Our bent stream demonstrates polarization and reorientation.
+
+Billions of aligned dipoles create polarization charge on dielectric surfaces beside the plates, opposite in sign to plate charge. This partly cancels the original field, flattening the slope. The same \(Q\) gives smaller \(V\), so \(C=Q/V\) grows. The multiplying factor is the dielectric constant: about two or three for paper, five to ten for glass, eighty for static water, and thousands for some ceramics. Dielectrics make compact capacitors possible.
+
+Polarization has limits. Strong fields tear electrons directly from molecules and make an insulator conduct: \textbf{breakdown}. Air's threshold, used earlier, is about \(3\times10^{6}\) volts per meter. Every capacitor therefore carries a voltage rating, not a suggestion but its terrain's altitude limit.
+
+Dielectrics work quietly around you. Touchscreen glass is one: your finger never touches the circuit, but its approaching charge polarizes glass and slightly changes local capacitance. A chip reads that change to locate your touch. Sweater sparks, bent water, touchscreens, and camera flashes are neighboring landmarks on one map.
+\end{mainline}
+
+\begin{challenge}
+Calculus makes slope precise. Along \(x\), field is the negative potential derivative:
+\[
+E_x = -\frac{dV}{dx}.
+\]
+In three dimensions, \(\mathbf{E} = -\nabla V\), the negative gradient. Minus means downhill. Our qualitative conclusions become identities: along equipotentials \(dV=0\), so \(\mathbf{E}\) is perpendicular; zero round-trip work gives \(\oint \mathbf{E}\cdot d\mathbf{l}=0\), electrostatics' condition for drawing a terrain map. When this integral need not vanish, as with Chapter 23's changing magnetic field, the map becomes mathematically impossible. The terrain descends continuously around a loop, like an Escher staircase that never reaches its top. Such fields really exist; we will change languages then.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+Every map has coverage limits; potential has four.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} The following claim about touching transmission wires is unsafe: a grounded person can receive a fatal shock from one energized conductor alone. Never touch or approach power conductors. See \href{https://www.osha.gov/etools/poultry-processing/plant-wide-hazards/electrical-hazards}{OSHA electrical-hazard guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+First, zero is arbitrary and only differences are physical. Saying a point is at a thousand volts without specifying relative to what omits the altitude datum. Engineering uses Earth as zero. Grounding connects equipment casing to Earth with a conductor, forcing it to share the zero beneath people's feet. This also explains why opposing transmission wires may differ by hundreds of thousands of volts while a grounded person is safe provided they do not touch both simultaneously.
+
+Second, where the voltage-as-current-pressure analogy fails. It helps because voltage drives charge like pressure drives water, and series batteries add drops like successive floors. But four differences matter. Voltage is not force: joules per coulomb are an account, not a newton push. Water pressure requires water, while voltage can span empty vacuum between plates. An open circuit still has battery voltage; the pressure analogy struggles with a closed valve maintaining a difference, whereas floor heights persist without anyone on the stairs. Finally, voltage alone does not specify current; road conditions, resistance, also matter, next chapter's topic. Voltage is drop, not flow rate.
+
+Third, potential rests on zero field work around a closed loop. That foundation is solid in electrostatics, not universal. Chapter 23's changing magnetic fields create circulating electric fields doing nonzero loop work. Potential alone cannot even be defined there; we must return to the field itself. This is a domain limit, not a flaw. A map's inability to cover all Earth does not make it wrong.
+
+Fourth, counterexamples for intuition: \textbf{zero field can coexist with high potential, and zero potential with strong field}. Midway between equal positive charges, forces cancel and field vanishes, while their positive potentials add well above infinity. Bringing a positive charge there means climbing to a plateau. Conversely, the perpendicular bisector plane of equal opposite charges has zero potential because peak and well cancel, yet nonzero field. It is a zero-altitude plane with a steep slope. A level plateau three kilometers high and a steep sea cliff show that height and slope keep separate accounts.
+\end{mainline}
+
+\step{Explaining the Opening Phenomenon}
+
+\begin{mainline}
+Take the map back to our four opening puzzles.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} The source's voltage and stored-energy estimate does not establish that contact is harmless. Do not reproduce a bodily discharge or test electrical safety on yourself; apparatus-specific precautions remain essential. See \href{https://physicslabs.colorado.edu/demos/electricity-and-magnetism/electrostatics/electrostatic-machines/dissectible-van-de-graaff/}{University of Colorado high-voltage warnings}.
+% END TRANSLATOR SAFETY NOTE
+
+First, why a 200,000-volt sphere does not kill while a 220-volt outlet can. A metal sphere of twenty-centimeter radius has about twenty picofarads, \(2\times10^{-11}\) farads. At 200,000 volts, total charge is \(Q=CV\approx 4\times10^{-6}\) coulombs, only a few microcoulombs; stored energy is \(\frac12 CV^2\approx 0.4\) joules, discharged once without replenishment. Those microcoulombs through your body to Earth only tingle skin and raise hair. Mains voltage has a much smaller drop but the entire grid behind it, supplying continuous charge while contact lasts, pouring joules or tens of joules per second into your body. Danger is not voltage alone, but the complete account of drop times total quantity times duration. Volts state the drop per coulomb, not how many coulombs will arrive.
+
+Second, why the bird is safe. Both feet touch nearly the same potential on one wire, so almost no difference drives current through it. Shock comes not merely from contact with high voltage but from a difference across the body. Touching line and tower bridges hundreds of thousands of volts. Live-line workers' conductive equipotential suits connect their whole surface, making it part of an equipotential and giving current no reason to cross the body.
+
+Third, why lightning branches. Cloud and ground resemble distant parallel plates, but \(10^{8}\) volts over two or three kilometers gives only about \(5\times10^{4}\) volts per meter, far below air's breakdown field. The whole gap cannot break down at once. Lightning probes forward: a droplet, ice crystal, or ion opens a short conducting channel, carrying high cloud potential closer to ground and redrawing the map. The next steepest region breaks down, redrawing it again. Channel and terrain reshape one another step by step, naturally leaving a crooked branching route. Lightning did not choose it; it records sequential terrain collapse.
+
+Fourth, why a wall balloon eventually falls. Its field polarizes wall molecules, attracting opposite charges, like the comb and water. Electricity has not been used up, a phrase forbidden in this book. Air ions and moisture gradually neutralize surface charge, and dust carries it away. Charge, polarization, attraction, and height difference fade, so the balloon slips. The separated state disappears, not electricity itself.
+
+Four puzzles settled with one terrain map: a test of a concept's value.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Treat a Storm Cloud and Earth as a Parallel-Plate Capacitor]
+A typical flash has cloud--ground voltage \(10^{8}\) to \(10^{9}\) volts and transfers five to twenty coulombs. Our first formula gives
+\[
+W = qV \approx 20\times 5\times10^{8} = 10^{10}\ \text{J} \approx 2700\ \text{kWh},
+\]
+enough for a three-person household for a year. A gold mine? Unfortunately it is spread along kilometers of channel and released in tens of microseconds, mostly heating air to thirty thousand degrees and making thunder, leaving little harvestable energy. Serious lightning-power estimates find even every strike over a city yields only a small power station's few days of annual output, before solving the minor problem of capturing a hundred million volts.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not deliberately create or investigate sparks at an outlet. The source's air-gap estimate is not a test of an outlet's voltage or safety. Energized equipment presents shock and fire hazards; see \href{https://www.osha.gov/etools/poultry-processing/plant-wide-hazards/electrical-hazards}{OSHA electrical-hazard guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+Reverse the scale. Breaking down one millimeter of air at \(3\times10^{6}\) volts per meter requires about three thousand volts, the scale of occasional charger-plug sparks entering an outlet. From micrometer chip insulation to kilometer storm clouds, \(V=Ed\) works across nine orders of magnitude. A map's scale range is its best credential.
+\end{thought}
+
+\begin{puzzles}
+\item Field vanishes midway between equal positive charges. Does potential vanish too? Slowly move a positive test charge from infinity along their joining line to the midpoint: does field force do positive or negative work? (Hint: zero final force does not mean no force along the route. A plateau can end an uphill climb; potential records the whole account.)
+\item Why make a lightning rod pointed rather than top it with a smooth sphere? (Hint: a conducting surface is equipotential. A tip crowds and curves nearby equipotentials, putting the same drop over less distance and creating a steep field where air breaks down first. Lightning is invited to the rod and carried to ground instead of a random roof location.)
+\item Capacitor energy is \(\frac12 QV\), not \(QV\). Could you first establish voltage \(V\), then add all charge \(Q\) at once, making the account \(QV\)? Why is this impossible? (Hint: gradual transfer raises voltage, giving average \(V/2\). Having \(V\) beforehand already requires plate charge, before your proposed transfer begins. The ledger resolves this chicken-and-egg puzzle.)
+\item Charge a parallel-plate capacitor, disconnect the battery so charge cannot escape, then separate the plates farther. What happens to field, voltage, and stored energy? Who pays any difference? (Hint: \(Q\) stays fixed. Uniform field depends on plate charge density, not spacing, while \(V=Ed\). If energy rises, what force does your pulling hand oppose?)
+\end{puzzles}

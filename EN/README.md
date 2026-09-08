@@ -1,0 +1,97 @@
+# Ignite Curiosity — English editions
+
+English translations of the four Chinese titles in this repository, with the
+same subject-directory structure. All four books are translated, and their
+complete compiled PDFs are included beside their subject READMEs.
+
+| Directory | English title | Chinese source |
+|---|---|---|
+| [`math/`](math/) | *Igniting the Mathematical Spark* — [English PDF](math/Igniting_the_Mathematical_Spark.pdf) | [`../math/`](../math/) |
+| [`phy/`](phy/) | *Igniting the Physics Spark* — [English PDF](phy/Igniting_the_Physics_Spark.pdf) | [`../phy/`](../phy/) |
+| [`chem/`](chem/) | *Igniting the Chemistry and Biology Spark* (three volumes) — [English PDF](chem/Igniting_the_Chemistry_and_Biology_Spark.pdf) | [`../chem/`](../chem/) |
+| [`literal_arts/`](literal_arts/) | *Igniting the Liberal Arts Spark* (three volumes) — [English PDF](literal_arts/Igniting_the_Liberal_Arts_Spark.pdf) | [`../literal_arts/`](../literal_arts/) |
+
+Each subject directory contains its English README, LaTeX sources in `latex/`,
+and, when complete, a compiled PDF beside the README. Original fonts, page
+geometry, colors, boxes, table definitions, and diagram styles are retained;
+visible labels and prose are translated into English. Diagram labels may be
+wrapped or locally repositioned for legibility without changing plotted shapes,
+paths, or scales.
+The chemistry README documents a local return-arrow routing repair and restored
+appendix numbering; these presentation fixes retain the original visual styles.
+Oversized tables may be split across pages with repeated headers, as approved
+by the contributor; these pagination fixes preserve the original table styles
+and all rows and are documented in each affected subject's README.
+Liberal arts also uses approved English line-breaking adjustments, compact
+navigation/running titles with full headings retained, and wider contents
+page-number boxes for its four-digit page count. Fonts, sizes, margins, and
+heading designs remain unchanged.
+Language-specific examples are translated with pronunciation guides and English
+glosses. Where character shapes are the subject, explicitly allowlisted original
+glyphs remain as examples; this does not exempt surrounding prose from translation.
+With the contributor's approval, clearly labeled translator safety notes appear
+beside hazardous advice in the physics and chemistry sources. These cite safety
+guidance and distinguish it from the retained source text; they do not silently
+rewrite the original claims or change the LaTeX styles.
+
+## Source edition and incremental updates
+
+These translations use the Chinese sources at commit
+[`7cc876a81c0026027322f534eaaee44cd596f6ba`](https://github.com/yinghai/Ignite_Curiosity/commit/7cc876a81c0026027322f534eaaee44cd596f6ba)
+(*Edit description of science books in README*). This is the source snapshot,
+not the commit that introduces or later updates the English translation.
+Translation history is recorded by Git under `EN/` on branch `yinghai/en`.
+
+To identify changes in a future Chinese edition, fetch that edition and compare
+it with this snapshot. For example, if the new source is on `origin/main`:
+
+```sh
+git fetch origin
+git diff --name-status 7cc876a81c0026027322f534eaaee44cd596f6ba origin/main -- math phy chem literal_arts
+```
+
+For each changed source chapter, update the corresponding English chapter,
+review references and terminology in dependent chapters, rebuild the affected
+book, and replace its PDF. Changes to a shared preamble or entrypoint require
+rebuilding all affected volumes. Update the source-commit record only after
+the English text and PDFs reflect the new snapshot; if subjects are updated at
+different times, record their individual source commits in their READMEs.
+
+The liberal arts source is one generated LaTeX file. Its English translation is
+maintained in `literal_arts/latex/fragments/` and assembled in the original order
+with `python3 scripts/assemble_liberal_arts.py` from the repository root.
+Regenerate its Chinese comparison fragments from the selected source edition
+with that script's `--extract` option when reviewing future changes.
+
+## Verification
+
+The complete PDFs contain 251 pages (mathematics), 783 pages (physics),
+1,054 pages (chemistry/biology), and 1,988 pages (liberal arts). All entrypoints,
+including the three standalone chemistry volumes, compile successfully with
+no missing inputs, missing glyphs, unresolved references, or overflow warnings.
+The liberal arts edition includes all 114 chapters and all 141 source fragments.
+
+From the repository root, require complete source coverage and unchanged
+LaTeX heading, environment, and reference structure:
+
+```sh
+python3 scripts/check_english.py
+python3 scripts/build_english.py --publish
+```
+
+During translation only, `--partial` checks existing files and explicitly reports
+what is missing. A successful LaTeX exit code alone is insufficient: missing
+`\include` files can otherwise be silently skipped. Build logs must also be
+checked for missing input, missing glyphs, and unresolved references, followed
+by visual review of the PDFs.
+
+## Source limitations
+
+The Chinese physics source ends with four unfinished appendix placeholders;
+their English translations retain that status. The liberal arts source includes
+its original editorial plan and proposed appendix outlines. Translating these
+sections does not turn them into newly authored appendices.
+
+The original series discloses that its text was generated by AI. Translation
+does not constitute independent verification of every scientific or historical
+claim. See the [original introduction](../README.md) and subject-specific notes.

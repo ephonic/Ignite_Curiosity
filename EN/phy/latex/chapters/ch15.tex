@@ -1,0 +1,222 @@
+% Chapter 15: Hamiltonian Mechanics: Navigating State Space
+\chapter{Hamiltonian Mechanics: Navigating State Space}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Look at a photograph of a child suspended on a swing, its ropes taut. A seemingly childish question: a second later, will the child be higher or lower?
+
+You cannot answer. Not because you know too little physics: even their weight, rope thickness, and the day's weather forecast would not help. The answer is absent from the photo. At the same position, the swing could be moving left or right; two futures begin with identical pictures.
+
+Add half a second of video and the problem disappears. What extra information did it supply? The direction and speed of motion. Predicting the future needs a two-column file: where something is, and where it is heading how fast. Without the second, no precision in the first can help.
+
+Now something more counterintuitive. Imagine two identical billiard balls at the same position on the same table, rolling at the same velocity. One was pushed steadily there by a hand; the other rolled down a ramp and has just arrived. Their histories differ completely, one born of a palm and the other of a slope. Will their motion differ from now on?
+
+No. With the same present position and velocity, their futures are identical. Nature keeps no diary; it reads only the present page.
+
+Notice a column the file \emph{does not} contain: acceleration. Should we record how rapidly velocity is changing now? No. Force usually depends on position: a spring responds to extension, gravity to distance. Specify position and acceleration follows. Two columns suffice; the third is redundant. Position and momentum being enough for a state is a profound physical fact, not mere convenience.
+
+Everyday life offers echoes. Navigation software estimates arrival from your current position and speed, not when you left home or how often you refueled. Continuing a chess game needs the current board and whose turn it is, not the earlier move record; future possibilities are already in the position. A medical report and a heart monitor differ similarly: the report records one morning's position, while the monitor tracks where measurements are heading. Doctors need both to judge a trend. Physicists call this memoryless evolution: the future depends on the present state, not the route by which it was reached.
+
+We grow up thinking causes lie in the past: a failed exam because we did not revise last night, a cold because we got soaked the day before. Mechanics instead says that given present position and velocity, the whole past can be discarded. Is this proud, concise claim right, and why? Can the two-column position-and-momentum file have a formal name and a proper home? This chapter names it state, houses it in phase space, and supplies traffic rules for every route inside: Hamilton's equations.
+\end{mainline}
+
+\step{Make a Guess First}
+
+As usual, stake your intuition before reading on. A wrong guess is more useful than a right one. These three questions address our pillars: state, evolution, and the subtle relationship between Hamiltonian and energy.
+
+First: two identical swings with equal lengths pass through their lowest points simultaneously. One child then swings high, the other only a little. Is that possible? If so, is the difference hidden in the present or the past?
+
+Second: you want an asteroid's position a year from now. Astronomers supply its current position and velocity but refuse its previous century of orbital records. Have you lost anything?
+
+Third: a carousel rotates at constant angular velocity. A ball slides back and forth in a smooth straight groove in its floor. A rider keeps accounts using carousel-relative position and velocity. Is their calculated kinetic plus potential energy conserved? If anything is conserved, is it still energy?
+
+Write all three answers with specific reasons. Finding exactly where intuition goes wrong is often more instructive than the answer.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Mapping a Key Pendulum]
+\textbf{Materials}: a thin string about thirty centimeters long, keys weighing about fifty grams, a pen, and paper. A phone's slow-motion video is helpful if available.
+
+\textbf{Step 1}: tie the keys to the string and hold its top as a pendulum. Pull it about thirty degrees left and release. Watch the bottom: it passes fastest there, heading right.
+
+\textbf{Step 2}: let it swing freely several times. When it returns from the right and passes the bottom again, its position is identical but its direction reversed. \emph{One position contains two different motions.} That is why the opening photo could not answer our question.
+
+\textbf{Step 3}: draw a map. Label the horizontal axis angle of displacement, positive right and negative left. Label the vertical axis momentum of motion, positive rightward and negative leftward. At release on the left, angle is negative and momentum zero: mark a point. At the bottom, angle is zero and momentum maximally positive: another point. At the right end, angle is maximally positive and momentum zero: a third. Back at the bottom, momentum is maximally negative: a fourth. Connect them smoothly and you get something close to a closed ellipse!
+
+\textbf{Step 4}: release from a smaller angle, perhaps fifteen degrees, and draw another loop. The large loop surrounds the small one; they never cross.
+
+\textbf{Step 5, optional}: film the motion and record bottom-passage speeds frame by frame, comparing them with your loops. Halving the amplitude roughly halves the loop's horizontal and vertical extents, reducing its area to a quarter. Some conserved quantity hides in that area; our closing estimate will use it.
+
+\textbf{Record}: why is the trajectory closed? Why do different-sized loops never intersect? What happens to the loop as the pendulum gradually stops? Record observations first; explanations follow. This angle--momentum map is an unfinished version of phase space.
+\end{experiment}
+
+A free observation next time you swing or watch a child: passing the bottom, motion is most vigorous; at either end, most still. The system alternates between maximum position with zero momentum and zero position with maximum momentum. You will soon see this cycle as a closed mapped trajectory. It also foreshadows Chapter 16: position and momentum take turns, one maximal when the other vanishes, the signature of oscillation.
+
+\step{The Old Model Runs into Trouble}
+
+Chapter 6 gave us a distinguished rule: net force determines acceleration, position's second rate of change in time. It successfully handled projectiles, pendulums, and satellites. Look closely, though, and several awkward features appear.
+
+First: \textbf{position holds only half the file}. To make the written equation predict anything, you must supply initial position \emph{and} velocity. Position alone cannot start it, precisely the photo's dilemma. Needing two inputs shows that position naturally describes only half the state.
+
+Second: \textbf{velocity and position have unequal status}. Newtonian language makes position the protagonist and velocity its attendant, merely the rate of position change. Yet Step 3 shows two independent columns: neither determines the other. Why should one lead and the other serve?
+
+Third: \textbf{change variables and familiar quantities change identity}. Chapter 14 used generalized coordinates such as pendulum angle. But with angle, mass times velocity is no longer the useful conserved momentum; its partner is angular momentum. Newtonian language hides conserved quantities behind coordinate conversions.
+
+Fourth: \textbf{second-order equations hide the next step}. Newton's equation directly supplies acceleration, velocity's rate of change of a rate of change. Actual motion proceeds in little successive steps. We want a rule that takes the complete current state and directly gives the next instant's state: first-order, with position and momentum equal partners.
+
+One more untidy account remains. Chapters 9 and 10 kept energy and momentum conservation separately. Constrained systems, stacked sliders, double pendulums, and robot arms, pile constraint-force equations onto both books. Could energy and momentum be combined in one function, bringing conserved quantities forward and moving constraint forces backstage?
+
+Chapter 14's Lagrangian mechanics solved coordinate choice, but its equations remain second-order. One final step is missing: promote where motion is heading to a coordinate equal in status to where the object is. Hamilton took that step.
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+\textbf{First concept: generalized momentum.} Chapter 14 chose suitable generalized coordinates, written \(q\). Give each \(q\) a partner, generalized or canonical momentum, written \(p\). Its identity depends on the coordinate. For a free particle's Cartesian \(x\), it is familiar \(p=mv\), mass times velocity. For pendulum angle \(\theta\), it is angular momentum: mass times length squared times angular velocity. Intuitively, \(p\) asks not simply how fast, but how much motion is associated with increasing \(q\). A skater pulling in her arms spins faster while conserving this generalized angular momentum: arms extended means slower angular velocity, arms tucked means faster, with their product nearly unchanged, as in Chapter 11. This is an elegant everyday appearance of angle's partnership with angular momentum.
+
+When does generalized momentum equal ordinary momentum? In straightforward settings with Cartesian coordinates, no magnetic field, and no moving constraints, it is \(mv\), exactly Chapter 10's momentum. Three settings change its identity. For angular coordinates it is angular momentum. In a magnetic field, a charged particle's generalized momentum adds a magnetic contribution to \(mv\), foreshadowing Chapter 22. In time-dependent coordinates, it also carries the frame's own motor parameters. One rule: \(p\) always follows its coordinate \(q\); change coordinates and the partner changes.
+
+\textbf{Second concept: phase space.} Draw a map with \(q\) horizontal and \(p\) vertical. This is phase space. Each point is a complete two-column state file: where and where heading. As time passes, the point traces a trajectory. The system's entire classical fate is that trajectory.
+
+Phase space has three firm rules, two already seen experimentally. First, trajectories never cross: one point has one way forward because one state has one future. That explains Step 4's nonintersecting loops. Second, trajectories neither appear nor disappear from nowhere; points flow continuously. Third, each system draws characteristic patterns: pendulums closed loops, free particles straight lines, friction-damped pendulums spirals. Later, wilder systems such as double pendulums wander forever through bounded regions without repeating, while obeying the same three rules.
+\end{mainline}
+
+Clarify the analogy. Phase space resembles a navigation map: mark your location and direction of travel and the route is determined. It does not resemble literal ground. Height on this map means momentum, not altitude. You cannot drive a car into phase space; it is a ledger, not a newly discovered physical region. Upward movement of a point means increasing momentum, not an object actually rising.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05]
+  \draw[-{Stealth}] (-3.7,0) -- (3.7,0) node[right=2pt] {Angle \(q\)};
+  \draw[-{Stealth}] (0,-2.0) -- (0,2.0) node[above=2pt] {Momentum \(p\)};
+  % Outer loop: large amplitude, clockwise flow
+  \draw[thick,blue!70!black] (0,0) ellipse [x radius=2.8,y radius=1.4];
+  \draw[thick,blue!70!black,-{Stealth}] (0,0) ++(150:2.8 and 1.4) arc[start angle=150,end angle=30,x radius=2.8,y radius=1.4];
+  \draw[thick,blue!70!black,-{Stealth}] (0,0) ++(330:2.8 and 1.4) arc[start angle=330,end angle=210,x radius=2.8,y radius=1.4];
+  % Inner loop: small amplitude
+  \draw[thick,red!70!black] (0,0) ellipse [x radius=1.6,y radius=0.8];
+  \draw[thick,red!70!black,-{Stealth}] (0,0) ++(150:1.6 and 0.8) arc[start angle=150,end angle=30,x radius=1.6,y radius=0.8];
+  % Same position, different states
+  \draw[dashed,gray] (1.0,-1.75) -- (1.0,1.75);
+  \fill (1.0,1.31) circle[radius=1.7pt];
+  \fill (1.0,-1.31) circle[radius=1.7pt];
+  \node[right=2pt,align=left] at (1.05,1.31) {A: same position, moving right};
+  \node[right=2pt,align=left] at (1.05,-1.31) {B: same position, moving left};
+  \node[blue!70!black] at (-2.2,1.05) {Large swing};
+  \node[red!70!black] at (-1.15,0.55) {Small swing};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+\textbf{Third concept: the Hamiltonian.} Give the map terrain. Write total energy using \(q\) and \(p\) instead of velocity; the resulting function is the Hamiltonian, \(H(q,p)\). For a pendulum, kinetic energy becomes momentum squared divided by twice the moment of inertia, while potential energy stays familiar:
+\[
+  H = \frac{p^{2}}{2ml^{2}} + mgl\,(1-\cos\theta)
+\]
+Here \(m\) is mass, \(l\) length, \(\theta\) displacement angle, and \(p\) its partner angular momentum. Think of a contour map. With energy conserved, a trajectory follows a contour: large-amplitude loops lie higher, small ones lower. Do not imagine a real mountain, though. Points travel along contours instead of rolling downhill. Phase-space flow has entirely different rules from mountaineering.
+
+The crucial question: is the Hamiltonian total energy? \emph{In most cases in this book, yes}, provided constraints are time-independent, potential energy depends only on position, and the coordinate system does not itself move in time. Then \(H\) equals kinetic plus potential energy. This is a conditional coincidence, not a law. Our third question supplies a counterexample. A carousel rider using rotating coordinates finds the ball's kinetic plus potential energy varying rather than conserved. Another combination is conserved: that frame's \(H\), total energy minus a correction involving rotation speed. A frame with its own motor requires subtracting the motor's share. Remember the guardrail: the Hamiltonian is a function of \((q,p)\) that drives evolution. It often equals total energy, but often is not always.
+
+An immediate benefit is transparent conservation. If a coordinate never appears in \(H\), for example the free particle's \(H=p^{2}/(2m)\) contains no position \(x\), then \(H\)'s slope in that direction vanishes and the associated momentum stays constant. A pendulum angle, by contrast, explicitly enters potential energy, so angular momentum is not conserved. In one sentence: \emph{an absent coordinate has a conserved momentum partner}. Coordinate choice from Chapter 14 shakes hands with conservation laws. The deeper reason, symmetry, waits for Chapter 58.
+\end{mainline}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Put where you are, \(q\), and where you are heading, \(p\), on equal footing as one point; its phase-space flow is the system's entire classical fate, and the Hamiltonian \(H\) supplies both the map's terrain and the engine driving that flow.
+\end{oneline}
+
+The first half describes phase space: state is a point, evolution a flow. The second gives Hamilton's intuition: knowing the terrain, the slopes of \(H\) in every direction, tells us the next step. Mountain terrain directs streams; a system's \(H\) directs states. The difference is that phase-space streams circle contours instead of running downhill. Remember this and you hold half a ticket to understanding Chapter 44's Schrödinger equation.
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+Two statements turn intuition into rules. First, the rate of change of \(p\) is minus the slope of \(H\) along \(q\). Steeper coordinate terrain changes momentum faster, a new outfit for force as potential-energy slope. Second, the rate of change of \(q\) is the slope of \(H\) along \(p\): greater momentum moves coordinates faster. Position and momentum are symmetric except for one minus sign. That sign is no decoration: it makes trajectories loop instead of sliding to the valley floor.
+
+One reading tip: phase-space flow runs tangent to contours, not downhill. The symmetric structure explains why. The slope along \(q\) drives \(p\), while the slope along \(p\) drives \(q\). These perpendicular contributions combine into motion parallel to the contour. Thus pendulum trajectories circle rather than collapse, keeping energy constant along the path.
+\end{mainline}
+
+\begin{mathbridge}
+In equations, the two statements become Hamilton's famous pair:
+\[
+  \dot{q} = \frac{\partial H}{\partial p}, \qquad
+  \dot{p} = -\frac{\partial H}{\partial q}
+\]
+The dot in \(\dot{q}\) means the rate at which \(q\) changes in time. The partial derivative \(\partial H/\partial p\) means varying only \(p\), holding other variables constant, and asking how fast \(H\) changes. One second-order equation becomes two first-order equations. The price is two variables instead of one; the reward is equal status for position and momentum and a clear view of state and evolution.
+
+Three routine checks. First, zero potential gives \(H = p^{2}/(2m)\). The second equation gives \(\dot{p}=0\), conserved momentum; the first gives \(\dot{q}=p/m\), consistent with momentum as mass times velocity. Together, a free particle flows uniformly along a horizontal phase-space line, recovering Chapter 6's first law. Second, reverse direction: replace \(p\) by \(-p\), reversing \(\dot{q}\). Starting from the same position in reverse plays the future backward, matching Step 2. Third, differentiate the pendulum's \(H\): \(\partial H/\partial p = p/(ml^{2})\) says angular velocity is angular momentum over moment of inertia, while \(-\partial H/\partial\theta = -mgl\sin\theta\) says angular momentum changes at the restoring torque's rate. Every Newtonian pendulum conclusion returns unchanged. These are two notations for one law, not competing laws.
+
+Recognize another pattern: the spring oscillator has \(H=p^{2}/(2m)+kx^{2}/2\). Conserved energy \(H=E\) is exactly an ellipse equation in phase space, with horizontal semiaxis set by amplitude and vertical semiaxis by maximum momentum. Your hand-drawn loop is its creation. This ellipse matters so much that Chapter 16 devotes an entire chapter to it.
+
+What happens at higher energies? Small pendulum swings trace ellipses; near the threshold for going over the top, the loops stretch into odd egg shapes. Above that threshold, closed loops become two never-returning wavy lines: the pendulum becomes a perpetually rotating machine. One equation set, two patterns, separated by a critical trajectory that just reaches the top with zero speed. Phase space places all this on one map, its advantage over isolated formulas.
+\end{mathbridge}
+
+\begin{mainline}
+Finish with real numbers leading to quantum mechanics' doorstep. Your key pendulum has mass about \(0.05\) kilograms and length \(0.3\) meters, released from thirty degrees. Its potential-energy change \(E = mgl(1-\cos\theta)\) is about \(0.05\times9.8\times0.3\times0.134\approx0.02\) joules, the height of its phase-space contour. Check: at the bottom all this is kinetic, \(\frac{1}{2}mv^{2}\approx0.02\) joules, giving \(v\approx0.9\) meters per second, consistent with its observed rush. Its frequency is \(f=\frac{1}{2\pi}\sqrt{g/l}\approx0.9\) hertz. Divide energy by frequency for the loop's area:
+\[
+  J = \frac{E}{f} \approx \frac{0.02}{0.9} \approx 0.022 \ \text{joule-second}
+\]
+This phase-space loop area has dimensions of energy times time. Enter Planck's constant, \(h\approx6.6\times10^{-34}\) joule-seconds, with exactly those dimensions. Divide: \(J/h\approx3\times10^{31}\). Your unassuming key pendulum encloses enough area for three hundred million trillion trillion quantum cells. Quantum mechanics will say phase-space area cannot be subdivided indefinitely: the smallest cell is roughly \(h\). A classical point becomes a fuzzy quantum patch of area \(h\). Everyday life looks classical because our loops are so large that the cells are invisible.
+\end{mainline}
+
+\begin{challenge}
+Where does the Hamiltonian come from? Chapter 14 supplied \(L(q,\dot{q})\). Define generalized momentum \(p=\partial L/\partial\dot{q}\), then perform a change-of-variable operation, the Legendre transform: \(H(q,p)=p\dot{q}-L\). Replace dependence on \(\dot{q}\) by dependence on \(p\), and Hamilton's equations emerge automatically. This explains why \(p\) sometimes differs from \(mv\). In a magnetic field, \(L\) includes a term coupling velocity to the field, so differentiating gives \(p\) an extra contribution.
+
+Two signposts lead deeper. First, Liouville's theorem: a small cloud of nearby phase-space points changes shape as it flows but preserves volume exactly, like incompressible ink stretching and curling in a river without expanding or shrinking. This licenses Chapter 31's statistical counting of states and underlies accelerator beam physics. Second, the quantum entrance: \(q\) and \(p\) share a deep relation, the Poisson bracket \(\{q,p\}=1\). Chapter 46 replaces it with a quantum commutation relation and \(H\) with a Hamiltonian operator, smoothly passing from classical to quantum mechanics. The same \(H\) changes from map terrain to the engine evolving quantum states in Chapter 44.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+Hamiltonian mechanics is powerful, but its first boundary is this: \textbf{it adds no new force or law to the world}. For the mechanical problems discussed here it is exactly equivalent to Newtonian and Lagrangian mechanics: one physics, three notations. Its value is clearer structure, not new predictions: what is state, what is evolution, and where are conserved quantities? The payoff comes later, because statistical and quantum physics speak this language directly.
+
+Second: \textbf{forces must be expressible as potential-energy slopes}. Dissipative friction and air resistance cannot. What do dissipative phase-space trajectories look like? Your keys already demonstrate it: the experimental loop is actually a shrinking spiral toward the origin. A phase-space plot exposes dissipation. Hamilton's framework must be extended by including air and table as environment, or replaced with statistical physics. Conversely, \emph{trajectory contraction tests for dissipation}. To be fair, cooling coffee plus surrounding air and table still forms a larger system with a conserved total account. Dissipation is the appearance produced by bookkeeping over too small a system. Chapter 29 develops this.
+
+Third: \textbf{do not always identify \(H\) with total energy}. We gave the conditions: time-independent constraints, no motor-driven coordinates, and position-only potential. The carousel is a counterexample; a charged particle in a magnetic field is another. There \(p\neq mv\), so \(p^{2}/(2m)\) is no longer kinetic energy, and \(H\)'s form diverges from kinetic plus potential energy. The test is to check whether the chosen coordinates and constraints themselves change in time.
+
+Fourth: \textbf{a phase-space point is a classical idealization}. It assumes \(q\) and \(p\) can be known simultaneously to arbitrary precision. Chapter 43 will show that nature forbids this: position and momentum precisions constrain one another because of the quantum state itself, not crude instruments. The point is therefore a patch of minimum area roughly \(h\); a sharp phase-space map approximates a patch too small to resolve.
+
+Finally, common misuses. Treating generalized momentum indiscriminately as \(mv\) gives incorrect conservation laws in magnetic fields or rotating coordinates. Treating phase space as a physical region and asking where it is mistakes a paper or computer representation for somewhere in the sky. Substituting an energy formula whenever \(H\) appears skips essential conditions. Expecting Hamiltonian mechanics to predict phenomena Newtonian mechanics cannot is equally wrong: it simply organizes the same ledger more neatly.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \draw[-{Stealth}] (-3.3,0) -- (3.3,0) node[right=2pt] {\(q\)};
+  \draw[-{Stealth}] (0,-2.2) -- (0,2.2) node[above=2pt] {\(p\)};
+  \draw[thick,blue!70!black,-{Stealth}] plot[domain=0:14,variable=\t,samples=150]
+    ({(1.9-0.125*\t)*cos(\t r)},{(1.9-0.125*\t)*sin(\t r)});
+  \node[align=left,gray!50!black] at (2.3,-1.7) {Pendulum with friction:\\ spiral toward the origin};
+\end{tikzpicture}
+\end{center}
+
+\step{Explaining the Opening Phenomenon}
+
+Return to the photo. Why can it not tell whether the child rises or falls next? It supplies only position, the first file column. In phase space, position alone draws a vertical line crossing countless trajectories, each intersection a possible future. Points A and B share that line and position, but one moves up and the other down, following their respective loops. Add speed and direction, the second column, and the line becomes a point selecting one trajectory. The future is determined, within classical mechanics.
+
+The first answer is now clear. Both swings can share the lowest position but have different momenta: different mapped points on different-sized loops. One swings high, the other low. The difference is in the present state, not hidden in the past.
+
+Second: you lose nothing. The asteroid's orbital history is compressed into present position and momentum, those two numbers. A century of records supplies no new information beyond checking them. This is the precise meaning of nature keeping no diary.
+
+Our differently raised billiard balls also fall into place: they now occupy the same phase-space point. Both history books close, leaving one shared trajectory.
+
+The third answer is subtler. The carousel rider finds energy changing but another combination conserved. That combination is the Hamiltonian in their rotating coordinates, conserved but not kinetic plus potential energy. Look again: \emph{what is conserved and what counts as energy depend on the coordinates in which you keep accounts}. Physical laws do not vary by observer; energy is simply a more careful concept than it first seemed. Chapter 58 derives energy conservation from time-translation symmetry, putting everything in place.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Put the Solar System in One Point]
+The Sun and eight planets: each body needs three position and three momentum coordinates, fifty-four numbers for nine bodies. The whole solar system is therefore \emph{one point} in fifty-four-dimensional phase space. Given universal gravitation, it follows one unique trajectory containing every conjunction, opposition, and eclipse.
+
+Be bolder: register every observable-universe particle, requiring roughly \(10^{80}\) coordinates. The universe's classical state becomes one point in unimaginably high-dimensional phase space. Laplace's famous 1814 version imagined a sufficiently powerful intellect knowing all particle positions and momenta, able to comprehend the universe's entire past and future. Later called Laplace's demon, it symbolized mechanical determinism. Phase space exposes two weaknesses. The real universe is quantum, so one point is only a classical approximation. And even classically, systems such as the three-body problem are extraordinarily sensitive to initial conditions: a hair's difference soon splits trajectories, making practical prediction horizons far less optimistic than the philosophy. Determinism is written into phase space; predictability is another matter.
+\end{thought}
+
+Two destinations show how far this language has traveled. First, \textbf{particle accelerators}: beams of hundreds of millions of particles are managed as moving phase-space clouds. Engineers arrange magnetic channels that keep the cloud together over tens of millions of turns. Liouville says its phase-space volume is conserved, so compressing a beam requires removing fluctuations. Stochastic cooling used this strategy to earn the 1984 Nobel Prize in Physics. Second, \textbf{quantum mechanics itself}: Chapter 44's Schrödinger equation replaces classical \(H(q,p)\) with a Hamiltonian operator driving quantum-state evolution. The map and engine remain in service, which is why physicists a century ago chose Hamilton's language as their quantum stepping stone.
+
+Another destination lies in laboratories and supercomputing centers: numerical simulation. Celestial mechanicians calculate Mercury's precession over tens of thousands of years, materials scientists simulate protein folding, and engineers predict satellite formations' long-term evolution. Their computers discretize Hamilton's equations into successive little steps, turning phase-space flow into movie frames. Good algorithms deliberately respect its rules, noncrossing trajectories and conserved cloud volume, or a planet may mysteriously fly away late in a calculation.
+
+\begin{puzzles}
+\item A free particle follows a horizontal phase-space line. What curve does a vertically thrown ball under gravity trace in height--momentum space? How do ascent and descent relate?\\
+\emph{Hint}: energy conservation gives \(p^{2}/(2m)+mgx=E\). Each height \(x\) has two momenta, positive and negative. The curve is a sideways parabola: its upper branch ascends and its lower branch descends, two directions of travel on one trajectory.
+\item Someone claims friction is an illusion: clever enough coordinates can put a damped pendulum into Hamilton's equations. Refute this with phase space.\\
+\emph{Hint}: Hamiltonian trajectories do not cross and cloud volume is conserved, but every damped-pendulum trajectory spirals toward the origin and every cloud's area eventually shrinks to zero. Coordinate changes cannot remove contraction; it is physics, not viewpoint.
+\item Why can phase-space trajectories never intersect? If experimental data showed an intersection, what would you suspect?\\
+\emph{Hint}: an intersection gives one state two futures, contradicting unique evolution. A real intersection means a missing file column: some important variable, perhaps charge, spin, or environmental influence, was omitted from the state.
+\item A carousel observer finds the ball's energy changing while a conserved combination depends on carousel speed. How does this make the relationship between energy and conservation subtler than school textbooks suggest?\\
+\emph{Hint}: conserved quantities depend on whether your descriptive coordinates vary in time. The conserved quantity is the Hamiltonian \(H\); the relationship between \(H\) and kinetic plus potential energy depends on coordinate choice. Chapter 58 formally connects conservation and symmetry.
+\end{puzzles}

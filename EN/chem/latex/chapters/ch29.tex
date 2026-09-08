@@ -1,0 +1,165 @@
+\chapter{Why Some Reactions Are Fast and Others Slow}
+
+\begin{kaichang}
+\textbf{Translator safety note:} Follow the glow-stick manufacturer's temperature limits; do not use boiling water, a microwave, or a flame, and never open a glow stick. See \href{https://www.poison.org/articles/glow-sticks}{Poison Control's glow-stick guidance}. The later slow-reaction example is not permission to store hydrogen with oxygen: do not make such mixtures. See \href{https://www.energy.gov/cmei/fuels/safe-use-hydrogen}{DOE hydrogen precautions}.
+
+You may have played with glow sticks at birthdays or festivals: soft plastic tubes that initially do nothing. Snap and shake one, and green or blue light appears without batteries or a hot surface.
+
+Now try two changes. Put it in hot water and it brightens dramatically, but fades within half an hour. Put a fresh one in the refrigerator and it glows dimly all night. An invisible dial seems to control its brightness.
+
+Guess what hot water changes: more reaction, or faster reaction? Is there a difference? By the end, you will turn that dial yourself.
+\end{kaichang}
+
+\section{From an Explosion to Millennia of Weathering}
+
+Collect familiar facts. Firecrackers explode instantly; effervescent tablets settle in tens of seconds; fresh milk keeps days refrigerated but spoils in half a summer day; nails rust over weeks; buried plastic bags degrade over centuries; rocks weather for thousands of years; a stalactite may need a century to grow a centimeter.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Process} & \textbf{Approximate timescale}\\
+\midrule
+Acid--base reaction, explosion & Instantaneous (microseconds to milliseconds)\\
+Effervescent tablet bubbling & Tens of seconds\\
+Glow-stick emission & Hours\\
+Milk spoilage, cut-apple browning & Hours to days\\
+Iron rusting & Weeks to years\\
+Plastic-bag degradation in soil & Centuries\\
+Weathering, stalactite growth & Thousands to tens of thousands of years\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Chemical reactions span less than a second to over ten thousand years, more than a dozen orders of magnitude. More striking, \textbf{one reaction can change speed}. Iron slowly spots in dry air, rusts rapidly in salt mist, and burns with sparks when ignited in pure oxygen. Eggs cook in minutes in boiling water but remain soft-centered after half an hour around $63\,^{\circ}\mathrm{C}$. The same protein denaturation differs tens-fold in rate for less than $40\,^{\circ}\mathrm{C}$ difference. Chapter 27 covered heat flow and Chapter 28 free-energy direction, but neither answers \textbf{how fast}. Thermodynamics governs direction; \textbf{kinetics} governs speed, the machine we dismantle here.
+
+\section{A Reaction Begins with a Collision}
+
+Zoom into particles. Chapter 26's equation records old molecules separating and atoms joining new partners, but how do molecules exchange them? Almost always they must first \textbf{collide}. Without hands or intentions, atoms and molecules rely on ceaseless random thermal motion (Chapter 9). No meeting, no reaction.
+
+Is every collision enough? A liter of air at ordinary conditions holds about $2.5\times 10^{22}$ molecules moving hundreds of meters per second, each colliding roughly $10^{9}$ to $10^{10}$ times each second. If every collision reacted, a liter's reactants would vanish far faster than a microsecond. Yet bottled hydrogen and oxygen barely change for years. Thus \textbf{almost all collisions are ineffective}: particles bounce apart unchanged. Rate is a contest between astronomical collision counts and tiny success rates.
+
+An \textbf{effective collision} needs two conditions.
+
+First, \textbf{enough force}. Loosening bonds and moving atoms requires crossing an energy threshold. Slow encounters merely bounce; sufficiently energetic ones may loosen structures. The minimum threshold is \textbf{activation energy}, $E_{\mathrm{a}}$.
+
+Second, \textbf{the right contact points}. Molecules have shape and orientation, not spherical symmetry. For hydrogen meeting iodine to form \chem{H—I}, a side-on encounter with iodine may work while another angle merely passes by. Wrong orientation wastes even ample energy.
+
+Together, \textbf{rate = collision count × effective fraction}. Speed up by more frequent collisions or a higher success fraction. Every later control turns one of these two factors.
+
+\section{A Mountain That Must Be Crossed}
+
+Draw the threshold in one of chemistry's most important diagrams: reaction progress horizontally, energy vertically.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (9,0) node[right]{\footnotesize Reaction progress};
+\draw[->] (0,0) -- (0,4.8) node[above]{\footnotesize Energy};
+\draw[thick] plot[smooth] coordinates {(0.5,2.8) (2.2,2.9) (4,4.2) (5.8,2.0) (7.5,1.2)};
+\draw[dashed] (0.5,2.8) -- (2.0,2.8);
+\draw[dashed] (7.5,1.2) -- (8.3,1.2);
+\draw[<->] (4.7,2.8) -- (4.7,4.15) node[midway,right]{\footnotesize Activation energy $E_{\mathrm{a}}$};
+\node at (1.2,3.25){\footnotesize Reactants};
+\node at (7.9,0.75){\footnotesize Products};
+\node at (4,4.6){\footnotesize Transition state};
+\end{tikzpicture}
+
+\footnotesize Energy schematic: molecules do not climb a real mountain. The curve records changing system energy during reaction.
+\end{center}
+
+Reactants lie on one side, products on the other and lower, making this exothermic (Chapter 27). Yet \textbf{however low the destination, the summit comes first}. The fleeting, partly broken and partly formed structure atop it is the \textbf{transition state}, like a passed ball suspended between two hands, held by neither, the crucial hardest-to-photograph moment. It lasts around $10^{-13}$ seconds, barely more than one molecular vibration, yet controls speed. Lower hills admit more successful collisions; higher ones repel even battered molecules, leaving favorable reactions waiting.
+
+This clarifies Chapter 28's negative-$\Delta G$ puzzle. Favorable does not mean immediate. Gasoline and oxygen can coexist in a tank until a spark gives a few molecules enough energy to cross. Their heat sends more over, creating a chain and a bang. \textbf{Spontaneity promises a lower far side; speed depends on the summit}. Keep thermodynamics and kinetics in separate accounts.
+
+How does temperature help? Molecular energies vary statistically. Most crowd near the average, while a few high-energy molecules occupy the tail. Activation energy sets a qualifying line. A small temperature rise barely changes the mean, but \textbf{exponentially increases the fraction above the line}, giving temperature its powerful effect.
+
+\begin{qiaoliang}
+In 1889, Arrhenius wrote:
+\[k = A\,\mathrm{e}^{-E_{\mathrm{a}}/(RT)}\]
+Here $k$ is the rate constant, $T$ kelvin temperature, $R$ the gas constant, and $E_{\mathrm{a}}$ activation energy. Remember only that temperature sits in a denominator inside an exponent, giving an \textbf{exponential} influence. For a typical $E_{\mathrm{a}} = \ud{50}{kJ\,mol^{-1}}$, warming from $300\,\mathrm{K}$, about $27\,^{\circ}\mathrm{C}$, to $310\,\mathrm{K}$ gives
+\[\frac{k_{310}}{k_{300}} = \mathrm{e}^{\frac{E_{\mathrm{a}}}{R}\left(\frac{1}{300}-\frac{1}{310}\right)} = \mathrm{e}^{0.65} \approx 1.9\]
+Almost double. This underlies the kitchen rule that \textbf{many reactions become two or three times faster per roughly $10\,^{\circ}\mathrm{C}$ rise}, with larger activation energies giving greater factors. Refrigeration around $4\,^{\circ}\mathrm{C}$ versus a $24\,^{\circ}\mathrm{C}$ room differs by $20\,^{\circ}\mathrm{C}$, making spoilage roughly $2\times 2=4$ times faster outside. Refrigeration's whole purpose is not changing direction, but effectively raising every reaction's mountain.
+\end{qiaoliang}
+
+\section{Four Rate Controls}
+
+Collision count times success fraction explains four common factors at once.
+
+\textbf{Concentration}. More solute molecules per liter give each more chances to meet the right partner, with collision count directly proportional to concentration. Iron wire glows in air, only one-fifth oxygen, but sparks vigorously in pure oxygen. Medicinal $3\%$ peroxide bubbles slowly during disinfection, while concentrated peroxide decomposes violently and can form rocket-propellant ingredients. Concentration changes both speed and hazard level.
+
+\textbf{Temperature}. As calculated, warming contributes little to collision frequency, increasing speeds only a few percent. Its real power is exponentially raising successful fractions, among the strongest controls.
+
+\textbf{Contact area}. In solid--liquid reactions only surface particles receive impacts. A nail takes days to rust, but the same mass as airborne iron powder can flash at a spark because area increases thousands-fold. Crushing solids or stirring suspensions exposes more particles. Too far becomes dangerous: airborne flour or coal dust has enormous area, and a spark can turn a workshop into a powder keg. Flame prohibitions in mills and mines are kinetics, not superstition.
+
+\textbf{Pressure}. This works only for gas reactions: compression increases density and collisions per volume. High-pressure ammonia synthesis both crowds molecules for rate and favors fewer gas molecules at equilibrium (Chapter 31). Pressure cookers turn another dial: increased pressure raises water's boiling point from $100\,^{\circ}\mathrm{C}$ to about $120\,^{\circ}\mathrm{C}$. The temperature rule predicts four- or fivefold faster meat-tenderizing reactions.
+
+\begin{shiyan}
+\textbf{An Effervescent-Tablet Race (Try at Home)}
+
+Materials: four tablets, four clear cups, cold water, comfortably warm water, hot water below $60\,^{\circ}\mathrm{C}$ poured by an adult, timer, and spoon.
+
+Procedure: (1) Put equal volumes of cold, warm, and hot water in three cups. Add whole tablets simultaneously and time until bubbling mostly stops. (2) Match the fourth cup to one temperature, add a crushed tablet, and compare its time.
+
+What to observe: which bubbles most vigorously and finishes first? How much do whole and powdered tablets differ? Record completion times, not just vigorous appearance. Strong bubbling and early finish are two faces of fast reaction.
+
+Safety note: adults handle hot water to prevent burns. \textbf{Never} shake tablets and water in sealed bottles; generated gas could launch the cap like a projectile.
+\end{shiyan}
+
+\section{Rate Laws Must Come from Experiments}
+
+Now symbols. A \textbf{rate law} records speed; for $\chem{A} + \chem{B} \rightarrow \chem{C}$, it often takes the form
+\[v = k \cdot c(\chem{A})^{m} \cdot c(\chem{B})^{n}\]
+Rate $v$ depends on reactant concentrations raised to powers, with rate constant $k$. Crucially, $m$ and $n$ \textbf{must be measured, not copied from the balanced equation}.
+
+Why? A balanced equation records only totals, not process. Most real reactions take several steps like an assembly line, whose \textbf{slowest operation}, the \textbf{rate-determining step}, sets throughput. Concentration matters according to involvement there, not merely appearance in the total account.
+
+A classic example fixes the idea. Nitrogen dioxide reacts with carbon monoxide:
+\[\chem{NO_2} + \chem{CO} \rightarrow \chem{NO} + \chem{CO_2}\]
+Yet measured rate is $v = k \cdot c(\chem{NO_2})^{2}$, depending only on \chem{NO_2}. Adding \chem{CO} barely matters. A reasonable mechanism first slowly brings two \chem{NO_2} together to produce \chem{NO_3}, then rapidly transfers oxygen from \chem{NO_3} to \chem{CO}. Carbon monoxide participates only in the second operation and does not control the line. Conversely, simultaneous collisions of three or more particles are negligibly rare, so coefficients of three or four almost inevitably indicate multiple steps. A ledger and a production line are different things.
+
+How is rate measured? Track something changing with time: collected gas volume, color deepening such as iodine with starch, or pressure changes in a sealed gas reaction. Convert to concentration for rate. Repeat at different initial concentrations: doubling concentration and doubling rate implies exponent 1; quadrupling implies 2; no change implies 0. This change-one-factor approach appears in the exercises for you to design.
+
+\section{How Scientists See a Fleeting Transition State}
+
+\begin{zhengju}
+Transition states once sounded like matters of belief: existing around $10^{-13}$ seconds and impossible to bottle, how could their reality be established? Chemists long had only indirect clues: concentration-dependent rates, temperature effects, and isotope substitutions. Together these indicated a highest-energy, short-lived intermediate arrangement, never directly seen.
+
+In the 1980s, Egyptian-American chemist Ahmed Zewail proposed \textbf{photographing it}. The shutter needed to beat $10^{-13}$ seconds. Laser pulses lasting tens of femtoseconds (1 femtosecond $= 10^{-15}$ seconds) were thousands of times shorter than the state's lifetime. Two flashes recorded a molecular dance: a pump pulse kicked molecules uphill; a precisely delayed probe pulse inspected their form. Varying delay produced a molecular movie of old bonds loosening, transition states, and new bonds. In 1987, his team recorded iodine cyanide, \chem{ICN}, splitting into \chem{I} and \chem{CN}, with signal positions and lifetimes matching predictions. They excluded alternative intermediates through different probe wavelengths and point-by-point quantum comparison. Zewail alone received the 1999 Chemistry Nobel, establishing femtochemistry. Even something lasting a millionth of a microsecond is tested with a faster shutter, not accepted on faith.
+\end{zhengju}
+
+\section{Where This Model Fails}
+
+Collision theory is simple and useful, assuming uniformly random billiard-like encounters. It works well for \textbf{simple gas and dilute-solution reactions}. But molecules can decompose unimolecularly using stored internal energy without a new collision; viscous liquids trap partners in solvent cages for repeated encounters, complicating collision counts. Some reactions succeed at every encounter and are limited by diffusion bringing partners together, with smaller temperature effects. Others receive energy directly from photons, as in photographic film, sunburn, and photosynthesis (Chapter 54), requiring photochemistry rather than collision models. Rate laws are also \textbf{empirical within measured temperature and concentration ranges}; extrapolating room-temperature data to engine chambers can fail badly. Knowing where a model stands or collapses matters as much as using it.
+
+\begin{wuqu}
+``More heat release always means a faster reaction.'' A classic error. Heat depends on the difference between start and finish; speed on the summit. These are independent heights. Rusting has substantial exothermic enthalpy yet takes years; paper releases much heat on burning yet remains unlit for decades because its activation barrier is high. Conversely, endothermic baking soda with citric acid bubbles immediately. For speed ask activation energy, for heat enthalpy, for direction free energy. Three questions, three ledgers; do not mix them.
+\end{wuqu}
+
+\section{Back to the Glow Stick}
+
+Now fulfill the opening promise. A glow stick holds two sets of chemicals, one in its plastic tube and the other sealed inside thin glass. Snapping breaks the glass, mixes the liquids, and starts reaction. Instead of becoming heat as in combustion, released energy goes directly to dye molecules, which emit it as light. Hence brightness without heat, called cold light.
+
+The invisible dial now has a name: \textbf{temperature}. Hot water increases motion and, more importantly, exponentially enlarges the fraction above activation energy. More molecules cross the summit each second, producing brighter light. But fixed reactant stocks are exhausted sooner, so brilliance ends quickly. Refrigeration brakes reaction, giving dim light while conserving stocks all night. Brightness is rate; endurance is quantity. Temperature trades bright-and-short for dim-and-long, purely kinetically. Your next glow stick becomes a hand-held reaction with adjustable speed, not merely a toy.
+
+\section{Turning Speed into Technology---and Lowering the Mountain}
+
+Millennia of managing reactions have become an enormous industry. Cold chains slow fresh-food change. Pasteurization instead heats milk around $72\,^{\circ}\mathrm{C}$ for a dozen or more seconds, accelerating bacterial protein denaturation enough to kill most bacteria without strongly changing flavor. Canning goes further, with $121\,^{\circ}\mathrm{C}$ pressurized steam fast-forwarding to total elimination. Nitrogen packaging removes oxygen through the concentration dial; grinding, chopping, and stirring increase contact area. Power stations likewise pulverize coal finer than flour for combustion in fractions of a second. Yogurt incubates around $42\,^{\circ}\mathrm{C}$ to optimize bacterial metabolism: colder makes bacteria idle, hotter kills them. Medicines labeled protect from light, seal, and refrigerate effectively ask you to raise activation mountains and eliminate collision opportunities.
+
+But heating and cooling both cost energy. The entire cold chain consumes enormous electricity to brake reactions; factories pay heavily to heat vessels hundreds of degrees for speed. An enticing question follows: \textbf{if heating merely makes molecules hit the mountain harder, can we lower the mountain itself}? Can reactions run fast at room temperature? Yes. Tens of trillions of such machines work in your body now; without them lunch would take decades to digest. They are catalysts. Next chapter dismantles their machine to see how it opens a tunnel without changing the total account.
+
+\begin{tiaozhan}
+(Optional.) Taking logarithms of the Arrhenius equation at $T_1$ and $T_2$ and subtracting gives
+\[\ln\frac{k_2}{k_1} = \frac{E_{\mathrm{a}}}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)\]
+The doubling-per-$10\,^{\circ}\mathrm{C}$ rule happens to work only near room temperature with $E_{\mathrm{a}}$ about $50\sim\ud{80}{kJ\,mol^{-1}}$. Smaller barriers weaken temperature sensitivity; diffusion-controlled reactions with only a dozen or so $\mathrm{kJ\,mol^{-1}}$ accelerate about 1.2-fold per $10\,^{\circ}\mathrm{C}$. Very high barriers make temperature sensitivity extreme. Another intriguing deduction: a reaction slowing when heated is probably multistep, with temperature shifting an intermediate equilibrium---back to Chapter 31.
+\end{tiaozhan}
+
+\section*{Try It}
+
+\begin{sikaoti}
+\item Draw effective and ineffective collisions of molecule A--B with C using circles and arrows. Mark differences in orientation or energy and note that circle sizes and arrow widths are representations.
+\item Draw energy profiles for exothermic but slow and exothermic and fast reactions. Which parts must differ, and which may match?
+\item Which finishes first: crushed tablet in warm water or whole tablet in cold water? What about crushed in cold versus whole in warm? Analyze both controls and explain why the second race requires experiment.
+\item Milk keeps seven days at $4\,^{\circ}\mathrm{C}$. Using rate doubling per $10\,^{\circ}\mathrm{C}$, estimate its life at $24\,^{\circ}\mathrm{C}$. Since real spoilage mainly involves bacterial growth, where might this estimate fail?
+\item Does coefficient 2 in $\chem{2HI} \rightarrow \chem{H_2} + \chem{I_2}$ prove two \chem{HI} molecules collide simultaneously to react? Use multistep mechanisms and rate-determining steps to explain why balanced equations do not directly yield rate laws.
+\item Design an experiment measuring how a metal--dilute-acid reaction's rate depends on acid concentration. What do you measure, hold fixed (temperature, area, quantity), and vary? Sketch an expected curve.
+\end{sikaoti}

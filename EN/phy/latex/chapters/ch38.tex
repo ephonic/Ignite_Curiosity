@@ -1,0 +1,267 @@
+% Chapter 38: What Would You See Chasing Light?
+\chapter{What Would You See Chasing Light?}
+
+The story goes that at sixteen, while studying in Aarau, Einstein acquired an inescapable question: what would I see if I ran as fast as light? Would a light wave stop beside me like a train I had caught up with? He pursued it for ten years. His answer did not make light into something strange; it dethroned the familiar rule of adding speeds, along with time and space themselves. We will retrace that journey.
+
+\step{A Counterintuitive Opening}
+
+Begin with a question you could answer with your eyes closed.
+
+From a platform, you watch a train pass at \(30\,\mathrm{m/s}\), about \(108\,\mathrm{km/h}\). Inside, someone throws a ball forward at \(10\,\mathrm{m/s}\) relative to the carriage. What speed do you measure?
+
+\begin{center}
+\begin{tikzpicture}[font=\small,>={Stealth}]
+  \draw[thick] (-0.5,0) -- (10,0);
+  \draw[fill=gray!10] (1,0.28) rectangle (6.6,1.5);
+  \draw (1.7,0.28) circle (0.18);
+  \draw (5.9,0.28) circle (0.18);
+  \node at (4.9,1.05) {Carriage};
+  \fill (2.1,1.05) circle (0.07);
+  \draw[-{Stealth},thick] (2.1,1.05) -- (3.7,1.05)
+    node[midway,above] {Ball relative to train: \(10\,\mathrm{m/s}\)};
+  \draw[-{Stealth},thick] (1,-0.5) -- (4.6,-0.5)
+    node[midway,below] {Train relative to ground: \(30\,\mathrm{m/s}\)};
+  \node at (8.8,0.5) {You on the platform};
+  \fill (8.8,0.15) circle (0.07);
+\end{tikzpicture}
+\end{center}
+
+Without thinking, you probably answer \(30+10=40\,\mathrm{m/s}\). This rule has never failed you: walking forward on an escalator adds walking and escalator speeds; rowing downstream adds water and rowing speeds; two cars approaching at \(100\,\mathrm{km/h}\) each pass one another at \(200\,\mathrm{km/h}\). Adding speeds seems self-evident.
+
+Now replace the ball thrower with someone switching on a flashlight. The train still moves at \(30\,\mathrm{m/s}\), and light shines forward. What will a sufficiently precise instrument on the platform measure?
+
+If speeds simply add, the answer should be light speed plus train speed: \(c+30\,\mathrm{m/s}\).
+
+But countless increasingly precise experiments, from the late nineteenth century onward, give exactly \(c\), about \(299\,792\,458\,\mathrm{m/s}\). Whether the source moves or flies, the measured speed is always the same.
+
+It gets more startling. Two cars each approaching at \(100\,\mathrm{km/h}\) see one another coming at \(200\,\mathrm{km/h}\). Now let two beams approach head-on and imagine riding one of them, ignoring for now how. How fast is the other relative to you? Not \(2c\), but still \(c\).
+
+The rest of this chapter explains why balls' speeds add but light's does not, and what nature is telling us through that exception.
+
+\step{Make a Guess First}
+
+Take paper and seriously record guesses for three questions. Do not skip this; you will grade your intuition at the end.
+
+First: a forward-shining train flashlight is measured from the platform. Is its speed greater than \(c\), equal to \(c\), or dependent on train speed?
+
+Second: ride a spacecraft at \(99\%\) of light speed to chase a laser from Earth. How quickly does the beam pull away in your measurements? At \(0.01\,c\)?
+
+Third: two beams meet head-on in vacuum. From one beam's ``perspective,'' how fast is the other? \(2c\)?
+
+Written them down? If you added speeds in all three, you stand with almost every physicist before 1900, including the most brilliant. The problem lies precisely in that unquestioned common sense.
+
+One warning: the strange thing is not that light is special. What changes is the arithmetic of velocity itself; light is merely the first messenger to reveal it.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Measuring Light Speed with a Microwave and Chocolate]
+Nearly three hundred thousand kilometers per second sounds like a laboratory-only number. Yet your kitchen contains a light-speed measuring instrument.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Treat this as a theoretical demonstration unless the manufacturer's instructions expressly allow the configuration. Do not disable or alter the turntable, door, or interlocks; hot food and cookware can burn. See \href{https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens}{FDA microwave safety}.
+% END TRANSLATOR SAFETY NOTE
+
+\textbf{Procedure}: remove the microwave turntable, crucial because rotation heats evenly and we want uneven heating. Put in a flat plate of chocolate, a cheese slice, or a layer of butter. Heat on low for a dozen seconds or so until regularly spaced softened or scorched spots appear. Switch off and measure neighboring spot-center separation \(d\).
+
+\textbf{What appears}: \(d\) is about \(6\,\mathrm{cm}\).
+
+\textbf{Why}: microwaves reflect between the walls into standing waves, discussed in Chapter 35. Electric field is strongest at antinodes, where food softens first; neighboring antinodes are half a wavelength apart. Hence \(\lambda=2d\approx 12\,\mathrm{cm}\). The label gives microwave frequency \(f=2450\,\mathrm{MHz}=2.45\times10^{9}\,\mathrm{Hz}\). Wave speed is frequency times wavelength:
+\[
+c=f\lambda\approx 2.45\times10^{9}\times 0.12\approx 2.9\times10^{8}\,\mathrm{m/s}.
+\]
+Only a few percent from the precise value \(3.0\times10^{8}\,\mathrm{m/s}\). A plate of chocolate reproduces one of physics' most important constants.
+
+\textbf{Think}: nothing here moves rapidly. The experiment tells you vacuum light has a definite speed, but not the deeper question: relative to whom? The oven, Earth, or some invisible space itself? Carry that question onward.
+\end{experiment}
+
+Compare sound. On a windless playing field, a friend's clap one hundred meters away reaches you after about \(0.3\) seconds, giving roughly \(340\,\mathrm{m/s}\). A strong wind blowing from behind you toward the friend makes sound travel less readily. Strictly, sound moves at \(340\,\mathrm{m/s}\) relative to air, which itself moves relative to ground, so ground-based measurement finds faster downwind and slower upwind propagation. Wave speed is relative to its medium. This seemed so natural that physicists two centuries ago assumed light must likewise wave in a medium.
+
+You already know bodily that light outruns sound. In a summer storm, lightning precedes thunder by seconds. Divide that delay by three to estimate kilometers: sound crosses a kilometer in three seconds, light in only one three-millionth of a second, imperceptibly fast. Ancient people estimated storm distance this way; today it illustrates six orders of magnitude between sound and light speeds. We test sound's medium-relative rule daily, but never probe light's peculiar behavior in ordinary life, explaining why it was clarified only a little over a century ago.
+
+\step{The Old Model Runs into Trouble}
+
+\textbf{First foundation: Galilean velocity addition.} Mechanics repeatedly used this rule: a carriage moving at \(v\) relative to ground and a ball moving at \(u'\) relative to the carriage give ground velocity
+\[
+u=u'+v.
+\]
+Behind it is a change of reference frame. Ground coordinate \(x\) and carriage coordinate \(x'\) differ by a steadily growing translation, \(x'=x-vt\), while both frames implicitly share time, \(t'=t\). This Galilean transformation seemed so obvious for three centuries that nobody considered it a hypothesis; it was synonymous with measurement.
+
+\textbf{Second foundation: waves require media.} Sound vibrates air, water waves vibrate a surface, rope waves a rope. Every wave speed is relative to its medium: sound travels at \(340\,\mathrm{m/s}\) relative to air and slows relative to someone chasing it. Nineteenth-century physicists naturally inferred that light, indisputably a wave after Chapter 35's interference and diffraction, also requires a medium. They named it ether: an absolutely stationary, universe-filling ``air'' carrying light. Then \(c\) would be light's speed relative to ether.
+
+\textbf{The third foundation caused the trouble.} Chapter 25 showed Maxwell unifying electricity and magnetism in equations. Their remarkable consequence is that changing electric and magnetic fields can sustain one another as a wave through vacuum, with speed fixed by two constants measurable on a tabletop:
+\[
+c=\frac{1}{\sqrt{\varepsilon_0\mu_0}}.
+\]
+Study it for three seconds. Vacuum permittivity \(\varepsilon_0\) and permeability \(\mu_0\) come from electrostatic and magnetic-force measurements. There is \textbf{no} source velocity, \textbf{no} observer velocity, and \textbf{no} ether position. Maxwell seems to say electromagnetic speed is calculated directly from natural laws, independent of who watches.
+
+The contradiction is complete. Galilean transformations demand different measured light speeds in different frames, making Maxwell exact only in \textbf{one} privileged frame, ether at rest, and wrong aboard a train. Electromagnetism would identify absolute motion. Yet every mechanical experiment, Galileo's famous cabin arguments with thrown balls and dripping water, says uniform motion cannot be detected internally. Mechanics grants equal rights to inertial frames; electromagnetism points to one special frame. One foundation must crack.
+
+\textbf{Let experiment decide.} Earth orbits the Sun at about \(30\,\mathrm{km/s}\). If ether fills space and rests relative to the Sun, Earth crosses an ether wind. Light sent along orbital motion should be slightly slower, opposite it slightly faster, by about \(v/c\approx 10^{-4}\), one part in ten thousand. Direct timing is difficult, but light's short wavelength lets interferometry magnify that speed difference into visible fringe motion.
+
+In 1887, Michelson and Morley pushed interferometry to its limit, reflecting light repeatedly for effective arms of about \(11\,\mathrm{m}\). Ether theory predicted that rotating the apparatus ninety degrees would shift fringes by
+\[
+\Delta N=\frac{2L}{\lambda}\cdot\frac{v^{2}}{c^{2}}
+=\frac{2\times11}{5.5\times10^{-7}}\times10^{-8}\approx 0.4\ \text{fringes}.
+\]
+The instrument resolved a hundredth of a fringe; \(0.4\) was forty times that. The result? Almost zero. In spring, zero; six months later with orbital direction reversed, still zero; on high mountains, zero again. Ether wind refused to appear wherever most expected.
+
+An earlier case also matters. In 1851, Fizeau measured light traveling with and against flowing water. If water fully dragged ether, the measured speed should add or subtract the entire water speed from light's speed in stationary water. Instead, dragging amounted to only about \(0.43\) times the water speed. Interpreted as partial ether drag, this odd coefficient briefly counted as ether theory's success. Remember \(0.43\); it will emerge by itself from the new equation.
+
+\begin{center}
+\begin{tikzpicture}[font=\small,>={Stealth}]
+  \node[draw,rectangle,inner sep=3pt] (src) at (-2.8,0) {Source};
+  \draw[fill=blue!10,rotate=45] (-0.16,-0.16) rectangle (0.16,0.16);
+  \node[below right=1pt] at (0.15,-0.2) {Beam splitter};
+  \draw[very thick] (3.4,-0.5) -- (3.4,0.5) node[midway,right] {Mirror 1};
+  \draw[very thick] (-0.5,3.4) -- (0.5,3.4) node[midway,above] {Mirror 2};
+  \draw[-{Stealth}] (src.east) -- (-0.2,0);
+  \draw[-{Stealth}] (0,0) -- (3.2,0);
+  \draw[-{Stealth}] (3.2,0) -- (0.2,0);
+  \draw[-{Stealth}] (0,0) -- (0,3.2);
+  \draw[-{Stealth}] (0,3.2) -- (0,0.2);
+  \node[draw,rectangle,inner sep=3pt] (det) at (0,-2.1) {Detector: fringes};
+  \draw[-{Stealth}] (0,0) -- (det.north);
+  \draw[-{Stealth},dashed] (-2.3,1.7) -- (2.3,1.7)
+    node[midway,above] {Hypothetical ether wind};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Rescue attempts made matters worse.} Perhaps Earth dragged ether along, eliminating local wind? But Bradley observed stellar aberration in 1729: Earth's orbit requires a telescope to tilt like an umbrella in rain, with annual motion about \(20.5\) arcseconds. Complete local ether drag should erase that tilt, making the accounts conflict. Others, FitzGerald and Lorentz, proposed that the forward arm shortened exactly enough to cancel fringe motion. But contraction tailored precisely to cancel the result, required by nothing else and predicting nothing new, was a patch, not an explanation. A theory needing a separately sewn patch for every experiment is ready for rewriting.
+
+\step{Inventing New Concepts}
+
+In 1905, patent clerk Einstein published ``On the Electrodynamics of Moving Bodies.'' His unexpected move was to leave experimentally successful Maxwell untouched and stop patching an ever-absent ether. Instead he reexamined the assumptions nobody recognized as assumptions: speeds obviously add, and time passes equally for everyone. He placed two statements beneath the entire building as new foundations:
+
+\textbf{Postulate one, the principle of relativity}: physical laws have the same form in every inertial frame. Not just mechanics but \textbf{any} experiment, including electromagnetism and optics, cannot reveal your uniform straight-line motion. Galileo's cabin applies equally to Maxwell.
+
+\textbf{Postulate two, invariance of light speed}: every inertial observer measures the same vacuum light speed \(c\), independent of both source and observer motion.
+
+Check them with the four questions we ask of important formulas:
+
+\textbf{What do they describe?} Vacuum light-speed measurements in inertial frames and laws under frame changes. \textbf{Why this form?} Maxwell's \(c\) contains no frame, so elevate that exceptional behavior to a principle; ether remains undetectable, so acknowledge it is unnecessary. \textbf{When do they apply?} Inertial frames and negligible gravity. \textbf{When do they fail?} Gravitational fields and accelerating frames require the more general theory of Chapter 41.
+
+Distinguish three levels. \textbf{Experimental facts}: all measurements so far give the same light speed and all ether-wind searches fail. \textbf{Mathematical model}: the two postulates rigorously yield new mechanics and spacetime, special relativity, whose every testable prediction has been confirmed. \textbf{Physical interpretation}, what time and space actually are, permits deeper questions that the next two chapters unpack. Confusing these levels misreads this chapter.
+
+Einstein's paper made another quieter but equally sharp move: demanding how every term is measured. Physical concepts must reduce to definite operations or remain empty words. How do we verify that clocks in Beijing and Shanghai show the same instant? The only way is exchanging light signals and subtracting travel time, which itself depends on how simultaneity is defined. A circle appears: \textbf{simultaneity is not nature's preprinted stamp but a rule requiring a light-signal convention}. One more operational question reaches different frames' different simultaneity conventions, Chapter 39's subject. Retain the method: do not rush to believe in a quantity whose measurement cannot be specified. Ether was dismissed this way, not disproved by one experiment, but found unmeasurable and therefore without a physical role.
+
+Finally, block a widespread misreading: special relativity does \textbf{not} say everything is relative. Its skeleton is a series of \textbf{absolutes}: everyone shares \(c\), and the next chapters add invariant spacetime intervals and rest mass. What becomes relative are formerly absolute length, duration, and simultaneity. Relativity stands on invariants.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+If everyone shares the same light speed, they cannot all share the same durations and distances: time and length must yield to light speed.
+\end{oneline}
+
+Balls and light differ not in temperament but because distance and time in ``speed equals distance divided by time'' themselves measure differently across frames. Invariant light speed is the cause; observer-dependent lengths and durations are the consequence. Chapter 39 grows that consequence; here establish its cause.
+
+\step{The Mathematical Translator}
+
+Write the old rule clearly before seeing its failure. Galilean addition is
+\[
+u=u'+v,
+\]
+where \(u'\) is velocity in the moving frame, \(v\) that frame's ground velocity, and \(u\) the object's ground velocity. Interrogate special cases: \(v=0\) restores \(u=u'\); \(u'=0\) gives carriage-following \(u=v\); reversing direction gives negative \(v\), still consistent. But \(u'=c\) gives \(u=c+v\ne c\) whenever \(v\ne0\), directly contradicting postulate two. At light speed, the old formula is mathematically wrong.
+
+The new rule is
+\[
+u=\frac{u'+v}{1+\dfrac{u'v}{c^{2}}}.
+\]
+Interrogate it likewise:
+
+\textbf{Low speeds}: when \(u'\) and \(v\) are far below \(c\), the denominator's \(u'v/c^{2}\) is negligible and \(u\approx u'+v\). The old rule is the low-speed approximation, explaining why it has never deceived your everyday life.
+
+\textbf{Insert light speed}: set \(u'=c\):
+\[
+u=\frac{c+v}{1+\dfrac{cv}{c^{2}}}=\frac{c+v}{1+\dfrac{v}{c}}
+=\frac{c+v}{\dfrac{c+v}{c}}=c,
+\]
+Whatever \(v\), the result is exactly \(c\). The formula automatically obeys postulate two: transform light speed into any frame and it remains \(c\).
+
+\textbf{Reverse direction}: \(u'=-c\) similarly gives \(u=-c\). Both signed light speeds are invariant.
+
+\textbf{Add two sublight speeds}: \(u'=0.5c\) and \(v=0.5c\) give
+\[
+u=\frac{0.5c+0.5c}{1+0.25}=\frac{c}{1.25}=0.8c.
+\]
+The old rule predicts \(1.0c\), the new \(0.8c\). Two sublight speeds never produce superlight motion: if \(u'<c\) and \(v<c\), the result is below \(c\). The formula builds in a ceiling at \(c\).
+
+Quantify the everyday difference. A train at \(300\,\mathrm{km/h}\) has \(v\approx83\,\mathrm{m/s}\), so \(v/c\approx2.8\times10^{-7}\). Throw a ball at \(u'=10\,\mathrm{m/s}\); the denominator differs from \(1\) by
+\[
+\frac{u'v}{c^{2}}\approx\frac{10\times83}{(3\times10^{8})^{2}}\approx9\times10^{-15}.
+\]
+Fourteen zeros after the decimal point. No platform-mounted instrument can distinguish it, explaining Galilean addition's three-century hold on intuition.
+
+Now a moderate-speed example makes the difference visible. A spacecraft travels at \(0.6c\) relative to Earth and fires a projectile forward at \(0.7c\) relative to itself. The old rule predicts \(1.3c\), superluminal. The new gives
+\[
+u=\frac{0.6c+0.7c}{1+0.6\times0.7}=\frac{1.3c}{1.42}\approx0.915c,
+\]
+below \(c\), always below. The inconspicuous denominator correction is nature's superluminal safety fuse.
+
+Remember Fizeau's \(0.43\)? Bring it home. Light travels through stationary water at \(c/n\), with \(n\approx1.33\) from Chapter 36, while water flows at \(v\). Compose them and expand for water speed far below \(c\); the dragged fraction is exactly \(1-1/n^{2}\approx0.43\). A coefficient once requiring a special partial-ether-drag hypothesis is now simply a first-order approximation. A good theory turns old ad hoc coefficients into automatic by-products.
+
+In accelerators, the difference is no longer correction versus approximation but right versus wrong. CERN's collider sends opposing proton beams at about \(0.999\,999\,99\,c\) each. Old addition gives nearly \(2c\); the new rule gives less than \(c\) from either beam's frame. Engineers calculating timing and collision energy use this denominator, not elementary addition. Relativity works there every day.
+
+\begin{mathbridge}
+\textbf{How two postulates force new spacetime transformations.} Relativity and invariant light speed, plus linearity so uniform motion remains uniform in every frame, uniquely replace Galilean transformations by Lorentz transformations. Sketch three steps: the carriage frame moves at \(v\) along \(x\) relative to ground. The most general linear form is
+\[
+x'=\gamma(x-vt),\qquad t'=\gamma\!\left(t-\frac{vx}{c^{2}}\right),
+\]
+with unknown \(\gamma\). Emit light from the origin at \(t=0\). Ground trajectory is \(x=ct\), and postulate two requires \(x'=ct'\) aboard. Substitute \(x=ct\), impose \(x'=ct'\), and rearrange to obtain
+\[
+\gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}.
+\]
+Notice two things. First, \(t'\) contains \(x\): what time it is aboard depends on where. Universal time begins to crack, and Chapter 39 extracts relative simultaneity, time dilation, and length contraction. Second, differentiating to relate \(u=dx/dt\) and \(u'=dx'/dt'\) gives precisely the main text's velocity rule. It is no patch but a direct descendant of the postulates. We omit detailed derivation; remember the machine has just two inputs, relativity and invariant light speed.
+\end{mathbridge}
+
+\begin{challenge}
+\textbf{A better velocity coordinate: rapidity.} Velocity composition looks awkward because velocity is a poor variable. Define \textbf{rapidity} \(\varphi\) by \(v=c\tanh\varphi\), where \(\tanh\) is hyperbolic tangent. Substitute and use \(\tanh(\varphi_1+\varphi_2)=\dfrac{\tanh\varphi_1+\tanh\varphi_2}{1+\tanh\varphi_1\tanh\varphi_2}\). Delightfully, \textbf{rapidities simply add}: \(\varphi=\varphi_1+\varphi_2\). Relativistic velocity addition is rapidity addition in disguise. This immediately explains everyday near-additivity, since small \(\varphi\) gives \(\tanh\varphi\approx\varphi\) and rapidity approximately \(v/c\), and the unreachable light speed, since \(v\to c\) requires \(\varphi\to\infty\), unchanged by adding any finite rapidity. It returns with relativistic energy in Chapter 40.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\textbf{Scope}. The two postulates apply only to inertial frames with negligible gravity. Special relativity is not ultimate theory, but a working model unfailing across an enormous range, from hospital linear accelerators to cosmic rays. Important gravity, near black holes, neutron-star surfaces, or even precise navigation-satellite timing, requires general relativity in Chapter 41. A familiar engineering fact: without both special- and general-relativistic clock corrections, satellite navigation would accumulate errors of order ten kilometers daily and fail within days. Chapters 39 and 41 explain the mechanisms; here remember your phone consumes these postulates daily.
+
+\textbf{When low-speed approximations suffice}. For small \(v/c\), Galilean addition has relative error of order \((v/c)^{2}\). An airliner at about \(250\,\mathrm{m/s}\) gives \(7\times10^{-13}\); a rifle bullet at about \(10^{3}\,\mathrm{m/s}\) gives \(10^{-11}\). Engineering with macroscopic objects still favors Newton, not because it is more correct but because it is sufficiently accurate and simpler at that scale. Choose by \(v/c\), not by a theory's age.
+
+\textbf{Evidence reserved for next chapter}. We have established postulates and velocity composition without deploying their most astonishing consequences. Plant a seed: cosmic rays produce muons a dozen or more kilometers up, with lifetimes of only about \(2.2\) microseconds. Classically, even near light speed they should travel only \(660\,\mathrm{m}\) before decaying, all dying aloft. Yet ground laboratories catch plenty daily. How do they survive the journey? No explanation leaving time and length untouched can balance that account. Chapter 39 uses a light clock to show invariant speed rewriting durations and distances.
+
+\textbf{Misuse one: everything is relative}. Precisely the opposite: invariants support the theory. When someone invokes ``Einstein proved there is no absolute truth'' outside physics, politely point out that he established invariant light speed and spacetime intervals.
+
+\textbf{Misuse two: invariance is light's odd temperament}. Light merely first exposed spacetime structure. The change concerns relations among velocity, length, and time. Light traveling below \(c\) in water or glass violates nothing: \(c\) is the \textbf{vacuum} limit, while propagation in matter reflects interactions discussed in Chapter 36, a different issue.
+
+\textbf{Misuse three: mass increases near light speed, preventing acceleration}. This is older textbook language. We use the modern convention: mass, meaning rest mass, is invariant, while total energy and momentum grow with speed. Chapter 40 uses invariant mass and the energy--momentum relation to state cleanly why reaching \(c\) requires infinite energy, without increasing-mass language.
+
+\textbf{Which apparent superluminal motions are allowed?} A sweeping searchlight spot can exceed \(c\): it is not an object carrying energy or information from the source to a distant place. Phase velocity can exceed \(c\) in some media but does not transmit a signal. Ask whether any reported superluminal effect can send a message faster than light, and its nature becomes clear. The sensational 2011 superluminal-neutrino result ultimately came from a loose fiber-optic connector shifting timing by tens of nanoseconds. For claims overthrowing the limit, suspect rulers and clocks first, not from stubbornness but because similar claims have ended that way for over a century.
+
+\step{Explaining the Opening Phenomenon}
+
+Return to the platform.
+
+A forward train flashlight measures \(c\) on the platform and \(c\) aboard. Why add balls but not light? Distance divided by time uses rulers and clocks related not by Galileo but by the transformation forced by the postulates. Under it, only \(c\) remains unchanged after composition. Invariant speed is no measurement mishap but a clue: \(c\) is woven into the relationship between space and time.
+
+Return to the sixteen-year-old's question. Accelerate a spacecraft to \(0.9c\), then \(0.99c\), then \(0.999\,999c\); look back at the laser from Earth and its relative speed remains \(c\) each time. You can \textbf{never} catch up, so standing beside a frozen light wave does not exist in nature. Maxwell says the same: a frozen nonpropagating electromagnetic wave satisfies the equations in no frame, so no spacecraft reveals one. Two routes reach one answer, the shape of a consistent theory.
+
+Why can people or anything massive never accelerate to \(c\)? That requires energy. Chapter 40 shows that closer to \(c\), the same thrust buys smaller speed increments, with further acceleration demanding ever more energy until infinity. The speed \(c\) is an asymptote, not a fence: approach indefinitely, never arrive.
+
+Inventory the resolution. Maxwell's frame-free speed once seemed to privilege one frame. Invariance now lets Maxwell retain the same form in \textbf{every} inertial frame. Neither electromagnetism nor mechanical relativity lost. The casualties were simple velocity addition and the ether invented to preserve it. Physics sometimes advances by recognizing an unnecessary old assumption rather than discovering a new thing.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Chasing Light Across Galaxies]
+Push the chase to extremes. A spacecraft passes Earth at \(0.9999\,c\), pursuing a laser in the same direction. Earth measures the gap growing slowly at \(c-0.9999c=0.0001c\), with light ahead and ship behind. The ship measures the laser departing at full \(c\). They differ ten thousandfold, yet \textbf{both are right}, describing different quantities measured with different frames' rulers and clocks. Everyday chasing, accelerate and relative speed decreases, fails near light speed. Accelerate farther to \(0.999\,999\,999\,9\,c\): the beam still leaves at \(c\). Chasing light resembles chasing your own horizon.
+\end{thought}
+
+\begin{thought}[Two Approaching Spacecraft]
+Two ships approach in deep space, each at \(0.75c\) in Earth's frame. Earth finds a closing rate of \(1.5c\). Does that violate the limit? No: the limit constrains an object's velocity relative to an observer. Earth sees neither ship individually exceeding light speed. Either ship instead measures the other using
+\[
+u=\frac{0.75c+0.75c}{1+0.75\times0.75}=\frac{1.5c}{1.5625}=0.96c,
+\]
+still below \(c\). Third-party closing rate and participant-relative velocity are different quantities. The former may exceed \(c\) without transmitting information; the latter stays below \(c\). Distinguishing them protects you when reading science-fiction news.
+\end{thought}
+
+\begin{puzzles}
+\item A train passenger throws a ball forward at \(10\,\mathrm{m/s}\), and the platform adds train and ball speeds. Replace it with a forward laser and the platform does not add speeds. Use the two postulates to locate the difference. (Hint: ask where velocity addition comes from, not why light is special. It comes from Galilean transformations, valid only as low-speed approximations.)
+\item Suppose ether exists and is fully dragged near Earth. This explains Michelson--Morley's null result but conflicts with stellar aberration, the approximately \(20.5\)-arcsecond orbital telescope tilt. Explain. (Hint: dragged ether would deflect starlight entering that region, erasing aberration or changing its magnitude, yet aberration was observed in 1729.)
+\item Calculate (a) \(u'=0.5c,\ v=0.5c\); (b) \(u'=c,\ v=0.9c\); (c) \(u'=10\,\mathrm{m/s},\ v=100\,\mathrm{km/h}\). (Hint: (a) is not \(c\); (b) must be \(c\), otherwise substitution went wrong and you did not obtain \(c\); for (c), estimate the denominator's deviation from \(1\). Ordinary addition is entirely adequate. Knowing when shortcuts are legitimate is a physical skill.)
+\item Someone explains invariance by saying moving rulers contract and clocks slow, fooling instruments into always reading \(c\). What is missing? (Hint: different clocks, mechanical, atomic, and heartbeats, have no reason to be fooled identically. The deception would also have to produce the same \(c\) at every speed and direction. Chapter 39 reveals a bolder truth: instruments are not deceived; durations and lengths themselves depend on frame.)
+\end{puzzles}

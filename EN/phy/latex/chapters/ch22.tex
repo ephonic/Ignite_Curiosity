@@ -1,0 +1,278 @@
+% Chapter 22: Magnetic Fields and Moving Charges
+\chapter{Magnetic Fields and Moving Charges}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+If your family still has an old cathode-ray-tube television (or you have seen an oscilloscope tube in a school laboratory), you can try something that would make a repair technician wince: slowly bring an ordinary refrigerator magnet toward the screen. The picture immediately distorts and changes color, as though an invisible hand were crumpling it. Remove the magnet, and most of the distortion disappears.
+
+Stop and consider how strange this is. The picture is drawn by electrons striking phosphor on the screen. The magnet touches none of those electrons: air and glass lie between them. Stranger still, the electrons are racing along at tens of millions of kilometers per hour, yet the magnet neither slows them down nor speeds them up. It merely \textbf{bends} their paths.
+
+There is an even fussier detail. Place a charged little ball (a balloon rubbed against a sweater will do) quietly beside a strong magnet: nothing happens. The magnet ignores it. But let that charge move, even just drift slowly past, and the magnetic field immediately acts. The magnet seems to distinguish whether a charge \textbf{is moving}, taking an interest only in moving charges.
+
+Most counterintuitive of all is the direction of the push. When you push a shopping cart forward and want it to accelerate, you push along its velocity; your muscles know that instinctively. A magnetic field refuses: when a charge flies north, it pushes east; when the charge flies east, it pushes south or north. It always acts across the direction of motion, like a barrier that redirects traffic but never gives it a running start. How can there be a force that always refuses to push along the velocity? What does all this sideways pushing accomplish?
+
+Now look on a larger scale. In the night sky near Earth's poles, auroras hang and sway like green curtains. Their light comes from atmospheric atoms tens or hundreds of kilometers up, struck by charged particles arriving from the Sun. But the solar wind blows toward the whole Earth. Why do these particles crowd near the north and south poles before descending? Who directs them along the way?
+
+This chapter introduces the player that redirects motion without speeding it up: the magnetic field.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Before reading on, place three bets. Without calculating, judge each statement true or false by intuition, and write down your answers:
+
+\begin{itemize}
+  \item First: a positively charged little ball hangs motionless from a silk thread near the north pole of a strong magnet, without touching it. The ball will be attracted or repelled.
+  \item Second: a positively charged particle shoots straight along the direction indicated by a compass needle, namely along the magnetic field lines. The magnetic force on it is greatest.
+  \item Third: confine a charged particle in a strong, uniform magnetic field and let it complete a million revolutions. Given a strong enough field and enough time, the field will keep increasing the particle's speed.
+\end{itemize}
+
+A spoiler: all three are false. The first fails at ``motionless'': magnetic fields ignore stationary charges. The second fails at ``along'': the magnetic force is greatest in the most crosswise direction. The third mistake is the most valuable, because it conceals a profound division of labor: \textbf{a magnetic field never changes the magnitude of velocity, only its direction}. One implication of the third question is worth considering now: if a magnetic field can never speed particles up, who supplies the electrical energy that keeps accelerating them in a hospital cyclotron? A preview: someone else does; the magnetic field merely keeps the particles around for another push. Understanding these three mistakes is the chapter's main thread. Come back afterward and mark your answers.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Let a Current Command a Compass]
+You need an AA battery (or a power bank and an old USB cable), about a meter of wire, and a compass. A phone compass app also works, but first calibrate it away from loudspeakers and magnets.
+
+First establish a baseline. Put the compass on a table and let its needle settle north--south. Stretch the wire straight, running north--south a few centimeters directly above the compass; two books can support it.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not connect a bare wire directly across a battery or USB power source, even briefly. Short circuits can produce dangerous heating or leakage. Treat this as a description, not a home procedure; use an instructor-approved, current-limited demonstration instead. See \href{https://oem.energizer.com/english/dos-donts/}{Energizer battery-care guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+Second, connect the power briefly. Connect the wire's ends to the battery's positive and negative terminals, and \textbf{disconnect immediately after two or three seconds}. This is almost a short circuit, and the wire will heat up; never leave it connected. Watch the needle closely during those seconds: it swings sharply through an angle. After disconnection, it slowly swings back north--south. Reverse the battery connections and repeat: the needle deflects the other way.
+
+Third, change the geometry. Turn the wire east--west and reconnect briefly; the deflection becomes much smaller or imperceptible. Move the wire from directly above the compass to directly below it, and the deflection reverses too.
+
+This is the phenomenon Ørsted happened to observe while lecturing in 1820: \textbf{an electric current can deflect a magnetic needle}. Notice three details. Without current there is no deflection, so this is not electricity ``leaking'' from the battery into the needle. Reversing the current reverses the deflection, so the effect has a definite direction. The wire's direction and placement relative to the needle affect the result, so geometry matters strongly. These three clues are our entire starting point for inventing the magnetic field.
+
+Safety note: use only a low-voltage source such as a dry cell, with each connection lasting no more than a few seconds. Never insert the wire into a wall outlet.
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+So far this book's electromagnetic toolbox contains just one tool: the electrostatic force between charges. Like charges repel, opposite charges attract, and the force lies along the line joining them. Try explaining the compass experiment with it, and you encounter three obstacles.
+
+First, electrostatic force does not distinguish moving from stationary charges. Coulomb's law contains charge and distance, but no velocity. Whether a charged ball hangs motionless beside a magnet or flies past at high speed, its electrostatic force should be identical. Yet experiments say the magnetic field ignores it at rest and pushes it when it moves. The old model has no slot labeled ``velocity'' in which to put this new rule.
+
+Second, the direction is wrong. The electrostatic force between two charged objects always follows their connecting line, pulling them together or pushing them apart. But a magnetic field pushes a moving charge neither from magnet toward charge nor from charge toward magnet. Its force is perpendicular to the charge's motion: it acts sideways. A framework built around the connecting line cannot accommodate it.
+
+Third, and most decisively, consider the force between two current-carrying wires. Two parallel wires carrying currents in the same direction attract; opposite currents repel. Try accounting for this electrostatically. The wires are copper, containing precisely equal numbers of positively charged nuclei and negatively charged electrons, so each wire is electrically neutral. The electrostatic force between two neutral wires should be zero, exactly zero. Yet they attract. The force is not insignificant: during an accidental short circuit in a factory, thick cables can whip and bend violently. Copper busbars in distribution cabinets must be secured with strong insulating supports to prevent short-circuit currents from bending them out of shape.
+
+The three accounts lead to one conclusion: electrically neutral wires interact because of \textbf{current}, and current means moving charges. Moving charges have an additional, entirely new interaction, absent from the electrostatic ledger. The old model has not merely miscalculated a number; it is missing a player.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+If a player is missing, invent one. History followed precisely this path: since moving charges create an additional effect around them, we say that \textbf{currents and magnets create a field in the surrounding space, called a magnetic field}. Another moving charge entering that space receives a push from the field.
+
+First do some bookkeeping: map the magnetic field. Place a small compass at any point around a magnet, let its needle settle, and record where its north pole points. Move it elsewhere and repeat. Joining these directions into smooth curves gives \textbf{magnetic field lines}. The tangent at each point indicates the local field direction; more densely drawn lines represent a stronger field. Outside a magnet, field lines leave its north pole and curve back to its south pole. Unlike electric field lines, they do not begin on positive charges and end on negative ones. In fact, nobody has found an isolated ``magnetic charge'': break a magnet in half and you get not separate north and south poles, but two smaller magnets, each with both poles. Magnetic field lines are always closed loops, without beginnings or ends.
+
+An analogy helps here. Field lines resemble directional arrows held up by spectators around a running track, telling you which way to go: the arrow at each point supplies a direction. But the difference matters more. Field lines are not actual threads suspended in space, nor are there rows of tiny arrows there. They are simply our bookkeeping method for recording the field's direction and strength, just as contour lines on a map are not white lines painted on a mountain.
+
+With a directional map in hand, we reach the central question: how does a magnetic field push a moving charge? Compress many experiments into three rules:
+
+\begin{itemize}
+  \item \textbf{No motion, no push.} A stationary charge experiences zero magnetic force. The field acts only on moving charges.
+  \item \textbf{The push is sideways.} Magnetic force is always perpendicular to both the charge's velocity and the field direction. A charge flying along a field line also experiences zero force; the more crosswise its motion, the stronger the push.
+  \item \textbf{The sign matters.} A negative charge feels exactly the opposite force to a positive one, as if the field used its left hand for one and its right for the other.
+\end{itemize}
+
+Together these say: a magnetic field gives a moving charge a \textbf{sideways push perpendicular to its motion}. This has a name: the Lorentz force.
+
+The Lorentz force does not push a wire directly, but a wire contains vast numbers of moving charges. When current passes through a wire in a magnetic field, each charge moving in an organized direction receives a sideways push. The charges pass these pushes to the entire crystal lattice. Macroscopically, \textbf{the whole current-carrying wire experiences a sideways force}. This is the second half of Ørsted's experiment: current can push a compass, and a magnet can push current. The motors in your electric fan, toothbrush, and electric vehicle all turn through this sideways push.
+
+To turn that statement into a rotating machine, all we need is a coil. Bend a wire into a rectangular loop, mount it between two magnets, and send current around it. The currents in its left and right sides run in opposite directions, so their magnetic forces are opposite: one side is pushed up, the other down. Together the forces twist the loop and make it turn. The trouble comes after half a turn: the side formerly on top has moved underneath, but its force still points upward. The resultant action now twists backward, leaving the loop rocking around equilibrium instead of behaving as a motor. Nineteenth-century engineers solved this with an almost cunningly simple component: the \textbf{commutator}. Connect the coil's ends to two semicircular copper rings; brushes automatically reverse the current every half-turn. Reverse the current and the forces reverse, instantly turning the backward twist into another forward twist. A torque that always acts in the same rotational direction keeps the loop spinning. Open any small DC motor of the sort in a toy car, and you will find the same trio: magnet, coil, commutator. A loudspeaker is the linear version. Its voice coil sits in a permanent magnet's field; as the music signal makes the current stronger, weaker, positive, and negative, the coil moves back and forth, driving the cone and passing its vibrations to the air.
+
+One final piece remains: why does the compass itself point north? Wind a current-carrying wire into a small loop and put it in a magnetic field. The loop turns until its face reaches a particular orientation, behaving exactly like a magnetic needle. We can therefore define a \textbf{magnetic moment} for the loop: its direction follows the current's circulation, and its magnitude is proportional to current times loop area. A compass needle is a tiny magnetic moment; Earth itself is an enormous one. Near the ground, Earth's field is only about one fifty-thousandth of a tesla, miserably weak but strong enough to align a nearly frictionless needle. The microscopic clue to magnetism lies here too: electrons in atoms carry tiny magnetic moments of their own. This does not mean electrons travel along definite planetary orbits, forming little current loops. Quantum mechanics says they have no such definite paths. Their magnetic moments are mainly \textbf{intrinsic} properties, called spin magnetic moments: electrons are inherently magnetic just as they are inherently charged. Iron is special because its atomic magnetic moments can spontaneously line up over a large region; in ordinary materials they point haphazardly and cancel out.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0]
+  % Magnet poles
+  \draw[thick,fill=blue!8] (-4.2,-1.6) rectangle (-3.4,1.6);
+  \draw[thick,fill=red!8] (3.4,-1.6) rectangle (4.2,1.6);
+  \node at (-3.8,0) {N};
+  \node at (3.8,0) {S};
+  % Field lines
+  \foreach \y in {-1.0,0,1.0}
+    \draw[-{Stealth[length=2.5mm]},blue!60!black] (-3.3,\y) -- (3.3,\y);
+  \node[blue!60!black,anchor=south] at (0,1.15) {$\bm B$};
+  % Coil (tilted rectangle, perspective view)
+  \draw[very thick,brown!75!black] (-1.3,-1.2) rectangle (1.3,1.2);
+  % Current directions
+  \draw[-{Stealth[length=2.5mm]},thick,green!45!black] (-1.3,0.5) -- (-1.3,-0.5);
+  \draw[-{Stealth[length=2.5mm]},thick,green!45!black] (1.3,-0.5) -- (1.3,0.5);
+  \node[green!45!black,anchor=east] at (-1.45,0) {$I$};
+  % Forces
+  \draw[-{Stealth[length=3mm]},very thick,orange!85!black] (-1.3,0) -- (-1.3,1.9)
+    node[left] {$\bm F$};
+  \draw[-{Stealth[length=3mm]},very thick,orange!85!black] (1.3,0) -- (1.3,-1.9)
+    node[right] {$\bm F$};
+  % Axis and rotation
+  \draw[dashed] (0,-2.2) -- (0,2.2);
+  \draw[-{Stealth[length=2.5mm]},thick] (0.9,1.75) arc (60:120:1.6);
+  \node[anchor=west] at (4.5,-1.9) {Opposite currents, opposite forces:};
+  \node[anchor=west] at (4.5,-2.5) {the coil turns about the dashed axis.};
+\end{tikzpicture}
+\caption{A motor's core: the two vertical sides of a current-carrying coil in a magnetic field feel opposite forces, twisting it around. The commutator reverses the current every half-turn to keep the twist in the same direction.}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.05]
+  % Magnetic field into the page
+  \foreach \x in {0,1.4,2.8,4.2,5.6}
+    \foreach \y in {0,1.4,2.8}
+      \node[blue!60!black] at (\x,\y) {$\otimes$};
+  \node[blue!60!black,anchor=west] at (6.1,2.8) {$\bm B$: field into the page};
+  % Charge and velocity
+  \fill[red!70!black] (2.8,1.4) circle (3pt);
+  \node[red!70!black,anchor=north] at (2.8,1.15) {$+q$};
+  \draw[-{Stealth[length=3mm]},very thick,green!45!black] (2.8,1.4) -- (4.6,1.4)
+    node[midway,below] {$\bm v$};
+  \draw[-{Stealth[length=3mm]},very thick,orange!85!black] (2.8,1.4) -- (2.8,3.2)
+    node[midway,left] {$\bm F$};
+\end{tikzpicture}
+\caption{Lorentz-force direction: a positive charge moving right through a field into the page feels an upward force. All three directions are mutually perpendicular. For a negative charge, $\bm F$ reverses downward.}
+\end{figure}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+A magnetic field is a referee that redirects motion without speeding it up: it pushes only moving charges, always sideways. A stronger push makes a tighter turn, but never changes the speed at all.
+\end{oneline}
+
+\begin{mainline}
+Remember the two halves separately. ``Redirects motion'': because magnetic force is perpendicular to velocity, it changes the velocity arrow's \textbf{direction}. ``Without speeding it up'': because the force is perpendicular to every displacement, the magnetic field \textbf{does no work} on the charge, leaving the arrow's \textbf{length} unchanged. To accelerate a charged particle, call in an electric field. A magnetic field is a bend in the road, never an accelerator pedal.
+\end{mainline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+Now compress the three qualitative rules into one equation. First state the question: given charge \(q\), speed \(v\), field strength \(B\), and angle \(\theta\) between velocity and field, how large is the magnetic force? Experiment gives
+\[
+F=qvB\sin\theta .
+\]
+The left side is the magnetic force on the moving charge. Each factor on the right has its job: \(q\) says whether you qualify for a push (no charge, no push); \(v\) says whether you are moving (no motion, no push); \(\sin\theta\) says how crosswise you move (along the field gives no push, perpendicular gives the full push); and \(B\) describes how strongly this region of space pushes.
+
+When does the equation hold? It summarizes experiments on a point charge in a known magnetic field. From electrons in cathode-ray tubes to protons in cosmic rays, over a century of measurements have agreed within their precision. It is among electromagnetism's most reliable formulas. When does it fail or become insufficient? A later section addresses that specifically.
+
+Do not believe it too quickly. Following this book's rule, check some special cases on the spot:
+
+\begin{itemize}
+  \item \(v=0\): \(F=0\). A stationary charge feels no magnetic force, matching the motionless ball beside the magnet in the opening.
+  \item \(\theta=0\) or \(\theta=180^\circ\): \(\sin\theta=0\). Flying along or against the field gives zero magnetic force, disproving the second initial guess.
+  \item \(\theta=90^\circ\): \(\sin\theta=1\). Perpendicular entry gives the greatest force, \(F=qvB\). The maximum occurs in the most crosswise direction, as the intuitive experiment suggests.
+  \item Make \(q\) negative: \(F\) changes sign, reversing the entire force direction. Electrons and protons curve oppositely in the same field; mass spectrometers use this to separate them.
+  \item Double \(B\): the force doubles exactly. This is built into the definition of field strength: \(B\) is calibrated by sideways force per unit charge per unit speed, in teslas. A strong magnet's surface field is of order \(0.1\ \mathrm T\); a hospital MRI scanner uses \(1.5\) to \(3\ \mathrm T\); Earth's field is only about \(5\times10^{-5}\ \mathrm T\).
+\end{itemize}
+
+What about direction? The equation gives only magnitude. The rule is that \(\bm F\), \(\bm v\), and \(\bm B\) are mutually perpendicular. For a positive charge, remember it with your right hand: let field lines enter your palm and point your four fingers along the positive charge's velocity; your thumb indicates the force. Reverse that for a negative charge. Which hand we use is merely convention; the physics is mutual perpendicularity plus opposite directions for opposite signs.
+
+Next comes the formula's most beautiful consequence. Since magnetic force is everywhere perpendicular to velocity, it only turns the motion. A charge entering a uniform field perpendicularly receives a sideways force of constant magnitude at every instant: exactly the arrangement for circular motion. Be precise: there is no new kind of ``centripetal force.'' The \textbf{Lorentz force supplies the centripetal acceleration}. The magnetic field plays the role; the account still follows \(F=ma\). Circular motion requires \(F=mv^2/r\); substitute \(F=qvB\) and solve for the radius:
+\[
+r=\frac{mv}{qB}.
+\]
+Check special cases again. Greater speed means a gentler bend and larger radius, just as a fast car needs a wider turn: reasonable. A stronger field means a smaller radius, because a harder push makes a sharper turn: reasonable. Greater mass means a larger radius, because heavier particles are more stubborn: reasonable.
+
+More interesting still is the time for one revolution. Divide the circumference \(2\pi r\) by the speed \(v\):
+\[
+T=\frac{2\pi m}{qB}.
+\]
+The speed \(v\) has vanished! Fast particles follow larger circles, slow ones smaller circles, and all return to the starting point \textbf{simultaneously}. This is no coincidence; it is the heart of a real machine. A cyclotron sends particles around in a magnetic field, giving them an electric-field boost every half-turn. Because the period does not depend on speed, the electric field can switch at a fixed rhythm and always stay in step. From tabletop prototypes in the 1930s to today's small hospital cyclotrons producing radioactive medicines, all exploit this same freely supplied rhythm.
+
+Try an estimate with real numbers to get a feel for scale. A solar-wind proton has mass \(m=1.67\times10^{-27}\ \mathrm{kg}\), charge \(q=1.6\times10^{-19}\ \mathrm C\), and typical speed \(v=5\times10^{5}\ \mathrm{m/s}\). Flying above Earth's equator perpendicular to the geomagnetic field, taking \(B=5\times10^{-5}\ \mathrm T\), its gyroradius is
+\[
+r=\frac{(1.67\times10^{-27})(5\times10^{5})}{(1.6\times10^{-19})(5\times10^{-5})}
+=\frac{8.35\times10^{-22}}{8\times10^{-24}}\approx 1\times10^{2}\ \mathrm m.
+\]
+A little over a hundred meters: on Earth's magnetic-field scale, that is practically turning on the spot. Weak though it is, Earth's field is more than adequate for individual solar-wind particles. They struggle to penetrate straight through and are instead forced to circle field lines and slide along them. This is a key part of the aurora story, which we will use shortly.
+
+With one charge accounted for, one step remains before we can explain motors: add up the sideways pushes on vast numbers of charges. A current \(I\) means \(I\) coulombs pass a wire's cross section each second. For a straight wire segment of length \(L\), combining the charge crossing that distance with its speed lets us rewrite \(qv\) exactly as \(IL\). The magnetic force on the whole wire is therefore
+\[
+F=BIL\sin\theta ,
+\]
+where \(\theta\) is the angle between the wire's current direction and the field. As usual, check special cases: \(I=0\), no current and no force, just as the compass returns home when Ørsted's experiment is disconnected; \(\theta=0\), a wire along the field feels zero force; \(\theta=90^\circ\), a wire across the field feels the maximum, \(F=BIL\). Reverse the current and the force reverses completely. Here is a substantial application. Parallel copper busbars a distance \(d\) apart in a distribution cabinet attract when their currents run the same way, with a force per meter of approximately \(2\times10^{-7}I^{2}/d\) newtons. At normal currents of a few hundred amperes this hardly matters. But a short circuit can raise the current to order \(10^{4}\) amperes. For busbars \(10\) centimeters apart, the force per meter is then about \(2\times10^{-7}\times10^{8}/0.1=20\) newtons. The forces on the cabinet's busbars add in the same direction, and a weak support can bend immediately. That accounts for the firm busbar supports mentioned earlier.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.05]
+  % Uniform magnetic field into the page
+  \foreach \x in {-2.4,-1.2,0,1.2,2.4}
+    \foreach \y in {-2.4,-1.2,0,1.2,2.4}
+      \node[blue!55!black] at (\x,\y) {$\otimes$};
+  \draw[dashed,thick] (0,0) circle (1.8);
+  \fill[red!70!black] (1.8,0) circle (3pt);
+  \node[red!70!black,anchor=west] at (1.95,0) {$+q$};
+  \draw[-{Stealth[length=3mm]},very thick,green!45!black] (1.8,0) -- (1.8,1.3)
+    node[right] {$\bm v$};
+  \draw[-{Stealth[length=3mm]},very thick,orange!85!black] (1.8,0) -- (0.6,0)
+    node[above] {$\bm F$};
+  \fill (0,0) circle (1.2pt);
+  \node[anchor=north west] at (-2.5,-2.6) {Positive charge entering across a uniform field:};
+  \node[anchor=north west] at (-2.5,-3.2) {force always inward; speed unchanged.};
+\end{tikzpicture}
+\caption{A circular orbit in a magnetic field: force always lies sideways to velocity and toward the center, changing direction but not speed.}
+\end{figure}
+
+\begin{mathbridge}
+In vector language, the Lorentz force takes one line: \(\bm F=q\,\bm v\times\bm B\). The cross product's magnitude \(|v||B|\sin\theta\) is exactly the main-text formula; the right-hand rule gives its direction, and perpendicularity is built in. One operator packages all three experimental rules.
+
+``Magnetic force does no work'' also becomes a one-step derivation. Power is the dot product of force and velocity: \(P=\bm F\cdot\bm v=q(\bm v\times\bm B)\cdot\bm v\). The cross product is automatically perpendicular to \(\bm v\), and perpendicular vectors have zero dot product, so \(P\equiv0\) at every instant. This is not an approximation but a direct verdict of vector geometry.
+
+If velocity is not perpendicular to the field, split \(\bm v\) into two components. The parallel component \(v_{\parallel}\) feels no force and stays constant; the perpendicular component \(v_{\perp}\) traces a circle as before. Superpose them and the trajectory is a \textbf{helix}, like a stretched spring winding forward along a field line. Charged particles sliding along Earth's field from equator toward poles follow such helical paths. In the Van Allen radiation belts, protons and electrons are confined this way for years: the stronger polar field shortens the helix's pitch until the motion reverses, making particles bounce between the poles as if between two magnetic mirrors. This is the basic picture of magnetic plasma confinement. Artificial tokamaks use the same idea, with more carefully designed field shapes.
+\end{mathbridge}
+
+\begin{challenge}
+One question about magnetic fields turns the whole picture upside down: magnetic force depends on velocity, but velocity depends on the reference frame. In the laboratory, you see a stationary charge: \(v=0\), so no magnetic force. Someone walking steadily past sees that same charge moving: \(v\neq0\), so it should experience magnetic force. Can the force on one charge depend on the observer?
+
+This contradiction did not demolish the theory; it became one of the main entry points to special relativity. A rigorous analysis shows that changing frames mixes electric and magnetic fields. What you regard as a purely magnetic field acquires an electric component in a moving frame, and electric fields can act on stationary charges. Complete both accounts and all observers' predictions for particle trajectories agree. Electricity and magnetism are not two separate things but two aspects of one electromagnetic field seen in different frames. This thread tightens with Maxwell's equations in Chapter 24 and reaches its full conclusion in relativity: electromagnetism already contained a mechanism demanding a new view of space and time. Einstein simply turned it on.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+The Lorentz-force formula \(F=qvB\sin\theta\) is exceptionally reliable, but its instructions include some fine print.
+
+First, it describes the force on a charge in a given magnetic field, assuming the charge does not significantly disturb that field. A moving charge produces a field too, but its contribution is usually negligible. To calculate the mutual magnetic force between two moving charges rigorously, proceed in two steps: A's current generates a field, which then pushes B. Do not simply splice Coulomb's law and the Lorentz force together and apply them indiscriminately to two charges.
+
+Second, the formula gives magnitude; direction is a separate rule. A common misuse is remembering \(qvB\) but forgetting \(\sin\theta\), assuming that field plus motion must mean magnetic force. A particle flying along field lines passes unhindered, precisely the mistake in the second initial guess. Another directional mistake is treating field lines as real threads that can cross. If two lines crossed, the field at their intersection would need to point two ways at once, leaving a compass needle helpless. At each point the field has one definite direction, so field lines never cross.
+
+Third, do not turn ``magnetic force does no work'' into ``magnetic fields cannot move anything.'' Motors clearly deliver mechanical work, and generators produce electricity. Where does the energy come from? More precisely, \textbf{the Lorentz force does no work on an individual charge, but it can pass along work done by other forces}. In a motor, the power supply transfers energy to charges, and the magnetic field acts like a bent transmission rod, converting that energy into coil rotation. The field is an intermediary, not an energy source. A machine supposedly turning forever on permanent magnets alone would violate not some engineering limitation, but the energy account itself. Generators are subtler: why turning a handle produces electricity waits until electromagnetic induction in Chapter 23.
+
+Fourth, the classical picture becomes insufficient at two extremes. At speeds approaching light speed, the force formula still holds, but the relationship between momentum and velocity must be recalculated relativistically, and the cyclotron period is no longer constant. That is why large accelerators require carefully designed variable-frequency schemes or other configurations. At atomic scales, magnetic moments become quantized, and electron magnetic moments arise mainly from intrinsic spin rather than orbital circulation. The classical picture is only rough scaffolding.
+
+One final boundary: this chapter treats the magnetic field as a real field. It stores energy and acts on distant charges, the standard modern-physics approach. But this book does not pretend that questions such as ``Is a field a kind of matter?'' have simple answers. What we can affirm are operational facts: keep accounts according to field rules, and all the predictions work.
+\end{mainline}
+
+\step{Explaining the Opening Phenomenon}
+
+\begin{mainline}
+Return to the television picture crumpled by a magnet. Inside its tube, electrons leave a gun at the back and are accelerated electrically to tens of thousands of kilometers per second, heading straight toward phosphor dots on the screen. A set of coils normally deflects them in a precisely timed magnetic field, scanning the picture line by line. Bring a refrigerator magnet close, and you parachute an extra field into their flight path. Each electron receives an extra sideways Lorentz force; landing positions shift, colors misalign, and the picture crumples. Remove the magnet and the extra force vanishes, restoring the scan. Only a few old sets retain color patches because internal steel parts have become magnetized; that is a magnetization story, not the immediate Lorentz-force effect.
+
+Now the aurora. The solar wind is a stream of charged particles ejected by the Sun, with protons and electrons approaching Earth at hundreds of kilometers per second. Once in Earth's field, they cannot penetrate straight through. Motion perpendicular to field lines bends into gyrations of roughly a hundred-meter radius, while motion along the lines remains unobstructed: magnetic force controls the crosswise motion, not the parallel motion. The particles therefore spiral along field lines like marbles in a funnel's channels. Earth's field lines converge and enter Earth near the poles, channeling particles to roughly a hundred kilometers above them. Collisions with oxygen atoms and nitrogen molecules produce green and purplish-red light. Why the poles rather than the equator? Above the equator, field lines run parallel to the ground, blocking particles like walls; above the poles they descend vertically, forming doors. The same magnetic field draws both walls and doors.
+
+The MRI scanner at a medical center, the motor in an electric vehicle, and the mass spectrometer separating particles of different masses on a laboratory bench all spend from the same account: \textbf{moving charges only, sideways force always, no work}. Three rules support a large share of modern electromagnetic technology.
+
+Consider a few examples closer to your pocket. The black stripe on a bank card is a layer that can be magnetized segment by segment. Each segment resembles a tiny needle pointing in a fixed direction; when you swipe the card, the head reads the pattern of magnetic moments. That is why magnetic-stripe cards should stay away from strong magnets: an external field can force the needles to turn together and erase the data. Maglev trains take magnetic force to another extreme, using attraction or repulsion between electromagnets to lift hundreds of tonnes off the track, removing wheel--rail friction and leaving the rest to the onboard motor's Lorentz force. Between a refrigerator magnet and a train there is no new physics, only the same rules applied at different power levels.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[If Earth's Magnetic Field Switched Off for a Day]
+Earth's magnetic field is no permanent guarantee: rocks record many reversals throughout geological history, and its strength fluctuates too. Suppose it suddenly vanished for one day tomorrow. What would happen? Do not start with disaster movies. Compasses would all lose their jobs; migrating birds and homing pigeons navigating magnetically would get lost. Low-orbit satellites would lose magnetic shielding, allowing solar-wind protons to strike components directly and increase failures. But the atmosphere itself is a thick wall: radiation doses at the surface would increase only slightly, and we would not instantly be roasted. The reverse effect is more interesting: a weaker field lets more charged particles into the upper atmosphere, so auroras might appear at middle and low latitudes. The point of this thought experiment is that a pathetically weak field of one fifty-thousandth of a tesla provides a global umbrella through its Earth-sized extent. Field strength must always be considered together with the space it occupies.
+\end{thought}
+
+\begin{puzzles}
+  \item In a cyclotron, an electric field speeds particles up every half-turn, steadily increasing their orbital radius. Someone argues: ``A larger radius means a longer path, so the period must increase and the electric field will eventually miss its beat.'' Is this right? (Hint: use \(r=mv/qB\) and \(T=2\pi m/qB\) to check whether a longer path necessarily means a longer time. Then consider why the conclusion fails near light speed.)
+  \item Parallel wires carrying currents in \textbf{opposite} directions repel. Yet if you imagine two currents as two teams of charges running together in the same direction, intuition suggests that teammates moving together should attract. Which is right? (Hint: wires are electrically neutral; stationary positive ions accompany the moving electrons. First find the direction in two steps: one current produces a field, and that field pushes the other wire's current. Then compare with experiment.)
+  \item A negatively charged particle enters a uniform field directed into the page, moving perpendicular to it. Which way does it curve? If the field reverses completely, does the turn reverse? Could replacing the magnetic field with a suitably directed uniform electric field produce the same circular path? (Hint: a negative charge feels the opposite force to the right-hand-rule direction. A circle requires force always toward its center; can an electric field of fixed direction do that?)
+  \item A loudspeaker uses a magnetic field to push a coil, which pushes a cone, which pushes air. At the end of the chain, the air really has been moved. Does this contradict ``magnetic force does no work''? (Hint: follow the energy baton. Who gives energy to the charges in the coil? Is the magnetic field a runner or the handover zone? The motor's transmission-rod analogy applies directly.)
+\end{puzzles}

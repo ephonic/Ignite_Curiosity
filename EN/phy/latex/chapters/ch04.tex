@@ -1,0 +1,224 @@
+% Chapter 4: Calculating with Direction: Vectors
+\chapter{Calculating with Direction: Vectors}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+On a windless rainy day, you stand by the road watching rain fall almost vertically. Holding your umbrella directly overhead is enough. Then you get into a moving car and look at the side window: the streaks are no longer vertical, but run diagonally from the upper front toward the lower rear. The faster the car goes, the flatter the streaks, almost horizontal. Stop and consider how strange this is. The rain is falling vertically and nobody is pushing it sideways. Who has tilted the rain?
+
+The second puzzle happens on the sidewalk. Open your phone's step counter and map, walk three hundred meters due east, then turn left and walk four hundred meters due north. The step counter faithfully reports seven hundred meters. Yet the straight-line distance between start and finish on the map is only five hundred meters. You really did walk all seven hundred meters, and the map is right too. Where did the missing two hundred meters go?
+
+The third puzzle needs only two spring scales. Use them to pull a small iron ring horizontally at the same time. With each scale reading fifty newtons, the total pull on the ring is a hundred newtons when the pulls share a direction, zero when they oppose one another, and about eighty-seven newtons when they make a sixty-degree angle. How can fifty plus fifty equal eighty-seven? The scales are not broken.
+
+These apparently unrelated puzzles concern the same thing: the arithmetic we learned as children handles how much, but not which way. Falling rain, walking people, and pulling scales all have directions. Direction is not wrapping paper you can discard and put back after calculation: it is part of the quantity itself. This chapter will invent an arithmetic that includes direction. With it, you will resolve all three puzzles and understand why sailboats can outrun the wind, why aircraft often point diagonally while flying straight, and why telescopes must look at stars obliquely, like car windows.
+\end{mainline}
+
+\step{Make a Guess First}
+
+Before reading on, put your intuition on the table as in previous chapters. A wrong guess is nothing to be ashamed of: intuition is precisely what this chapter will repair.
+
+Question one. Return to the rainy side window. If a streak runs downward and backward, is its upper end toward the front and its lower end toward the rear, or the reverse? Sketch your impression without rushing to justify it.
+
+Question two. A small boat must cross a river flowing steadily downstream. The boatman points the bow \emph{straight} across, so the boat's motion relative to the water is perpendicular to the bank. Will it land directly opposite or downstream? To land directly opposite, should the bow point somewhat upstream or downstream?
+
+Question three. You hurry along pulling a wheeled suitcase, its handle angled above the ground. With the pull's magnitude unchanged, does raising the handle more steeply increase, decrease, or preserve its forward effect? Intuition probably says the same effort gives the same result. Remember that sentence; this chapter will expose its mistake.
+
+Write down your three answers. We will check them at the chapter's end.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Shadows and Paths: Two Faces of Direction]
+\textbf{Materials}: a phone flashlight, a pencil, white paper, and a ruler; an open space you can walk across, such as a tiled living-room floor, and a two- or three-meter string.
+
+\textbf{Step one (shadows)}: lay the phone flat at the table edge and shine its flashlight horizontally toward paper standing upright on the table. Place the pencil between the light and paper, initially \emph{perpendicular} to the light, lying across the beam, and mark its shadow's length on the paper. Slowly rotate it toward a direction \emph{parallel} to the light. The shadow shrinks from a full pencil length to a point. The pencil never changes shape; what changes is its presence along the light's direction. Measure and record shadow lengths at two or three angles.
+
+\textbf{Step two (joining paths)}: walk a right angle in the open space: three large steps from the starting point in one direction, a ninety-degree left turn, then four large steps. Stretch the string directly from start to finish and compare it with your steps: its length is about five steps. Three steps plus four steps, yet only five steps straight back. Repeat, but take only two steps on the second leg. How long is the string now? Guess, then measure.
+
+\textbf{Record}: note one question for each experiment. For the shadow: why does its length change when the pencil's does not? For the path: why is the straight-line distance back to the start not equal to the total number of steps? Write them down; the chapter will answer each. The two experiments form a pair: one asks how much of a directed quantity appears along a specified direction; the other asks how two directed paths combine into one. These are the beginnings of our two main tools.
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+First, sketch the old model. Elementary arithmetic naturally gives us a worldview: everything measurable ultimately is a number; measuring means reading numbers, and calculating means adding, subtracting, multiplying, and dividing them. Temperature is a number, mass is a number, your wallet balance is a number. This model works astonishingly often. Mixing two cups of water at fifty degrees Celsius does not produce a hundred degrees---temperatures cannot be added indiscriminately---but two kilograms of rice plus three always gives five.
+
+Then the difficulties arrive, one after another.
+
+Difficulty one: the path experiment. Three steps east plus four north gives five steps diagonally, not seven. Three plus four itself has two answers, depending on whether you ask how far you walked altogether or how far you are from home now. The old model has no distinction between these questions, only a total.
+
+Difficulty two: the spring scales. Fifty newtons plus fifty newtons varies continuously between a hundred and zero as the angle changes. If the scales read numbers, those numbers openly defy addition. The old model completely fails here: it cannot provide a definite algorithm for the basic question of total pull.
+
+Difficulty three: the opening rain. Vertically falling rain, with no horizontal motion to begin with, leaves a horizontal component on the window. The old model cannot even express where that component comes from, because its language describes motion only by speed, never direction.
+
+All three point to one diagnosis: \emph{for some quantities, direction is part of their value}. Discard it, and the remaining numbers naturally fail to reconcile. This does not make ordinary arithmetic wrong: the rice is still five kilograms and those accounts still balance. It means arithmetic covers only half the world. Historically, sailors and merchants used directions skillfully long ago---compass navigation is much older than calculus---but turning direction itself into something you could calculate with happened fairly recently. In the late eighteenth century, surveyor Wessel first treated directed line segments in a plane as calculable numbers for mapmaking. In the mid-nineteenth century, Hamilton invented quaternions to describe three-dimensional rotations; Gibbs and Heaviside subsequently extracted today's textbook vector arithmetic. Vectors were not obvious tools dropped from the sky. People invented them under pressure from maps, rotations, and electromagnetism: when Maxwell organized the electromagnetic equations, this new language helped compress dozens of component equations into a few clean lines. Physicists almost immediately discovered that their most troublesome quantities---displacement, velocity, and force---were naturally suited to this arithmetic.
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+\textbf{First concept: scalars and vectors.} Divide measurable things into two kinds. Those answering only how much are \emph{scalars}: temperature, mass, distance traveled, and telephone charges can be stated with one number and a unit. Those that must answer both how much and which way are \emph{vectors}: displacement from one place to another, velocity with speed and direction, acceleration, and force. Whether a quantity is a vector has nothing to do with how sophisticated it is. Apply a direction-reversal test: would reversing it change its effect? Five kilograms of rice remains five kilograms when reversed, a scalar. Reverse a fifty-newton force on a door and opening becomes closing, a vector.
+
+\textbf{Second concept: displacement is not distance traveled.} This is the chapter's most important separation. Distance is the total length you actually cover, a scalar. Displacement is the directed straight segment from start to finish, a vector. In the experiment, seven steps is distance; five diagonal steps is displacement. The missing two hundred meters never vanished. How far you traveled and how far you moved away were always different questions. They merely give the same answer for straight-line travel, misleading us into conflating them.
+
+\textbf{Third concept: a vector is an arrow that can slide.} Mathematically, a vector is represented by an arrow whose length gives magnitude and whose orientation gives direction, nothing more. What is it like? A navigation instruction: three hundred meters east. Whoever receives it, at whichever junction, the instruction has the same effect; it contains no starting point. What is it unlike? A point on a map: the tail's position is not part of the vector, so arrows three hundred meters east in Beijing and Shanghai are the \emph{same} vector and can be drawn anywhere. It is also unlike a stake fixed to the ground: translate an arrow parallel to itself and it remains the same vector. Because vectors are independent of location, we can move several forces on one object together to compare or join them.
+
+\textbf{Fourth concept: vector addition joins arrows head to tail.} What is the combined effect of three hundred meters east followed by four hundred north? Put the second arrow's tail at the first arrow's head. The answer runs from the first tail to the second head: displacement \(\vec{A}\) followed by \(\vec{B}\) gives \(\vec{A}+\vec{B}\). This is the triangle rule. Drawing both arrows from one origin and completing a parallelogram whose diagonal gives the answer is another drawing of the same operation. Observe a distinction this book will maintain: \emph{joining arrows head to tail is a mathematical definition}; displacement following that rule is a directly verifiable geometric fact; forces following it is an \emph{experimental fact}. Pull a ring with two scales, replace them with one producing the same effect, and compare readings: the result repeats every time. We invent definitions; the world votes on facts.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \coordinate (O) at (0,0);
+  \coordinate (E) at (3,0);
+  \coordinate (N) at (3,4);
+  \draw[-{Stealth[length=3mm]},very thick,blue!70!black] (O) -- (E) node[midway,below=2pt] {East \(3\) steps};
+  \draw[-{Stealth[length=3mm]},very thick,blue!70!black] (E) -- (N) node[midway,right=2pt] {North \(4\) steps};
+  \draw[-{Stealth[length=3mm]},very thick,red!70!black] (O) -- (N) node[midway,above left=-1pt] {Net displacement \(5\) steps};
+  \fill (O) circle (1.5pt) node[below left=1pt] {Start};
+  \fill (N) circle (1.5pt) node[above=1pt] {Finish};
+  \draw (E) ++(0,0.35) -- ++(-0.35,0) -- ++(0,-0.35);
+\end{tikzpicture}
+\end{center}
+
+The vector family's first four members in physics deserve individual introductions. We already know \textbf{displacement}. \textbf{Velocity} is the rate and direction of displacement change: a car dashboard shows only speed, a scalar, while navigation must also tell you which way to drive. Chapter 5 will define it formally. \textbf{Acceleration} is the rate and direction of velocity change. Since velocity includes direction, \emph{turning without changing speed also counts as acceleration}. Your body being thrown sideways when the steering wheel turns is a reminder of this account, a hint that will become central in circular motion. \textbf{Force} has already appeared in Chapter 6; now add its vector identity. A push on a door depends on both effort \emph{and} direction; push obliquely on the upper edge and the door may both turn and jam.
+
+Velocity addition is everywhere in everyday life, though we rarely call it vector addition. Walk upward on an upward escalator and your speed relative to the ground is escalator speed plus walking speed: same direction, arrows joined directly. Walk down as fast as the escalator goes up and the opposed arrows cancel, leaving you hovering in place. Others see the strange sight of legs walking while the person goes nowhere. Aircraft do this arithmetic every day: with a destination due north and wind from the west, a north-pointing nose lets the aircraft drift northeast. The pilot must point somewhat northwest so that the airplane-relative-to-air arrow plus the air-relative-to-ground arrow points exactly north. The heading and ground track on an in-flight screen often differ because vector addition is doing its job, not because the plane is flying crookedly.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Add and subtract directed quantities as arrows joined head to tail, with direction part of the quantity itself; to find how much lies along a specified direction, project the arrow onto it---each direction keeps its own account independently.
+\end{oneline}
+
+The first half explains combination, the second decomposition. These are the chapter's entire pair of tools.
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+First master addition. Join two fifty-newton arrows head to tail: in the same direction the resultant is a hundred newtons; in opposite directions they return to the origin and give zero; at right angles the resultant is a right triangle's hypotenuse, of length \(\sqrt{50^{2}+50^{2}}\approx 71\) newtons. The larger the angle, the shorter the resultant. This is no new physics, merely the triangle inequality in another outfit. The opening sixty-degree case gives eighty-seven newtons, which we will verify in the mathematical bridge.
+
+Look at the Pythagorean triple hidden in the path experiment: three steps, four steps, and a five-step hypotenuse, \(3^{2}+4^{2}=5^{2}\), the most famous integer solution for a right triangle. A string exactly five steps long at home is no coincidence; it is Pythagoras's theorem working on your living-room floor. Perform a direction-reversal check too: change four northward steps to four southward steps, and the resultant changes from five steps northeast to five southeast. Its magnitude stays unchanged and its direction flips. Reverse a displacement's direction and the resultant flips accordingly: that is a vector's characteristic difference from a scalar.
+
+Now learn decomposition. Any arrow can be split uniquely into two arrows along perpendicular directions. Why split it? Because afterward \emph{each direction can be calculated separately}. The vertical account does not change the horizontal account, nor vice versa. This independence is one of classical mechanics' most convenient gifts. Chapter 5's projectile motion---constant horizontal velocity and vertical acceleration, each calculated separately---depends entirely on it.
+
+The suitcase is the perfect lesson in components. Your pull \(\vec{F}\) points forward and upward along the handle, at angle \(\theta\) to the horizontal. Its forward component is \(F\cos\theta\), its upward component \(F\sin\theta\). Only the forward component drags the suitcase forward; the upward component lifts it slightly, reducing its pressure on the ground and incidentally its friction. A steeper handle means larger \(\theta\) and smaller \(\cos\theta\): the same effort gives less forward pull. The third opening answer is emerging.
+
+Components also explain cooperation in lifting heavy objects. If two people lift a heavy cabinet from opposite sides with arms exerting forces straight upward, they share the weight equally. In practice they stand apart with arms sloping inward, so each effort splits into two components. The upward parts support the weight; the horizontal inward or outward parts oppose each other and are wasted effort. Standing farther apart makes arms more slanted and \(\cos\theta\) smaller, so each person must exert greater total effort for the same upward component. That is why professional movers stand as close as possible when lifting. It is still the same two accounts, one for each direction.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \draw[thick,fill=gray!15] (0,0) rectangle (1.6,1.0);
+  \node at (0.8,0.5) {Case};
+  \draw[thick] (-1.2,0) -- (5.4,0);
+  \fill[pattern=north east lines] (-1.2,-0.25) rectangle (5.4,0);
+  \coordinate (P) at (1.6,1.0);
+  \draw[-{Stealth[length=3mm]},very thick,red!70!black] (P) -- ++(40:3.2) node[right=2pt] {Pull \(\vec{F}\)};
+  \draw[-{Stealth[length=3mm]},very thick,blue!70!black] (P) -- ++(0:2.45) node[midway,below=32pt] {Forward component \(F\cos\theta\)};
+  \draw[-{Stealth[length=3mm]},very thick,blue!70!black] (P) ++(0:2.45) -- ++(90:2.06);
+  \node[right=2pt] at ($(P)+(2.45,1.2)$) {Upward component \(F\sin\theta\)};
+  \draw[dashed] (P) -- ++(0:1.5);
+  \draw ($(P)+(0.9,0)$) arc (0:40:0.9) node[midway,right=1pt] {\(\theta\)};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+Asking how much lies along a direction is so common that it deserves a name and formula. Given vectors \(\vec{A}\) and \(\vec{B}\), separated by angle \(\theta\), define
+\[
+  \vec{A}\cdot\vec{B} = AB\cos\theta ,
+\]
+read as the magnitude of \(\vec{A}\) times the projection of \(\vec{B}\) along \(\vec{A}\), or equivalently the magnitude of \(\vec{B}\) times the projection of \(\vec{A}\). Both readings give the same result. This is the \emph{dot product}, a scalar: direction information has done its job and leaves, retaining only how much. The shadow experiment is a live dot product: shadow length equals pencil length times \(\cos\theta\), where \(\theta\) is the angle between pencil and light.
+
+Check the new formula three ways. First, \(\theta=0\): \(\cos 0^{\circ}=1\), so the dot product is \(AB\). Perfectly aligned means all of it, as expected. Second, \(\theta=90^{\circ}\): \(\cos 90^{\circ}=0\), so the product is zero. A vertical pencil casts no shadow in horizontal light; there is nothing to count in the perpendicular direction. Third, \(\theta=180^{\circ}\): \(\cos 180^{\circ}=-1\), so the product is \(-AB\). The minus sign is no misprint: it reports reversed direction. Walk into the wind and its account along your forward direction is negative.
+
+The dot product's first major application arrives in Chapter 9: when force pushes an object through a displacement, \emph{work} is the dot product of force and displacement. Only the force component along motion signs the work ledger. For today, remember its form: the dot product answers how much along one direction.
+\end{mainline}
+
+\begin{mathbridge}
+Coordinates turn arrows into number pairs. Choose perpendicular coordinate axes and write \(\vec{A}\) as \((A_x,A_y)\). Add corresponding components:
+\[
+  \vec{A}+\vec{B} = (A_x+B_x,\;A_y+B_y),
+\]
+and recover length by Pythagoras: \(A=\sqrt{A_x^2+A_y^2}\). Rotate the axes however you like: the vector stays unchanged and only its readings change. Choosing good directions often makes a problem fall apart by itself; resolving gravity along and perpendicular to an incline is a frequent example in Chapter 7.
+
+For two fifty-newton forces at sixty degrees, check the opening puzzle with the cosine rule:
+\[
+  F_{\text{net}}=\sqrt{50^{2}+50^{2}+2\times 50\times 50\cos 60^{\circ}}
+  =\sqrt{7500}\approx 87\ \text{N}.
+\]
+Special cases: at zero degrees, the radicand is \((50+50)^2\), giving a hundred newtons; at a hundred and eighty degrees it is \((50-50)^2\), giving zero. The formula agrees with common sense in all three limiting cases.
+
+The dot product becomes simpler in coordinates; no angle is needed:
+\[
+  \vec{A}\cdot\vec{B} = A_xB_x + A_yB_y .
+\]
+The expressions \(AB\cos\theta\) and \(A_xB_x+A_yB_y\) are equal; expand \(|\vec{A}-\vec{B}|^2\) with the cosine rule to derive either from the other. This also answers the changing shadow lengths you measured: the ratio of shadow to pencil length traces exactly the curve of \(\cos\theta\).
+
+Finally, consider one dimension. When all vectors lie on a single straight line, vectors reduce to signed numbers. The negative numbers of elementary school are an early form of vector arithmetic: vectors whose only directional choices are forward and backward.
+\end{mathbridge}
+
+\begin{challenge}
+The dot product asks how much along a direction; another quantity asks how strongly a force tends to make you turn. Everyone knows opening a door: a large force need not turn it. Push close to the hinge and even great effort is wasted; push perpendicular to the door far out at the handle and a light touch opens it. The turning effect depends on the product of three things: force magnitude \(F\), distance \(r\) from the axis to the point of application, and the directional factor \(\sin\theta\), where \(\theta\) is the angle between \(\vec r\) and \(\vec F\). Physicists package this as a new vector, the \emph{cross product}:
+\[
+  \vec{r}\times\vec{F},\qquad \text{magnitude } rF\sin\theta ,
+\]
+Its direction follows the right-hand rule: curl your four fingers from \(\vec r\) toward \(\vec F\), and your thumb points along the result. Strangely and profoundly, this turning tendency does not lie in the plane of \(\vec r\) and \(\vec F\), but sticks out perpendicular to it. This requires three-dimensional space and explains why it was invented only after three-dimensional vector arithmetic matured. Check special cases: \(\theta=0\), pushing or pulling along a wrench, gives zero and no turning; \(\theta=90^{\circ}\) gives the maximum \(rF\), confirming that perpendicular effort is most effective. The cross product is the mathematical skeleton of Chapter 11's torque and angular momentum, where it will explain why gyroscopes wobble without falling and why figure skaters spin faster when drawing in their arms.
+
+One more preview: vectors need not inhabit physical space. Anything consisting of numbers in a row, added or subtracted component by component and scaled together, obeys vector arithmetic. In Chapter 46, quantum mechanics treats an entire system's state as a vector, whose arrow points not east or west but in an abstract state space. This chapter's method of resolving along chosen directions and keeping separate accounts will be used again unchanged.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+Vector arithmetic works so well at everyday scales that we forget its boundaries. Here are its borders and this chapter's particular misuses.
+
+Boundary one: \emph{velocity addition fails near light speed}. Boat-speed-plus-water-speed addition is impeccably accurate far below light speed, but experiments near it show that \(0.8\) times light speed plus \(0.8\) times light speed is not \(1.6\) times light speed: no combination crosses the limit. Vector arithmetic is not wrong; the relationships between space and time need rewriting at high speeds, and the addition formula needs correcting. See Chapters 38 and 39. At everyday speeds the correction is too small to measure, so we use ordinary addition here.
+
+Boundary two: \emph{finite rotations are not vectors}. Try a ten-second experiment with a book: rotate it forward ninety degrees about a horizontal axis, then left ninety degrees about a vertical axis, and note its orientation. Return to the start and reverse the order. The results differ! Vector addition ignores order, \(\vec A+\vec B=\vec B+\vec A\), but finite rotations depend on it, so a ninety-degree rotation cannot be treated as an arrow. Distinguish the \emph{rate} of rotation, angular velocity, which is a vector, from a finite \emph{angle} of rotation, which is not. Chapter 11 will sort out this difficulty.
+
+Boundary three: \emph{directions on a sphere}. Our arrows implicitly live on a plane. Over long distances on a sphere such as Earth, continuously heading east follows a latitude circle back to the start, while the straightest route between two points, a great-circle route, curves on a map. That is why long-haul flights always detour north. Planar vectors are a local approximation, sufficient for cities, sports fields, and laboratories.
+
+Boundary zero, deserving first place because it is violated most often: \emph{only quantities of the same kind can be added}. Displacement plus displacement and force plus force make sense. Three meters plus five newtons is not merely hard to calculate: there is no such arrow to draw. Vector addition does not change Chapter 2's rule. Reconcile dimensions before joining directions. Conversely, this constraint is a free error detector: if an intermediate step adds velocity to force, stop calculating; an earlier step must be wrong.
+\end{mainline}
+
+Typical misuses, each matching a trap introduced earlier:
+
+\begin{itemize}[leftmargin=1.8em]
+  \item \emph{Adding magnitudes instead of vectors.} ``He used fifty newtons and I used fifty, so the total is a hundred.'' Ask the directions first. Magnitudes add directly only when fully aligned.
+  \item \emph{Confusing distance and displacement.} Run a punishment lap of a four-hundred-meter track: distance is four hundred meters, displacement zero. A navigation message saying five hundred meters from the destination refers to displacement magnitude, not your remaining walking distance.
+  \item \emph{Thinking components are unreal.} The forward and upward components are not fictitious forces, but genuine accounts of one force in two directions. Conversely, resolving a force does not create two extra forces: it changes bookkeeping, not the cast of characters.
+  \item \emph{Thinking a larger vector must have a larger effect.} With an angled suitcase handle, a good angle can beat a stronger pull. The effect depends on which directional account you need.
+\end{itemize}
+
+\step{Explaining the Opening Phenomenon}
+
+\textbf{Rain streaks.} The new model says their direction is determined by rain's velocity \emph{relative to the car}. Relative velocity is vector subtraction: rain relative to car equals rain relative to ground minus car relative to ground. Rain points downward and car motion forward. From the car, rain falls downward and also flies backward toward you. Subtract the arrows head to tail and the resultant points diagonally forward and downward, so rain strikes the side window obliquely and streaks from upper front to lower rear. If your opening sketch put the upper end toward the car's front and the lower end toward its rear, you were right.
+
+Estimate with real data. Heavy raindrops fall at a terminal speed near eight meters per second; drizzle is about two and the largest storm drops can reach nine. A car at sixty kilometers per hour travels about seventeen meters per second. The streak's angle to the vertical obeys
+\[
+  \tan\theta=\frac{v_{\text{car}}}{v_{\text{rain}}}=\frac{17}{8}\approx 2.1,
+  \qquad \theta\approx 65^{\circ} .
+\]
+Thus at sixty kilometers per hour, streaks tilt about sixty-five degrees away from vertical; no wonder they look almost horizontal. Special cases: stop the car, \(v_{\text{car}}=0\), and \(\theta=0\), giving vertical streaks. Let car speed become extremely large and \(\theta\) approaches ninety degrees, giving almost horizontal streaks. Nobody bent the rain at any stage. The tilt belongs to your motion relative to it.
+
+\textbf{Joining paths.} Seven hundred meters is distance, scalar addition; five hundred is displacement magnitude, vector addition. The missing two hundred meters is a false problem: different accounts have different rules and naturally different answers. Walk a thousand meters in circles on the spot and the step counter says a thousand while displacement is zero. Not one meter vanished; displacement never promised to report your effort.
+
+\textbf{Two spring scales.} Fifty newtons plus fifty at sixty degrees gives a resultant of about eighty-seven newtons, already checked with the cosine rule. The scales did not disobey addition; they disobeyed the old assumption that force is scalar. Force is a vector, obeying arrow addition, an experimental fact endorsed by countless experiments.
+
+All three mysteries are settled. Recall your two home experiments: joining paths is displacement addition itself, with the five-step string illustrating Pythagoras. Shadows are the beginning of the dot product, their length relative to the pencil tracing \(\cos\theta\) as angle varies. You have personally handled both of this chapter's tools.
+
+The new model also gives a bonus: it explains a question you did not ask. \textbf{Why can sailboats sail into the wind, even faster than the wind itself?} With the sail angled to the wind, the wind's force acts roughly perpendicular to the sail. Resolve it forward and sideways: the forward component propels the boat, while its keel or centerboard resists the sideways component. Directly into the wind is consequently forbidden: the sail flaps without receiving force, the sailor's no-go zone. Clever sailors zigzag, sailing obliquely into the wind on one tack, then another, climbing toward the wind like stairs. Each leg's resultant velocity plays the vector game of boat speed and wind-pressure direction. Iceboats and land yachts are more remarkable still: with very low resistance, their speed can greatly exceed the wind. In 2009, the land yacht Greenbird reached about 203 kilometers per hour on a Nevada dry lakebed, roughly three times the wind speed. Intuition asks how a wind-driven boat can outrun its wind. Vectors reply that nobody requires boat speed to be a component of wind speed. With sufficiently low resistance and a well-adjusted sail, the boat's own speed changes the wind direction it feels, allowing the sail to keep receiving a forward component. That positive-feedback account is yours to work through beyond the challenges.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[You Are Moving at 230 Kilometers per Second Right Now]
+Push vector addition to an extreme scale. You feel motionless in your chair, but velocity is a vector relative to a reference frame. At Earth's equator, rotation carries you east at about half a kilometer per second; Earth's orbit carries you tangent to its orbit at about thirty kilometers per second; the Sun carries the solar system around the Milky Way's center at about 230 kilometers per second. Your real velocity now is the vector sum of these three arrows. Because the first two directions change continually, its magnitude and direction are rewritten every moment: your orientation relative to the solar system differs by nearly a hundred and eighty degrees between midnight and noon. Rest was never absolute, only everyday shorthand with the reference frame omitted. Next time someone says sitting still is safest, tell them that only the chair-relative-to-floor vector is still. The universe keeps busily recording all the other accounts.
+\end{thought}
+
+\begin{thought}[Starlight Is Rain: Moving the Car Window into an Observatory]
+Extend the rain-streak idea to astronomy and it yields a real scientific discovery. Light from a distant star falls vertically toward the solar system while Earth runs around the Sun at about thirty kilometers per second. Earth is the car, starlight the rain. The light's direction in a telescope should therefore tilt like a rain streak: its velocity relative to Earth is the light-velocity vector minus Earth's orbital-velocity vector. This is \emph{stellar aberration}, actually measured by Bradley in 1729. All stars trace small annual ellipses in the sky, with amplitudes matching the ratio of Earth's speed to light speed; he also used the effect to calculate light speed. But the story has an elegant sequel: as precision improved, classical vector addition's predicted angle showed tiny systematic discrepancies from observation. Fixing them required rewriting the rule for velocity addition, not drawing thicker arrows: the entrance to relativity in Chapters 38 and 39. This chapter's little arrow points all the way to twentieth-century physics' revolution.
+\end{thought}
+
+\begin{puzzles}
+\item River water flows downstream at one meter per second and a boat moves at two meters per second relative to water. If its bow points straight across, perpendicular to the bank, will it land directly opposite? To do so, which way should the bow turn? \emph{Hint}: boat relative to bank is the sum of boat relative to water and water relative to bank. A bow straight across gives a resultant angled downstream and a downstream landing. Landing opposite requires a resultant perpendicular to the bank, so point upstream until that component exactly cancels the current. Two components, separate accounts.
+\item With pull magnitude fixed, how does a suitcase's forward component change when the handle becomes steeper? Raising it also reduces pressure on the ground and friction, so why is there still a most comfortable angle rather than steeper always being better or flatter always being better? \emph{Hint}: the forward component \(F\cos\theta\) decreases monotonically as the angle steepens; the frictional burden falls as \(\sin\theta\) increases. One account loses while the other gains; the comfortable angle balances them. Suitcase-handle engineering does precisely this vector accounting.
+\item Two people pull one ring with a hundred newtons each at an angle of a hundred and twenty degrees. A third joins. What minimum force, in which direction, must they exert to keep the ring still? \emph{Hint}: first combine the first two arrows. At a hundred and twenty degrees, the cosine rule gives a resultant of exactly a hundred newtons along the angle bisector. The third person simply opposes it with equal magnitude. All three use equal force: the symmetry is geometry, not coincidence.
+\item The chapter says finite rotations are not vectors because two ninety-degree turns cannot exchange order. Yet angular velocity is a vector, as when Earth's rotation axis points near Polaris. Why does one version of rotation qualify and the other not? \emph{Hint}: the key is infinitesimal. Split each turn into infinitely many infinitesimal rotations, and the effect of order tends to zero. Infinitesimal rotations combine independently of order and can be represented by arrows, while every finite rotation retains a trace of ordering. Obedience only in the infinitesimal limit repeats Chapter 3's limiting idea in a rotational setting.
+\end{puzzles}

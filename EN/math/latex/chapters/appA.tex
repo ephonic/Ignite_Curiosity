@@ -1,0 +1,92 @@
+\chapter{The Basic Grammar of Mathematical Proof}
+
+Learning a language begins with its grammar; reading mathematical proofs is no different. A proof is not a juggling act with symbols. It follows rules for making things clear: what makes a statement true, what refutes it, and what counts as a reason. This appendix gathers the grammar used throughout the book, with examples at middle school level. Whenever the main text leaves you stuck, return here for help.
+
+\section{Propositions: Statements That Can Be True or False}
+
+Mathematics discusses a special kind of sentence: a \textbf{proposition}, a statement that can be judged true or false. ``The interior angles of a triangle add to $180^\circ$'' is a proposition, and it is true. ``All prime numbers are odd'' is also a proposition, but false: $2$ is a counterexample. ``Mathematics is fascinating'' is not a proposition because it has no definite truth value. On its own, ``$x>3$'' is not one either, since we cannot decide its truth without specifying $x$. Quantifiers address this issue, as we will see below.
+
+Many propositions have the form ``if ... then ...''. For example: ``If an integer is divisible by $4$, then it is divisible by $2$.'' The part after ``if'' is the hypothesis; the part after ``then'' is the conclusion. Exchanging them produces the \textbf{converse}. Here the converse is: ``If an integer is divisible by $2$, then it is divisible by $4$.'' Notice that the original is true while its converse is false: $6$ is divisible by $2$ but not by $4$.
+
+\begin{fanli}
+``If a proposition holds, so does its converse'' is a common misunderstanding. ``Vertically opposite angles are equal'' is true, but its converse, ``Equal angles are vertically opposite,'' is plainly false. Corresponding angles formed by parallel lines are equal without being vertically opposite. A proposition and its converse require separate judgments.
+\end{fanli}
+
+\section{Sufficient and Necessary Conditions: Two Different Hats}
+
+When ``if $p$, then $q$'' holds, we say $p$ is a \textbf{sufficient condition} for $q$: having $p$ is enough to guarantee $q$. At the same time, $q$ is a \textbf{necessary condition} for $p$: for $p$ to hold, $q$ must hold too.
+
+\begin{li}
+Being a rectangle guarantees that a quadrilateral is a parallelogram, so ``is a rectangle'' is sufficient for ``is a parallelogram.'' Conversely, being a parallelogram is only necessary for being a rectangle. A rectangle must be a parallelogram, but parallel sides alone are not enough: right angles are required too.
+\end{li}
+
+An everyday analogy: electricity is necessary for an electric bulb to light---without it, the bulb cannot glow---but not sufficient, since a broken filament prevents it from lighting even with power. Sufficient need not mean necessary, and necessary need not mean sufficient. When both hold, $p$ is a \textbf{necessary and sufficient condition} for $q$, written $p\Leftrightarrow q$. The two then stand or fall together: for example, ``a triangle is equilateral'' and ``all three of its interior angles are $60^\circ$.''
+
+\section{Quantifiers: Being Clear About ``All'' and ``There Exists''}
+
+Two of the most common expressions in propositions are ``all'' or ``for every,'' written $\forall$, and ``there exists'' or ``at least one,'' written $\exists$. They behave very differently:
+
+\begin{itemize}
+\item For ``Every even number is divisible by $2$'' to be true, \textbf{every} even number must pass the test.
+\item For ``There is an integer $x$ such that $x^2=4$'' to be true, \textbf{finding} one is enough: $x=2$ works.
+\item One counterexample refutes an ``all'' statement. Refuting an ``exists'' statement requires showing that none can be found.
+\end{itemize}
+
+Negation has a clear rule too. The negation of ``All ravens are black'' is not ``All ravens are nonblack,'' but ``There is a raven that is not black.'' Negating a universal statement produces an existential one, and vice versa. This exchange is used constantly in proof by contradiction.
+
+\section{Counterexamples: One Is Enough}
+
+A counterexample is a specific case satisfying the hypothesis but not the conclusion. It is mathematics' most economical weapon: one counterexample overturns even the most beautiful conjecture. Consider ``For all integers $a,b$, if $a^2>b^2$, then $a>b$.'' Plausible enough---until we take $a=-3$, $b=1$. Then $a^2=9>1=b^2$, yet $-3<1$. One counterexample ends the conjecture. Conversely, checking a million examples is still not a proof. Examples show only that a claim has not yet been defeated, not that it never will be.
+
+\section{Mathematical Induction: Toppling a Row of Dominoes}
+
+Suppose we want to prove a proposition $P(n)$ for all positive integers $n$, such as
+\[1+3+5+\cdots+(2n-1)=n^2.\]
+Checking each case would never end. Mathematical induction requires just two tasks: (1) the \textbf{base case}: verify $P(1)$; (2) the \textbf{inductive step}: prove that whenever $P(k)$ holds, $P(k+1)$ follows. Think of a row of dominoes: if the first falls and each falling domino knocks over the next, the entire row falls.
+
+\begin{proof}
+(Base case) When $n=1$, the left side is $1$ and the right side is $1^2=1$, so the claim holds.
+(Inductive step) Assume $1+3+\cdots+(2k-1)=k^2$ for $n=k$. For $n=k+1$,
+\[1+3+\cdots+(2k-1)+(2k+1)=k^2+(2k+1)=(k+1)^2,\]
+which is exactly the required identity. By induction, the equality holds for every positive integer $n$.
+\end{proof}
+
+Neither step can be omitted. A base case alone leaves open a possible break farther along; an inductive step alone may describe a row that was never pushed.
+
+\section{Proof by Contradiction: Assume the Opposing Claim Is Right}
+
+Some propositions resist a direct attack. Try a different approach: \textbf{assume the conclusion is false and reason onward until you reach a contradiction}. The contradiction shows that the starting assumption was wrong, so the conclusion must hold. A classic example is that there are infinitely many primes.
+
+\begin{proof}
+Suppose there are only finitely many primes, and list them all: $p_1,p_2,\dots,p_n$. Construct $N=p_1p_2\cdots p_n+1$. Dividing $N$ by any $p_i$ leaves remainder $1$, so none of the listed primes divides $N$. But every integer greater than $1$ is either prime or divisible by a prime. Therefore a prime outside the list must exist, contradicting the claim that the list contains every prime. Thus there cannot be only finitely many primes.
+\end{proof}
+
+This argument already appeared in Euclid's \emph{Elements} over two thousand years ago. Proof by contradiction lets you borrow a false proposition as a ladder, then dismantle it after climbing.
+
+\begin{toolbox}
+A quick reference to the grammar of proof:
+\begin{itemize}
+\item A proposition is a statement with a truth value. Its converse exchanges hypothesis and conclusion and must be judged independently.
+\item $p\Rightarrow q$: $p$ is sufficient and $q$ is necessary. When each is necessary and sufficient for the other, write $p\Leftrightarrow q$.
+\item Negating $\forall$ gives $\exists$ with ``not''; negating $\exists$ gives $\forall$ with ``not.''
+\item One counterexample refutes ``all.'' Induction can prove statements for all positive integers, using a base case and an inductive step.
+\item When a direct proof is difficult, try contradiction: assume the conclusion is false and derive a contradiction.
+\end{itemize}
+\end{toolbox}
+
+\section*{Reflection Questions}
+
+\textbf{Observation}
+\begin{sikao}
+\item Write the converse of ``A square has four equal sides'' and determine whether it is true. Hint: find a shape with four equal sides that is not a square.
+\end{sikao}
+
+\textbf{Proof}
+\begin{sikao}
+\item Prove $1+2+3+\cdots+n=\dfrac{n(n+1)}{2}$ by induction. Hint: for the inductive step, add $k+1$ to both sides, then combine the fractions and simplify.
+\end{sikao}
+
+\textbf{Challenge}
+\begin{sikao}
+\item Prove by contradiction that $\sqrt{2}$ cannot be written as a ratio of two integers. Hint: suppose $\sqrt{2}=\dfrac{p}{q}$ in lowest terms, square both sides, and examine the parity of $p$.
+\end{sikao}

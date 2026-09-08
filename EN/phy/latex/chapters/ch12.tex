@@ -1,0 +1,252 @@
+% Chapter 12: Equilibrium, Materials, and Fluids
+\chapter{Equilibrium, Materials, and Fluids}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Here is an experiment you can try tonight. Fill an ordinary glass with water, slightly above the rim. Cover it with a stiff card, such as a playing card or business card. Hold the card with your palm, turn the whole glass upside down, then remove your hand. The card stays put. A full glass of water, weighing about a quarter of a kilogram, hangs in midair on a card weighing only a few grams.
+
+Water sits above the card, and only air lies below. Has the water glued it on? Does the rim suck it into place? If you really think suction explains it, keep reading: that word has fooled almost everyone who has not studied physics. The strongman actually holding up the card is pressing on your shoulders right now, though you never notice.
+
+Consider two relatives of this phenomenon. When a typhoon tears off a roof, the wind often does not \emph{push it upward from below}. It \emph{sweeps across} the roof, which nevertheless lifts as though an invisible hand were pulling it up. An airliner weighing tens of tonnes flies ten kilometers high on two thin wings. The force difference between their upper and lower surfaces must steadily support hundreds of passengers and all the fuel. A card, a roof, and a wing share the same underlying laws: how flowing things, water and air, push, support, and lift.
+
+This chapter also answers seemingly unrelated questions. Why does the adult on a seesaw instinctively sit closer to the center? Why does a high-pressure water jet shoot so fast and far? A rubber band stretches severalfold and returns, while chalk snaps when bent: what makes solids hard, and what makes them break? By the end, equilibrium, materials, and fluids will share one thread: \emph{how forces and pressures are transmitted and balanced within and between objects}.
+\end{mainline}
+
+\step{Make a Guess First}
+
+As usual, place your bets before reading the answers.
+
+First: what mainly keeps the card on the inverted glass? (a) Wetting makes the card stick to the water; (b) the glass rim exerts suction; or (c) air below pushes it upward. If you choose c, estimate that upward force: the weight of a few grams, a few hundred grams, or tens of kilograms?
+
+Second: a 70-kilogram adult and a 30-kilogram child use a seesaw. The adult sits one meter from the pivot. How far away must the child sit to balance it? (a) One meter as well, because symmetry is fair; (b) farther than one meter; or (c) closer than one meter. Now suppose the adult sits \emph{right on the pivot}. Can the child still lift them?
+
+Third: a small iron nail sinks immediately, but a steel ship weighing tens of thousands of tonnes floats steadily. If heavy things sink and light things float, where does that rule go wrong? What differs between the nail and the ship?
+
+Fourth: put two straws in your mouth, one dipping into a drink and the other opening into the air outside the cup. Suck hard. Can you drink anything?
+
+Write down all four answers. We will check them at the end.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[A Diving Medicine Vial]
+\textbf{Materials}: a clear, flexible plastic bottle with a cap, such as a water bottle; a small medicine vial or glass oral-medicine bottle, or a bent piece of straw weighted with a paper clip; and water.
+
+\textbf{Step 1}: partly fill the vial with water so that it \emph{just floats} when placed upside down in a basin, with its mouth downward and a small air bubble inside. That bubble is the entire mechanism. Adjust the water repeatedly until it barely floats and sinks with a light touch. We will call it the diver.
+
+\textbf{Step 2}: put the diver into the water-filled plastic bottle and tighten the cap. It now floats at the top.
+
+\textbf{Step 3}: squeeze the bottle firmly with both hands. The diver slowly sinks; release your grip and it rises again. The harder you squeeze, the deeper it sinks. With careful adjustment, you can even suspend it halfway down.
+
+\textbf{Record}: your hands never touch the diver, so what commands it to sink? What is compressed inside the bottle? Does the diver's air bubble grow or shrink when you squeeze? Sketch your observations. This experiment hides three central concepts: pressure transmission, compression, and buoyancy. The answers appear in ``Explaining the Opening Phenomenon.''
+\end{experiment}
+
+Another free experiment needs only a strip of paper about two centimeters wide and fifteen centimeters long. Hold one end between two fingers and let it droop naturally \emph{below} your lips. Predict what happens if you blow horizontally \emph{over} it: does it drop farther or rise? Try it. The strip rises almost to horizontal. Your intuition probably guessed wrong: blowing seems like pushing things away, yet the paper moves toward the airflow. Keep this troublesome strip; we will vindicate it later.
+
+\step{The Old Model Runs into Trouble}
+
+\textbf{Old model 1: heavy things sink; light things float.} It sounds obvious: stones sink, wood floats; iron sinks, foam floats. Yet a 20-gram iron nail sinks while a 40,000-tonne iron ship floats. Both are iron, but the heavier one floats. Someone may repair the rule by saying the ship contains air and is lighter on average. That approaches the truth, but also concedes the old model's failure: sinking has never depended on the \emph{single} number describing an object's weight. The old model cannot even provide a consistent criterion.
+
+\textbf{Old model 2: suction is a pulling force.} Drinking feels as though your mouth reaches out with an invisible rope and pulls the liquid upward. But this model fails in three settings. First, seal a drink in a rigid bottle with an airtight straw opening. You can suck until your cheeks ache without drinking: the supposed pull remains, but the liquid does not move. Second, our fourth prediction question: one straw in the drink and one in air likewise prevents drinking. Third and most decisively, remove the air above the bottle and even the strongest suction lifts no liquid. History offers another unfortunate victim: mine pumps. Centuries ago, miners found that no matter how well a pump was built, it could raise water only about ten meters, not a centimeter more. If suction were the pump's pulling force, a stronger pump should lift higher. Why did Europe's finest pumps all hit the same ten-meter wall?
+
+\textbf{Old model 3: if something is still, no force acts, or the forces cancel.} Chapter 6 already dismantled the first half. A book on a table experiences gravity and support; their net force is zero. But canceling forces is not the whole story either. On a seesaw, an adult and child of equal weight balance at opposite ends with a central pivot. Move the pivot toward the adult: the same people and forces remain, and net force is still zero, yet the board tips. Zero net force does not guarantee that something will not \emph{rotate}. Being motionless is more demanding than zero net force. We have missed a rotational account.
+
+\textbf{Old model 4: wind simply pushes whatever it blows on.} The paper-strip experiment directly contradicts it. Air sweeps across the top, yet the strip moves not \emph{down} and away but \emph{up} toward it. Another oddity: hang two sheets side by side a few centimeters apart and blow \emph{between} them. Intuition predicts they will separate, but they move closer. Treating fluid forces as a simple shove is clearly insufficient.
+
+All four difficulties expose the same gap: we have never carefully defined how fluids exert force. Liquids and gases cannot be grasped in your hands. Their pushing and supporting depend on one thing: pressure.
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+\textbf{First concept: torque, the accounting unit for rotational effect.} The seesaw teaches that the same force has a greater turning effect farther from the pivot. You open a door at its handle, farthest from the hinge, not beside the hinge; a rusty screw calls for a long wrench. Force times lever arm, the perpendicular distance from pivot to line of action, is \emph{torque}. More torque means more ability to change rotation. True stillness therefore requires two simultaneous conditions: all forces sum to zero, preventing translational acceleration, and all torques sum to zero, preventing rotational acceleration. One governs moving, the other turning. That is why the adult sits forward: they reduce their lever arm, not their weight.
+
+\textbf{Second concept: pressure, force spread over area.} Push a wall with your palm using fifty newtons and it stays unchanged; apply the same force through a drawing pin and the point enters easily. Force is unchanged; what changes is the area over which it is \emph{distributed}. Force per unit area is \emph{pressure}. Think of splitting a bill: a hundred yuan shared by ten people means ten yuan each. Pressure distributes force over area; smaller area gives each little patch more. Unlike force itself, it is a per-area account, not the total. Pressure on an object and force on it are different questions. A drawing pin exploits both ends: its broad head gives your finger low, painless pressure, while its tip has less than one ten-thousandth the area, concentrating the same force into over ten thousand times the pressure. Wood cannot resist. Tank tracks and wide, long skis apply the same principle in reverse.
+
+\textbf{Third concept: pressure inside a fluid. Deeper means more load overhead.} Every underwater point supports the whole column above it. Dive deeper and that column lengthens, increasing pressure. That is why dams have a trapezoidal profile, broad below and narrow above: the bottom experiences much greater pressure than the surface. Better still, pressure at a point in a liquid is equal \emph{in every direction}, squeezing left, right, down, and up alike. Enclosed fluids have another useful trait: an added pressure anywhere is \emph{transmitted unchanged to every corner}. This is Pascal's principle. Car brakes use it: your foot drives a small piston that pressurizes brake fluid; the pressure travels through pipes to larger pistons at all four wheels, clamping pads firmly against discs.
+
+\textbf{Fourth concept: atmospheric pressure and buoyancy. We live at the bottom of an ocean of air.} Air is invisible but has weight. Every patch of ground supports a column extending to the edge of space. Per square meter, that column weighs about \emph{ten tonnes}. You do not feel crushed because the pressure inside your body, cells, and lungs matches the outside pressure, balancing it, just as a deep-sea fish experiences balanced pressure inside and out. In the inverted-glass experiment, the small pressure at the water surface inside is much less than the pressure of outside air pushing up against the card. The net effect supports card and water together. The card is not sucked into place; it is \emph{pushed} from below.
+
+Once we accept that fluid pressure increases with depth, buoyancy follows automatically. Consider a submerged block. Its shallow top experiences a smaller downward pressure; its deeper bottom experiences a larger upward pressure; forces on the sides cancel. Subtracting top from bottom leaves an upward push: buoyancy. How large? Archimedes, stepping into his bath, discovered that it equals the weight of \emph{the water displaced} by the block. Notice the clever wording: it never mentions the block's own weight or material. It asks only how much the water occupying that space would weigh. A nail displaces twenty grams of water, so its buoyancy is only the weight of twenty grams of water, too little to support it. A ship's hollow belly displaces tens of thousands of tonnes of water and gains the corresponding buoyancy. The judge is never your weight alone, but how much buoyancy your volume buys and whether that balances your weight.
+
+\textbf{Fifth concept: what flows in must flow out; accelerating water reveals a pressure difference.} If water flowing through a pipe is incompressible, the amount entering a section each second must equal the amount leaving. Water neither vanishes nor packs into less space. In a narrower section it must move faster. Pinching a garden hose makes the jet shoot fast and far for this reason. Now the second key: water entering a narrow pipe from a broad one speeds up. \emph{It accelerates}. Chapter 6 tells us that acceleration requires net force. What pushes this water? Only a higher pressure behind than ahead. We infer a counterintuitive result: \emph{in steady flow, faster-moving regions have lower pressure}. This is the physical core of Bernoulli's relation. Speed does not mysteriously reduce pressure; a pressure difference accelerates water. Speed is the \emph{effect}, lower pressure the \emph{cause}. Energy gives the formal accounting, which we will translate shortly.
+
+\textbf{Sixth concept: elasticity. Solids are hidden springs.} Pull a rubber band harder and it stretches farther, then springs back on release. A spring balance uses the proportionality between extension and pulling force, Hooke's law. The deeper point is that \emph{every} solid is a spring, just an extraordinarily stiff one. Your chair bends by about a hair's width under you, then pushes back with an equal force. A steel bridge bends a few millimeters as a truck crosses, then returns. Solids behave this way because atoms resist both being squeezed together and pulled apart, like billions of tiny connected springs. The useful part of the analogy is that small compressions and extensions really are approximately proportional to restoring force. The misleading part: no actual springs connect atoms. Electromagnetic interactions create an equilibrium separation with short-range repulsion and longer-range attraction, as Chapter 54 will explain. Pull far enough and these springs fail permanently. Strength describes how much force a material tolerates without damage; toughness describes how much damage it absorbs without breaking. Chalk snaps while steel wire can suspend a car. The difference is not simply hardness, but how far the internal atomic spring account can go.
+\end{mainline}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Equilibrium means not an absence of forces but cancellation of all pushes, pulls, and turning effects; fluid forces come from pressure differences, with greater pressure below supporting submerged objects and pressure differences accelerating flowing water; buoyancy asks one question: how much does the displaced water weigh?
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+\textbf{Torque and equilibrium.} For force \(F\) and lever arm \(L\), the perpendicular distance from pivot to line of action, torque is
+\[
+  \tau = F\,L .
+\]
+What it describes: the strength of the force's turning effect about the pivot. Why this form: experiments show proportionality to both force and lever arm, so they multiply. Doubling either doubles the effect. Equilibrium requires two conditions:
+\[
+  F_{\text{net}} = 0, \qquad \tau_{\text{net}} = 0 .
+\]
+Routine checks: set \(L=0\). A force directed through the pivot produces zero torque. Pushing the hinge harder still cannot turn the door, matching experience. Reverse direction from lifting upward to pressing downward: counterclockwise torque becomes clockwise and changes sign. Equilibrium is the \emph{cancellation} of clockwise and counterclockwise torques. Now the seesaw: a \(70\)-kilogram adult one meter from the pivot produces torque of magnitude \(70g\times 1\) meters. A \(30\)-kilogram child must sit \(70\times 1/30\approx 2.3\) meters away on the other side to produce equal opposing torque. That is farther than one meter, answer b. If the adult sits on the pivot, \(L=0\), their torque is always zero, and the child cannot lift them however hard they try.
+
+\textbf{Pressure.}
+\[
+  p = \frac{F}{S} .
+\]
+What it describes: how concentrated the force is over area \(S\). Checks: keep force fixed and multiply area by ten; pressure falls to one tenth, explaining tracks and skis. Let area become tiny and pressure becomes enormous, explaining needle points. Real numbers: press a drawing pin with \(50\) newtons. Its head has area about \(1\) square centimeter, giving your finger \(50/10^{-4}=5\times10^{5}\) pascals without pain. Its tip has area about \(0.01\) square millimeters, giving pressure as high as \(50/10^{-8}=5\times10^{9}\) pascals. The same finger and force produce a ten-thousandfold difference.
+
+\textbf{Liquid pressure and atmospheric pressure.} At depth \(h\) below the water surface,
+\[
+  p = p_{0} + \rho g h,
+\]
+where \(p_{0}\) is atmospheric pressure at the surface, about \(1.0\times10^{5}\) pascals; \(\rho\) is water's density, \(1000\) kilograms per cubic meter; and \(g\) is about \(10\) newtons per kilogram. Why this form? That point supports the atmosphere plus a water column of height \(h\) and unit base area, whose weight is \(\rho g h\). Check \(h=0\): we recover \(p=p_{0}\), leaving only atmospheric pressure at the surface. At \(h=10\) meters, \(\rho g h=1000\times10\times10=10^{5}\) pascals, exactly another atmosphere. Every ten meters of descent adds the equivalent of another entire atmosphere. Europe's ten-meter pumping wall is solved. A pump can only reduce the pressure inside its pipe toward zero. Atmospheric pressure on the well's surface actually pushes water up, and one atmosphere supports at most about ten meters of water. Stronger suction cannot help: the pump was never the one doing that work.
+
+\textbf{Buoyancy.} Archimedes' principle:
+\[
+  F_{\text{buoy}} = \rho_{\text{fluid}}\, g\, V_{\text{disp}} .
+\]
+What it describes: the net upward force on an object displacing fluid volume \(V_{\text{disp}}\). Three checks. If \(V_{\text{disp}}=0\), the object touches no fluid and buoyancy is zero, trivial but necessary. Once fully submerged, \(V_{\text{disp}}\) no longer changes with depth, so buoyancy is depth-independent: it neither increases nor decreases as a stone sinks. If the object's density exactly matches water's, its weight equals that of an equal water volume. Buoyancy balances it and it remains suspended. Fish make this adjustment with their swim bladders. Try a person: a \(60\)-kilogram body occupies about \(60\) liters, so full submersion produces buoyancy equal to the weight of about \(60\) kilograms of water, nearly balancing body weight. A deep breath expands the chest and \(V_{\text{disp}}\), letting you float; exhaling makes you sink. You have already tested the formula with your body.
+
+\textbf{The continuity equation.} For steady incompressible flow through a pipe, cross-sectional area \(S\) and speed \(v\) satisfy
+\[
+  S_{1}v_{1} = S_{2}v_{2} .
+\]
+What it describes: the same water volume passes every cross-section each second. Inflow equals outflow. Checks: halve the area and speed doubles, explaining the pinched hose's long jet. Let \(S_{2}\) become enormous, as a pipe enters a reservoir, and speed approaches zero, consistent with calm water where a large river meets the sea.
+
+\textbf{Bernoulli's relation.} Along one streamline,
+\[
+  p + \tfrac{1}{2}\rho v^{2} + \rho g h = \text{constant}.
+\]
+Read \(\tfrac{1}{2}\rho v^{2}\) as kinetic energy per unit volume, \(\rho g h\) as gravitational potential energy per unit volume, and \(p\) as pressure energy carried per unit volume. Their sum is conserved along the streamline: Chapter 9's energy conservation dressed as flowing water. Check equal speed everywhere: the kinetic terms cancel, leaving \(p+\rho g h=\) constant. The hydrostatic pressure formula has returned in disguise, a consistency check. At equal height, greater speed necessarily means lower pressure. The paper-strip verdict follows: fast air above gives lower pressure; still air below gives higher pressure and pushes the strip upward.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Pivot
+  \draw[thick] (0,0) -- (-0.45,-0.7) -- (0.45,-0.7) -- cycle;
+  \fill[pattern=north east lines] (-0.9,-1.0) rectangle (0.9,-0.7);
+  \node[below] at (0,-1.0) {Pivot};
+  % Seesaw
+  \draw[very thick] (-3.6,0.3) -- (3.0,-0.25);
+  % Child: left, farther away; adult: right, closer
+  \draw[thick,fill=blue!10] (-3.35,0.29) circle (0.25);
+  \node[above=2pt] at (-3.35,0.55) {Child};
+  \draw[-{Stealth[length=2.5mm]},thick,blue!70!black] (-3.35,0.29) -- (-3.35,-0.71) node[midway,left=1pt] {\(30g\)};
+  \draw[thick,fill=red!10] (1.3,-0.14) circle (0.3);
+  \node[above=2pt] at (1.3,0.22) {Adult};
+  \draw[-{Stealth[length=2.5mm]},thick,red!70!black] (1.3,-0.14) -- (1.3,-1.44) node[midway,right=1pt] {\(70g\)};
+  % Lever-arm labels
+  \draw[dashed] (0,0) -- (-3.35,0.28);
+  \node[above] at (-1.7,0.2) {Arm about \(2.3\) m};
+  \draw[dashed] (0,0) -- (1.3,-0.15);
+  \node[below] at (0.75,0.05) {Arm \(1\) m};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Water
+  \fill[blue!6] (0,0) rectangle (7,-3.2);
+  \draw[thick,blue!50!black] (0,0) -- (7,0);
+  \node[above left] at (0,0) {Water surface};
+  % Block
+  \draw[thick,fill=gray!20] (2.6,-1.2) rectangle (4.4,-2.6);
+  \node[left] at (0,-1.9) {\shortstack{Submerged\\block}};
+  % Smaller pressure on top
+  \draw[-{Stealth[length=2.5mm]},thick,red!70!black] (3.2,-0.35) -- (3.2,-1.15);
+  \draw[-{Stealth[length=2.5mm]},thick,red!70!black] (3.8,-0.35) -- (3.8,-1.15);
+  \node[above] at (3.5,0.2) {Top: less downward pressure};
+  % Larger pressure below
+  \draw[-{Stealth[length=3.5mm]},very thick,blue!70!black] (3.2,-3.35) -- (3.2,-2.65);
+  \draw[-{Stealth[length=3.5mm]},very thick,blue!70!black] (3.8,-3.35) -- (3.8,-2.65);
+  \node[below] at (3.5,-3.4) {Deeper bottom: more upward pressure};
+  % Side forces cancel
+  \draw[-{Stealth[length=2.5mm]},thick] (1.6,-1.9) -- (2.55,-1.9);
+  \draw[-{Stealth[length=2.5mm]},thick] (5.4,-1.9) -- (4.45,-1.9);
+  \node[right] at (5.4,-2.8) {Sides cancel};
+  % Net buoyancy
+  \draw[-{Stealth[length=4mm]},very thick,orange!80!black] (5.6,-2.6) -- (5.6,-0.9);
+  \node[right] at (5.6,-1.0) {\shortstack[l]{Net: upward\\buoyancy}};
+\end{tikzpicture}
+\end{center}
+
+\begin{mathbridge}
+Bernoulli's relation follows directly from work and energy. Take a small water volume \(\Delta V\) flowing from section 1 to section 2. Water behind does positive work \(p_{1}\Delta V\); water ahead does negative work \(p_{2}\Delta V\), giving net work \((p_{1}-p_{2})\Delta V\). By the work--energy theorem, this becomes its increase in kinetic plus potential energy:
+\[
+  (p_{1}-p_{2})\,\Delta V
+  = \tfrac{1}{2}\rho\Delta V\,(v_{2}^{2}-v_{1}^{2})
+  + \rho\Delta V\,g\,(h_{2}-h_{1}),
+\]
+Cancel \(\Delta V\) and rearrange to obtain Bernoulli's relation. There is no mysterious new fluid law here: it is the joint bookkeeping of Chapter 6's Newton's second law and Chapter 9's energy conservation applied to flowing water.
+
+The complete torque expression includes direction: \(\tau = rF\sin\theta\), where \(\theta\) is the angle between the lever-arm direction and the force. At \(\theta=0\), a force aimed directly at the pivot gives zero torque, the rigorous version of pushing a hinge without turning the door. At \(\theta=90^{\circ}\), torque is largest, so apply force perpendicular to a wrench.
+
+The solid's spring account can also be written independently of shape. Define stress \(\sigma=F/S\), internal force per unit area, and strain \(\varepsilon=\Delta L/L\), relative extension. Within the elastic range,
+\[
+  \sigma = E\,\varepsilon,
+\]
+where \(E\) is the elastic modulus, determined only by the material. Steel has \(E\) around \(2\times10^{11}\) pascals. Stretching a steel bar by one percent requires stress \(2\times10^{9}\) pascals, equivalent to pressing two small cars onto every square centimeter of cross-section. This quantifies the claim that all solids are extraordinarily stiff springs. A rubber band's \(E\) is only a few ten-thousandths of steel's, so you can stretch it by hand.
+\end{mathbridge}
+
+\begin{challenge}
+An invisible assumption runs through Bernoulli's relation: viscosity is neglected. Real fluids have internal friction. Honey leaves a bottle much more slowly than Bernoulli predicts because viscosity turns much of its mechanical energy into heat along the way. The Reynolds number measures whether inertia or viscosity dominates. At large Reynolds number, as for large ships, fast water, or air, inertia dominates and Bernoulli is useful. At small Reynolds number, as for microorganisms swimming in body fluids or fine dust settling in still air, viscosity dominates and Bernoulli fails completely. A bacterium stops almost immediately when it stops paddling. It lives in a world where inertia is negligible: water is as viscous to it as honey is to you. Wings are another deep subject. Rigorous aerodynamics uses circulation to describe how a wing changes the entire flow field, then Bernoulli's relation to calculate pressure distribution. Saying that the wing deflects air downward and the air pushes the wing back is a momentum-language description of the same process. The two languages do not conflict; trouble arises only when one is simplified into the sole truth.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+Every formula in this chapter has a clear border. Cross it and the answer goes wrong.
+
+\textbf{Buoyancy's limits: gravity and static equilibrium are required.} In \(F_{\text{buoy}}=\rho g V_{\text{disp}}\), the \(g\) is not decoration. Buoyancy comes from pressure increasing with depth, and that increase itself comes from gravity pulling fluid downward. In the space station's weightlessness, water no longer forms layers. Push a table-tennis ball underwater and it will not rise: there is no up. This counterintuitive check shows that buoyancy is not water's innate urge to lift, but a pressure gradient in a gravitational field. Another everyday boundary: fluid must get underneath the object. A bridge pier embedded deeply in riverbed mud has no water touching its bottom and thus \emph{experiences no buoyancy}. A cup tightly suctioned to a pool floor likewise has no water pushing from below.
+
+\textbf{Bernoulli's limits: steady, incompressible flow, negligible viscosity, and one streamline.} Lose any of the four and the account fails. Air before and after an electric fan, or in a propeller's slipstream, does not meet these conditions, so direct substitution is invalid. The classic misuse is the folk explanation of lift: air travels farther over a wing's upper surface, so it must move faster; Bernoulli gives lower pressure and therefore lift. Every link is questionable. No law requires the upper and lower air streams to reach the trailing edge simultaneously; measurements show the upper stream arrives \emph{earlier}. This argument would deny lift to symmetric aerobatic wings or inverted flight, yet both work. Bernoulli itself is sound: it faithfully translates between speed and pressure distributions, but does not explain why the speed is distributed that way. The full picture is that a wing deflects passing air downward, and the air pushes it upward by Newton's third law. The pressure difference across the wing and downward air deflection are two sides of one process. Remember our principle: Bernoulli is an important page in the lift ledger, not the entire book.
+
+\textbf{Pascal's limits: a nearly incompressible fluid.} In hydraulics, pressure transmission is almost immediate and undiminished. Replace the liquid with a highly compressible gas and squeezing first stores energy in compression; transmission becomes slower and lossy. That is why air in brake lines makes brakes spongy, a real driving hazard.
+
+\textbf{Elasticity's limits: elastic limits and fatigue.} Hooke's law applies only to small relative deformations. Beyond the elastic limit, permanent, plastic deformation occurs; further loading breaks the material. Fatigue is subtler: bend a wire repeatedly, seemingly within recoverable limits each time, and it still breaks after dozens of cycles. Microscopic damage accumulates. An aircraft fuselage undergoes a pressurization--depressurization cycle each flight; regular inspections for defects race against fatigue.
+\end{mainline}
+
+Here are four characteristic misuses gathered together:
+
+\begin{itemize}[leftmargin=1.8em]
+  \item \emph{``Heavy things sink; light things float.''} Wrong. Compare the object's weight with that of an equal fluid volume, or equivalently compare average densities, not the object's weight alone.
+  \item \emph{``Your mouth's suction pulls a drink up a straw.''} Wrong. Your mouth lowers pressure in the straw; atmospheric pressure on the liquid surface pushes the drink upward. No amount of suction lets you drink in vacuum.
+  \item \emph{``Faster flow, lower pressure'' applied everywhere.} This holds only under Bernoulli's four conditions and along one streamline. Using it for everything lifted by wind often crosses its boundaries.
+  \item \emph{``Motionless things experience no force.''} Wrong. Equilibrium requires both zero net force and zero net torque. Bridges, towers, and dams continually transmit enormous internal forces; every entry is merely balanced by another.
+\end{itemize}
+
+\step{Explaining the Opening Phenomenon}
+
+\textbf{The inverted glass.} Its opening has area about \(40\) square centimeters. At atmospheric pressure about \(10^{5}\) pascals, air pushes upward on the card with force \(10^{5}\times4\times10^{-3}\approx 400\) newtons, the weight of forty kilograms! The water weighs only about a quarter of a kilogram, roughly \(3\) newtons. Even adding the card's weight barely uses the strongman's strength. The first answer is c, with a force on the scale of tens of kilograms' weight. Common failures supply evidence: a chipped rim leaks air, or incomplete filling leaves a large compressible bubble that prevents a sufficient pressure difference from developing, and the card falls. These failures show that a pressure difference supports the card, not sticking or suction.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not follow the source's advice to open doors or windows during a typhoon. Keep them closed and follow local shelter or evacuation instructions. See \href{https://www.weather.gov/wrn/fall2019-wrw-sm}{National Weather Service wind guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+\textbf{A typhoon lifting a roof.} Estimate with Bernoulli: wind speed \(50\) meters per second and air density \(1.2\) kilograms per cubic meter give \(\tfrac{1}{2}\rho v^{2}=\tfrac{1}{2}\times1.2\times2500=1500\) pascals. Fast outdoor airflow has low pressure, while nearly still indoor air remains at normal atmospheric pressure. A hundred-square-meter roof then experiences net upward force about \(1500\times100=1.5\times10^{5}\) newtons, an upward pull equivalent to fifteen tonnes' weight. This is a realistic order of magnitude: moderate ventilation through doors and windows during a typhoon can relieve pressure and make the roof safer. Actual roof flow includes separation and turbulence, of course, so this is only an estimate. A rising paper strip and two sheets approaching each other are smaller versions of the same fast-flow, low-pressure effect. Your strip is not blown upward; still air below pushes it into the stream.
+
+\textbf{Two straws and the diver.} With two straws, the moment low pressure forms in your mouth, the second straw admits outside air and equalizes it. No pressure difference develops; atmospheric pressure on the drink has no opposing imbalance, and the liquid stays put. The diver works similarly. Squeezing the bottle transmits your added pressure through the water by Pascal's principle. The internal air bubble compresses, shrinking the displaced water volume. Buoyancy can no longer balance weight, so the diver sinks. Release your hand and the bubble expands, buoyancy returns, and it rises. Submarines flood ballast tanks to become heavier and descend, then expel water to rise. They use the other end of the same principle: a submarine changes its weight, whereas the diver changes displaced volume.
+
+\textbf{The shapes of bridges, ships, and aircraft.} Why do they look so different? They answer the same question in three ways: how to transmit a load safely elsewhere. Bridges: stone and concrete resist compression strongly but tension poorly. An arch cleverly turns vertical vehicle loads into \emph{compression} along the arch and into the banks. Steel cables resist tension strongly, so a suspension bridge hangs the load from tensioned main cables instead. A truss uses triangular arrangements of members to break bending, a particularly troublesome loading mode, into simple tension or compression in each member. Ships: steel is almost eight times as dense as water, so the solution is a hollow body that buys the greatest displaced volume for the least self-weight. Hull curves are the geometry of the buoyancy formula. Aircraft: wing camber, angle of attack, and area all serve to deflect enough air and create sufficient pressure difference at limited speed while controlling drag and structural weight. Three shapes and three sets of tradeoffs share one thread: structures and fluids faithfully transmit force, and engineers build it an effective, economical route.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Taking a Foam Cup Ten Kilometers Underwater]
+The Mariana Trench in the Pacific is about \(11000\) meters deep. Using \(p=p_{0}+\rho g h\), bottom pressure is \(\rho g h\approx1000\times10\times11000=1.1\times10^{8}\) pascals, about 1,100 atmospheres. Every square centimeter outside a submersible's window bears roughly a tonne's weight. Imagine hanging a foam coffee cup in a mesh bag outside the vehicle and taking it down, an actual deep-sea expedition tradition. It returns as a hard, thumb-sized souvenir: the gas in countless tiny bubbles in its walls has been squeezed away by over a thousand atmospheres. Notice the surprising detail: the cup has not \emph{distorted}, only shrunk uniformly, because pressure squeezes equally from every direction. Uniform high pressure does not itself crush things; crushing depends on a pressure \emph{difference}. The submersible needs a thick shell because it maintains one atmosphere inside against 1,100 outside. A solid steel ingot taken on the same dive returns almost unchanged. Steel's enormous bulk modulus means a thousand atmospheres reduce its volume by only about 0.6 percent. High pressure follows more precise rules than our intuition of flattening things suggests.
+\end{thought}
+
+\begin{thought}[Do Oil and Water Still Separate in a Space Station?]
+In a kitchen, oil floats distinctly above water. Buoyancy says the less-dense oil is displaced upward by heavier water. Take the mixture into a weightless space station, shake it thoroughly, and leave it. An hour later, scattered oil droplets remain suspended rather than forming layers. The reason is simple: in buoyancy's premise, \(p=p_{0}+\rho g h\), the \(g\) is ineffective. There is no longer a pressure gradient increasing with depth. Heavier components have no reason to sink and lighter ones none to rise. Weightlessness brings other oddities. On Earth, convection from rising hot air and incoming cool air stretches a candle flame into a teardrop. In the station it becomes a quiet blue sphere and soon suffocates because fresh air is not delivered. This thought experiment leads onward: where do pressure, buoyancy, and other fluid traits come from? Chapter 27 resolves gas pressure into molecules, the statistical average of countless wall collisions. Chapter 31 explains that buoyancy, pressure, and temperature are collective behaviors of microscopic armies. This chapter's formulas are their credentials to the macroscopic world.
+\end{thought}
+
+\begin{puzzles}
+\item A submarine remains suspended without rising or sinking. How does the weight of its displaced water compare with its own weight? Sailors then admit seawater into ballast tanks while its outer shape barely changes. What happens next? \emph{Hint}: unchanged shape means unchanged \(V_{\text{disp}}\) and buoyancy. Weight on the other side of the balance changes. Rising or sinking depends on which side wins.
+\item Sailors know that two ships traveling side by side in a narrow channel should keep apart, or they may mysteriously attract and collide. Why? \emph{Hint}: treat the gap as a narrowed waterway. Use continuity to infer flow speed there, then Bernoulli to compare pressure on the ships' inner and outer sides. Remember the conditions: steady, approximately inviscid flow along streamlines. The explanation is qualitatively valid.
+\item An ancient stone arch supports a bridge for centuries without nails or crossbeams, while a flat stone slab of the same material breaks in the middle if its span is too long. What loading does stone resist or tolerate? \emph{Hint}: stone is strong in compression and weak in tension. Under load, a flat slab's upper edge compresses and its lower edge stretches; fracture begins below. An arch carries almost all its load toward the banks as \emph{compression}. Why does a suspension bridge need the opposite material properties?
+\item Milk poured through one small cut in a carton glugs and stops intermittently. Poke a second hole in the top and it pours steadily. That hole has not changed the amount of milk; what has it changed? \emph{Hint}: as milk leaves, internal air pressure falls and outside atmospheric pressure resists outflow. The second hole is an entrance for air, the third act of the same play as straws and pumps.
+\end{puzzles}
+
+Starting with a card that would not fall, we split stillness into force and torque accounts, fluid support into pressure differences, buoyancy into displaced volume, flow into energy conservation, and solid hardness and fracture into hidden atomic springs. The next chapter takes a radical new view: instead of tracking motion instant by instant, can we compare entire paths and let nature select the real one from all possibilities? That is our first step from Newton toward the principle of least action.

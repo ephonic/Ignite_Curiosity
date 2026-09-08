@@ -1,0 +1,291 @@
+% Chapter 28: The First Law of Thermodynamics: The Energy Account
+\chapter{The First Law: The Energy Account}
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Pump a bicycle tire rapidly twenty or thirty times, then crouch and touch the metal pump barrel, especially near the outlet. It is warm, sometimes noticeably hot.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not discharge insecticide, spray paint, or cooling spray merely to make a can cold. Use chemical products only for their labeled purpose and follow exposure, ventilation, and ignition precautions. For pesticides, see \href{https://www.epa.gov/sites/default/files/2017-08/documents/citizens_guide_to_pest_control_and_pesticide_safety.pdf}{EPA's pesticide-safety guide}.
+% END TRANSLATOR SAFETY NOTE
+
+Now another scene. In summer, hold down an aerosol nozzle for a dozen seconds or so, using insecticide, cooling spray, or spray paint. Touch the metal can afterward. It is cool, often enough for droplets to condense on its walls.
+
+Set the pictures side by side and a mystery appears. The pump approached no fire and nothing in the room was hotter than it. Why did it warm? The aerosol never entered a refrigerator and stands in warm air. Why did it cool? We grew up knowing heat flows from hot things to cold things, yet here neither heat nor cold seems to arrive from elsewhere. They seem made from nothing.
+
+Such puzzles are everywhere. Rubbing hands warms them; hard braking can make brake pads smoke; drilling wood can start a fire. Conversely, a deflating balloon's neck feels cold, and steam escaping a pressure cooker rapidly cools. Heat and cold can both be made from nothing. If heat is a substance, is it not conserved? This chapter builds an overall energy ledger to put the apparent disorder in order.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Before continuing, place bets. Write an intuitive answer to each:
+
+\begin{itemize}
+  \item Is pump heating caused by friction between plunger and barrel?
+  \item When you release all the air from a balloon, does its neck warm or cool?
+  \item As hot water cools on a table, where does its lost energy go? Could this reverse spontaneously, with cool coffee absorbing heat from the air and boiling again?
+\end{itemize}
+
+A spoiler: most people miss the first, valuably, because their answer hides an old model overestimated for two hundred years. Experience may give you the second without its explanation. The third's two parts receive answers of can explain and cannot explain; that second part is the hook we leave for the next chapter.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[A Bicycle Pump and a Rubber Band]
+You need a bicycle pump, preferably metal, a broad rubber band used for lunchboxes or vegetables, and your lips, your body's most sensitive thermometer.
+
+First, the pump. Give a tire twenty or thirty quick strokes, then immediately touch different barrel heights. The bottom near the outlet is hottest, with less warming higher up. Now the crucial control: disconnect the hose from the tire valve and pump freely, letting air enter and leave with almost no compression. Repeat the same number of strokes at the same rate, then touch again. It is much less warm. The same number of plunger--wall friction events produces far less heating. Remember the contrast: the friction explanation has taken its first heavy blow.
+
+Second, the band. Rest it loosely against your upper lip, quickly stretch it to two or three times its original length, and hold. You clearly feel it warm. Keep it stretched for a dozen seconds to lose heat, then quickly release it and touch it to your lip again. It is cooler.
+
+Third, think. Both experiments share a pattern. Warming accompanies someone exerting effort, compressing air or stretching rubber. Cooling accompanies the object returning, expanding or contracting. This correspondence between effort and warming, return and cooling, is the intuition our formula translates.
+
+Safety note: never stretch a rubber band toward anyone's eyes. A continuously used pump can get very hot; first touch lightly with the back of your hand.
+\end{experiment}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+Newtonian mechanics already gives an energy ledger: kinetic plus potential energy, mechanical energy, conserved when only forces such as gravity and elasticity do work. Apply that ledger here and three insurmountable problems appear.
+
+First, braking cannot be reconciled. A car stops suddenly and hundreds of thousands of kilojoules of kinetic energy vanish. They become neither height nor spring compression. The old ledger can only mark them disappeared. Hand rubbing, wood drilling, and pumping likewise receive mechanical energy without retaining it as visible kinetic or potential energy; they merely warm. A ledger allowing unexplained write-offs hardly deserves the name conservation law.
+
+Second, the old heat model cannot explain heat production. Eighteenth-century caloric theory pictured heat as a massless fluid, abundant in hot objects and scarce in cold ones, flowing from rich to poor on contact. It elegantly explained hot water cooling and cold water warming. But in 1798, Count Rumford's Munich cannon-boring work showed that a blunt drill produced few chips while continuously warming surrounding water, even keeping it boiling as long as drilling continued. If metal released squeezed-out caloric, how could one piece contain an inexhaustible stock? Frictional heating seemed unlimited.
+
+Third, no hotter object is present at the pump. Your hands are around thirty-seven degrees Celsius, yet the barrel may exceed body temperature. If heat only flows hot to cold, where did its heat come from? Caloric theory collapses: heat is being produced, not relocated.
+
+Around the same period, German physician Mayer approached the same conclusion differently. As a ship's doctor, he noticed venous blood drawn in the tropics was redder than in cold regions. He inferred that warm surroundings required less food burning to maintain body temperature, leaving more oxygen in the blood. Food, body heat, and labor seemed exchangeable at a fixed rate. Inferring energy conservation from blood color sounds unlikely, but shows the time was ripe. Someone only needed to measure the exchange precisely.
+
+That was Joule. His 1840s experiments famously used steadily descending weights, ropes, and pulleys to stir submerged paddles, measuring the water's temperature rise. The result was clean: the heat needed to warm one gram of water by one Celsius degree always equaled about 4.2 joules of mechanical work, whether supplied by stirring, compression, or friction. Mechanical energy and heat had a fixed exchange rate. Heat was no substance, but a mode of energy's existence and transfer. The braking ledger was saved: kinetic energy had not vanished, but moved into another account, our next concept.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+To rebuild Joule's generation's ledger, first invent three bookkeeping concepts: \textbf{system}, \textbf{surroundings}, and \textbf{boundary}.
+
+The system is the piece of the world we choose to track: bottled gas, a tank of water, an engine. Surroundings are everything outside it that may exchange energy with it. The boundary separates them, whether a real wall or imaginary surface, fixed or moving with a piston. These plain words are thermodynamics' whole grammar. Accurate accounts depend almost entirely on clear boundaries. When a thermal problem confuses you, first ask what the system is and where its boundary lies.
+
+Next, three entries in the ledger.
+
+First, \textbf{internal energy}, \(U\): the system's currently possessed energy, including random molecular kinetic energy, intermolecular potential energy, and energy locked in chemical bonds (Chapters 26 and 27). Crucially it is a \textbf{state variable}, determined only by present state, amount, temperature, and volume, not the route taken. Compress then heat a gas, or heat then compress: identical final states mean identical internal energy. Return to the starting state and internal energy returns to its starting value.
+
+Second and third, \textbf{heat} \(Q\) and \textbf{work} \(W\). Unlike internal energy, these are not contained possessions but two ways energy \textbf{crosses a boundary}, process quantities. Work crosses through organized macroscopic action: piston displacement, shaft rotation, or a current driving a motor, microscopically giving vast numbers of molecules a coordinated push. Heat crosses solely because of temperature difference, leaking through countless random boundary collisions without macroscopic displacement. Asking how much heat a gas contains is therefore malformed: heat matters only during crossing, just as you cannot ask how much of an account balance is transfers.
+
+Complete the bank analogy. It works because internal energy resembles a balance, concerned with now rather than history, and heat/work resemble transfer/cash routes whose sum changes the balance. It fails twice. Bank transfers can be retrieved and reversed, but after energy enters internal energy, no joule remains distinguishable as heat-derived or work-derived, the deeper meaning of process quantity. More importantly for the chapter's ending, bank transactions can run backward, whereas real energy processes have a direction that the first-law ledger does not record. Remember that gap.
+
+This language also meets the book's three recurring questions. What state is the system in? A few variables such as temperature, pressure, and volume describe it, and internal energy is their function. What governs change? The first law answers half, how energy is booked; which changes are allowed comes later. How do measurements tell us? Internal energy has no direct meter, but work is measurable by force times distance, and heat by thermometry plus heat capacity. Both sides can be measured independently and their balance tested immediately, just as Joule did.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1]
+  \draw[rounded corners=6pt] (-4.6,-2.2) rectangle (4.6,2.6);
+  \node at (0,2.95) {Surroundings};
+  \draw[thick,rounded corners=14pt] (-1.8,-1.1) rectangle (1.8,1.1);
+  \node at (0,0) {System (internal energy \(U\))};
+  \node at (2.6,-1.5) {Boundary};
+  \draw[->] (2.2,-1.35) -- (1.55,-0.85);
+  \draw[-{Stealth},very thick] (-4.0,0.4) -- (-2.1,0.4) node[midway,above] {Heat \(Q\) (in)};
+  \draw[-{Stealth},very thick] (2.1,-0.5) -- (4.0,-0.5) node[midway,below] {Work \(W\) (out)};
+\end{tikzpicture}
+\caption{System, surroundings, and boundary. Internal energy is the current balance; heat and work have meaning only while crossing the boundary.}
+\end{figure}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+The energy account: internal-energy change equals heat entering across the boundary minus work done outward. Heat and work are transaction routes; internal energy is the balance. The account always balances, but its balance never reveals how the money arrived.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+In symbols, this is the first law of thermodynamics:
+\[
+  \Delta U \;=\; Q \;-\; W .
+\]
+As usual, answer four questions.
+
+\textbf{What does it describe?} For any process in a clearly bounded system, it relates internal-energy change to two energy flows crossing the boundary. The left side, \(\Delta U\), is balance change; \(Q\) and \(W\) are the only two transaction routes.
+
+\textbf{Why this form?} Energy is neither created nor destroyed. Increased internal energy comes only from incoming heat minus outgoing work. The minus sign is purely convention: here \(Q>0\) means heat absorbed and \(W>0\) means work done \textbf{by} the system. Some textbooks reverse the convention, taking \(W>0\) as work on the system, and write \(\Delta U=Q+W\). The physics is identical; only account direction differs. Always check a thermodynamics book's convention first, a money-saving habit.
+
+\textbf{When does it hold?} Whenever system and boundary are clear and all energy forms are recorded, from bicycle pumps to diesel engines and stars. Few physical laws have broader scope.
+
+\textbf{When does it fail or need extension?} Three cases need additions: matter exchange, as in an uncapped bottle; nuclear reactions involving rest mass; and scales small enough for significant quantum fluctuations. See the limits section.
+
+Immediately check special cases, following the book's practice:
+
+\begin{itemize}
+  \item \(Q=0\), adiabatic: \(\Delta U=-W\). Expanding gas doing work spends its own balance, reducing internal energy and temperature. This accounts for aerosol cooling.
+  \item \(W=0\), a rigid fixed-volume container: \(\Delta U=Q\). Heat absorbed over a flame all becomes internal energy.
+  \item \(Q=W=0\), isolated: \(\Delta U=0\). Total energy stays fixed. Energy conservation is thus the first law's isolated-system special case; the first law is broader.
+  \item A full cycle returns to the original state: \(\Delta U=0\), hence \(Q=W\). Net heat absorbed equals net work delivered, the basis of heat-engine accounts.
+  \item Reverse direction: compression gives \(W<0\), so \(-W>0\), increasing internal energy. There is pump heating.
+\end{itemize}
+
+How exactly do we calculate work? A piston of area \(S\), pushed by gas at pressure \(p\), slowly moves through distance \(\Delta x\). Its force is \(pS\), and work approximately \(pS\,\Delta x\). Since \(S\,\Delta x\) is the volume increase \(\Delta V\), each small step gives
+\[
+  W_{\text{step}} \approx p\,\Delta V .
+\]
+If pressure changes during expansion, as usual, divide the process into many small steps, multiply each volume increment by its current pressure, and add. This accumulation has a beautiful geometric picture: plot pressure against volume, and \textbf{the area under the process curve is work}. That makes the \(p\)-\(V\) diagram thermodynamics' primary chart, both a state map and a work counter.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.15]
+  \draw[-{Stealth}] (0,0) -- (6.4,0) node[below left] {Volume \(V\)};
+  \draw[-{Stealth}] (0,0) -- (0,3.6) node[above] {Pressure \(p\)};
+  \draw[thick,domain=1.1:5.4,samples=60] plot (\x,{3.3/\x});
+  \fill[pattern=north east lines] (1.6,0) -- plot[domain=1.6:4.6,samples=40] (\x,{3.3/\x}) -- (4.6,0) -- cycle;
+  \draw[dashed] (1.6,0) -- (1.6,{3.3/1.6});
+  \draw[dashed] (4.6,0) -- (4.6,{3.3/4.6});
+  \node[below] at (1.6,0) {\(V_1\)};
+  \node[below] at (4.6,0) {\(V_2\)};
+  \node at (3.05,0.55) {Area \(=W\)};
+  \node[right] at (4.15,1.75) {Expansion curve};
+\end{tikzpicture}
+\caption{The \(p\)-\(V\) diagram: shaded area under the curve equals work done by the gas. Expansion gives positive area; compression decreases volume and gives negative work.}
+\end{figure}
+
+\begin{mainline}
+With this counter, inventory four standard processes, again for ideal gas:
+
+\begin{itemize}
+  \item \textbf{Isothermal}: immerse the cylinder in a constant-temperature bath and move slowly. During expansion, absorbed heat exactly becomes work, with unchanged internal energy, since ideal-gas internal energy depends only on temperature.
+  \item \textbf{Isochoric}: weld the container shut at fixed volume, \(W=0\). Every joule of absorbed heat becomes internal energy.
+  \item \textbf{Isobaric}: place a fixed weight on the piston to maintain pressure. Heat splits between internal energy and work lifting the piston.
+  \item \textbf{Adiabatic}: wrap the system in thick insulation, or act too quickly for heat transfer, as in a pump stroke. Work and internal energy trade joule for joule.
+\end{itemize}
+
+The same gas follows different paths with different allocations, but the total always balances. That is the division between state and process quantities: \(\Delta U\) depends only on endpoints, while \(Q\) and \(W\) each depend on the path, always joined by \(\Delta U=Q-W\).
+
+Now two real-number estimates make heat--work equivalence tangible.
+
+First, Joule's waterfall. Water drops about 110 meters, with all gravitational energy assumed to become internal energy. Each kilogram releases \(9.8\times110\approx1.1\times10^{3}\) joules. Since one Celsius degree needs about 4200 joules per kilogram, warming is only \(1100/4200\approx0.26\) degrees. Joule reportedly took a thermometer on his honeymoon to measure this upstream--downstream difference. A difference should exist, but mixing spray and evaporation overwhelmed the signal below 0.3 degrees, and he failed. The idea was right: mechanical work and heat exchange at about 4.2 joules per calorie. This mechanical equivalent of heat was caloric theory's autopsy report and the energy ledger's birth certificate.
+
+Second, a day's food. An adult consumes about 2000 kilocalories, 8.4 megajoules, daily. Use all of it to lift a 70-kilogram person vertically and the height is \(8.4\times10^{6}/(70\times9.8)\approx1.2\times10^{4}\) meters, above Everest. Your daily energy expenditure could lift you beyond its summit. Food is concentrated energy, and the body is a thermodynamic machine that never borrows without accounting.
+
+Third, how much kettle energy pushes air aside? Vaporizing one gram at a hundred degrees absorbs about 2260 joules of latent heat. Its volume grows from about 1 to 1700 cubic centimeters, requiring room against atmosphere, with work \(p\,\Delta V\approx10^{5}\times1.7\times10^{-3}\approx170\) joules. About93 percent of vaporization heat therefore becomes steam's internal energy, overcoming intermolecular attraction, and only about 7 percent pushes atmosphere aside. A kettle boiling dry has not enlarged the room; that work quietly joins the air's internal energy. The ledger still balances.
+\end{mainline}
+
+\begin{mathbridge}
+In calculus, area-as-work is pressure integrated over volume:
+\[
+  W=\int_{V_1}^{V_2} p\,\mathrm{d}V .
+\]
+For an isothermal ideal gas, \(p=nRT/V\), giving
+\[
+  W=nRT\ln\frac{V_2}{V_1}.
+\]
+Check: \(V_2>V_1\) gives a positive logarithm and positive expansion work. Compression gives a negative logarithm, a deposit by the surroundings. Signs work automatically.
+
+Without adiabatic heat flow, the first law gives another curve:
+\[
+  pV^{\gamma}=\text{constant},\qquad TV^{\gamma-1}=\text{constant},
+\]
+where \(\gamma\) is the adiabatic index, about \(1.4\) for air. Since \(\gamma>1\), an adiabat is steeper than an isotherm on a \(p\)-\(V\) diagram. Compressing to half volume raises pressure more adiabatically because all compression work stays as warming.
+
+Estimate a pump stroke compressing air to about one-seventh volume, corresponding to a tire at about seven atmospheres. If perfectly adiabatic, final temperature is
+\[
+  T_2=300\times 7^{\,0.4}\approx 650\ \mathrm{K},
+\]
+nearly four hundred degrees Celsius. This upper bound retains all compression work in the gas. Real gas loses heat through the barrel while compressing and stays cooler, but the bound explains a hot barrel: its wall passes that energy onward. Diesels exploit the principle with compression ratios of sixteen to twenty-two, heating air above fuel ignition temperature. Injected diesel ignites without spark plugs. Compression ignition is an especially profitable adiabatic application.
+\end{mathbridge}
+
+\begin{challenge}
+Engineering and chemistry often prefer not \(U\) but enthalpy, \(H=U+pV\). For constant-pressure processes such as open reaction vessels or atmospheric heating, the first law gives \(Q_p=\Delta H\): absorbed heat equals enthalpy increase, automatically including \(p\,\Delta V\) as the cost of pushing atmosphere aside. Thus measured reaction heats are usually \(\Delta H\), not \(\Delta U\). Steady-flow equipment, turbines, compressors, and nozzles, needs enthalpy and kinetic energy in its practical first law:
+\[
+  \dot Q-\dot W_{\text{shaft}}=\dot m\left[\left(h_2-h_1\right)+\tfrac12\left(v_2^2-v_1^2\right)\right].
+\]
+More elaborate than \(\Delta U=Q-W\), its spirit is unchanged: with a clear boundary, incoming minus outgoing equals accumulation. One unused boundary reminder: when rest mass converts to energy, include \(mc^2\) in internal energy. With it recorded, the ledger still balances.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+The first-law ledger rests on clear system boundaries and complete registration of energy forms. Wherever these assumptions loosen, its application needs adjustment.
+
+First, open systems. An uncapped soda bottle or continuously supplied engine cylinder exchanges matter across its boundary. Both carried internal energy and the work of pushing matter in and out need entries. That is the role of enthalpy and the steady-flow formula above, an upgraded ledger rather than a failed law.
+
+Second, nuclear processes. Ordinary physical and chemical processes leave nuclei unchanged and rest mass a dormant balance. Fission, fusion, or annihilation makes rest mass exchangeable, so include \(E=mc^2\) in internal energy. The first law stands unchanged: more entries, same balance principle.
+
+Third, microscopic scales. For one molecule or a few dozen, \(Q\), \(W\), and \(U\) fluctuate continually, and deciding heat versus work requires finer definitions. This does not affect the macroscopic account, but reminds us that their clean distinction is macroscopic and statistical.
+
+The deepest boundary is not technical but something the law cannot govern: \textbf{direction}. Return to cool coffee. Hot water cooling loses heat and internal energy, a balanced account. Reverse it: cool coffee absorbs ambient heat and boils while the air cools. The ledger balances perfectly, with incoming \(Q\) equaling increased \(\Delta U\), and the first law has no objection. Yet nobody ever sees it. Broken cups do not reassemble, crumpled paper does not flatten itself, and none of these reverse processes violates energy balance. Nature enforces another independent rule selecting allowed accounts and forbidden ones: the second law, starring in Chapters 29 and 30. The first law is a bookkeeper, not a legislator.
+
+One last boundary counterexample trips intuition: the \textbf{heat pump}. Winter air-conditioning instructions may promise three kilowatt-hours of indoor heating per kilowatt-hour of electricity. Three-hundred-percent efficiency? Broken conservation? Neither. A heat pump does not simply convert electricity to heat; electrical work moves outdoor heat indoors. Indoor heat \(=\) heat taken outdoors \(+\) electrical work supplied, exactly balancing. An electric resistance heater truly converts one electrical kilowatt-hour to one thermal kilowatt-hour at 100 percent efficiency. The heat pump's extra comes from transport, not creation. Distinguishing conversion from transport unlocks engines, refrigerators, and air conditioners.
+
+Correct another misuse: conserved energy does not mean inexhaustible energy resources. Conserved quantity is not conserved usefulness. Burned gasoline loses no energy, but spreads it through air in a form difficult to gather again. Not a penny is missing, yet the useful part is gone: everyday language's version of directionality.
+\end{mainline}
+
+\step{Explaining the Opening Phenomenon}
+
+\begin{mainline}
+Now gather the threads and explain the opening warming and cooling.
+
+Why is the pump hot? During a rapid compression stroke, the piston works on trapped gas before heat can escape through the wall: approximately adiabatic compression. With \(\Delta U=-W\) and \(W<0\), internal energy and temperature rise. Heat then passes from hot gas to metal and your hand. The bottom is hottest because compressed gas stays and releases heat there. The control closes the case: free pumping retains friction but nearly eliminates heating because the dominant compression work disappears. Friction is the smaller contribution. The first guess is now corrected.
+
+Another opening account is braking. A 1300-kilogram car at 120 kilometers per hour has kinetic energy about \(72\) ten-thousand joules. Hard braking converts nearly all into disc and pad internal energy. If half heats four steel pads totaling roughly2 kilograms, their temperature can rise three or four hundred degrees. No wonder brakes may smoke or temporarily fail on long descents, the brake fade experienced drivers mention. Energy has not vanished; it entered an account you can feel but cannot reclaim.
+
+Why is the aerosol cold? Escaping high-pressure gas expands rapidly, doing work against atmosphere. Near the nozzle the process is fast with little heat exchange, approximately adiabatic. With \(\Delta U=-W\) and \(W>0\), internal energy and temperature fall. Remaining cold gas chills the can, condensing atmospheric vapor into droplets. Real-gas intermolecular interactions add further cooling without changing the conclusion's direction.
+
+Nature demonstrates the same principle on a huge scale in foehn winds. Moist air climbing a mountain expands adiabatically and cools, roughly half to one degree per hundred meters, condensing water as rain. After crossing, drier air descends the lee slope, compressing under increasing pressure and warming about one degree per hundred meters. The lee becomes dry and hot, familiar north of the Alps and east of the Andes. One ledger includes condensation heating on one side and compression warming on the other; the first law balances throughout.
+
+In engineering, engines, refrigerators, and heat pumps are siblings sharing one flow diagram. An engine absorbs \(Q_{\text{hot}}\) from a hot reservoir, converts part to output work \(W\), and rejects \(Q_{\text{cold}}\) to a cold reservoir. A cycle has \(\Delta U=0\), so \(W=Q_{\text{hot}}-Q_{\text{cold}}\). Steam engines, car engines, gas turbines, and nuclear power-station turbines share this structure. Refrigerators and heat pumps reverse the arrows: input work \(W\) moves heat \(Q_{\text{cold}}\) from cold to hot, delivering \(Q_{\text{hot}}=Q_{\text{cold}}+W\). Summer air-conditioning is refrigerator mode; winter heating is heat-pump mode. Two names, one machine and ledger.
+\end{mainline}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1]
+  % Heat engine
+  \draw[fill=red!8,rounded corners=3pt] (-4.7,1.7) rectangle (-2.3,2.4);
+  \node at (-3.5,2.05) {Hot reservoir};
+  \draw[fill=blue!8,rounded corners=3pt] (-4.7,-2.4) rectangle (-2.3,-1.7);
+  \node at (-3.5,-2.05) {Cold reservoir};
+  \draw[thick] (-3.5,0) circle (0.55);
+  \node at (-3.5,0) {Engine};
+  \draw[-{Stealth},very thick] (-3.5,1.7) -- (-3.5,0.6) node[midway,left] {\(Q_{\text{hot}}\)};
+  \draw[-{Stealth},very thick] (-3.5,-0.6) -- (-3.5,-1.7) node[midway,left] {\(Q_{\text{cold}}\)};
+  \draw[-{Stealth},very thick] (-2.95,0) -- (-1.7,0) node[right] {Work \(W\)};
+  % Refrigerator / heat pump
+  \draw[fill=blue!8,rounded corners=3pt] (2.3,1.7) rectangle (4.7,2.4);
+  \node at (3.5,2.05) {Hot (indoors)};
+  \draw[fill=blue!8,rounded corners=3pt] (2.3,-2.4) rectangle (4.7,-1.7);
+  \node at (3.5,-2.05) {Cold (outdoors)};
+  \draw[thick] (3.5,0) circle (0.55);
+  \node at (3.5,0) {Pump};
+  \draw[-{Stealth},very thick] (3.5,-1.7) -- (3.5,-0.6) node[midway,right] {\(Q_{\text{cold}}\)};
+  \draw[-{Stealth},very thick] (3.5,0.6) -- (3.5,1.7) node[midway,right] {\(Q_{\text{hot}}\)};
+  \draw[-{Stealth},very thick] (1.7,0) -- (2.95,0) node[midway,above] {Work \(W\)};
+\end{tikzpicture}
+\caption{Left: an engine takes hot-reservoir heat, converts some to work, and rejects the rest cold. Right: refrigerators and heat pumps use work to move heat from cold to hot. Opposite arrows, equally balanced accounts.}
+\end{figure}
+
+\begin{mainline}
+One glaring detail remains: why can an engine not convert all \(Q_{\text{hot}}\) to \(W\)? Why must it reject \(Q_{\text{cold}}\)? The first law stays silent: complete heat-to-work conversion with no rejection also balances. Yet two centuries of engineers have never eliminated rejection, however clever the design. The bookkeeper again points to the legislator: what requires engine waste and process direction? The answer hides in why broken cups do not reassemble, Chapter 29's story; its distilled second law awaits in Chapter 30. The deeper question of why energy is conserved waits for symmetry. Energy conservation corresponds to physical laws remaining unchanged in time. The ledger balances because time's rules never rewrite its accounts.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Is the Expanding Universe an Adiabatic Machine?]
+Push the first law to its greatest scale, the whole universe. On large scales it resembles expanding gas with no outside to exchange heat with; by definition no surroundings exist beyond it. This is the ultimate adiabatic system. The first law therefore predicts expansion paid for by internal energy, with continuing cooling.
+
+That is what happens. The early universe was hot and dense, cooling as it expanded. The cosmic microwave background, the Big Bang's residual warmth, corresponded to plasma around 3000 kelvins at an age of380,000 years. After 13.8 billion years of expansion it is about \(2.7\) kelvins, matching radio-telescope measurements. Admit that radiation cools differently from molecular gas: photon number and energy need their own account, and who receives expansion work ultimately belongs to general relativity. Yet the skeleton of no external heat exchange, expansion, and cooling reaches cosmological scales. Reverse the thought: without balanced cosmic accounts, we could not infer this greatest machine's past. Following 13.8 billion years to today is the energy ledger's grandest audit.
+
+Is it like a bicycle pump? Yes in adiabatic expansion and cooling; no in having neither piston nor walls nor recipient of external work. At cosmic scales, work itself needs redefining. New scales demand new tuition when we apply an old ledger.
+\end{thought}
+
+\begin{puzzles}
+  \item Could opening the refrigerator cool a hot summer kitchen? (Hint: choose refrigerator plus kitchen as the system. Its interior cools, but its coils reject that absorbed heat \textbf{plus} all compressor electrical input into the kitchen. Net heating makes the room warmer. Air-conditioning works because its heat-rejection coils are outside; the boundary is the difference.)
+  \item An insulated rigid container is divided in half, ideal gas on one side and vacuum on the other. Remove the partition and let gas fill it. Does temperature change? (Hint: insulation gives \(Q=0\); no piston and no work against vacuum give \(W=0\), hence \(\Delta U=0\). Ideal-gas internal energy depends only on temperature, so temperature stays fixed. Intuition that expansion cools wrongly imports adiabatic piston expansion, where something receives work. Would a real gas stay exactly unchanged? Intermolecular potential energy permits a small temperature change, historically a classic probe of molecular forces.)
+  \item Identical gas samples start in one state, then compress to the same smaller volume, one isothermally and one adiabatically. On a \(p\)-\(V\) diagram, which final pressure is higher and which costs more work? (Hint: adiabatic compression retains work as warming, raising pressure above the isothermal value. Its steeper curve ends higher and encloses more area, costing more work. A pump becomes harder not only because tire pressure rises, but because temperature assists the resistance.)
+  \item Seal a pump outlet with your hand, quickly push the piston fully down, and release. Gas pushes it back partway, not to the original height. How does the ledger balance? (Hint: compression work raises internal energy, and rebound work lowers it. Both rapid stages create internal disturbances and eddies, while walls lose heat, leaving some work as unrecoverable internal energy. Returned work is less than input; the remainder stays in gas and walls. Mechanical energy seems lost but total energy balances. A reversed video still looks false. Why can the account balance while the film cannot reverse? That hooks into Chapter 29.)
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not seal a pump outlet against your hand and force the piston down. Keep compressed-air jets away from the body and treat this as a calculation, not a procedure. See \href{https://www.ccohs.ca/oshanswers/safety_haz/compressed_air.html}{Canadian Centre for Occupational Health and Safety compressed-air guidance}.
+% END TRANSLATOR SAFETY NOTE
+\end{puzzles}

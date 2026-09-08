@@ -1,0 +1,316 @@
+\chapter{Derivatives: A Curve's Rate of Change at a Point}
+
+\section{A Question on a Roller Coaster}
+
+A roller coaster is an amusement park's most thrilling attraction. It climbs a high, gentle slope, plunges downward, then sweeps into an almost vertical loop. Riders sense the differences clearly: some places are level, some steep, some turning, and the speed seems different at every instant.
+
+Draw the track on coordinate paper as a curve $y=f(x)$, with horizontal distance $x$ and height above ground $y$. Riders say things like ``steepest here,'' ``the descent starts here,'' and ``almost level here.'' Can mathematics express these descriptions precisely?
+
+Consider a simpler scene. A car's odometer reads 120 kilometres at 10 a.m. and 180 kilometres at 11 a.m. Its average speed over that hour is 60 kilometres per hour; everyone agrees. But a traffic camera records it at 92 kilometres per hour at 10:23:15, in an 80-kilometre-per-hour zone. Notice the distinction: this is a speed at an instant, not an average over an interval. At an instant the time interval and distance increment are both zero. Is the speed not $\frac{0}{0}$?
+
+The steepness of a track at a point and a car's speed at an instant are really the same mathematical problem. It troubled mathematicians for years. The tool that resolved it is this chapter's protagonist: the derivative.
+
+\section{First Guess: Does Instantaneous Velocity Exist?}
+
+Before continuing, answer a few questions intuitively:
+
+\begin{itemize}
+  \item Does saying that a car's speed at one instant is 92 kilometres per hour have real meaning, or is it just convenient speech?
+  \item Does it make sense to speak of a winding curve's steepness at one point? Is steepness not a property of a whole stretch?
+  \item If instantaneous velocity exists, why does $\frac{0}{0}$ not destroy it?
+\end{itemize}
+
+Many people say that an instant must have a definite velocity because they can feel it while cycling. Others object that velocity is distance divided by time, so a zero interval makes the division meaningless. Both sides are partly right. Mathematicians translate both intuitions into one precise, consistent definition. Last chapter's limits prepared the tools for that translation.
+
+This translation actually happened in the seventeenth century, twice. Studying planetary motion, Newton needed velocity at each instant and called rates of change fluxions. Leibniz approached from geometry and tangents, inventing the still-used notation $\frac{\mathrm{d}y}{\mathrm{d}x}$. They independently grasped the same idea, then became embroiled in years of priority disputes that drew learned societies across Europe into taking sides. From today's perspective the dispute is unfortunate: motion and tangents looked like different questions but led to one concept. That shows how naturally the concept arises whenever change itself is questioned seriously.
+
+\section{First Attempt: A Very Short Time Interval}
+
+Start with the car. Suppose its distance travelled follows $s(t)=t^2$, in kilometres and hours. The numbers are unrealistic, but the reasoning is unchanged. What is its instantaneous velocity at $t=2$?
+
+Try a small interval, say $\Delta t=0.1$ hours, and calculate the average:
+\[
+\frac{s(2.1)-s(2)}{0.1}=\frac{4.41-4}{0.1}=4.1\ \text{kilometres per hour}.
+\]
+Now take $\Delta t=0.01$:
+\[
+\frac{s(2.01)-s(2)}{0.01}=\frac{4.0401-4}{0.01}=4.01\ \text{kilometres per hour}.
+\]
+With $\Delta t=0.001$, the answer is $4.001$; with $\Delta t=0.0001$, it is $4.0001$. Shorter intervals give answers closer to 4. We therefore guess that the instantaneous velocity at $t=2$ is 4 kilometres per hour.
+
+A table clarifies the approach. We can approach from the left too, using a small interval before $t=2$, and check whether both sides head toward the same number:
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+$\Delta t$ & $1$ & $0.1$ & $0.01$ & $0.001$ \\
+\midrule
+From the right: $\frac{s(2+\Delta t)-s(2)}{\Delta t}$ & $5$ & $4.1$ & $4.01$ & $4.001$ \\
+From the left: $\frac{s(2)-s(2-\Delta t)}{\Delta t}$ & $3$ & $3.9$ & $3.99$ & $3.999$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The right-hand values approach 4 from above, and the left-hand values from below. Meeting at the same place is essential: if the other side approached a different number, the instantaneous velocity would not exist. The graph $y=|x|$ at the origin, considered in the exercises, behaves that way.
+
+Notice that we never dare set $\Delta t$ equal to 0, since both numerator and denominator would become 0. Instead, $\Delta t$ can be arbitrarily small and the average velocity arbitrarily close to 4. This is exactly last chapter's language of limits. Instantaneous velocity is the limit of averages as the interval tends to zero, rather than an average from one very short interval.
+
+In symbols, the limit of $\frac{s(t+\Delta t)-s(t)}{\Delta t}$ as $\Delta t$ tends to 0 is the instantaneous velocity at time $t$.
+
+\begin{fanli}
+A widespread false proof says that instantaneous velocity uses a zero time interval, so substituting $\Delta t=0$ gives $\frac{0}{0}$ and proves that instantaneous velocity does not exist.
+
+The error is treating a limit as substitution. As $\Delta t$ approaches 0, it becomes arbitrarily small while remaining nonzero. For $\Delta t\neq 0$, an expression such as $\frac{s(t+\Delta t)-s(t)}{\Delta t}$ can often be simplified first. For example, $\frac{(2+\Delta t)^2-4}{\Delta t}=\frac{4\Delta t+(\Delta t)^2}{\Delta t}=4+\Delta t$. Now let $\Delta t$ tend to 0 and obtain exactly 4. At no stage did we divide by zero.
+\end{fanli}
+
+\section{The Same Idea on a Curve: Secants and Tangents}
+
+Turn to geometry. How do we describe the steepness of $y=x^2$ at $(1,1)$? A line has a slope, but where does a curved line get one?
+
+Imitate the car problem: use two points. Choose a second point $(1+h,(1+h)^2)$ on the curve. The line joining them is a secant with slope
+\[
+\frac{(1+h)^2-1}{h}=\frac{2h+h^2}{h}=2+h.
+\]
+For $h=1$, its slope is 3; for $h=0.1$, 2.1; for $h=0.01$, 2.01. As $h$ tends to 0, the secant slope tends to 2. Geometrically, as the second point slides toward $(1,1)$, the secant turns toward a definite line. That line is the tangent at the point, and its slope is 2.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.6]
+  \draw[->] (-1.2,0) -- (2.8,0) node[right] {$x$};
+  \draw[->] (0,-0.5) -- (0,4.6) node[above] {$y$};
+  \draw[thick,domain=-1.15:2.05,samples=60] plot (\x,{\x*\x});
+  \draw[dashed] (1,1) -- (2,4);
+  \draw[blue!60!black,thick,domain=0.05:2.2,samples=60] plot (\x,{2*\x-1});
+  \fill (1,1) circle (0.05) node[below left] {$(1,1)$};
+  \fill (2,4) circle (0.05) node[above right] {$(2,4)$};
+  \node[blue!60!black] at (2.3,2.4) {Tangent: slope $2$};
+  \node at (1.6,3.4) {Secant};
+\end{tikzpicture}
+\end{center}
+
+The two problems have become one: instantaneous velocity equals the tangent slope on a distance graph. Pause at this union. Velocity in algebra and slope in geometry, formerly inhabitants of different worlds, are now the same number. That number is the derivative.
+
+\begin{shuyu}{Tangent}
+Intuition: the line that fits the curve best near the contact point, embodying its local direction. Meeting the curve only once is insufficient: a parabola's symmetry axis meets only its vertex but is not tangent there.
+Formal definition: the limiting position of secants through a fixed curve point and a nearby point as the nearby point approaches the fixed one.
+Example: the tangent to $y=x^2$ at $(1,1)$ is $y=2x-1$, supporting the entire parabola from below.
+\end{shuyu}
+
+\begin{dingyi}[Derivative]
+Suppose $f$ is defined near $x$. If the limit
+\[
+f'(x)=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+\]
+exists, then $f$ is differentiable at $x$. This limit is the derivative of $f$ at $x$, written $f'(x)$, or often in physics $\frac{\mathrm{d}y}{\mathrm{d}x}$.
+\end{dingyi}
+
+\begin{shuyu}{Derivative}
+Intuition: approximately how much the vertical coordinate changes per small horizontal step at a point; geometrically, the tangent slope there.
+Formal definition: the limit of average rates of change as the interval length tends to zero.
+Example: $f(x)=x^2$ has derivative 2 at $x=1$. Near $(1,1)$, a tiny horizontal increase produces approximately twice that vertical increase.
+\end{shuyu}
+
+\section{Calculating Derivatives by Hand: $x^2$, $x^3$, and Linear Functions}
+
+We learn whether a definition is useful by calculating with it. Let us invent three derivatives directly from the definition.
+
+First take $f(x)=x^2$. For any $x$,
+\[
+\frac{f(x+h)-f(x)}{h}=\frac{(x+h)^2-x^2}{h}=\frac{2xh+h^2}{h}=2x+h.
+\]
+Let $h$ tend to 0 to get $f'(x)=2x$. One formula now holds every tangent slope on the parabola: at $x=1$ it is 2, matching our secant experiment; at $x=0$ it is 0, showing a horizontal bottom; at $x=-3$ it is $-6$, whose negative sign indicates descent.
+
+Next take $f(x)=x^3$, using a familiar algebraic identity:
+\[
+(x+h)^3=x^3+3x^2h+3xh^2+h^3.
+\]
+Thus
+\[
+\frac{(x+h)^3-x^3}{h}=\frac{3x^2h+3xh^2+h^3}{h}=3x^2+3xh+h^2.
+\]
+As $h$ tends to 0, the last two terms disappear, giving $f'(x)=3x^2$. Notice that $3x^2$ is always nonnegative, so $x^3$ rises or levels off everywhere. It is flattest at the origin, with slope 0, but that point is neither peak nor valley, merely a resting place. Compare how the curves grow steeper: the slope $2x$ of $x^2$ increases uniformly with $x$, while the slope $3x^2$ of $x^3$ increases ever faster. At $x=10$, the parabola's slope is 20 and the cubic's already 300. Derivatives tell us both steepness at a point and how steepness itself changes, an idea that will become another object of study.
+
+Finally, for $f(x)=kx+b$,
+\[
+\frac{k(x+h)+b-(kx+b)}{h}=\frac{kh}{h}=k,
+\]
+so its derivative is $k$. As expected, a straight line is equally steep everywhere, and its tangent is itself.
+
+\begin{li}
+A rocket's height after ignition is $h(t)=5t^2$ metres. Find its instantaneous velocity at $t=10$ seconds.
+\end{li}
+
+Since $h(t)=5t^2$, use the derivative of $x^2$, carrying along the constant factor as explained below, to get $h'(t)=10t$. At $t=10$ seconds the instantaneous velocity is $100$ metres per second. We calculated no interval average, yet obtained an answer more precise than any such average: it describes the exact instant ten seconds after ignition.
+
+\section{Why Derivatives Matter: Local Linear Approximation}
+
+The derivative's deepest meaning is the best straight-line stand-in for a curve near a point.
+
+Return to $f(x)=x^2$ at $x=1$, with tangent $y=2x-1$. At $x=1.02$, the curve gives $1.02^2=1.0404$, while the tangent gives $2\times 1.02-1=1.04$. The difference is only 0.0004! Near $x=1$, we can approximate $x^2$ by $2x-1$ with a very small error. Zoom close enough and every smooth curve becomes a line. Chapter 8's promise of local straightness now has a precise measure: the line is the tangent and its slope the derivative.
+
+An immediate application is estimation. Estimate $\sqrt{4.1}$. The derivative of $g(x)=\sqrt{x}$ is $\frac{1}{2\sqrt{x}}$, obtained from the limit definition by rationalizing the numerator. At $x=4$ it is $\frac{1}{4}$. The tangent approximation gives
+\[
+\sqrt{4.1}\approx \sqrt{4}+\frac{1}{4}\times 0.1=2+0.025=2.025.
+\]
+The actual value is about 2.02485, an error below 0.0002. Without a calculator, the derivative has supplied three significant figures.
+
+Examine the general approximation on its own:
+\[
+f(x_0+\Delta x)\approx f(x_0)+f'(x_0)\,\Delta x.
+\]
+The left side is a value on the curve; the right is a value on the tangent. The structure is current value plus rate times step. A larger rate gives a larger change for the same step, matching our experience that each step on a steep slope takes more effort. Remember the scope: this is reliable only for small $\Delta x$, and stronger bending, or a larger second derivative, makes it fail sooner. Approximation is a tradeoff whose error must be acknowledged.
+
+\begin{toolbox}
+This chapter's new tools:
+\begin{itemize}
+  \item \textbf{Derivative}: a limit of average rates, geometrically a tangent slope and physically an instantaneous velocity.
+  \item \textbf{The power rule}: $(x^n)'=nx^{n-1}$, established here for $n=2,3$.
+  \item \textbf{Local linear approximation}: $f(x_0+\Delta x)\approx f(x_0)+f'(x_0)\,\Delta x$, improving as we approach $x_0$.
+  \item \textbf{Reading derivative signs}: $f'>0$ means rising, $f'<0$ falling, and $f'=0$ a possible peak, valley, or resting place.
+\end{itemize}
+\end{toolbox}
+
+\section{Differentiating Assembled Functions: Product and Chain Rules}
+
+Knowing $x^2$ and $x^3$ is not enough. Real functions are often assembled by multiplying two functions or putting one inside another. Can derivatives be assembled too?
+
+Addition is easiest: $(f+g)'=f'+g'$, because the change in a sum is the sum of the changes. The definition proves this directly. Constants behave similarly: $(cf)'=cf'$.
+
+Multiplication is trickier. Many people's first guess is that a product's derivative is the product of its derivatives. A familiar example immediately refutes it: $x^3=x\cdot x^2$. The derivative of $x^3$ is $3x^2$, while those of $x$ and $x^2$ are 1 and $2x$, whose product is only $2x$. The correct rule is a little more complicated.
+
+\begin{dingli}[The Product Rule]
+If $f$ and $g$ are differentiable at $x$, then
+\[
+(fg)'(x)=f'(x)g(x)+f(x)g'(x).
+\]
+\end{dingli}
+
+\begin{proof}
+Examine the difference quotient of the product, adding and subtracting the same term in the numerator:
+\[
+\frac{f(x+h)g(x+h)-f(x)g(x)}{h}
+=\frac{f(x+h)g(x+h)-f(x)g(x+h)}{h}
++\frac{f(x)g(x+h)-f(x)g(x)}{h}.
+\]
+Factor out $g(x+h)$ from the first part to get $\frac{f(x+h)-f(x)}{h}\,g(x+h)$, and $f(x)$ from the second to get $f(x)\,\frac{g(x+h)-g(x)}{h}$. As $h$ tends to 0, the difference quotients tend to $f'(x)$ and $g'(x)$, while $g(x+h)$ tends to $g(x)$, since differentiability implies continuity, as the definition directly verifies. The limit is therefore $f'(x)g(x)+f(x)g'(x)$.
+\end{proof}
+
+The geometry is vivid: regard $f$ and $g$ as rectangle side lengths, with area $fg$. When both sides grow a little, area changes in two main pieces. Growth in length contributes current width times the rate of length change; growth in width contributes current length times the rate of width change. Strictly, a tiny corner also contributes the product of the two increments, which becomes negligible in the limit.
+
+Check our counterexample: for $x^3=x\cdot x^2$, the product rule gives $1\cdot x^2+x\cdot 2x=x^2+2x^2=3x^2$, exactly as required.
+
+Now put functions inside functions, as in $y=(x^2+1)^3$. The inner layer is $u=x^2+1$, the outer layer $u^3$. Intuitively, $x$ changes and $u$ follows; the change in $u$ then changes $y$. The rates should multiply along the chain.
+
+\begin{dingli}[The Chain Rule]
+If $u=g(x)$ is differentiable at $x$ and $y=f(u)$ at the corresponding $u$, then $y=f(g(x))$ is differentiable at $x$, with
+\[
+\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}u}\cdot\frac{\mathrm{d}u}{\mathrm{d}x}.
+\]
+\end{dingli}
+
+We omit the full proof, which involves technical details about interchanging limiting processes, but explain the intuition. For small $\Delta x$, we have $\Delta u\approx g'(x)\Delta x$ and $\Delta y\approx f'(u)\Delta u$. Substitution gives $\Delta y\approx f'(u)g'(x)\Delta x$. The approximation errors disappear in the limit.
+
+Apply it to $y=(x^2+1)^3$. The derivative of the outer $u^3$ is $3u^2$, and that of the inner $x^2+1$ is $2x$. Thus
+\[
+y'=3(x^2+1)^2\cdot 2x=6x(x^2+1)^2.
+\]
+To appreciate the saving, expand $(x^2+1)^3$ as $x^6+3x^4+3x^2+1$ and differentiate term by term. You get $6x^5+12x^3+6x$, identical after factoring. But the chain rule takes one line and reveals which stage contributes each rate.
+
+\section{Another Perspective: Error, Optimization, and Marginal Quantities}
+
+Once derivatives became available, many trial-and-error problems gained systematic solutions. Here are four perspectives.
+
+\textbf{Error estimates.} You measure a square's side as 10 centimetres, but ruler error means the true length could be $10\pm 0.05$ centimetres. How uncertain is its area? With $S=x^2$ and $S'=2x$, the derivative at $x=10$ is 20. Linear approximation says a side error of 0.05 gives an area error of approximately $20\times 0.05=1$ square centimetre. The derivative measures how much measurement error is amplified. Engineers use this as an early check of robustness: a large derivative can turn tiny manufacturing errors into serious consequences.
+
+\textbf{Optimization.} Use 40 metres of fencing to enclose a rectangular vegetable garden against a wall, which forms one long side. What dimensions maximize area? If the width is $x$ metres, the length is $40-2x$ metres and
+\[
+S(x)=x(40-2x)=40x-2x^2.
+\]
+Previously we completed squares or guessed from a graph. Now $S'(x)=40-4x$. A positive derivative means area grows with $x$; a negative one means it shrinks. The switch from growth to decline occurs where the derivative vanishes: $40-4x=0$, so $x=10$. The length is 20 metres and maximum area 200 square metres. Peaks and valleys share a horizontal tangent, or zero derivative, giving our first map to extrema. Boundaries and resting places must still be checked, as the counterexample below explains.
+
+\textbf{Marginal quantities.} Economists often ask how much one more item increases cost. The derivative of cost $C(x)$ at production level $x$ is marginal cost. If a factory has total cost $C(x)=1000+20x+0.01x^2$ yuan, its marginal cost at 100 items is $C'(100)=20+0.02\times 100=22$ yuan. The 101st item therefore adds approximately 22 yuan. Approximately matters: a derivative is a continuous local approximation, whereas products come in discrete units. Stating a model's scope is good mathematical practice.
+
+\textbf{Motion.} Return to the car. Distance's derivative is velocity; what is velocity's derivative? Acceleration, the rate at which velocity changes. The slight sinking sensation when a lift starts, or the sideways pull in a turn, comes from acceleration rather than velocity itself. If free-fall distance is $s(t)=4.9t^2$ metres, then velocity is $v(t)=s'(t)=9.8t$ metres per second. Differentiating again gives the constant $v'(t)=9.8$. This is the fact Galileo found with inclined-plane experiments: falling acceleration is almost unchanged by weight or time spent falling. Two derivatives compress crates of experimental data into one formula. The derivative of a derivative is the second derivative, describing how quickly a curve bends; it will reappear with Chapter 8's curvature.
+
+\begin{lianjie}
+Derivatives connect our earlier chapters. Chapter 2's slope is the constant-function special case; Chapter 8's promise of local straightness has become tangents and derivatives; and Chapter 9's limits form the definition's framework. Looking ahead, Chapter 12 will rigorously establish the role of zero derivatives as candidates for extrema, while Chapter 17 upgrades tangent lines to tangent planes. In physics, economics, and biology, wherever a rate appears---population growth, radioactive decay, or disease spread---derivatives are the first language.
+\end{lianjie}
+
+\begin{shiyan}
+\textbf{Experiment 1: A Tangent Through the Telescope.} Draw $y=x^2$ on squared paper using integer $x$ from $-3$ to $3$. At $(2,4)$, gently draw a ruler line following the curve that touches without crossing. Measure its slope by counting rise over run. Theory gives $2x=4$. How far is your hand-drawn value from 4?
+
+\textbf{Experiment 2: Estimating with a Tangent.} Without a calculator, use the tangent to $f(x)=x^2$ at $x=5$ to estimate $5.1^2$. The tangent is $y=10x-25$; substituting $x=5.1$ gives 26. The actual value is $26.01$, an error of 0.01. Estimate $5.5^2$ similarly and compare the error, seeing how approximation worsens farther from the contact point.
+
+\textbf{Experiment 3: Detecting Slope Signs.} Draw a smooth curve, perhaps rising, falling, then rising again. Without calculating, label several points with positive, negative, or zero derivative. Swap with a classmate to check. This trains your eye to see derivatives.
+\end{shiyan}
+
+\section{Another Look at Peaks: Zero Derivatives and Extrema}
+
+The fencing problem used the claim that a maximum has zero derivative. State it formally.
+
+\begin{dingli}[A Necessary Condition for an Extremum]
+If $f$ attains a maximum or minimum at a differentiable point $x_0$ in the interior of an interval, then $f'(x_0)=0$.
+\end{dingli}
+
+\begin{proof}
+Consider a maximum. Since $f(x_0)$ is maximal, every nonzero $h$ with $x_0+h$ still in the interval satisfies $f(x_0+h)\le f(x_0)$. For $h>0$, the quotient $\frac{f(x_0+h)-f(x_0)}{h}\le 0$, giving $f'(x_0)\le 0$ in the limit. For $h<0$, the negative denominator reverses the inequality, so the quotient is $\ge 0$ and the limit gives $f'(x_0)\ge 0$. A number both at most and at least 0 must be 0.
+\end{proof}
+
+The theorem is carefully restrained: every peak has a horizontal tangent, but a horizontal tangent need not be a peak. The distinction is crucial.
+
+\begin{fanli}
+Someone claims that $f'(x_0)=0$ proves a maximum or minimum at $x_0$. The example $f(x)=x^3$ refutes this: $f'(x)=3x^2$ vanishes at the origin, but function values are negative to its left and positive to its right. The curve increases throughout; the origin is neither peak nor valley, just the resting place mentioned earlier, a stationary point and in this case an inflection point.
+
+A second trap concerns the interval's interior. On $[0,1]$, the function $f(x)=x$ reaches its maximum at $x=1$, where the derivative is 1, not 0. Extrema on closed intervals can lie at endpoints. The complete search therefore includes points of zero derivative, points where the derivative does not exist, and endpoints, then compares their function values. No candidate may be omitted.
+\end{fanli}
+
+\begin{tuilun}
+If a differentiable function $f$ satisfies $f'(x)=0$ throughout an interval, then $f$ is constant there.
+\end{tuilun}
+
+This apparently ordinary result is one of calculus's best detective tools. To determine whether two functions differ by a constant, differentiate their difference and check whether it is identically zero. A rigorous proof needs Chapter 12's mean value theorem; for now we record it as a promise.
+
+\section{Challenge: Calculating a Bending Track by Hand}
+
+Combine our tools in a complete problem. A park designs a slide whose height in metres depends on horizontal distance $x$ in metres as $y=x^3-6x^2+9x+1$, for $0\le x\le 4$. Where does it descend most steeply, and where are its highest and lowest points?
+
+Differentiate term by term: $(x^3)'=3x^2$, $(-6x^2)'=-12x$ by the constant-multiple rule, $(9x)'=9$, and the constant term has derivative 0. Thus
+\[
+y'=3x^2-12x+9=3(x^2-4x+3)=3(x-1)(x-3).
+\]
+The derivative vanishes at $x=1$ and $x=3$. For $x<1$, both factors are negative, so the derivative is positive and the slide rises. For $1<x<3$ it descends, and for $x>3$ it rises again. Thus $x=1$ is a peak, with $y(1)=1-6+9+1=5$ metres, and $x=3$ a valley, with $y(3)=27-54+27+1=1$ metre.
+
+But the problem asks for extrema on $[0,4]$, so check the endpoints too: $y(0)=1$ and $y(4)=64-96+36+1=5$. Comparing $\{5,1,1,5\}$, the maximum is 5 metres at $x=1$ and $x=4$, and the minimum 1 metre at $x=0$ and $x=3$. Looking only at zero derivatives would miss the endpoint answers, exactly as our warning predicted.
+
+The steepest descent occurs where the derivative is most negative. Since $y'=3(x-1)(x-3)=3(x-2)^2-3$ is an upward-opening parabola centred at $x=2$, its minimum occurs at $x=2$, with $y'(2)=-3$. The steepest descent is therefore at $x=2$ metres, with slope $-3$, exactly at the midpoint of the line joining the peak and valley. This coincidence holds generally for curves of the $x^3$ family; its reason lies in the derivative of the derivative, a direction for further climbing.
+
+\begin{pandeng}
+This is only calculus's first step. Further signposts include \textbf{second derivatives}, rates of change of derivatives describing concavity and acceleration; the \textbf{mean value theorem}, linking function values to derivatives and justifying that zero derivative implies constancy; \textbf{L'Hopital's rule}, using derivatives for limits of the form $\frac{0}{0}$; \textbf{Taylor expansions}, upgrading local linear approximation to quadratic, cubic, and infinitely many terms; and \textbf{multivariable functions and gradients}, describing a whole collection of directional slopes at a surface point. Competition proofs of inequalities by constructing and differentiating functions use these same tools.
+\end{pandeng}
+
+\section*{Questions to Think About}
+
+\textbf{Observation}
+\begin{sikao}
+  \item Draw a curve of your own with three zero-derivative points. Must they all be maxima or minima? \emph{Hint: look at $x^3$ near the origin.}
+  \item The graph of $f(x)=|x|$ has a corner at $x=0$. Calculate the difference-quotient limits separately for $h>0$ and $h<0$. What do you obtain? \emph{Hint: what does disagreement between the left and right limits mean?}
+\end{sikao}
+
+\textbf{Proof}
+\begin{sikao}
+  \item Prove $(x^4)'=4x^3$ from the definition. \emph{Hint: expand $(x+h)^4$. After forming the quotient, terms involving $h^2$ and higher powers in the expansion disappear in the limit. Conjecture and check the general rule $(x^n)'=nx^{n-1}$.}
+  \item Show that the constant-multiple rule $(cf)'=cf'$ is a special case of the product rule. \emph{Hint: what is the derivative of a constant function?}
+\end{sikao}
+
+\textbf{Challenge}
+\begin{sikao}
+  \item A factory's profit in yuan from $x$ items is $L(x)=-2x^2+80x-300$. Find the output maximizing profit, and explain why producing more then becomes financially worse. \emph{Hint: solve $L'(x)=0$ and interpret the derivative's signs on either side.}
+  \item Prove that the derivative of a differentiable even function, satisfying $f(-x)=f(x)$, is odd. \emph{Hint: differentiate both sides of $f(-x)=f(x)$ using the chain rule, or compare $f'(-a)$ and $f'(a)$ directly with difference quotients.}
+\end{sikao}
+
+\section*{The Door to the Next Chapter}
+
+We have learned to move from accumulated quantities to rates: a distance function gives velocity at every instant, and a cost function gives marginal cost. The process uses a division and a limit.
+
+Reverse the question, however, and division no longer helps: \emph{if I know only a car's speedometer reading at every instant, can I calculate the total distance travelled?} Or geometrically: \emph{given $y=x^2$, can I calculate the area between it and the $x$-axis?} We know areas of straight-edged figures, but this boundary is curved.
+
+Intuition suggests dividing the journey into countless tiny intervals, treating velocity as nearly constant on each, approximating distance by velocity times time, and adding the pieces. Finer divisions improve the approximation. This is another limit, but in the opposite direction: this chapter used limits of difference quotients; the next uses limits of sums. Astonishingly, these directions are inverse operations, undoing one another like multiplication and division. Differentiating an accumulated quantity gives its rate; summing the rate recovers the accumulation. This profound duality is the fundamental theorem of calculus, next chapter's story.

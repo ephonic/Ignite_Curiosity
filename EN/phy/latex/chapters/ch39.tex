@@ -1,0 +1,303 @@
+% Chapter 39: Simultaneity, Time, and Length
+\chapter{Simultaneity, Time, and Length}
+
+Chapter 38 forced us to accept a fact: every uniformly moving observer measures the same vacuum light speed \(c\), regardless of source or observer motion. We deferred a question: should speeds not add? This chapter settles that account. If light speed is invariant, three childhood certainties, ``simultaneous,'' ``one second,'' and ``one meter,'' must all be rewritten. This is no word game but a fact repeatedly verified every day by atomic clocks and cosmic rays.
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+At the top of the atmosphere, cosmic rays, mainly fast protons from deep space, continually strike air molecules. Their fragments include particles called muons, \(\mu\). In a laboratory you can stop a \(\mu\) and quietly measure its lifetime: an average of just \(2.2\) microseconds before it decays into other particles. This is a repeatable experimental fact.
+
+Now do some elementary arithmetic. A \(\mu\) forms about 10 kilometers up. Even diving toward Earth at light speed, in \(2.2\) microseconds it travels only
+\[
+3\times10^{8}\ \text{meters/second}\times 2.2\times10^{-6}\ \text{seconds}\approx 660\ \text{meters}\text{.}
+\]
+660 meters, a tiny fraction of the atmosphere's depth. This calculation predicts virtually no \(\mu\) particles at sea level.
+
+Yet every minute, several hundred \(\mu\) particles cross each square meter of ground, and your body too. With an alcohol-vapor cloud chamber, you can even see their white tracks. The particles are not lying, nor are detectors mistaken. Some assumption slipped into our arithmetic must be wrong.
+
+A second mystery hides in your phone. Navigation satellites carry extremely precise atomic clocks, yet engineers find that without corrections built into their design, satellite and ground clocks disagree by tens of microseconds daily. Light travels 300 meters in one microsecond; accumulated errors of tens of microseconds produce daily navigation errors of order ten kilometers. Your phone finds the correct intersection precisely because someone took seriously the fact that clocks above and below do not run equally fast.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Before continuing, put your intuition on the table. Why can a \(\mu\) survive to ground level? You might guess:
+
+First, fast-moving \(\mu\) particles change their nature, with some unknown mechanism extending their lives. Vigorous exercise speeds up a heartbeat; perhaps speed interferes with a particle's internal clock.
+
+Second, the laboratory's \(2.2\) microseconds applies only to stationary \(\mu\) particles; a moving \(\mu\) is simply a different kind of particle.
+
+Third, the distance ``10 kilometers'' is itself suspect. Perhaps from a \(\mu\)'s perspective the atmosphere is not that thick.
+
+A fourth possibility lurks behind most people's thinking: time flows equally for everyone and a meter is equally long for everyone, so none of these guesses works. The experiment must be wrong.
+
+Remember your choice. By the end you will find the third guess closest, but the truth goes further: neither a broken \(\mu\) nor a thinner atmosphere is involved. ``Time'' and ``length'' never possessed the universal meanings you assumed.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Seeing Is Not Happening]
+You need a thunderstorm, or a friend working some distance away.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Choose the clapping alternative in fair weather. Audible thunder means lightning danger, regardless of the calculated distance: seek a substantial building or enclosed hardtop vehicle and wait 30 minutes after the last thunder. See \href{https://www.weather.gov/safety/lightning-tips}{National Weather Service lightning guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+\textbf{Method one}: during a storm, start silently counting seconds when lightning flashes and stop when thunder arrives. Multiply by 340 meters, roughly sound's distance per second, to estimate the lightning's distance. Three seconds means about one kilometer.
+
+\textbf{Method two}: watch someone hammering a nail or clapping tens of meters away. The hammer's motion and impact sound do not match: the image arrives first, the sound later. Slow-motion phone video makes the mismatch clearer.
+
+\textbf{What you are doing}: distinguishing two times, when something happened and when you saw it. Light takes only microseconds from the lightning to your eyes, negligible here, but sound needs seconds. Your brain automatically applies a rule: \emph{event time equals the time you see it minus the signal's travel time.}
+\end{experiment}
+
+\begin{mainline}
+This seemingly unrelated experiment contains the chapter's most important operation: \emph{subtracting signal travel time}.
+
+Taking it seriously raises further questions. If two flashes appear simultaneous, one a kilometer away and the other two kilometers away, did they happen simultaneously? No: subtract light's travel time and the farther flash happened earlier. Conversely, two genuinely simultaneous flashes at different distances reach you at different times.
+
+Thus your eyes alone cannot declare simultaneity. To order distant events, specify an operation: place synchronized clocks at each location and record each event on its local clock. Synchronizing distant clocks also requires signals, most reliably light because its speed is most dependable, as Chapter 38 showed. Einstein began his 1905 paper with precisely this seemingly trivial task: operationally defining simultaneity by using invariant-speed light signals to synchronize clocks at different places.
+
+Remember that definition. Every oddity below grows from the honest operation that we can synchronize clocks only with light.
+\end{mainline}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+Move the stage onto a train. A lamp at the carriage's exact center flashes once, sending light toward the front and rear simultaneously.
+
+\textbf{The observer aboard}, at rest relative to the carriage, reasons that both ends are equally distant and light speed is invariant, independent of source and observer motion, as Chapter 38 established. The beams cover equal distances in equal times, reaching both ends \emph{simultaneously}. This is measurable: synchronized clocks at the two ends record identical arrival times.
+
+\textbf{The observer on the ground} watches the same process. Both beams must still travel at \(c\), neither faster: that is what invariance means. But while they travel, the rear moves \emph{toward} its beam and the front \emph{away from} its beam. Light covers a shorter path to the rear and a longer one to the front: \emph{it reaches the rear first, then the front}. The ground observer's own array of synchronized clocks records two different times.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=0.92]
+  \draw[thick] (0,0) rectangle (8,1.3);
+  \fill (4,0.65) circle (0.07) node[above=3pt]{Flash};
+  \draw[->,thick,blue!60!black] (3.9,0.4) -- (1.0,0.4);
+  \draw[->,thick,blue!60!black] (4.1,0.4) -- (7.0,0.4);
+  \node[left] at (0,0.65){Rear};
+  \node[right] at (8,0.65){Front};
+  \draw[->,thick] (3,1.9) -- (5.5,1.9) node[midway,above]{Train moves right at speed \(v\)};
+  \node[align=center] at (4,-0.8){Ground frame: rear approaches light, front recedes;\\ both beams travel at \(c\), reaching the rear first};
+\end{tikzpicture}
+\end{center}
+
+One frame calls the same two events, light reaching the rear and light reaching the front, simultaneous; another does not. \emph{Neither calculation is wrong.} This is entirely different from the experiment's seeing delay: both have already subtracted signal travel times and used synchronized clocks at the events, yet still disagree.
+
+Who is really right? The question cannot even be posed without presupposing a true simultaneity above all frames. The old model, absolute time assumed since Newton and written \(t'=t\) in Galilean transformations, is formally retired here. Not so much overturned as exposed: it was always an approximate habit, not the world's structure.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+Simultaneity's collapse is not the disaster's end but reconstruction's beginning. If time is relative, what can serve as a clock? Physicists strip the question to its cleanest form: build a clock whose principle is beyond reproach, a \emph{light clock}.
+
+It is simple: two parallel mirrors separated by \(L_0\), with light bouncing between them. Each round trip is one tick. Why trust it? Invariant light speed makes its rate depend only on distance and \(c\), with no aging parts. More importantly, if any other good clock, atomic, mechanical, or your heartbeat, disagreed, you would have an instrument detecting your own absolute motion, directly violating relativity. The strong conclusion is that \emph{all} clocks, biological ones included, must keep pace with a light clock.
+
+First travel with the clock. For you, at rest relative to it, light moves straight up and down, covering \(2L_0\) per round trip. One tick is therefore
+\[
+\Delta\tau=\frac{2L_0}{c}.
+\]
+Now switch to the ground. The whole clock flies sideways at \(v\). Its light follows a diagonal, because the upper mirror moves forward while light rises. If the ground measures the upward journey as \(\Delta t/2\), light's diagonal is \(c\,\Delta t/2\), the clock's horizontal displacement is \(v\,\Delta t/2\), and mirror separation remains \(L_0\). Length perpendicular to motion is unchanged; we will explain why below. These form a right triangle, so Pythagoras gives
+\[
+\left(\frac{c\,\Delta t}{2}\right)^{2}=L_0^{2}+\left(\frac{v\,\Delta t}{2}\right)^{2}.
+\]
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=0.95]
+  % Left: observer at rest with the clock
+  \fill[pattern=north east lines] (-1.3,2.4) rectangle (1.3,2.56);
+  \fill[pattern=north east lines] (-1.3,-0.16) rectangle (1.3,0);
+  \draw[thick] (-1.3,0)--(1.3,0);
+  \draw[thick] (-1.3,2.4)--(1.3,2.4);
+  \draw[<->,thick,blue!60!black] (0,0.06)--(0,2.34);
+  \node[right] at (0.08,1.2){$L_0$};
+  \node at (0,-1.75){\shortstack{(a) With the clock:\\light moves vertically}};
+  % Right: ground observer
+  \begin{scope}[xshift=7.2cm]
+    \draw[thick] (-2.8,0)--(2.8,0);
+    \draw[thick] (-0.7,2.4)--(0.7,2.4);
+    \draw[->,thick,blue!60!black] (-1.6,0.06)--(0,2.34);
+    \draw[->,thick,blue!60!black] (0,2.34)--(1.6,0.06);
+    \draw[dashed] (0,0)--(0,2.4);
+    \draw[dashed] (-1.6,0)--(1.6,0);
+    \node[right] at (0.06,1.3){$L_0$};
+    \node[below] at (-0.85,0){$\dfrac{v\,\Delta t}{2}$};
+    \node[below] at (0.85,0){$\dfrac{v\,\Delta t}{2}$};
+    \node[above left] at (-0.9,1.35){$\dfrac{c\,\Delta t}{2}$};
+    \node at (0,-1.75){\shortstack{(b) Ground: diagonal light\\travels farther}};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+Collect the terms containing \(\Delta t\) and solve:
+\[
+\Delta t=\frac{2L_0/c}{\sqrt{1-v^{2}/c^{2}}}=\gamma\,\Delta\tau,
+\qquad
+\gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}\ \ge 1.
+\]
+From the ground, every moving-clock tick lasts \(\gamma\) times longer: \emph{moving clocks run slower}. This is \emph{time dilation}. The accompanying observer's interval \(\Delta\tau\) is called \emph{proper time}, the time personally experienced by that clock and the shortest result among all observers' measurements.
+
+Pause over this term. Proper time is not true time but time readable without synchronizing distant clocks: it is written on the participant's own wrist. This concept accompanies us to the chapter's end.
+
+Next, length. Accept a conceptual requirement: whether a \(\mu\) reaches the ground is an objective event. Every frame must agree, or physics falls apart. From the ground, as already calculated and quantified shortly, a moving \(\mu\)'s lifetime extends by \(\gamma\), allowing a 10-kilometer journey. Switch to the frame \emph{traveling with the \(\mu\)}: here the \(\mu\) rests quietly, living its ordinary \(2.2\) microseconds, enough for only 660 meters unless the atmosphere is shorter. The only escape is that the approaching atmosphere \emph{contracts} along its motion, from 10 to \(10/\gamma\) kilometers. This is \emph{length contraction}: a ruler with rest length \(L_0\), its proper length, measures in a frame moving along it at \(v\) as
+\[
+L=\frac{L_0}{\gamma}.
+\]
+
+Why no perpendicular contraction? Imagine a train entering a tunnel. If transverse dimensions also changed with motion, train and ground observers would disagree about hitting the walls. Collision is objective and cannot have two answers. Contraction therefore occurs only along motion.
+
+Looking back, relative simultaneity, time dilation, and length contraction are three aspects of one coin. All grow from synchronizing clocks only with invariant-speed light signals, and interlock to ensure that every frame agrees about objective events.
+\end{mainline}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Light speed is shared by everyone, so simultaneity belongs to a particular frame; moving clocks slow by \(\gamma\), and moving rulers shorten along motion by \(\gamma\). Proper time and spacetime intervals are what all observers agree on.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+Compress the story into two formulas and ask our customary four questions.
+\[
+\Delta t=\gamma\,\Delta\tau,\qquad
+L=\frac{L_0}{\gamma},\qquad
+\gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}.
+\]
+
+\textbf{What do they describe?} One clock advances \(\Delta\tau\) in its rest frame and \(\Delta t\) in a frame seeing it move; one ruler has rest length \(L_0\) and measures \(L\) when moving lengthwise.
+
+\textbf{Why this form?} Everything comes from invariant light speed and Pythagoras. A hypotenuse exceeds either leg, so \(\gamma\ge 1\): moving clocks always slow and moving rulers always shorten, never the reverse.
+
+\textbf{Test special cases}:
+\begin{itemize}[leftmargin=1.6em]
+  \item \(v=0\): \(\gamma=1\), restoring everyday behavior as it should.
+  \item \(v\ll c\): expanding the square root gives \(\gamma\approx 1+\dfrac{v^{2}}{2c^{2}}\), differing from 1 by order a billionth or less. That explains three centuries without finding Newtonian cracks.
+  \item Reverse direction: only \(v^{2}\) appears, so approaching and receding clocks slow equally. Time dilation differs from the Doppler effect that makes them appear faster or slower.
+  \item \(v\to c\): \(\gamma\to\infty\), and the moving clock tends to stop. Light's own ``clock'' accumulates no proper time. Leave that statement here; spacetime intervals will supply its precise meaning.
+  \item \(v>c\): the square root turns negative and refuses a real answer. This is no mathematical tantrum: ordinary objects cannot reach light speed. Why not belongs to Chapter 40's energy and momentum.
+\end{itemize}
+
+\textbf{When do they hold or fail?} Exactly in inertial frames and flat spacetime; acceleration and gravity require an upgrade in Chapter 41. Now calculate some real accounts.
+
+\textbf{Account one: a car.} 120 kilometers per hour is about 33 meters per second:
+\[
+\gamma-1\approx\frac{v^{2}}{2c^{2}}\approx\frac{33^{2}}{2\times(3\times10^{8})^{2}}\approx 6\times10^{-15}.
+\]
+A lifetime of driving gains only nanoseconds. Intuition is not wrong, merely narrow in scope.
+
+\textbf{Account two: the \(\mu\).} A high-altitude \(\mu\) travels at about \(0.998c\):
+\[
+\gamma=\frac{1}{\sqrt{1-0.998^{2}}}\approx 16.
+\]
+From the ground, lifetime is \(2.2\times16\approx 35\) microseconds and distance \(0.998\times300\ \text{meters/microsecond}\times35\ \text{microseconds}\approx 10.4\) kilometers, just enough for sea level.
+
+\textbf{Account three: navigation satellites.} Speed is about 3.9 kilometers per second, giving \(\gamma-1\approx 8\times10^{-11}\) and about 7 microseconds of slowing daily. The complete correction includes gravity, Chapter 41, speeding the satellite clock by about 45 microseconds daily, for a net daily gain of about 38 microseconds. Engineers simply offset the clock's oscillation frequency by the theoretical value before launch. Every phone position fix is relativity's paycheck.
+
+\textbf{Account four: atomic clocks flying around Earth.} In 1971, Hafele and Keating flew atomic clocks around the world on commercial airliners and compared them with identical ground clocks. Eastward and westward differences differed, both agreeing with theory including gravity to tens or hundreds of nanoseconds. Time dilation became an experiment purchasable for an airline fare.
+\end{mainline}
+
+\begin{mainline}
+One final mathematical tool answers what actually remains unchanged. Define the \emph{spacetime interval}
+\[
+s^{2}=c^{2}\Delta t^{2}-\Delta x^{2}.
+\]
+For events joined by light, \(\Delta x=c\,\Delta t\), hence \(s^{2}=0\), a fact invariant light speed guarantees in every frame. More generally, the mathematical bridge shows that \(s^{2}\) is identical in all inertial frames for any pair of events. When \(s^{2}>0\), \(\sqrt{s^{2}}/c\) is precisely the proper time of an observer traveling straight between them. Universally shared time and length have abdicated; this combination with a minus sign is the new absolute.
+\end{mainline}
+
+\begin{mathbridge}
+\textbf{Lorentz transformations.} Two inertial frames have parallel axes, with \(K'\) moving relative to \(K\) at \(v\) along \(x\). Their coordinates for one event obey
+\[
+x'=\gamma\,(x-vt),\qquad
+t'=\gamma\left(t-\frac{vx}{c^{2}}\right).
+\]
+These settle three accounts at once. First, relative simultaneity: events simultaneous in \(K\), \(\Delta t=0\), but separated by \(\Delta x\neq 0\), have in \(K'\) the difference \(\Delta t'=-\gamma v\,\Delta x/c^{2}\neq 0\). Second, direct calculation gives \(c^{2}\Delta t'^{2}-\Delta x'^{2}=c^{2}\Delta t^{2}-\Delta x^{2}\), interval invariance. Third, time dilation and length contraction follow in two lines. Also, for \(v\ll c\), \(\gamma\to 1\) and \(vx/c^{2}\to 0\), restoring Galilean \(x'=x-vt\) and \(t'=t\). The old model is the new one's low-speed limit, not its rival.
+\end{mathbridge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+This elegant model has definite prerequisites and familiar traps.
+
+\textbf{Scope.} Every result here assumes inertial frames and flat spacetime. Sustained acceleration, turning, or strong gravity requires Chapter 41's broader framework. For engineering below a few hundred kilometers per hour, corrections are order \(10^{-15}\); buildings, cars, and bridges can use Newton. Navigation satellites and accelerators cannot: accelerator electrons can have \(\gamma\) in the tens of thousands, and magnets designed with Newtonian mechanics cannot contain their beams.
+
+\textbf{Misreading one: everything is relative.} The opposite: the protagonists are \emph{invariants}, light speed, proper time, spacetime intervals, and timelike event order. Relative quantities are old concepts mistakenly considered absolute. ``Relativity'' is historical; ``theory of invariants'' would fit better.
+
+\textbf{Misreading two: whose clock really slows?} A sees B's clock slow and B sees A's clock slow; both are right because comparing distant clocks requires simultaneity, on which they disagree. This is no contradiction, like two people each placing the other to their right. To turn disagreement into a direct comparison, they must reunite, requiring at least one to turn around and break symmetry. This unlocks the twins below.
+
+\textbf{Misreading three: contraction means looking squashed.} Contraction is a \emph{measurement} with synchronized clocks, not a photograph. A photograph records photons reaching the film together, though emitted at different times. Careful calculation shows a fast-moving cube photographed not as flattened but as rotated, the Terrell rotation. What you see and what a frame measures are always separate accounts.
+
+\textbf{Misreading four: acceleration broke the clock.} Time dilation is no mechanical fault. It treats atomic clocks, heartbeats, and chemical reactions equally because it describes time's structure. A broken clock would immediately betray itself by disagreeing with other clocks, a betrayal never observed here.
+
+Finally, a convention: this book always uses \emph{invariant mass} \(m\), not mass increasing with speed. Energy and momentum truly increase for fast objects, Chapter 40's subject.
+\end{mainline}
+
+\step{Explaining the Opening Phenomenon}
+
+\begin{mainline}
+Settle the opening accounts, each in two frames that must agree.
+
+\textbf{The \(\mu\), ground perspective}: a fast \(\mu\)'s clock slows, dilating lifetime from \(2.2\) to about \(35\) microseconds. At \(0.998c\), traveling about 10.4 kilometers to sea level is no problem.
+
+\textbf{The \(\mu\), its own perspective}: my lifetime remains an honest \(2.2\) microseconds. But the approaching atmosphere moves at \(0.998c\), contracting its 10.4-kilometer thickness to \(10.4/16\approx 0.66\) kilometers. Sweeping past me at \(0.998c\), that takes about \(2.2\) microseconds, just in time.
+
+One account concerns time, the other length, yet both conclude that the \(\mu\) reaches the ground. This is no coincidence: interval invariance underwrites it. From creation to decay, the \(\mu\)'s own proper time is always \(2.2\) microseconds, whichever frame calculates it.
+
+\textbf{Navigation satellites}: engineers build in this chapter's corrections, plus Chapter 41's gravity, instead of waiting for errors. A satellite clock's manufactured frequency is offset by about four parts per billion so it synchronizes with ground clocks after launch. Your map's steady blue dot testifies daily to the counterintuitive slowing of moving clocks.
+
+Return to your guesses. Readers suspecting a changed \(\mu\) took the wrong direction: the innocent particle merely lives by its own time. Those suspecting a thinner atmosphere found the doorknob, but beyond that door lies new spacetime structure, not an illusion.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Twins: Who Is Younger, and Why?]
+A stays on Earth while B flies at \(0.8c\), giving \(\gamma=5/3\), to a star 4 light-years away, immediately turns around, and returns at the same speed.
+
+Earth's account: \(4/0.8=5\) years each way, 10 years total. The ship's account: proper time is reduced by \(\gamma\), so B experiences only \(10\times 3/5=6\) years. Reunited, B is 4 years younger. Their biological clocks, wrinkles, and memories agree, a face-to-face comparison requiring no signal convention.
+
+But during separation did B not also see A's clock slow? Why would B not expect A to be younger? The key is the turnaround. A remains in one inertial frame throughout; B must decelerate, reverse, and accelerate, switching inertial frames. Asymmetric experiences permit asymmetric conclusions. Mutual slowing during separation remains entirely true, but those comparisons depend on each frame's simultaneity convention. Reunion does not.
+\end{thought}
+
+\begin{challenge}
+\textbf{A straight path has the longest proper time.} Spacetime intervals give the twins a clean geometrical description. Draw departure and reunion on a spacetime diagram: A follows a straight inertial line, B a broken line. Among all paths joining two timelike-separated events, the inertial path has the \emph{longest} proper time. Any detour, even a brief acceleration and return, leaves its traveler younger. This reverses everyday geometry, where straight lines are shortest; the reversal hides in the minus sign of \(s^{2}=c^{2}\Delta t^{2}-\Delta x^{2}\). Minkowski geometry's departures from Euclidean geometry begin with that tiny minus sign.
+\end{challenge}
+
+\begin{mainline}
+\textbf{Causality's boundary: the light cone.} A final concept gathers the chapter into one diagram. Put here and now at the origin, space \(x\) horizontally and time multiplied by \(c\) vertically. Light from the origin follows \(x=\pm ct\), two diagonal lines dividing the plane into three regions. Above, \(c^{2}t^{2}>x^{2}\), and you can arrive below light speed: your \emph{future}. Below is the \emph{past} you might have come from. Left and right lie the \emph{spacelike} region, \(s^{2}<0\), whose separation from you cannot be crossed even by light. You here and now cannot influence those events, nor can they influence you here and now.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth,scale=1.25]
+  \fill[blue!12] (0,0) -- (1.6,1.6) -- (-1.6,1.6) -- cycle;
+  \fill[orange!15] (0,0) -- (1.6,-1.6) -- (-1.6,-1.6) -- cycle;
+  \draw[->] (-2.2,0) -- (2.2,0) node[right] {$x$};
+  \draw[->] (0,-1.85) -- (0,2.0) node[above] {$ct$};
+  \draw[thick] (-1.6,-1.6) -- (1.6,1.6);
+  \draw[thick] (-1.6,1.6) -- (1.6,-1.6);
+  \node at (0,1.05){Future};
+  \node at (0,-1.0){Past};
+  \node at (1.45,0.3){Spacelike};
+  \node at (-1.45,0.3){Spacelike};
+  \fill (0,0) circle (0.045) node[below right=1pt]{Here and now};
+\end{tikzpicture}
+\end{center}
+
+The diagram says something deeper than the ban on exceeding light speed: \emph{the light cone bounds causality}. All frames agree on timelike event order, so cause before effect is absolute. Spacelike event order can reverse across frames, but cannot scramble causality because no influence can pass between those events. Superluminal signals would let replies arrive before questions in some frames, collapsing causality. The speed limit protects causality itself, not light's privilege.
+\end{mainline}
+
+\begin{mainline}
+\textbf{An extreme-scale example.} The Milky Way is about 100,000 light-years across. Imagine a ship with \(\gamma=10^{5}\), traveling only about five parts in ten billion below light speed, crossing it. Earth measures 100,000 years; the crew experiences about 1 year. Starlight ahead is compressed to extremely high frequencies, and the journey's true price is astronomical energy, an account for Chapter 40. Relative time and length are not merely fifteenth-decimal-place matters: sufficiently large \(\gamma\) makes 100,000 years and 1 year two readings of one journey.
+
+The links ahead matter too. Chapter 40 derives relativistic energy and momentum from interval invariance and explains why reaching light speed costs infinite energy. Chapter 41 asks whether inertial frames themselves survive gravity's ability to alter clock rates, the GPS correction of 45 microseconds daily. The seemingly simple proper time will return in a different role in the quantum chapters.
+\end{mainline}
+
+\begin{puzzles}
+  \item Train and tunnel. A train of proper length 100 meters passes at \(0.8c\) through a tunnel of proper length 60 meters. The ground attendant says the train contracts to 60 meters and fits entirely inside for an instant. Passengers say the tunnel contracts to 36 meters and can never contain their train. Are both wrong, or neither? \emph{Hint}: fitting entirely means the front has not exited while the rear has entered. These are distant events; what does simultaneity mean in each frame?
+
+  \item Event A occurs at the origin at time zero; in \(K\), B occurs 3 light-seconds away and 2 seconds later. Is there an inertial frame with B before A? What if B is 1 light-second away and 2 seconds later? \emph{Hint}: calculate each spacetime interval \(s^{2}\), then locate the light-cone regions permitting reversed order across frames.
+
+  \item Two ships pass and recede. Looking through a telescope, A finds B's clock slower even than time dilation predicts. Has A disproved it? \emph{Hint}: a telescope's seen time includes signal travel. Besides clock slowing, what else affects departing light? Think Doppler.
+
+  \item A cube of proper length 1 meter flashes past near light speed and you photograph it. What shape appears? \emph{Hint}: the shutter records photons \emph{arriving} at the film together. Near- and far-side photons were emitted at different times. Combine that path difference with contraction.
+\end{puzzles}

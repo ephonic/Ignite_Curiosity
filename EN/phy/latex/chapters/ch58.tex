@@ -1,0 +1,227 @@
+% Chapter 58: Noether's Theorem: Where Conservation Laws Come From
+\chapter[Noether's Theorem and Conservation Laws]{Noether's Theorem: Where Conservation Laws Come From}
+
+Chapter~57 turned symmetry from a compliment into an operational concept: change a system in a particular way, and if its laws remain untouched, they possess that symmetry. This chapter tackles a larger question. Our whole bookkeeping system---energy in Chapter~9, momentum in Chapter~10, angular momentum in Chapter~11---rests on three conservation laws: an isolated system's total energy, momentum, and angular momentum each remain constant. We have used them like accountants, reassured when accounts balance and searching for hidden entries when they do not. But who issued these three prohibitions? Why conserve these quantities instead of velocity, acceleration, or something else? In 1918, mathematician Emmy Noether gave a provable answer: conservation laws are not extra prohibitions but the shadows of symmetry. Let us see how that shadow is cast.
+
+\step{A Counterintuitive Opening}
+
+One moment in figure-skating footage deserves repeated replay. A skater begins spinning on one foot, arms extended like a slow windmill, about once per second. She draws her arms against her chest. Without pushing against the ice or receiving a shove, she suddenly spins so fast her face blurs: three or four turns per second. Extending her arms again obediently slows her down, leaving comfortable time for the next movement.
+
+Pause to appreciate how strange this is. First, she speeds up without a push. The ice provides almost no horizontal force; vertical support and gravity are parallel to the rotation axis. Nobody twists her, yet her increased speed seems conjured from nothing. Second, the precision is uncanny. Measuring her mass distribution gives her moment of inertia, larger when mass lies farther from the axis. Multiply rotation rate by moment of inertia: the number before drawing in her arms equals the number afterward. Reduce inertia to a third and speed rises exactly threefold, no more or less, as though an invisible cash register on the ice balances every transaction perfectly.
+
+Another example may be familiar personally. Jump ashore from a stationary small boat: the instant you leap forward, it slides backward. Measurements show your mass times velocity and the boat's mass times velocity are almost exactly equal and opposite. Jump harder and it recoils faster; jump gently and it recoils slowly. Even two people coordinating their jumps leave the account balanced.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Treat this boat example as a thought experiment, not an invitation to jump ashore. Boat movement can cause falls or immersion. Step aboard or ashore only under safe docking conditions; see the \href{https://pfbc.pa.gov/fishpub/summaryad2022/2022summarybook.pdf}{Pennsylvania Fish and Boat Commission handbook}, which warns against jumping from boat to dock.
+% END TRANSLATOR SAFETY NOTE
+
+The third example is so unobtrusive you may never notice it: repeat yesterday's experiment today and get the same result. The swing downstairs takes the same number of seconds for a cycle; kitchen baking soda still bubbles with vinegar. You never worry about physics raising its prices overnight, and your lab report assumes instrument constants can last a semester. That confidence is itself remarkable cosmic behavior. Incidentally, you are racing around the Sun with Earth at about thirty kilometers per second, and around the galactic center with the Solar System at over two hundred kilometers per second. Yet your jump-rope score and tea's temperature have nothing to do with those enormous speeds. If laws cared how fast you traveled through the universe, life would be chaos.
+
+Together these examples pose the chapter's mystery. Physics has three famous prohibitions: an isolated system's total momentum, angular momentum, and energy do not change. The skater's cash register corresponds to angular momentum, the boat's balanced accounts to momentum, and overnight reproducibility has energy conservation behind it. Everyone can recite the prohibitions, but where do they come from? Why govern these quantities rather than velocity or acceleration?
+
+\step{Make a Guess First}
+
+Record your intuitive position as specifically as possible.
+
+First, two views of conservation's origins compete. A says conservation laws are three extra cosmic prohibitions, independent peers of the laws of motion, needing no deeper reason. B says they are not independent laws but shadows of something deeper and more ordinary. Which side appeals to you?
+
+Second, imagine three relocations: move an entire apparatus to another city a thousand kilometers away and repeat the experiment; rotate everything ninety degrees in place and repeat it; or leave everything untouched until tomorrow and repeat it. Will the three results change? If one relocation changes the result, what might happen to a conservation law?
+
+Third, a box pushed across the floor soon stops: its kinetic energy is gone. Someone says, ``Energy conservation is just accounting. Whenever the books fail to balance, invent a new category called heat and they always balance.'' Does that category represent something independently measurable, or merely conceal the accountant's embarrassment?
+
+Write your answers, tuck them between the pages, and check them individually at the end.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[The Swivel-Chair Cash Register]
+\textbf{Materials}: a freely rotating computer chair and two thick books or full water bottles.
+
+\textbf{Step one}: sit in the chair with feet off the floor and arms extended sideways, holding one book in each hand. Ask a partner to push an arm gently so the chair turns slowly, about once every two or three seconds. Do not spin fast.
+
+\textbf{Step two}: while turning, draw your arms against your chest. You will distinctly feel your rotation speed up, with nobody pushing, just your arms moving inward.
+
+\textbf{Step three}: extend your arms again and slow down. Repeat several times to feel how your arms control the speed.
+
+\textbf{Step four (optional)}: lean your upper body noticeably to one side while turning. The rotation will feel awkward and wobbly, no longer cleanly following the original vertical axis.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not perform the leaning step or spin an ordinary office chair while holding heavy objects. These actions create tipping, fall, and dropped-object hazards. Use a recorded demonstration or instructor-approved apparatus designed for this activity. See \href{https://ehso.emory.edu/sso/documents/toolbox-training_reducing-chair-related-injuries.pdf}{Emory Environmental Health and Safety's chair-injury guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+\textbf{Safety reminder}: always turn slowly, grip the books firmly when drawing in your arms, and have a partner steady you the first time.
+
+\textbf{Record and reflect}: have your partner count turns in ten seconds and estimate the factor by which your speed changes. Then answer two questions: speed clearly changes, yet nobody seems to twist the chair---which quantity changes and which account remains fixed? Why does step four make rotation awkward?
+\end{experiment}
+
+Record another, deeper mystery hidden here: drawing in your arms increases speed and rotational kinetic energy. Does energy fail to be conserved too? Has the accountant invented another category? We will balance that entry later.
+
+\step{The Old Model Runs into Trouble}
+
+First interrogate the old model that conservation laws are three cosmic prohibitions standing beside other laws. It cannot explain why these particular quantities. Why momentum rather than velocity? Energy rather than some accumulation of force? Why exactly three prohibitions in three-dimensional space? An arbitrary decree offers no reason for any particular list, yet this one fits perfectly.
+
+Next interrogate the model that conservation laws are by-products of Newton's laws. They can indeed be derived: Newton's third law makes two interacting bodies exchange momentum equally and oppositely, leaving their total unchanged. This derivation is valid, but subsequent history shows the explanatory order is backward. Electromagnetism found that light carries momentum: light slowly accelerates solar sails, and mirrors in radiation-pressure experiments gain precisely the momentum light loses. Newtonian mechanics had no place for field momentum, yet conservation survived. Quantum mechanics later largely dispensed with the word force, while energy, momentum, and angular momentum conservation not only survived but became legislators: before allowing a nuclear reaction or particle decay, check the accounts. A mere by-product should have failed with Newton's laws. Instead, Newtonian mechanics retreated from microscopic and high-speed realms while conservation flourished with wider jurisdiction.
+
+A more everyday embarrassment just appeared in the swivel chair: drawing in your arms increases kinetic energy. Braking turns a car's kinetic energy into hot brake pads; two clay balls colliding and sticking can lose nearly all their kinetic energy. If conservation is absolute, where do these disappearing or emerging energies go or come from? The old model either evades the question or improvises categories. The prohibition model always says ``because it is prohibited.'' That repeats a rule rather than explaining it.
+
+Such questions had accumulated by the early twentieth century. After Einstein completed general relativity in 1915, mathematicians were asked to clarify its energy-conservation problem. In 1918, German mathematician Emmy Noether answered with a theorem, not another prohibition: the list is not arbitrary. Every continuous symmetry of physical laws necessarily has a corresponding conserved quantity. Prohibitions are shadows; symmetry is the object casting them.
+
+\step{Inventing New Concepts}
+
+Recall Chapter~57: symmetry means laws remaining unchanged after some change. We need three continuous symmetries, meaning the change can be made gradually, unlike reflection's two options, reflected or not. They are spatial translation, relocating an entire experiment; time translation, delaying it; and spatial rotation, reorienting it. Let us see what conserved quantity each invariance produces.
+
+\textbf{Spatial translation invariance corresponds to momentum conservation.} Return to two people pushing each other on ice. If laws are the same everywhere, A pushing B and B pushing A must follow identical rules with subjects exchanged: neither position deserves special treatment. Conversely, if laws vary with location, nothing guarantees the two effects cancel, and an isolated system's total momentum can increase or decrease from nowhere. In other words, total momentum changes if and only if laws themselves change with location. Identical laws everywhere force balanced momentum accounts.
+
+\textbf{Time translation invariance corresponds to energy conservation.} Consider an unscrupulous merchant's argument. Suppose laws vary with time, gravity weakening at night and strengthening by day. At night you cheaply pump water uphill; by day you release it to generate more electricity than pumping consumed. Repeat for a net energy profit: perpetual motion becomes legal. Energy conservation's ban on all perpetual-motion machines is equivalent to denying nighttime discounts: laws do not change with time. Conserved energy is the bookkeeping form of laws having no time differential.
+
+\textbf{Spatial rotation invariance corresponds to angular momentum conservation.} Return to the chair. If laws treat every direction equally, no privileged direction can inject or drain rotational tendency from nowhere; the rotational account about an axis must balance internally. If a privileged direction appears---gravity's downward direction when you lean---angular momentum about other axes can change, and rotation becomes awkward.
+
+The three arguments share a framework: a quantity is conserved if and only if laws are indifferent to a corresponding change. Noether makes this mathematically rigorous. Provided motion can be expressed through an action, our old friend from Chapter~13, every continuous action symmetry corresponds precisely to a quantity constant along actual motion. This is a theorem, not a guess: given symmetry, a formula directly calculates its conserved quantity. It even determines the quantity's form---momentum as mass times velocity, angular momentum as moment of inertia times angular speed---from symmetry's mathematical structure, not another assumption.
+
+Notice continuous: it is the theorem's entry requirement. Discrete symmetries such as mirror reflection or left--right exchange allow only swapping or not, with no partial swap; Noether's machinery cannot use them. Discrete symmetries do not correspond to conserved quantities. They are still useful: mirror symmetry supplies quantum parity, a label distinguishing allowed and forbidden processes, but not a conserved continuously valued quantity. Before 1956, physicists regarded mirror symmetry as just as unquestionable as conservation of handedness, until experiments showed weak interactions distinguish left and right. Chapters~59 and~60 explore that territory. Here remember: only symmetry's continuous branch distributes conserved quantities.
+
+We can now untie the old model's knot: why exactly this list? Count the symmetries. Three-dimensional space has three independent translations, forward--back, left--right, up--down, conserving three momentum components; three independent rotation axes conserve three angular momentum components; time has one direction, giving one energy. The prohibitions number not three but three plus three plus one: seven. Each hangs on a specific symmetry axis. Discover indifference to another continuous change and the list gains an entry. Conversely, none is superfluous, since no symmetry stands idle. The list's shape is spacetime symmetry's shape.
+
+Action deserves another intuitive paragraph. Imagine it as a route's total fare: we compare the entire journey's account, not one step's price. Unlike a fare, it has units of energy times time, and nature requires only stationarity: slightly alter the route and the first-order change vanishes, without necessarily minimizing it. Add symmetry: the total fare is completely insensitive to a certain change. Translate, delay, or rotate the entire path and the fare is untouched. Mathematically, insensitivity in a particular direction along the actual path is precisely equivalent to constancy of a quantity along that path. The insensitive direction is the conserved direction. That is Noether's theorem's entire intuition.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,
+  box/.style={draw,rounded corners=3pt,align=center,minimum width=4.6cm,minimum height=1.0cm,fill=blue!4},
+  cbox/.style={draw,rounded corners=3pt,align=center,minimum width=4.6cm,minimum height=1.0cm,fill=green!6}]
+  \node[box] (s1) at (0,0) {Spatial translation invariance\\ (Same at every location)};
+  \node[box] (s2) at (0,-1.7) {Time translation invariance\\ (Same at every time)};
+  \node[box] (s3) at (0,-3.4) {Spatial rotation invariance\\ (Same in every direction)};
+  \node[cbox] (c1) at (8,0) {Momentum conservation};
+  \node[cbox] (c2) at (8,-1.7) {Energy conservation};
+  \node[cbox] (c3) at (8,-3.4) {Angular momentum\\conservation};
+  \draw[->,thick] (s1) -- (c1);
+  \draw[->,thick] (s2) -- (c2);
+  \draw[->,thick] (s3) -- (c3);
+  \node at (4,1.1) {Directions to which laws are indifferent};
+  \node at (4,-4.55) {Quantities forced to remain constant};
+  \draw[->,thick,dashed] (2.6,0.45) .. controls (4,0.3) .. (5.4,0.45);
+\end{tikzpicture}
+\caption{Noether's three symmetry--conservation pairs. Left: three changes to which laws are insensitive. Right: three quantities forced to remain constant. The arrows indicate rigorous correspondences guaranteed by a theorem, not analogies.}
+\end{figure}
+
+A historical footnote: Emmy Noether, among the twentieth century's greatest mathematicians, was long denied a formal teaching position because she was a woman and had to lecture in G\"ottingen under someone else's name. Her theorem initially drew little attention; decades later it became theoretical physics' underlying grammar. Today, particle physicists begin any new theory by inventorying its symmetries, which determine conserved quantities and thereby allowed and forbidden behavior. Someone denied an academic title gave rules to the entire universe.
+
+\step{A One-Sentence Model}
+
+\begin{oneline}
+The universe has not issued three prohibitions against changing momentum, energy, or angular momentum. It is simply indifferent in three ways: laws do not change when you change location, time, or orientation. Indifference to translation forces an isolated system's momentum to remain constant; indifference to passing time fixes energy; indifference to reorientation fixes angular momentum. Conservation laws are symmetry's shadows: a shadow is not an extra object but the way an object blocks light.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Begin with momentum. Translation symmetry forces equal and opposite action and reaction: \(\mathbf F_{12}=-\mathbf F_{21}\). Net force changes momentum, following Chapters~6 and~10, so
+\[
+\frac{d}{dt}\bigl(\mathbf p_1+\mathbf p_2\bigr)=\mathbf F_{21}+\mathbf F_{12}=0 .
+\]
+Answer our four usual questions. What does it describe? The time rate of change of an isolated two-body system's total momentum; zero means a constant total. Why this form? The left side is the account's change; the right has the only two internal forces, canceled by translation symmetry. Identical laws everywhere become zero change in the account. When valid? For isolation or zero net external force: two people on ice have balanced vertical weight and support and almost no horizontal friction. When invalid? With net external force: on the ground, friction transfers momentum to Earth, so the two people's total is not conserved. The people-plus-Earth total still is. The law has not failed; the account boundary was drawn too narrowly.
+
+Check special cases. Zero total momentum: two initially stationary people push apart with equal positive and negative momenta, still summing to zero. The boat example fits: a \(60\)~kg person moves ashore at \(2\)~m/s while a \(40\)~kg boat recoils at \(3\)~m/s; both products are \(120\)~kg\(\cdot\)m/s in opposite directions. Reversed directions: identical billiard balls colliding head-on exchange velocities; however complex the collision, the formula governs only the before-and-after accounts. An extreme case: supernova debris flies everywhere, yet its total momentum equals the original star's nearly zero momentum. Astronomers once used this account to predict neutrinos: visible fragments plus radiation did not balance, so invisible fragments had to carry momentum away; they were later caught.
+
+Now angular momentum. Denote the product of moment of inertia \(I\) about an axis and angular speed \(\omega\) by \(L=I\omega\). Rotation symmetry gives
+\[
+L=\text{constant}\quad\text{(about the symmetry axis, with no external torque)}.
+\]
+What does it describe? Total rotational tendency. Why this form? \(I\) measures mass distribution about the axis and \(\omega\) rotation speed. Drawing in arms changes the former, so the latter must change to preserve their product. When valid? For rotationally symmetric laws about that axis and no external torque. When invalid? Gravity selects downward, leaving only the vertical-axis component conserved; leaning in the chair disrupts the account. Insert real skating figures: extended arms give \(I\approx3.0\)~kg\(\cdot\)m\(^2\); retracted arms, \(I\approx1.0\)~kg\(\cdot\)m\(^2\). Speed rises from roughly one to three turns per second, preserving the product exactly. Kinetic energy is \(E=\tfrac12 I\omega^2=L^2/(2I)\): constant angular momentum and one-third inertia triple energy, from about \(59\)~J to \(178\)~J. The extra energy is not created: muscles pull arms inward against their outward tendency, doing positive work that transfers chemical energy into kinetic energy. Angular momentum conservation never promises kinetic energy conservation. Check extremes again: unchanged \(I\) means unchanged \(\omega\), like an undisturbed diabolo spinning uniformly without friction. If \(\omega=0\), then \(L=0\), and no amount of drawing in arms starts rotation; zero times anything is zero. This explains the initial push.
+
+This apparently ice-dance-specific law underpins modern navigation. A fast gyroscope's angular momentum direction is locked in space by rotation symmetry: the carrier can jolt and turn while the axis stays fixed. Three mutually perpendicular gyroscopes provide directional memory without external signals. Aircraft, submarines, and intercontinental missiles use it for inertial navigation; your phone detects screen orientation and steps using fingernail-sized micromechanical gyroscopes. Reaction wheels actively adjust the accounts; gyroscopes passively preserve them. Both use the same symmetry.
+
+Time translation takes a slightly longer route to a formula. The main thread needs only the result: if a system's laws do not change with time---in Chapter~15's language, its Hamiltonian has no explicit time dependence---a quantity called total energy remains constant:
+\[
+E=\text{constant}\quad\text{(laws do not change with time)}.
+\]
+We must honestly state a condition foreshadowed in Chapter~15. Hamiltonian conservation and its equality to kinetic-plus-potential total energy are different claims with different conditions. Conservation requires laws without a built-in clock; equality to ordinary total energy also requires absence of time-dependent constraints. A swing externally driven to a timetable has time written into its laws and need not conserve energy. This is precisely external breaking of time-translation symmetry, not a counterexample but another correct prediction.
+
+\begin{mathbridge}
+Lagrangian translation symmetry takes two lines. Describe the system by coordinate \(q\), with Lagrangian \(L=T-V\) not explicitly containing \(q\), the expression of location-independent laws. The Euler--Lagrange equation gives
+\[
+\frac{d}{dt}\frac{\partial L}{\partial \dot q}=\frac{\partial L}{\partial q}=0
+\quad\Longrightarrow\quad
+p=\frac{\partial L}{\partial \dot q}=\text{constant},
+\]
+where \(p\) is the momentum corresponding to \(q\). This earns \(q\) the vivid name cyclic coordinate: absent from the laws, it has conserved conjugate momentum. Time translation likewise takes a line: the Hamiltonian's total time derivative equals its partial time derivative,
+\[
+\frac{dH}{dt}=\frac{\partial H}{\partial t},
+\]
+so if \(H\) does not explicitly contain \(t\), \(H\) itself is conserved. Here is Noether's general pattern too: if a continuous change \(q\to q+\varepsilon\) leaves \(\delta L=0\), then along the actual path, the component of \(\partial L/\partial \dot q\) in that direction stays constant. The symmetry change's direction determines the conserved quantity's kind.
+\end{mathbridge}
+
+\begin{challenge}
+Noether's general form: when action \(S=\int L\,dt\) is invariant under a continuous transformation, \(\delta S=0\), a charge-like quantity \(Q\) is conserved along actual motion. Applied to fields, this becomes a local law: symmetry supplies a conserved current satisfying \(\partial\rho/\partial t+\nabla\!\cdot\!\mathbf j=0\). Density inside any volume can change only by flowing across its boundary, not by appearing or disappearing. Electric charge is the most important example. Its underlying symmetry is not an ordinary spacetime change but an arbitrary descriptive choice: Chapter~59's gauge symmetry. Another unsettling corner deserves advance mention. In an expanding universe, light's wavelength stretches and photon energy decreases. Whether the universe's total energy is conserved cannot be answered with school-level accounts because expansion lacks exact time-translation symmetry. The ledger has not been torn apart; expansion has crossed out its time-translation page.
+\end{challenge}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth]
+  % Arms extended
+  \draw[thick] (0,0) circle (1.5);
+  \fill (0,0) circle (0.10);
+  \fill (1.5,0) circle (0.14);
+  \fill (-1.5,0) circle (0.14);
+  \draw[->,thick] (45:1.95) arc (45:120:1.95);
+  \node at (0,-2.15) {Arms out: large \(I\), small \(\omega\)};
+  \node at (0,2.35) {\(L=I\omega\)};
+  % Arms drawn in
+  \draw[thick] (6,0) circle (0.6);
+  \fill (6,0) circle (0.10);
+  \fill (6.6,0) circle (0.14);
+  \fill (5.4,0) circle (0.14);
+  \draw[->,thick] ($(6,0)+(45:1.35)$) arc (45:160:1.35);
+  \node at (6,-2.15) {Arms in: small \(I\), large \(\omega\)};
+  \node at (6,2.35) {\(L=I\omega\) (the same number)};
+  \draw[->,very thick,dashed] (2.3,0) -- (3.7,0);
+\end{tikzpicture}
+\caption{Before and after drawing in the arms: mass moves inward, moment of inertia \(I\) decreases, angular speed \(\omega\) increases inversely, and \(L=I\omega\) remains constant. Kinetic energy is not conserved: the extra rotational energy comes from muscular work pulling the arms inward.}
+\end{figure}
+
+\step{The Model's Limits}
+
+First, laws are symmetric, not states. Near Earth's surface, up and down are privileged by gravity, leaving only rotational symmetry about the vertical axis. A figure skater's vertical angular momentum is conserved, while gravitational torque can change the account during horizontal-axis somersaults. States can be asymmetric while laws remain symmetric. Chapter~60 explores what happens when symmetric equations meet asymmetric circumstances.
+
+Second comes an intuition-overturning counterexample: a falling cat. Dropped upside down, it turns halfway around in midair and lands on its feet while total angular momentum remains zero. Has it violated conservation? No: a cat is not rigid. It bends its waist, twists front and back in opposite directions, and extends or retracts legs to change their inertias. The halves exchange angular momentum with a constantly zero sum, yet overall orientation changes. Conservation constrains the total, never internal redistribution. Engineers copied the cat with satellite and space-station reaction wheels: a motor turns a flywheel one way and the spacecraft turns the other. Coordinated wheels along three directions reorient it without expelling gas. Hubble has pointed steadily into deep space for decades using this free account.
+
+Third is one failure mode: too narrow an account boundary. A box loses momentum to Earth; braking loses kinetic energy to internal energy of pads and tires, as Chapters~9 and~28 explained. The accounts still balance, but entries may lie elsewhere.
+
+Fourth is another failure mode: broken symmetry itself. Collision experiments in an accelerating train seem not to conserve momentum: the carriage is not a translation-symmetric environment, since the outside world pushes through its wheels. A deeper cosmic example is expanding space stretching distant light's wavelength and reducing photon energy. This does not overthrow energy conservation; rather, exact time-translation symmetry is absent in an expanding universe. Noether is particularly useful here, identifying precisely which ledger page fails and why.
+
+Finally, real numbers show nature's careful accounting. Approximate Earth as a sphere with moment of inertia \(8\times10^{37}\)~kg\(\cdot\)m\(^2\) and angular speed \(7.3\times10^{-5}\)~rad/s. Their product gives spin angular momentum about \(5.9\times10^{33}\)~kg\(\cdot\)m\(^2\)/s, beyond everyday comparison. Tidal friction brakes it constantly, lengthening a day by roughly \(1.7\) milliseconds per century. Where does Earth's lost spin angular momentum go? Into the Moon's orbit. Apollo reflectors permit centimeter-precision laser ranging: the Moon recedes about \(3.8\) centimeters annually, gaining exactly the orbital angular momentum Earth loses. Hundreds of millions of years ago, days were roughly twenty-two hours long, as fossil coral growth bands record. Conservation is no textbook game: across geological time, it balances both ends entry by entry without discrepancy.
+
+\step{Explaining the Opening Phenomena}
+
+Now settle all three opening mysteries.
+
+The skater's cash register: near the ice, laws are symmetric about the vertical axis, fixing \(L=I\omega\). Drawing mass inward reduces \(I\), so \(\omega\) must rise exactly inversely. Behind the metaphor lies geometry: indifference to orientation forces a balanced rotational account. Speeding up requires no push because rotational energy, not angular momentum, increases, supplied by muscles' chemical energy. The chair's awkward wobble when leaning illustrates the converse: gravity selects down, preserving only vertical-axis rotational symmetry and leaving other directional accounts unprotected. Your body immediately feels it.
+
+The boat's balanced accounts: horizontally, person plus boat is approximately isolated. Translation symmetry guarantees paired cancellation of interactions, preserving zero total momentum. Your forward momentum equals the boat's backward momentum, with equal opposite mass--velocity products. This directly follows from identical laws everywhere, not coincidence.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not test this explanation by jumping between a boat and shore. Use a model or video; follow safe boarding and docking procedures in the \href{https://pfbc.pa.gov/fishpub/summaryad2022/2022summarybook.pdf}{Pennsylvania Fish and Boat Commission handbook}.
+% END TRANSLATOR SAFETY NOTE
+
+Overnight reproducibility: energy conservation is equivalent to laws not changing with time. Yesterday's instrument constants remain trustworthy because the universe offers no off-peak discounts. Conversely, if today's swing period differs from yesterday's, look for broken time-translation symmetry: changed temperature, perhaps, or an unwound spring.
+
+The three guesses now have answers. Conservation laws are not independent prohibitions but symmetry's shadows: choose B for question one. If laws remain unchanged under the three relocations, results remain unchanged; changed results invalidate the corresponding conservation law locally. Heat is no cover-up but independently measurable internal energy, an account category required by following time symmetry's bookkeeping through. The prohibitions disappear and structure remains. Chapter~57 asked what symmetry is; this chapter showed what it does. Chapter~59 asks about arbitrary descriptive choices, such as electric potential's zero and wavefunction phase. These too are symmetries, with conserved quantities related to interactions themselves. Symmetry does more than keep accounts: it legislates.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[A Sealed Laboratory in Deep Space]
+Put a fully equipped laboratory in a windowless cabin, far from all celestial bodies, drifting uniformly. Perform any mechanics experiment: throwing balls, collisions, pendulum clocks, swivel chairs. Can you determine its location, orientation, or current time? Noether's answer is no: these three impossibilities are momentum, angular momentum, and energy conservation's other face. But rotation is detectable without windows: water develops a parabolic surface and a pendulum deflects. Rotation seems more absolute than location, direction, or time. Why can we detect acceleration and rotation but not position? This troubled Mach and Einstein and leads deep into general relativity. We merely open the door a crack.
+\end{thought}
+
+\begin{puzzles}
+\item An astronaut's safety tether breaks during an EVA, leaving him stationary relative to the spacecraft three meters away. He has no thruster, only a two-kilogram wrench. How can he return? If he has plenty of time and merely wants to turn toward Earth, can he do so without throwing anything?\\
+\emph{Hint}: returning is translation: total momentum must remain zero, so something must be thrown backward. Turning is rotation: recall the cat. Zero total angular momentum can coexist with changed orientation if the body or held wrench can twist in separate sections.
+
+\item Imagine a region where laws vary slowly with location, so two balls' action and reaction are unequal. What macroscopic oddity would appear? Then imagine laws changing between day and night: use the merchant's argument to design a device that earns net energy.\\
+\emph{Hint}: broken symmetry invalidates a ledger page. Identify it first; the free lunch hides there. An isolated object starting to move by itself is the first region's expected oddity.
+
+\item A ring-shaped station spins for artificial gravity. One astronaut runs with its rotation, another against it. Whose bathroom scale reads more? What happens to the station's rotation when they begin running?\\
+\emph{Hint}: people plus station form an isolated system with constant total angular momentum. A co-rotating runner takes more angular momentum, leaving the cabin less and slowing it slightly. Gravity underfoot comes from rotation; changed rotation speeds naturally make one reading larger and the other smaller.
+
+\item Light leaves a source ten billion light-years away in an expanding universe. By arrival at Earth its wavelength has doubled and each photon's energy halved. Where did the lost energy go?\\
+\emph{Hint}: before hunting hidden energy, check the premise. Does an expanding universe still have exact time-translation symmetry? What is the name of the invalidated ledger page?
+\end{puzzles}

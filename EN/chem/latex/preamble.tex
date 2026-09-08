@@ -1,0 +1,112 @@
+% Shared preamble: formatting definitions for all three volumes
+% Compile with XeLaTeX (TeX Live, ctex, and tcolorbox required).
+
+% ctex options (fontset=none, UTF8, scheme=chinese) are set in documentclass.
+\usepackage{ctex}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+% Western text uses the original default Latin Modern alongside Noto CJK.
+
+\usepackage[a4paper,top=2.6cm,bottom=2.6cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{booktabs,longtable,array,multirow}
+\usepackage{enumitem}
+\usepackage{zhnumber}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Color grammar (editorial coding, not actual appearances) ----------
+\definecolor{mainblue}{RGB}{31,78,121}     % Main story
+\definecolor{bridgegreen}{RGB}{46,117,80}  % Conceptual bridge
+\definecolor{challengepurple}{RGB}{96,60,130} % Further challenge
+\definecolor{laborange}{RGB}{176,96,32}    % Experiment
+\definecolor{warnred}{RGB}{158,42,43}      % Misconception alert
+\definecolor{evidenceteal}{RGB}{30,110,110}% Evidence story
+
+% ---------- Chemical formulas: \chem{H_2O}, \chem{CO3^{2-}} ----------
+\newcommand{\chem}[1]{\ensuremath{\mathrm{#1}}}
+
+% ---------- Three reading levels ----------
+% The main story is unmarked; the other two levels have colored boxes.
+\newtcolorbox{qiaoliang}{% Conceptual bridge: quantitative relationships
+  enhanced,breakable,colback=bridgegreen!6,colframe=bridgegreen,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily [Conceptual Bridge] A Little Math, a Deeper View},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=bridgegreen}
+
+\newtcolorbox{tiaozhan}{% Further challenge: a higher perspective
+  enhanced,breakable,colback=challengepurple!6,colframe=challengepurple,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily [Further Challenge] Ready to Climb Another Level?},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=challengepurple}
+
+% ---------- Recurring features ----------
+\newtcolorbox{kaichang}{% Opening object and question
+  enhanced,breakable,colback=mainblue!5,colframe=mainblue,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily Opening: Pick Something Up},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=mainblue}
+
+\newtcolorbox{shiyan}{% Safe home/classroom observations
+  enhanced,breakable,colback=laborange!6,colframe=laborange,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily Try It Yourself},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=laborange}
+
+\newtcolorbox{wuqu}{% Common misconceptions and counterexamples
+  enhanced,breakable,colback=warnred!5,colframe=warnred,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily Watch Out: A Common Misconception},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=warnred}
+
+\newtcolorbox{zhengju}{% How scientists know
+  enhanced,breakable,colback=evidenceteal!5,colframe=evidenceteal,
+  boxrule=0.6pt,arc=1.5mm,left=2mm,right=2mm,
+  title={\sffamily How Scientists Know},
+  fonttitle=\bfseries,coltitle=white,colbacktitle=evidenceteal}
+
+% Reflection questions
+\newlist{sikaoti}{enumerate}{1}
+\setlist[sikaoti,1]{label=\textbf{Think \arabic*.},leftmargin=3.2em,itemsep=2pt}
+
+% ---------- Chapter styling ----------
+\ctexset{
+  chapter = {
+    name = {Chapter\space,},
+    number = \arabic{chapter},
+    format = \Huge\bfseries\sffamily,
+  },
+  section = {format = \Large\bfseries\sffamily},
+  subsection = {format = \large\bfseries\sffamily},
+}
+
+% Part names
+\ctexset{
+  part = {
+    name = {Part\space,},
+    number = \Roman{part},
+    format = \Huge\bfseries\sffamily\centering,
+  }
+}
+\ctexset{appendix={name={Appendix\space,},number=\Alph{chapter}},
+  contentsname={Contents},figurename={Figure},tablename={Table}}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\sffamily Burn the Chemistry and Biology Textbooks}
+\fancyhead[RO]{\small\sffamily \leftmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Line and paragraph spacing
+\linespread{1.32}
+\setlength{\parskip}{2pt}
+
+% Physical quantities and units
+\newcommand{\ud}[2]{\ensuremath{#1\ \mathrm{#2}}} % \ud{6.02\times10^{23}}{mol^{-1}}

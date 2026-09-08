@@ -1,0 +1,83 @@
+% preamble.tex -- Global styles for Igniting the Physics Spark
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathmorphing,patterns}
+\usepackage[most]{tcolorbox}
+\usepackage[a4paper,margin=2.4cm,top=2.6cm,bottom=2.8cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue!50!black,citecolor=black}
+
+% ---------- Three reading levels ----------
+% Main story: middle school mathematics, with a complete narrative
+\newtcolorbox{mainline}{%
+  colback=green!4,colframe=green!50!black,breakable,
+  title={[Main Story]},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+% Mathematical bridge: vectors, functions, limits, derivatives, integrals,
+% and simple differential equations
+\newtcolorbox{mathbridge}{%
+  colback=blue!4,colframe=blue!55!black,breakable,
+  title={[Mathematical Bridge]},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+% Challenge: linear algebra, partial differential equations, complex numbers;
+% not prerequisites for understanding later chapters
+\newtcolorbox{challenge}{%
+  colback=red!4,colframe=red!60!black,breakable,
+  title={[Challenge]},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+
+% ---------- Recurring boxes ----------
+% Hands-on experiment
+\newtcolorbox{experiment}[1][]{%
+  colback=orange!6,colframe=orange!75!black,breakable,
+  title={Hands-on Experiment\ifx\\#1\\\else: #1\fi},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+% Thought experiment
+\newtcolorbox{thought}[1][]{%
+  colback=violet!6,colframe=violet!70!black,breakable,
+  title={Thought Experiment\ifx\\#1\\\else: #1\fi},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+% One-sentence model
+\newtcolorbox{oneline}{%
+  colback=yellow!10,colframe=yellow!60!black,breakable,
+  title={One-Sentence Model},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+% Draft outline placeholder (used only in unfinished source chapters)
+\newtcolorbox{draftnote}{%
+  colback=gray!6,colframe=gray!60,breakable,
+  title={Chapter Outline (Placeholder; Remove When Complete)},fonttitle=\bfseries,
+  left=6pt,right=6pt,top=4pt,bottom=4pt}
+
+% ---------- Headings in each chapter's ten-step structure ----------
+% Usage: \step{A Counterintuitive Opening}
+\newcommand{\step}[1]{\subsection*{#1}}
+% Challenge questions
+\newlist{puzzles}{enumerate}{1}
+\setlist[puzzles]{label=\textbf{Challenge \arabic*.},leftmargin=3em}
+
+% ---------- Volumes (three) ----------
+% Usage: \volume{Volume I}{Motion, Energy, and Fields}
+\newcommand{\volume}[2]{%
+  \cleardoublepage
+  \thispagestyle{empty}
+  \vspace*{0.28\textheight}
+  \begin{center}
+    {\Huge\bfseries #1\par}
+    \vspace{1.2em}
+    {\LARGE #2\par}
+  \end{center}
+  \vfill
+  \phantomsection
+  \addcontentsline{toc}{part}{#1\quad #2}
+  \cleardoublepage}
+
+% ---------- Parts (eleven) ----------
+% Localize generated labels without changing the document class's styling.
+\ctexset{part={name={Part\space,},number=\Roman{part}},
+  chapter={name={Chapter\space,},number=\arabic{chapter}},
+  appendix={name={Appendix\space,},number=\Alph{chapter}},
+  contentsname={Contents},figurename={Figure},tablename={Table}}
+\renewcommand{\today}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\day, \number\year}

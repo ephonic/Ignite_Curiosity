@@ -1,0 +1,210 @@
+\chapter{Crystals, Glass, New Materials}
+
+\begin{kaichang}
+Draw a light pencil line on paper. A black mark appears. You may not realize that this easily smudged trace and the sparkling jeweler's diamond, called ``nature's hardest material,'' contain the same element---carbon---both at fairly high purity.
+
+Before turning to the answer, guess why the same atoms make one material soft enough to crumble onto paper or between fingers, and another hard enough to scratch glass and cut stone. Then guess again: does pencil ``lead'' really contain lead?
+
+Consider your glass window too: transparent, brittle, easily shattered. A widespread story says glass is not solid but an extraordinarily slow-flowing liquid: ``Old European church windows are thicker at the bottom because they flowed down over centuries.'' Is that true?
+
+By the end, all three questions will be answered in the same place: \textbf{how atoms line up}.
+\end{kaichang}
+
+\section{Visible Order}
+
+Scatter salt on black paper and inspect it with a magnifying glass. Every grain is a tiny cube with ruler-neat edges. Crush one through paper with a spoon's back: the fragments are smaller cubes.
+
+Salt is not alone. Rock sugar has smooth flat faces; endlessly varied snowflakes always have six arms; mica peels into transparent sheets like sticky notes; quartz grows hexagonal prisms. People noticed minerals' spontaneous regular shapes thousands of years before understanding why. If you wear a quartz watch, its artificially cut crystal is vibrating as steadily as a tuning fork, counting your seconds. Its regular structure earns its timekeeping reputation.
+
+These crystals share \textbf{fixed melting points}. Ice melts promptly at $0\,^{\circ}\mathrm{C}$, salt only at $801\,^{\circ}\mathrm{C}$, and temperature stays pinned there throughout melting.
+
+Compare glass, paraffin, rosin, and plastics. Heating produces no sharp ``melts at this degree'' boundary; they soften, become viscous, then flow. Broken glass has curved shell-like fractures without a flat plane. Wax even deforms in your hands.
+
+Chocolate sits between these examples. Good chocolate snaps cleanly, has a smooth shining fracture, and melts near body temperature in your mouth. After long storage, a white bloom may appear and its texture become sandy. That is not mold (it remains edible), but fat quietly changing its ``formation.'' Remember the clue; we will return to it.
+
+\textbf{Translator safety note:} The source's blanket ``edible'' claim, repeated in an exercise, is not a food-safety test. Do not assume every white coating is harmless bloom, and do not taste or sniff suspect food. Discard moldy or otherwise suspect food according to \href{https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/molds-food-are-they-dangerous}{USDA mold-handling guidance}.
+
+Now focus the question: what atomic arrangement explains regular shapes, fixed melting points, and peeling into sheets together?
+
+\section{Zooming In: Atoms in Formation}
+
+Magnify salt a hundred million times and you see Chapter 18's picture: sodium and chloride ions alternate like a checkerboard, repeating identically upward, downward, forward, backward, left, and right. There is no individual ``\chem{NaCl} molecule,'' only an endlessly extending ion array.
+
+A regularly repeating three-dimensional array is a \textbf{lattice}; its smallest repeating unit is a \textbf{unit cell}. A cell relates to a lattice like one complete wallpaper motif to the whole sheet. Know its shape and repetition directions, and one rule describes the whole crystal. In other words, crystals have \textbf{long-range order}: locating one particle lets you predict its hundred-millionth neighbor's position.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+\foreach \x in {0,0.6,1.2,1.8,2.4}
+  \foreach \y in {0,0.6,1.2,1.8}
+    \fill[mainblue] (\x,\y) circle (0.1);
+\draw[mainblue,dashed] (0.6,0.6) rectangle (1.2,1.2);
+\node at (1.2,-0.6) {Crystal: repeating (dashed unit cell)};
+\begin{scope}[xshift=5.4cm]
+\fill[warnred] (0.15,0.25) circle (0.1); \fill[warnred] (0.65,0.55) circle (0.1); \fill[warnred] (0.35,1.15) circle (0.1);
+\fill[warnred] (1.05,0.05) circle (0.1); \fill[warnred] (1.25,0.85) circle (0.1); \fill[warnred] (0.85,1.55) circle (0.1);
+\fill[warnred] (1.65,0.45) circle (0.1); \fill[warnred] (1.55,1.35) circle (0.1); \fill[warnred] (2.15,0.95) circle (0.1);
+\fill[warnred] (2.05,1.75) circle (0.1); \fill[warnred] (0.2,1.8) circle (0.1); \fill[warnred] (2.25,0.15) circle (0.1);
+\node at (1.2,-0.6) {Glass: packed, but not ordered};
+\end{scope}
+\end{tikzpicture}
+\end{center}
+(Schematic: dots are representations, not atoms' actual appearances or colors.)
+
+The formation model explains all three crystalline quirks:
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Regular shapes}: salt's cubic cells stack neatly in three perpendicular directions, naturally building cubic grains. Crystal faces are the most orderly ``slices'' of the array.
+\item \textbf{Peeling into sheets}: mica's particles bind strongly within layers and weakly between them, so applied force separates the weakest places: layer interfaces.
+\item \textbf{Fixed melting points}: particles have identical surroundings, neighbor counts, and distances, binding them equally tightly. At a particular temperature they almost simultaneously ``unlock,'' creating a sharp melting point.
+\end{itemize}
+
+Glass resembles the right-hand picture. Its particles also pack tightly, with density not greatly different from crystals, but their neighbor relationships lack an overall pattern: \textbf{long-range disorder}.
+
+\begin{qiaoliang}
+How many unit cells fit in a salt grain? Salt's cubic cell has sides about \ud{0.56}{nm}. A grain with \ud{0.5}{mm} sides holds along each edge
+\[
+\frac{0.5\times 10^{-3}}{0.56\times 10^{-9}} \approx 9\times 10^{5}\ \text{(about 900,000)}
+\]
+Cubing gives roughly $(9\times 10^{5})^{3} \approx 7\times 10^{17}$ cells. Each contains 4 sodium and 4 chloride ions, so the barely visible grain has about $6\times 10^{18}$ ions---six hundred quadrillion.
+
+Now the true meaning of order: all $10^{18}$ positions can be described by ``one unit cell $+$ three repetition directions,'' information small enough for a postage stamp. An equally populated glass requires recording each particle separately. Order and disorder differ first in information content.
+\end{qiaoliang}
+
+\section{Why Line Up, and Why Run Out of Time?}
+
+Chapter 17 gave a simple principle: change may occur when it lowers total energy. Atoms have no wishes; energy and probability drive everything. In a lattice, each particle attracts the most neighbors at suitable distances with minimal repulsion, minimizing total energy. Energetically, most pure substances therefore ``should'' crystallize on cooling.
+
+But lining up takes time. Roaming liquid particles must reach the right place at the right angle to join the array. Here appears a recurring division of labor: \textbf{direction and speed}.
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Slow cooling}: ample time lets particles find their places and large crystals grow. Underground magma cooling over tens of thousands of years grows visible quartz and feldspar crystals in granite.
+\item \textbf{Rapid cooling}: particles freeze in place before lining up, forming glass. Magma entering cold water solidifies within minutes into obsidian, a natural glass.
+\end{itemize}
+
+Crystallization is thus the energetically favorable \textbf{direction}; glass is a \textbf{product} arrested halfway. This does not refute ``energy release permits spontaneous change,'' but exemplifies thermodynamics governing direction and kinetics governing speed. Chapters 27 and 29 bring this division back as a central theme.
+
+Chocolatiers practice it daily. Cocoa butter has several crystal forms, but only one gives the right snap, shine, and melt-in-the-mouth texture. ``Tempering'' carefully heats, cools, and reheats to direct fat molecules into that formation. Long-storage bloom comes from months of rearrangement into a more stable formation: better energetics, worse texture.
+
+\section{Four Kinds of Formation}
+
+The ``glue'' holding ordered particles determines crystalline character. Four kinds give four main crystal classes:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lllll}
+\toprule
+Type & Particles & ``Glue'' & Examples & Traits \\
+\midrule
+Ionic & \shortstack[l]{Positive/\\negative ions} & \shortstack[l]{Electrostatic\\attraction} & \chem{NaCl}, \chem{CaF_2} & \shortstack[l]{Hard, brittle;\\high melting\\point} \\
+Molecular & \shortstack[l]{Whole\\molecules} & \shortstack[l]{Intermolecular\\forces} & \shortstack[l]{Ice, dry ice,\\sugar} & \shortstack[l]{Soft; low\\melting point} \\
+\shortstack[l]{Covalent\\network} & Atoms & \shortstack[l]{Covalent\\network} & \shortstack[l]{Diamond,\\quartz} & \shortstack[l]{Very hard;\\very high\\melting point} \\
+Metallic & \shortstack[l]{Metal\\cations} & Electron sea & \chem{Cu}, \chem{Fe} & \shortstack[l]{Conductive,\\ductile} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Molecular crystals use Chapter 22's intermolecular forces, one or two orders of magnitude weaker than chemical bonds. Dry ice, solid \chem{CO_2}, therefore sublimes at $-78\,^{\circ}\mathrm{C}$; ice's hydrogen bonds from Chapter 23 hold only to $0\,^{\circ}\mathrm{C}$. Metallic crystals rely on Chapter 21's sea for conduction and ductility. Chapter 18 covered ionic crystals; remember that attraction everywhere makes them hard, while a half-spacing shift bringing like charges together makes them brittle.
+
+The genuinely new face is the \textbf{covalent-network crystal}: the whole crystal is a three-dimensional covalent net. A quartz piece can be called one ``molecule,'' a giant with an astronomical molecular mass. Melting leaves no weak links to loosen first; many covalent bonds must break, absorbing energy as Chapter 17 explained. Quartz therefore melts only around $1700\,^{\circ}\mathrm{C}$.
+
+Now symbols arrive, immediately correcting a misconception. Quartz is \chem{SiO_2}, but no independent ``silicon dioxide molecule'' exists. Each silicon connects to 4 oxygens and each oxygen to 2 silicons, extending everywhere. \chem{SiO_2} records only the simplest $1:2$ atomic ratio, just as \chem{NaCl} records $1:1$. For ionic and network crystals, formulas give recipes, not molecular portraits.
+
+\begin{shiyan}
+\textbf{Grow Your Own Crystal.} Materials: alum (from food-additive shops or online; coarse salt can substitute), a clean glass, hot water, cotton thread, a chopstick, and a well-shaped small crystal as a seed. Procedure: (1) Stir successive portions of alum into hot water until a little remains undissolved, making a nearly saturated solution. (2) Pour into the glass and leave overnight; choose the neatest small crystal from the bottom as your seed. (3) Tie it to thread wound around the chopstick, suspending it centrally in the solution; cover the glass with paper against dust. (4) Leave undisturbed for one or two weeks. What to observe: new flat faces grow daily while symmetry remains; compare the irregular little crystals that happen to grow on the thread. Why can the seed ``direct'' arriving particles into the same formation? Safety note: beware hot-water burns; alum solution and crystals \textbf{must not be eaten}. Wash your hands afterward; waste solution may go down the drain.
+\end{shiyan}
+
+\section{The Same Carbon: Diamond and Graphite}
+
+Now answer our first opening question directly. Diamond and graphite are pure carbon, differing only in atomic arrangement.
+
+In \textbf{diamond}, each carbon extends four ``hands'' tetrahedrally (Chapter 20), taking four neighbors, which take their neighbors, extending equally everywhere into a rigid three-dimensional net. No weak link exists: sliding in any direction requires breaking many covalent bonds simultaneously. Diamond tops the Mohs scale and scratches glass and stone. All four electrons per carbon work in covalent bonds, leaving none free, so pure diamond insulates. It is also transparent: visible light lacks enough energy to disturb those locked electrons and passes through. Strong refraction and carefully cut facets send light through repeated internal total reflections before emerging, creating its brilliance. Diamond also ranks among nature's best thermal conductors and feels cool; jewelers' thermal-conductivity testers exploit this.
+
+In \textbf{graphite}, each carbon has only three neighbors, making flat hexagonal honeycombs. Strong covalent bonds within layers are shorter and stronger even than diamond's, while weak intermolecular forces from Chapter 22 connect layers spaced \ud{0.335}{nm} apart. Layers slide easily, fully explaining softness, writing, pencil leads, and lubrication. Each carbon also has one electron not used for in-layer bonding, free to move within the layer, so graphite conducts along layers.
+
+Pencil writing is now clear: the lead is not simply ``worn away''; paper acts as a scraper, removing honeycomb layers and leaving them behind. Even a \ud{100}{nm}-thick stroke stacks about three hundred layers. One casual mark builds a three-hundred-story ``molecular building.''
+
+And the second question: pencil lead contains \textbf{no lead}. It is fired graphite powder mixed with clay. More clay gives hardness (H grades); more graphite gives blackness (B grades). Early observers mistook graphite for lead ore, and the mistaken name survives.
+
+Peel graphite down to \textbf{one layer} and you get celebrated graphene. We will save its story for the new-materials section.
+
+\section{Glass: Frozen Disorder, Not a Flowing Liquid}
+
+Ordinary glass also mainly contains \chem{SiO_2}, with sodium carbonate and limestone added to lower melting temperature and improve properties. It differs from quartz in arrangement. Zoom into silica glass and local order remains: four oxygens still surround each silicon tetrahedrally, with orderly neighbor relationships. But tetrahedra link into irregular rings of varying size, without any global repetition. This is \textbf{short-range order, long-range disorder}.
+
+The structure immediately explains glass's quirks:
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{No fixed melting point}: each particle has its own surroundings and binding strength. Loosely bound ones move first, tighter ones later, producing continuous softening. Glassblowers exploit this ``soft candy'' state for bottles and lampshades.
+\item \textbf{Equal properties in every direction}: without orderly weak planes, fractures curve randomly into shell-like patterns.
+\item \textbf{A genuine solid}: at room temperature glass has a fixed shape, responds elastically, and fractures under heavy force, displaying all solid mechanical behaviors. Precisely, it is an \textbf{amorphous solid}: liquid-like structure, solid mechanics.
+\end{itemize}
+
+\begin{wuqu}
+``Glass is a very slow liquid, proven by old church windows thicker at the bottom.'' Three counterexamples dismantle this widespread misconception. First, calculated flow is negligible: viscosity rises exponentially as temperature falls, essentially halting room-temperature flow. Even times far beyond the universe's age would yield no visible deformation. Second, precision instruments testify: telescope and microscope lenses made two or three centuries ago still image accurately, and two-thousand-year-old Roman glass bottles have not flowed into bottom-heavy shapes. Third, uneven thickness has another cause: old blown or spun window glass was uneven from manufacture, and installers typically put thicker, heavier edges down. That records installation, not flow. Glass is honestly described as a frozen liquid structure, not a still-flowing liquid.
+\end{wuqu}
+
+\section{How Scientists Know Atoms Line Up}
+
+A \ud{0.56}{nm} unit cell is hundreds of times smaller than visible wavelengths, invisible to any microscope. Why believe atoms form arrays?
+
+\begin{zhengju}
+In 1912, Laue devised an elegant test. X-rays were barely more than a decade old and their nature uncertain. \textbf{If} crystals were regular particle arrays, \textbf{and} X-rays were waves with wavelengths comparable to atomic spacings, crystals should be three-dimensional gratings producing orderly diffraction spots. His assistants Friedrich and Knipping tested copper sulfate crystals, and regular spots appeared. One experiment established both wave-like X-rays and periodic crystalline order, when some scientists still doubted atoms' existence.
+
+The Braggs turned spots into a ruler. Lawrence recognized diffraction as X-ray ``reflection'' from atomic planes, letting spot positions reveal plane spacings. Their early structures included salt, \chem{NaCl}, with an unexpected result: no paired ``\chem{NaCl} molecules,'' only an infinite alternating ion array. This supplied Chapter 18's experimental basis for ionic crystals as vast arrangements. Father and son shared the 1915 Nobel Prize; Lawrence was only 25.
+
+The method outlives any individual conclusion. X-ray diffraction later revealed proteins, DNA, and other biological macromolecules, and returns in the genetics chapters. Remember the method above all: scientists did not see atoms directly but designed circumstances in which atoms had to leave fingerprints, then reconstructed the scene from those prints.
+\end{zhengju}
+
+\section{New Materials: Change Structure, Not Just Composition}
+
+Twentieth-century materials science's greatest lesson fits one sentence: \textbf{properties depend not just on which elements are present, but on how structures are organized across scales}.
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Graphene}: one graphite layer. In 2004, Geim and Novoselov repeatedly stuck and peeled transparent tape from graphite until one honeycomb layer remained, earning the 2010 Physics Nobel. This atom-thick sheet can be over a hundred times stronger than steel by equal weight, with excellent thermal and electrical conduction. Today's difficulty is not whether it is good, but cheaply making large perfect single layers---another structure-and-rate problem.
+\item \textbf{Ceramics}: materials such as alumina, \chem{Al_2O_3}, and silicon nitride, \chem{Si_3N_4}, form ionic/covalent networks that are hard, heat-resistant, corrosion-resistant, and insulating, enabling ceramic knives, spark plugs, and spacecraft heat tiles. The cost is brittleness: network bonds prevent slip, letting cracks propagate throughout. Nearly every contrast with metals follows from whether the bonding permits particle sliding.
+\item \textbf{Composites}: every single material has weaknesses, so combine them. Steel resists tension and concrete compression; together they make reinforced concrete. Glass fibers in resin make fiberglass; carbon fibers in resin make bicycle frames and rackets lighter than aluminum and stronger than steel. Properties reside not only in composition, but in which components occupy which positions and orientations.
+\item \textbf{Metamaterials}: push this route to the limit and properties come mainly from designed microstructure rather than composition. Arrange subwavelength units in specific patterns, and responses to light or sound can become unlike natural materials, including preliminary cloaking devices that bend light around a region. Composition nearly exits; geometry takes the stage.
+\end{itemize}
+
+These materials already serve you. Chips are sliced from ultrapurified single-crystal silicon ingots, each one complete lattice whose conductivity even one impurity atom can alter. Artificial hip-joint heads use hard, wear-resistant zirconia ceramics. Drugmakers use X-ray diffraction to reveal disease-related protein shapes, then design molecules that fit them. From nanoscale atomic arrangements through micrometer-scale grains to macroscopic component shapes, \textbf{structure across scales determines everything about materials}. That is the chapter's final message to remember.
+
+\section{Boundaries: Perfect Crystals Do Not Exist}
+
+Our perfect lattice is an ideal model. Real crystals contain vacancies where particles are missing, forced-in impurities, and dislocations where rows shift by half a spacing.
+
+But defects need not be flaws. Many important properties come from them: dislocations moving row by row allow metals to be forged and bent; impurities obstruct them to harden steel and aluminum alloys; deliberately introduced impurities are semiconductors' soul. Without defects, no chips.
+
+Two further facts exceed this framework. First, your nail is not one crystal but a \textbf{polycrystal} of differently oriented grains whose boundaries strongly influence strength and rusting. Second, in 1982, Shechtman saw fivefold symmetry in an aluminum alloy's diffraction pattern, though textbooks said periodic arrays could not have it. Colleagues mocked him for years. Such \textbf{quasicrystals} were later found in natural meteorites, and he received the 2011 Chemistry Nobel. Order need not mean periodic repetition. Treat perfect lattices as useful scaffolding: half the story of real materials is written in defects and boundaries.
+
+\section{Back to the Pencil}
+
+Time to keep our promises.
+
+Pencils write because strong in-layer covalent bonds coexist with weak interlayer forces, letting paper scrape honeycomb sheets away. Diamond is hardest because a tetrahedral covalent network locks each carbon in every direction with nowhere to slide. Pencil lead is graphite and clay, not lead. Your window is a rapidly frozen \chem{SiO_2} disorder, locally ordered but globally disordered, and genuinely solid at room temperature. Thick-bottomed church windows record manufacture and installation, not flow.
+
+One element, two extreme personalities: the dividing line lies not in composition, but in three questions---how particles arrange, what bonds connect them, and at what scale they organize. This is another application of our first two guiding questions.
+
+\section{Next Chapter: Taking the Lattice Apart}
+
+Lattices lock particles neatly in place with favorable energetics. Yet salt vanishes in water within seconds. Without electric hammers or crowbars, how do water molecules dismantle an ionic array? Where do the removed ions go, and what do they wear now? Why does salt scatter with a rinse while quartz sand remains unchanged after ten thousand years of soaking?
+
+In Chapter 25, ``What Happens in Solutions,'' we follow a sodium ion into water.
+
+\begin{tiaozhan}
+The Braggs' ruler is one equation. Treat atomic planes spaced $d$ apart as semitransparent mirrors. X-rays enter at angle $\theta$, and reflections from adjacent planes differ in path length by $2d\sin\theta$. When this equals a whole number of wavelengths, reflections reinforce and produce a bright spot:
+\[
+n\lambda = 2d\sin\theta
+\]
+This is Bragg's law. Calculate with a common experimental wavelength $\lambda = \ud{0.154}{nm}$ and salt's first-order spot ($n=1$) at $\theta \approx 16^{\circ}$. The plane spacing is $d = \frac{\lambda}{2\sin\theta} \approx \frac{0.154}{2\times 0.276} \approx \ud{0.28}{nm}$, exactly half the \ud{0.56}{nm} unit-cell edge, because those planes bisect the cell. One spot locates an atomic row; hundreds reconstruct a whole three-dimensional crystal. Skipping this does not lose the main thread, but misses the ruler's most elegant part.
+\end{tiaozhan}
+
+\section*{Try It}
+
+\begin{sikaoti}
+\item Draw particle diagrams using circles for a single crystal, glass, and a polycrystal of differently oriented grains. Under each, state what lets someone identify it.
+\item Dry ice (molecular crystal) and quartz (covalent network) are solid nonmetal oxides. Use arrangements and glue types to explain why dry ice sublimes at $-78\,^{\circ}\mathrm{C}$ while quartz melts only around $1700\,^{\circ}\mathrm{C}$.
+\item Graphene and diamond contain only carbon. Explain why one conducts and the other does not in terms of where electrons work.
+\item Someone insists glass is liquid. Give two pieces of this chapter's contrary evidence and your more accurate classification with reasons.
+\item Explain why bloomed chocolate is safe but sandy using rearranged fat molecules. What variable should a chocolatier control to restore snap and shine?
+\item Estimate sodium ions in a cubic salt grain with \ud{1}{mm} sides, given \ud{0.56}{nm} unit-cell edges and 4 sodium ions per cell. Show your calculation.
+\end{sikaoti}

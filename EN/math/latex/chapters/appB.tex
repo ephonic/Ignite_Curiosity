@@ -1,0 +1,82 @@
+\chapter{An Elementary Mathematics Toolbox}
+
+This appendix is a checklist before setting out. The main text assumes you have encountered these tools, but does not demand mastery. If something seems unfamiliar, ten minutes here should refresh it. For each tool we answer just three questions: what it is, what difficulty it resolves, and what a typical example looks like. The list roughly follows frequency of use in the main text, with the most common tools first. Consult it when needed; you need not read it all beforehand. But do work through each example. A tool truly belongs in your toolbox only once you can check how it works.
+
+\section{Fractions and Ratios: Parts of a Whole}
+
+The fraction $\dfrac{a}{b}$ means dividing the unit ``$1$'' into $b$ equal parts and taking $a$ of them. It addresses the shortage of integers: share two pancakes among three people and each receives $\dfrac{2}{3}$ of a pancake, which no integer expresses. Two main rules govern fractions. For addition and subtraction, first use a common denominator: $\dfrac{1}{2}+\dfrac{1}{3}=\dfrac{3}{6}+\dfrac{2}{6}=\dfrac{5}{6}$. Multiplication and division are direct: $\dfrac{2}{3}\times\dfrac{3}{5}=\dfrac{2}{5}$, and dividing by a fraction means multiplying by its reciprocal.
+
+A ratio describes the relative sizes of two quantities. A map scale of $1:50000$ means $1$ centimetre on the map corresponds to $50000$ centimetres, or $500$ metres, on the ground. A measured $3.6$ centimetres represents $3.6\times500=1800$ metres. Percentages express ratios with denominator $100$: a twenty-percent discount means paying $80\%$ of the original price. Direct proportion, $y=kx$, means doubling one quantity doubles the other. Inverse proportion, $y=\dfrac{k}{x}$, means doubling one halves the other: double the speed and the time for the same distance halves.
+
+When describing change with percentages, always identify the reference whole. Raising a price by $10\%$ and then lowering it by $10\%$ does not restore the original price. The increase uses a smaller base than the decrease, leaving $99\%$ of the original price. Many everyday numerical traps hide in this step.
+
+\section{Equations: Working with an Unknown as Though It Were Known}
+
+The central idea of equations fits in one sentence: \textbf{give the unknown a name, then calculate with it as though it were known}. ``Three times a number plus $5$ equals $20$'': call the number $x$ and write $3x+5=20$. Solving uses the balance principle. Adding, subtracting, multiplying, or dividing by the same number on both sides preserves equality, provided the divisor is not $0$. Thus $3x=15$ and $x=5$.
+
+Here is a complete example. ``A father is $40$ and his son is $12$. In how many years will the father be twice the son's age?'' Let that be $x$ years from now. Write $40+x=2(12+x)$, expand to $40+x=24+2x$, and rearrange to get $x=16$. Check by substitution: after $16$ years, their ages will be $56$ and $28$, exactly a ratio of two. Name the unknown, set up the equation, solve it, and substitute to check: all four steps matter, though the last is the easiest to skip.
+
+A system of two linear equations uses two balances together. For example,
+\[\begin{cases}x+y=10,\\ x-y=4,\end{cases}\]
+adding eliminates $y$: $2x=14$, so $x=7$, and substitution gives $y=3$. A quadratic equation such as $x^2-5x+6=0$ can often be factored as $(x-2)(x-3)=0$, giving $x=2$ or $x=3$. When factoring is difficult, the quadratic formula is available: $x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$.
+
+\section{Coordinates: An Address for Every Point in the Plane}
+
+In a Cartesian coordinate system, each point corresponds to an ordered pair of real numbers $(x,y)$. Move $x$ units east, or west if negative, then $y$ units north, or south if negative. This translates shapes into numbers, allowing algebraic calculation of geometric problems and pictures of algebraic expressions.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-1,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,-1) -- (0,4) node[above] {$y$};
+\foreach \t in {1,2,3,4} {\draw (\t,0.08) -- (\t,-0.08);}
+\foreach \t in {1,2,3} {\draw (0.08,\t) -- (-0.08,\t);}
+\fill (3,2) circle (2pt) node[above right] {$(3,2)$};
+\draw[dashed] (3,2) -- (3,0);
+\draw[dashed] (3,2) -- (0,2);
+\end{tikzpicture}
+\end{center}
+
+The distance formula between $(x_1,y_1)$ and $(x_2,y_2)$, $\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}$, is simply the Pythagorean theorem in coordinate clothing: the horizontal and vertical differences are the perpendicular legs. The midpoint formula $\left(\dfrac{x_1+x_2}{2},\dfrac{y_1+y_2}{2}\right)$ says to average the two addresses component by component. The midpoint of $(1,2)$ and $(3,6)$ is $(2,4)$. The graph of $y=2x+1$ is a straight line whose slope $2$ means that each increase of $1$ in $x$ raises $y$ by $2$.
+
+\section{Triangles: The Building Blocks of Plane Geometry}
+
+A triangle is the most rigid of polygons: once its three side lengths are fixed, so is its shape. That is why roof supports and bicycle frames use triangles. Its three most frequently used properties are:
+
+\begin{itemize}
+\item Angle sum: the three interior angles add to $180^\circ$.
+\item Pythagorean theorem: in a right triangle with legs $a,b$ and hypotenuse $c$, $a^2+b^2=c^2$; for example, $3^2+4^2=5^2$.
+\item Triangle inequality: the sum of any two sides exceeds the third. Thus $2,3,6$ cannot form a triangle, since $2+3<6$.
+\end{itemize}
+
+A triangle's area is half its base times its height. This formula will return in integration as cutting into narrow strips and adding them. Two triangles are congruent if they coincide exactly, as guaranteed by criteria such as side-side-side. They are similar if their shapes agree, even if their sizes differ, with proportional corresponding sides. A useful consequence of similarity is that a side-length ratio of $k$ gives an area ratio of $k^2$. Double the sides and the area quadruples, explaining why larger pizzas can be disproportionately good value. Measuring a flagpole's height from its shadow uses similarity: at the same moment, its height-to-shadow ratio equals yours.
+
+\section{Exponents and Logarithms: Accelerating Multiplication and Reversing It}
+
+Exponents abbreviate repeated multiplication: $2^{10}$ means multiplying ten copies of $2$, giving $1024$. The law $a^m\cdot a^n=a^{m+n}$ adds the numbers of factors. In particular, $a^0=1$ is the empty product and $a^{-1}=\dfrac{1}{a}$ is the reciprocal. Scientific notation applies exponents in everyday work: light travels at approximately $3\times10^{8}$ metres per second, and a hydrogen atom has a mass of approximately $1.67\times10^{-27}$ kilograms. Exponents make enormous and tiny numbers manageable to write.
+
+A logarithm is an exponent in reverse. $\log_a b$ asks: ``To what power must $a$ be raised to give $b$?'' Since $2^{10}=1024$, $\log_2 1024=10$. Logarithms address the burden of excessive multiplication. The rule $\log_a(xy)=\log_a x+\log_a y$ turns multiplication into addition. Before calculators, astronomers used logarithm tables to reduce months of multiplication to days of addition.
+
+\begin{shuyu}{Logarithm}
+Intuitive explanation: the power of the base needed to obtain a number. Formal definition: if $a^x=b$, with $a>0$, $a\neq1$, and $b>0$, then $x=\log_a b$. Example: $\log_{10}1000=3$, because $10^3=1000$.
+\end{shuyu}
+
+\begin{toolbox}
+Six tools to carry with you: fractions and ratios (parts and relative sizes), equations (calculating with unknowns), coordinates (translating between shapes and numbers), triangles (angle sums, the Pythagorean theorem, and the triangle inequality), exponents (abbreviating repeated multiplication), and logarithms (asking the inverse exponential question). Return to this appendix whenever the main text uses them.
+\end{toolbox}
+
+\section*{Reflection Questions}
+
+\textbf{Observation}
+\begin{sikao}
+\item A glass of sugar water contains $10\%$ sugar. After you drink half and refill it with water, what is the concentration? Hint: track the sugar remaining, not the water added.
+\end{sikao}
+
+\textbf{Proof}
+\begin{sikao}
+\item Prove that a square of side length $1$ has diagonal length $\sqrt{2}$. Hint: what kind of triangles does the diagonal produce?
+\end{sikao}
+
+\textbf{Challenge}
+\begin{sikao}
+\item Without solving the equation, determine whether $x^2+x+1=0$ has real solutions. Hint: examine $b^2-4ac$ under the square root in the quadratic formula.
+\end{sikao}

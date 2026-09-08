@@ -1,0 +1,162 @@
+% Chapter 52: Hydrogen, Quantum Mechanics' Showroom
+\chapter{Hydrogen: Quantum Mechanics' Showroom}
+
+Chapter~51 left a case open: Rutherford's tiny nucleus and surrounding electron should classically radiate their energy away and collapse almost instantly. Bohr imposed rules that stabilized atoms and predicted hydrogen wavelengths without explaining the rules. This chapter closes the case by solving hydrogen from Chapter~43's states and Chapter~44's evolution equation. Levels, orbital shapes, and transition rules now emerge from one equation. Hydrogen is quantum mechanics' showroom because it is nature's only real system almost completely solvable exactly and precisely matched by experiment: every new-theory screw can be tightened and tested here.
+
+\step{A Counterintuitive Opening}
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not connect or build the high-voltage discharge apparatus described below. Observe only a recorded demonstration or certified educational equipment operated by an instructor, without touching or modifying its electrical connections. See \href{https://www.osha.gov/etools/poultry-processing/plant-wide-hazards/electrical-hazards}{OSHA electrical-hazard guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+Find a hydrogen discharge tube, a common physics teaching aid resembling a slender neon tube. High voltage across its ends drives current through the gas, producing soft pink light. Neon glows orange-red, argon blue-violet, hydrogen pink. Why does gas type, rather than voltage, determine color?
+
+Pass the pink light through a prism or diffraction grating. Instead of a continuous rainbow, isolated lines make a barcode against darkness: bright red, cyan-green, blue-violet, then fainter violet, and nothing else. Every other wavelength is absent. Sunlight through that same grating gives a complete rainbow containing hundreds of thin dark lines, some exactly matching hydrogen's bright ones.
+
+In 1885 Swiss secondary-school mathematics teacher Balmer found an astonishing pattern in hydrogen's four visible wavelengths. A simple integer expression, \(\frac{1}{4}-\frac{1}{n^2}\), with \(n\) equal to 3, 4, 5, or~6, multiplied by a constant matched all four lines within one part in a thousand. Atoms have no gears or dials, yet integers hide in their light. What are atoms counting, and why does every hydrogen atom, here, on the Sun, or in galaxies billions of light-years away, count identically?
+
+\step{Make a Guess First}
+
+Record specific intuitive predictions.
+
+First: suppose Chapter~51's planetary picture is real, an electron orbiting elliptically under electromagnetic attraction. Radiating energy shrinks its orbit and speeds it up. Would its light have a few fixed colors or a smoothly rising continuous spectrum?
+
+Second: what naturally involves integers? Fixed-end guitar strings have a fundamental and integer harmonics; stairs have whole steps, not half-numbered ones. Are Balmer's integers coincidence or an internal stepped structure? Who draws the steps?
+
+Third: precision manufactured parts still have tolerances, and identical watches differ slightly in rate. Yet terrestrial and distant-stellar hydrogen wavelengths agree beyond measurable differences. Why can atoms achieve zero tolerance, and what aligns them?
+
+Keep your answers between the pages; we will check each afterward.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Check Light's Identity with an Old Disc]
+\textbf{Materials}: an old CD or DVD, its grooves a ready-made grating; a white phone screen, white LED desk lamp, daylight fluorescent or compact fluorescent, and incandescent bulb or candle. A neon sign visible through a window is a bonus. Never look directly at the Sun reflected in the disc.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Use the electric-light option instead of a candle when possible. If an adult uses a candle, place it in a stable holder at least 12 inches from combustible objects and never leave it unattended. Keep the disc away from the flame. See \href{https://www.usfa.fema.gov/prevention/home-fires/prevent-fires/candle/}{U.S. Fire Administration candle guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+\textbf{Step one}: switch off other lights and display a pure white phone image. Angle the CD's unlabeled face toward it until a rainbow band appears, white light sorted by wavelength. Adjust slowly for the brightest, clearest spectrum.
+
+\textbf{Step two}: repeat with an incandescent bulb or candle. A smooth red-to-violet rainbow contains no gaps.
+
+\textbf{Step three}: use a fluorescent tube or compact fluorescent. Thin bright lines overlay the dim continuous rainbow, especially a conspicuous mercury-green line, with red and blue lines too: a barcode on a rainbow.
+
+\textbf{Step four}: compare a white LED. Usually a bright blue peak and broad yellow-green hump replace the fluorescent's sharp lines.
+
+\textbf{Record and think}: sketch all four spectral shapes, continuous rainbow, rainbow with lines, and humps. Why does nominally white light reveal three different forms? What determines each source's color list?
+\end{experiment}
+
+You have verified the central fact: gaseous atoms select a discrete wavelength list. Who issues that list?
+
+\step{The Old Model Runs into Trouble}
+
+Replay Chapter~51 with real numbers. Rutherford's electron continually turns, hence accelerates, and classical charges must radiate. Radiation lowers energy, shrinks the orbit, increases speed, and intensifies radiation: a runaway death spiral. Starting at atomic size \(10^{-10}\)~m, collapse takes about \(10^{-11}\)~s, one ten-billionth of a second. Real hydrogen has survived 13.8 billion years since shortly after cosmic birth. This twenty-nine-order conflict is among physics' greatest, worse than giving a mosquito the Milky Way's lifetime.
+
+Even slower collapse would predict the wrong spectrum. Smoothly shrinking orbits give smoothly increasing frequencies, a rising rainbow, the opposite of the observed barcode.
+
+Bohr's 1913 legislation allowed only special nonradiating orbits, with photons emitted or absorbed only on jumps. Its \(E_n=-13.6/n^2\), in eV, exactly reproduced Balmer and predicted subsequently found ultraviolet and infrared series. But count the debts: permitted orbits and forbidden stationary radiation were unexplained postulates; two-electron helium defeated calculation, heavier atoms worse; correct line positions came without intensities; and fine line clusters were unexplained. A patch can restart a machine without becoming its engine. We need self-generating steps.
+
+\step{Inventing New Concepts}
+
+Our tools are ready. Chapter~43 replaces an electron's instantaneous position and velocity with amplitudes for measurement outcomes. Chapter~44 evolves that state with Schrödinger, needing the environmental potential. Hydrogen offers the simple Coulomb potential \(V(r)=-\dfrac{e^2}{4\pi\varepsilon_0 r}\), a round bowl deepening infinitely at center. Which lasting states does the equation permit inside?
+
+Borrow guitar intuition. Only waves fitting an integer number of half-wavelengths between fixed ends survive; other shapes cancel themselves. Standing-wave frequencies are discrete, admitting integers into physics. Similarly, atomic amplitude waves confined near a nucleus need self-consistent patterns, giving discrete energies without imposed rules. But a string is physically vibrating material, while an electron wave distributes probability amplitude, without a moving medium or smeared material cloud. And an atom is three-dimensional rather than one-dimensional, permitting richer patterns.
+
+Three-dimensional patterns need three labels, as drum modes need two integers. Principal quantum number \(n\), 1, 2, 3, and so on, roughly sets size and energy: larger \(n\) spreads probability farther and approaches zero energy, greater freedom. Angular quantum number \(l\), from 0 to \(n-1\), labels rotational type: \(l=0\) spherical s, \(l=1\) two-lobed dumbbell p, \(l=2\) more complex four-lobed d. Magnetic quantum number \(m\), integers from \(-l\) to \(+l\), labels spatial orientation: a dumbbell can point east, west, or up, totaling \(2l+1\) orientations. Add Chapter~47's two-valued intrinsic spin label, without classical counterpart, and four numbers \((n,l,m,m_s)\) completely specify an electron's hydrogen seat.
+
+Stop to correct an almost universal picture. An orbital is not a trajectory but one of these spatial quantum patterns. For the \(n=1,\,l=0\) ground state, there is no electron circling a spherical surface, but spherical position probability. Density rises toward the nucleus, while multiplying by shell volume gives the most probable radius near \(5.3\times10^{-11}\)~m. The electron is not currently at some undiscovered place: definite position does not apply before measurement, a state property rather than instrument failure, as Chapter~45 discussed. Planetary lines mistake accounts for goods.
+
+One hurdle remains: why no ground-state radiation or collapse if the electron accelerates nearby? The new account makes a stationary state's probability distribution time-independent, like a guitar standing wave with moving points but fixed envelope. A static probability distribution gives no time-varying charge or current and hence no classical radiation. Chapter~45's uncertainty prevents collapse: squeeze position toward the nucleus and momentum fluctuations, hence kinetic cost, soar. Rising confinement cost competes with falling Coulomb energy, balancing near \(5.3\times10^{-11}\)~m, the atomic size. No invisible prop is needed; smaller becomes more expensive.
+
+\begin{oneline}
+Hydrogen is a three-dimensional resonance chamber admitting discrete electron standing-wave patterns, each labeled by four quantum numbers and a definite energy. Light comes not from an electron rolling down an orbital staircase but from changing patterns, with a photon carrying the full energy difference: the spectral barcode is the chamber's price list.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+Solving Schrödinger in a Coulomb potential gives remarkably clean energies:
+\[
+E_n=-\frac{13.6\ \mathrm{eV}}{n^2},\qquad n=1,2,3,\dots
+\]
+These are allowed total energies near the nucleus. The right side contains an energy scale, 13.6~eV from electron mass, charge, Planck's constant and vacuum permittivity, divided by integer \(n\) squared. Negative means bound: zero corresponds to just escaping, while bound states need borrowed outside energy for liberation.
+
+Check immediately. At \(n=1\), energy \(-13.6\)~eV means removal costs at least 13.6~eV, matching measured 13.598~eV. As \(n\to\infty\), energy approaches zero and the electron becomes distant and free, joining nonnegative classical free-particle energies. Values \(n=0\) or \(n=-2\) are forbidden because no corresponding self-consistent patterns exist, not mathematical stinginess. Gaps shrink: \(n=1\) to \(n=2\) needs 10.2~eV, \(n=2\) to \(n=3\) only 1.9~eV. The ladder crowds upward, directly shaping spectra.
+
+Light's rule is energy conservation. A change from \(n_i\) to \(n_f\), with \(n_i>n_f\), gives one photon:
+\[
+E_\gamma=E_{n_i}-E_{n_f}=13.6\ \mathrm{eV}\times\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right),
+\qquad \lambda=\frac{hc}{E_\gamma}.
+\]
+For \(n_i=3,\,n_f=2\), \(E_\gamma=13.6\times(\frac14-\frac19)=1.89\)~eV. Using \(hc\approx1240\ \mathrm{eV\cdot nm}\) gives \(\lambda\approx656\)~nm, the bright red line measured at 656.3~nm. For \(n_i=2,\,n_f=1\), \(E_\gamma=10.2\)~eV and \(\lambda\approx122\)~nm, invisible ultraviolet. Visible hydrogen lines therefore end at \(n=2\), the Balmer series, while \(n=1\) Lyman lines hide in UV. Check extremes: \(n_i=n_f\) gives no energy difference or photon, no changed pattern, no emission. Large adjacent \(n_i\) and \(n_f\) give tiny gaps, vanishing photon energies, and nearly continuous frequencies, smoothly melting quantum lines into the classical rainbow. The required large-quantum-number classical limit passes.
+
+\begin{mathbridge}
+Uncertainty alone estimates ground-state size and energy. Confine the electron roughly within radius \(r\): momentum fluctuations at least \(\Delta p\sim \hbar/r\) cost kinetic energy \(\hbar^2/(2mr^2)\), offset by Coulomb potential \(-e^2/(4\pi\varepsilon_0 r)\). Total:
+\[
+E(r)\approx\frac{\hbar^2}{2mr^2}-\frac{e^2}{4\pi\varepsilon_0 r}.
+\]
+Smaller \(r\) raises the first term as \(1/r^2\), while the second falls only as \(1/r\); eventually shrinking loses money. Minimize over \(r\) by setting the derivative to zero:
+\[
+r_{\min}=\frac{4\pi\varepsilon_0\hbar^2}{me^2}\approx 5.3\times10^{-11}\ \mathrm{m},
+\qquad E(r_{\min})\approx-13.6\ \mathrm{eV}.
+\]
+Both match exact solutions, no coincidence: the ground state minimizes the competing confinement and attraction accounts. Planck's constant is written into atomic size itself.
+\end{mathbridge}
+
+\begin{challenge}
+Where do three quantum numbers arise? Separate Schrödinger's spherical-coordinate equation into radial and angular parts. Angular solutions joining themselves after a full turn force \(l\), with \(L^2=l(l+1)\hbar^2\), and \(m\), with directional angular momentum \(m\hbar\). Requiring the radial solution not to diverge at infinity forces \(n\) and \(n\ge l+1\). Thus \(l\) runs from 0 to \(n-1\), \(m\) from \(-l\) to \(+l\): consistency boundaries, not arbitrary decrees. Each \(n\) admits \(n^2\) patterns excluding spin. Better yet, selection rules control brightness: single-photon transitions require \(\Delta l=\pm1\). Symmetry, not experimental fiat, requires the photon's angular momentum to match a one-unit difference between initial and final rotational patterns. Otherwise amplitudes cancel exactly and transition probability vanishes. Symmetry determines visible light, Noether's spirit acting inside atoms.
+\end{challenge}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,scale=1.0]
+  % Levels: y = -13.6/n^2 eV, scale 0.25 cm/eV
+  \draw[thick] (0,0) -- (6.4,0) node[above right] {\(0\) (free electron)};
+  \draw[thick] (0,-0.136) -- (6.4,-0.136) node[right=80pt] {\(n{=}5\)};
+  \draw[thick] (0,-0.213) -- (6.4,-0.213) node[right=40pt] {\(n{=}4\)};
+  \draw[thick] (0,-0.378) -- (6.4,-0.378) node[right] {\(n{=}3\)};
+  \draw[thick] (0,-0.85) -- (6.4,-0.85) node[right] {\(n{=}2\)};
+  \draw[thick] (0,-3.4) -- (6.4,-3.4) node[right] {\(n{=}1\) (ground state, \(-13.6\)~eV)};
+  \draw[->,very thick,red!70!black] (1.6,-0.378) -- (1.6,-0.82);
+  \node[right,red!70!black] at (1.7,-0.6) {H\(\alpha\): 656~nm red};
+  \draw[->,very thick,blue!70!black] (3.4,-0.85) -- (3.4,-3.35);
+  \node[left,blue!70!black] at (3.3,-2.1) {\shortstack{Lyman\(\alpha\):\\122~nm UV}};
+  \draw[->,very thick,green!50!black,dashed] (5.3,-3.35) -- (5.3,-0.05);
+  \node[right,green!50!black,align=left] at (5.4,-1.9) {Absorb 13.6~eV\\ = ionization};
+\end{tikzpicture}
+\caption{Hydrogen's ladder crowds upward. Downward arrows emit photons carrying energy differences; the upward dashed arrow absorbs light or collision energy. Every line's wavelength is fixed by a pair's height difference.}
+\end{figure}
+
+\step{The Model's Limits}
+
+Expose five approximations: nonrelativistic electrons, hence Schrödinger rather than Dirac; a stationary point nucleus despite real proton size, mass, and motion; no spin--orbit magnetic coupling; no subtler quantum-electrodynamic light interactions; no external fields. Within this scope, predicted energies match to several decimal places. Beyond it, each deviation points deeper. Relativistic speed corrections split fine structure, explained in Chapter~49. The roughly thousand-megahertz \(2s\)--\(2p\) Lamb shift goes beyond Dirac and prompted quantum electrodynamics. Electron--nuclear spin coupling gives hyperfine structure and radio astronomy's 21~cm line. This showroom is no endpoint but a sensitive probe, exposing each deeper theoretical layer.
+
+External electric and magnetic fields shift and split lines, Stark and Zeeman effects. These do not invalidate the model: add fields to the potential and solve again; splitting verifies magnetic quantum number \(m\). Multiple electrons are the genuine boundary. Helium's repelling pair prevents exact solution, leaving our formulas qualitatively useful. Approximations and numerical computation conquer Chapter~53's territory.
+
+Three misuses remain. Planetary orbitals have already been dismissed. Transitions are not visible falling trajectories: \(n=3\) becomes \(n=2\) over roughly \(10^{-8}\)~s without an intermediate electron descent. We can describe initial pattern, final pattern, and emitted photon; asking its midway location imposes a classical script. Finally, transitions do not require observers. Atom--field interactions determine whether and what photons emerge, regardless of witnesses, throughout billions of years of empty-space starlight.
+
+\step{Explaining the Opening Phenomenon}
+
+Read the barcode. Discharge current continually excites hydrogen; patterns then change: \(3\to2\) gives 656~nm red, the dominant pink-light contribution; \(4\to2\) gives 486~nm cyan-green; \(5\to2\) gives 434~nm blue-violet. All end at \(n=2\), the visible Balmer series. Why no intermediate colors? No pair of discrete patterns has a gap corresponding to 600~nm, so no such photon can emerge. The barcode follows from energy levels plus conservation, not atomic eccentricity.
+
+Balmer's integers now have an origin: \(n\) labels three-dimensional standing waves, and \(\frac{1}{n_f^2}-\frac{1}{n_i^2}\) converts gaps to wavelengths. His 1885 empirical formula anticipated Schrödinger's solution by forty years.
+
+Zero tolerance follows too. Universal \(e\), \(m\), \(\hbar\), and \(\varepsilon_0\) determine hydrogen levels; no atom serial number enters the equation. Identical equations give identical price lists. Manufactured objects have variable assembly among billions of atoms; hydrogen's blueprint is the equation, with no assembly choices. The same reasoning explains solar dark lines: continuous hot-surface light crosses cooler outer gas, whose hydrogen absorbs exactly its listed photons. Laboratory emission and solar absorption are the same transaction between the same levels. Distant galaxies' matching barcodes directly support universal physical laws.
+
+This becomes practical immediately. Solar physicists image through 656~nm H\(\alpha\) filters to reveal flares and filaments. Radio astronomers map Galactic arms using hydrogen's 21~cm hyperfine spin-flip photons. One atom waits tens of millions of years on average, but roughly \(10^{66}\) Galactic hydrogen atoms provide an astronomical continuous chorus. Collective proportional redshifts reveal recession. One price list serves as celestial identity card, thermometer, and speedometer.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Planck's Constant Ten Thousand Times Larger]
+Atomic radius contains \(\hbar\): the bridge gives \(r_{\min}\propto\hbar^2\). Increase \(\hbar\) and atoms swell; increasing \(\hbar\) a little over ten thousandfold, about \(1.4\times10^4\), makes centimeter hydrogen marbles for your palm. Reason through three consequences. First, \(\Delta x\,\Delta p\gtrsim\hbar\) becomes important in daily life: would thrown balls show resolvable position--momentum fuzziness? Second, \(E_n\propto 1/\hbar^2\), as expanding 13.6~eV into constants shows: larger \(\hbar\) makes levels shallower or deeper, and can visible photons still excite them? Third, how much of our sharply outlined world, with definite positions, colors, and objects, merely reflects tiny \(\hbar\)?
+\end{thought}
+
+Rescale differently to expose the orbital picture's error. Enlarge hydrogen to a 100~m-radius playing field. Its nucleus becomes roughly \(2\times10^{-5}\)~m, a dust mote, while the electron is not another mote at all: its ground state distributes spherical probability throughout the field. No tiny orbiting grain belongs in this picture. A stationary, unevenly dense possibility mist is closer, though unlike molecular fog it is only a rule predicting position measurements.
+
+\begin{puzzles}
+\item Hydrogen atoms all start at \(n=3\) and decay spontaneously to ground. At most how many wavelengths appear? What if initially \(n=4\)? (Hint: draw floors and list downward routes, direct and connecting, with different photons for different routes.)
+\item Hydrogen's \(2p\to1s\) transition takes about \(10^{-8}\)~s, while single-photon \(2s\to1s\) is almost forbidden: a \(2s\) atom waits roughly a tenth of a second, tens of millions of times longer. With nearly identical energies, why may one emit and the other not? (Hint: selection rules. Photons carry angular momentum as well as energy; \(2s\) and \(1s\) have identical rotational patterns and zero angular-momentum difference, leaving one photon unable to unload.)
+\item A star shows the entire hydrogen pattern with matching relative spacings but shifted redward, H\(\alpha\) at 660~nm rather than 656~nm. What follows? What if another spectrum's spacing matches no known element? (Hint: proportional displacement of the whole list signals approach or recession; unmatched spacings need more than displacement. What broadens, splits, or obscures lines?)
+\end{puzzles}
+
+Next place this lone electron in a crowded room: dozens around one nucleus, forbidden to share seats. From exclusion, the entire periodic table will grow.

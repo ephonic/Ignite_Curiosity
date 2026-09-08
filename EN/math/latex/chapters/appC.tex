@@ -1,0 +1,129 @@
+\chapter{Symbols and Glossary}
+
+Mathematical symbols are abbreviations, not secret codes. Behind each lies an intuitive idea that would take longer to say in words. This appendix groups the book's principal symbols and terms by field. ``Intuition'' gives the picture to bring to mind; ``Example'' offers a minimal check. When you encounter an unfamiliar symbol, look it up here, then return to the main text to see it at work. You can consult the relevant section for an unfamiliar term or scan a table before a chapter to meet its cast of characters. These tables are maps, not memorization assignments. Travel the routes often enough and you will remember them naturally.
+
+\section{Numbers}
+
+The world of numbers has expanded floor by floor: negative numbers for subtraction, fractions for division, and irrational numbers to express lengths such as the diagonal of a square with side length $1$. The symbols below are the nameplates for those floors.
+
+\begin{center}
+\begin{tabular}{llp{4.6cm}p{4.6cm}}
+\toprule
+Symbol/term & Name & Intuition & Example \\
+\midrule
+$\mathbb{N}$ & Naturals & Counting numbers, starting at $0$ or $1$ & $0,1,2,3,\dots$ \\
+$\mathbb{Z}$ & Integers & Natural numbers and their negative counterparts & $-3,0,7$ \\
+$\mathbb{Q}$ & Rationals & Numbers expressible as ratios of two integers & $\dfrac{2}{3}$, $0.25$ \\
+$\mathbb{R}$ & Reals & Every point on the number line, with no gaps & $\sqrt{2}$, $\pi$ \\
+$a\mid b$ & $a$ divides $b$ & $b$ divides exactly by $a$, with no remainder & $3\mid 12$, but $3\nmid 14$ \\
+$\gcd(a,b)$ & GCD & Greatest common divisor: the largest integer dividing both $a$ and $b$ & $\gcd(12,18)=6$ \\
+$|x|$ & Absolute value & Distance from $x$ to the origin, regardless of direction & $|-5|=5$ \\
+$\approx$ & Approximately & Equal within an acceptable error & $\pi\approx 3.14$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Algebra}
+
+Algebra's central move is representing numbers with symbols, allowing us to study calculation rules independently of specific values. The symbol $x$ is not a mysterious number but a placeholder: it holds a space so a pattern can emerge.
+
+\begin{center}
+\begin{tabular}{lp{4.8cm}p{5.4cm}}
+\toprule
+Symbol/term & Intuition & Example \\
+\midrule
+$a^n$ & A product of $n$ copies of $a$: abbreviated multiplication & $2^5=32$ \\
+$\sqrt{a}$ & The nonnegative number whose square is $a$ & $\sqrt{9}=3$ \\
+$\log_a b$ & The answer to ``what power of $a$ equals $b$?'' & $\log_2 8=3$ \\
+$\sum$ & Summation: add a sequence of numbers according to a rule & $\sum_{k=1}^{4}k=1+2+3+4=10$ \\
+$f(x)$ & A function: a machine giving one output for input $x$ & If $f(x)=2x$, then $f(3)=6$ \\
+Polynomial & An expression using only addition, subtraction, and multiplication of unknowns & $x^2-3x+2$ \\
+Factorization & Expressing a polynomial as a product & $x^2-1=(x+1)(x-1)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Geometry}
+
+Most geometric symbols grow out of the shapes themselves. Seeing $\triangle$ suggests a triangle; seeing $\perp$ suggests a right-angled corner. Sketching a symbol's meaning while learning it is more effective than repeating its name ten times.
+
+\begin{center}
+\begin{tabular}{lp{4.8cm}p{5.4cm}}
+\toprule
+Symbol/term & Intuition & Example \\
+\midrule
+$\angle ABC$ & The angle opening at vertex $B$ & $\angle ABC=60^\circ$ \\
+$\triangle ABC$ & The triangle with vertices $A,B,C$ & Interior angles sum to $180^\circ$ \\
+$\cong$ & Congruent: able to coincide exactly & Side-side-side establishes congruence \\
+$\sim$ & Similar: same shape, possibly different size & An enlarged photograph is similar to the original \\
+$\perp$ & Perpendicular: meeting at exactly $90^\circ$ & The sides of a right-angled corner \\
+$\parallel$ & Parallel: coplanar lines that never meet & The two rails of a railway track \\
+$\pi$ & Circumference divided by diameter, the same for all circles & Circumference $=2\pi r$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Analysis}
+
+Analysis, the rigorous development of calculus, studies approaching without limit. Its symbols almost all address one question: how close are we to the target? The difficult process of making ``close'' precise is the story of Chapters $9$ through $12$.
+
+\begin{center}
+\begin{tabular}{lp{4.8cm}p{5.4cm}}
+\toprule
+Symbol/term & Intuition & Example \\
+\midrule
+$\lim$ & Limit: a target approached arbitrarily closely, not necessarily reached & $\dfrac{1}{n}\to 0$ (larger $n$ brings it closer to $0$) \\
+$\infty$ & Infinity: a direction beyond every finite number, not a number & Counting $1,2,3,\dots$ never ends \\
+$\varepsilon$ & An error allowance as small as you choose & Accuracy within $\varepsilon=0.001$ \\
+$\Delta x$ & Change: a small step in $x$ & From $3$ to $3.1$, $\Delta x=0.1$ \\
+$f'(x)$ & Derivative: the instantaneous slope of a curve & The derivative of displacement is velocity \\
+$\int$ & Integral: combining infinitely many small strips into a total & Integrating speed over time gives distance \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Probability}
+
+Probability theory gives uncertainty rules. Likelihood is represented by a number from $0$ to $1$, with $0$ for impossibility and $1$ for certainty. The hardest part is often translating a real problem into the correct events, rather than calculating.
+
+\begin{center}
+\begin{tabular}{lp{4.8cm}p{5.4cm}}
+\toprule
+Symbol/term & Intuition & Example \\
+\midrule
+$P(A)$ & The likelihood of event $A$, between $0$ and $1$ & Coin toss: $P(\text{heads})=\dfrac{1}{2}$ \\
+$P(A\mid B)$ & The probability of $A$ given that $B$ occurs & Probability of carrying an umbrella given rain \\
+$E(X)$ & Expectation: the average outcome in the long run & Expected result of a die roll: $3.5$ \\
+Random variable & A measurement whose result involves randomness & The number showing on a rolled die \\
+Variance & The size of fluctuations around the expectation & More consistent scores have smaller variance \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Discrete Mathematics}
+
+Discrete mathematics studies separate objects: integers, sets, and graphs. It is computer science's native language: the basic objects in a computer are discrete, with no ``half'' of one. This section also includes the quantifiers from Appendix A, among the symbols most frequently encountered in proofs throughout the book.
+
+\begin{center}
+\begin{tabular}{lp{4.8cm}p{5.4cm}}
+\toprule
+Symbol/term & Intuition & Example \\
+\midrule
+$\in$ & Membership: an object belongs to a set & $2\in\{1,2,3\}$ \\
+$\forall$ & For every: each member must satisfy the claim & Every even number is divisible by $2$ \\
+$\exists$ & There exists: at least one can be found & There is an even prime \\
+$a\equiv b\pmod{m}$ & Congruence: $a$ and $b$ leave the same remainder modulo $m$ & $17\equiv 2\pmod{5}$ \\
+$n!$ & Factorial: the number of orders for $n$ distinct objects & $3!=6$ \\
+$\dbinom{n}{k}$ & Binomial coefficient: unordered choices of $k$ objects from $n$ & $\dbinom{4}{2}=6$ \\
+Graph & A network of points and connections between them & A transport network with cities as vertices and roads as edges \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A general tip for reading symbols: when one is unfamiliar, read it aloud and ask three questions. What objects does it act on? What question does it answer? What is its inverse operation? For instance, $\log$ acts on positive numbers, asks ``what power?'', and is reversed by exponentiation. Once you can answer all three, the symbol becomes less intimidating.
+
+\begin{lianjie}
+Symbols travel between fields. In algebra, $\sum$ adds finitely many terms; in analysis, it appears in infinite series. In set theory, $\in$ records membership; in probability, it can say that an event contains an outcome. If a symbol leaves you puzzled in any chapter, first locate it here, then see what new task its new setting gives it.
+\end{lianjie}
+
+One final reminder: a symbol's meaning comes from its definition, not its appearance. The same symbol may play different roles in different chapters. In an equation, $x$ is an unknown; in a function, an independent variable; in geometry, perhaps a horizontal coordinate. Asking ``who is it this time?'' at each encounter is a basic mathematical reading skill.

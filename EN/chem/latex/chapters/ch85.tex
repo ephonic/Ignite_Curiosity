@@ -1,0 +1,166 @@
+\chapter{What Can Genetic Testing Tell Us?}
+
+\begin{kaichang}
+Imagine receiving a parcel. Inside are no medicines or instruments, just a plastic tube, a small vial of preservative, and instructions. Following them, you spit 2 milliliters of saliva into the tube, seal it, and mail it back. Three weeks later, a report dozens of pages long appears on your phone: your ability to metabolize alcohol is ``relatively weak''; your risk of a certain disease is ``1.3 times the average''; your ancestry is ``approximately 60 percent northern Han Chinese''; you may carry a genetic ``variant of uncertain significance.''
+
+Set aside what this report is worth for a moment and make a guess: how much truth about you can this tube of saliva actually ``tell''? Is every statement in the report equally reliable? Write down your intuition. By the end of this chapter, you should be able to reassess such reports using four statistical numbers---and discover that what most needs watching is often not the testing technology but our own way of reading percentages.
+\end{kaichang}
+
+\section{What Is Actually in Saliva?}
+
+Start with what we can see. The liquid you spit into the tube is mostly water, mixed with salivary enzymes and mucus. For the testing laboratory, however, the real treasure is the tens of thousands of cells floating in it: epithelial cells shed from the lining of your mouth, along with a few white blood cells. Each cell nucleus contains a complete copy of your genome: a long book of approximately 3 billion base pairs, written in the four ``letters'' A, T, C, and G. Chapter 66 covered this book's structure, and Chapter 81 explained how to read it letter by letter. Rather than repeat that, we will ask a new question: does the testing company really read all 3 billion letters?
+
+Most consumer tests do not. They use a shortcut called a ``genotyping chip'': instead of reading the whole book, they spot-check several hundred thousand positions with ``common spelling differences.'' Such a position has a technical name: a single-nucleotide polymorphism, or SNP (pronounced ``snip''). This means that at a particular genomic coordinate, some people have an A and others a G, much as one person might write ``color'' and another ``coler'' in the same sentence. Most SNPs have no consequences; they are simply natural spelling differences within a population. A few, however, fall in a gene's switch or a critical part of a protein and change a trait or a risk. The chip resembles a preprinted answer sheet, asking only about those several hundred thousand marked coordinates: ``At this position, do you have A or G?'' It is cheap and fast, but inevitably blind to unmarked positions.
+
+Hospital testing follows a different approach: when a particular disease is strongly suspected, the relevant genes are read from beginning to end without letting a single letter escape. Neither approach is inherently superior---one is broad spot-checking, the other close reading of a specific passage, and they answer different questions. Remember this distinction, because every discussion of a report's reliability must first ask: what did it read?
+
+\section{One Tube, Three Very Different Answers}
+
+The most misleading feature of genetic reports is that conclusions with vastly different evidential weight appear on the same page in the same typeface. We will divide them into three categories according to how ``firm'' the answers are.
+
+\textbf{Category one: single-gene diseases---answers close to ``yes or no.''} Some diseases are almost determined by a spelling error in one gene: cystic fibrosis (a faulty gene encoding a chloride channel disrupts the ion transport discussed in Chapter 15), sickle-cell anemia (one amino-acid substitution in hemoglobin, a missense mutation of the kind discussed in Chapter 72), and Huntington's disease (discussed in detail later in this chapter). For such diseases, provided the testing technology itself is reliable, finding a disease-causing variant is essentially a verdict; not finding it essentially rules the disease out. These are the ``firmest'' answers, but notice the qualifiers ``almost'' and ``essentially.'' Even with single-gene diseases, some people carry a variant without ever developing the disease---geneticists call this ``incomplete penetrance.'' There is also a particularly frustrating result: a ``variant of uncertain significance,'' meaning that a spelling change has been found, but scientists worldwide cannot yet determine whether it is harmful.
+
+\textbf{Translator safety note:} The preceding source description overstates what a positive or negative single-gene test can establish. Interpretation depends on inheritance, which variants were tested, and clinical findings; a negative result may be uninformative, and an uncertain variant should not determine medical decisions. Discuss results with a qualified clinician or genetic counselor. See \href{https://medlineplus.gov/genetics/understanding/testing/interpretingresults/}{MedlinePlus guidance on interpreting genetic tests}.
+
+\textbf{Category two: risks of complex disease, only a ``probability adjustment sheet.''} High blood pressure, type 2 diabetes, coronary heart disease, most cancers, and depression are not decided by a single gene. Hundreds or even thousands of sites often contribute, each nudging risk slightly upward or downward, alongside diet, exercise, sleep, pollution, and chance. Genetic testing provides a ``polygenic risk score'' for these diseases: it adds up the small effects of all known sites and places you at a percentile of the population distribution. This is real statistical information, but what it shifts is probability, not destiny---a distinction we will soon demonstrate rigorously with numbers.
+
+\textbf{Category three: pharmacogenomics---currently the category with the most immediate practical effects.} Genes influence not only which diseases you develop but also how your body handles medicines. A familiar example is flushing after drinking alcohol. A substantial proportion of East Asian people carry a variant form of aldehyde dehydrogenase (\chem{ALDH2}); acetaldehyde, an intermediate in alcohol metabolism, breaks down slowly and accumulates in the blood, causing flushing, a racing heart, and discomfort. This is more than a social question of ``holding your liquor.'' Acetaldehyde is an established carcinogen, and long-term drinking in people with this variant significantly raises the risk of esophageal cancer. A more serious example comes from cardiology: the antithrombotic drug clopidogrel is itself inactive and must be converted into its active form by a liver enzyme (\chem{CYP2C19}). Some people naturally have low activity of this enzyme, making the standard dose almost ineffective; they may develop another blood clot even after receiving a heart stent. Many hospitals now check genes before prescribing this drug. That is an everyday application of pharmacogenomics: not predicting disease, but tailoring medication.
+
+The same tube of saliva provides three entirely different things: ``yes or no,'' ``probability adjustments,'' and ``medication instructions.'' Reading them as though they were the same is the first source of misunderstanding.
+
+\section{Four Numbers for Assessing Any Test}
+
+We now reach the chapter's most demanding section. Whether a genetic test, a routine screening test, or a pregnancy test, the performance of any ``test'' is described by four numbers. You will use these numbers throughout your life, so they deserve a careful reading.
+
+\begin{qiaoliang}
+Divide everyone into two columns by ``true status'': actually has the disease and actually does not. Then divide them into two rows by ``test result'': positive and negative. This gives a four-cell table:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+ & Actually diseased & Actually disease-free \\
+\midrule
+Test: positive & True positive & False positive \\
+Test: negative & False negative & True negative \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Sensitivity}: what proportion of people with the disease does the test detect? True positives divided by all people with the disease. A sensitivity of 99\% means that out of 100 actual patients, it detects 99 and misses 1.
+
+\textbf{Specificity}: what proportion of people without the disease does the test correctly clear? True negatives divided by all healthy people. A specificity of 95\% means that out of 100 healthy people, 5 will be wrongly flagged, producing 5 false positives.
+
+Most people think that if these two numbers are high, the test can be trusted. The following calculation demonstrates that \textbf{one hidden protagonist is still missing: the base rate}, or the disease's prevalence in the population.
+
+Suppose a disease has a prevalence of 1/1000 (one in a thousand), and a test has 99\% sensitivity and 95\% specificity---seemingly excellent. Now test 100,000 people:
+
+\begin{itemize}[itemsep=2pt]
+\item Of the 100,000 people, approximately 100 actually have the disease ($100000 \times 1/1000$). At 99\% sensitivity, the test identifies approximately 99 true positives.
+\item Of the remaining 99,900 healthy people, 95\% specificity means that 5\% are wrongly flagged: approximately 4,995 false positives.
+\item Total positive results: $99 + 4995 = 5094$. Only 99 are actual patients.
+\item Thus the proportion of people with positive results who truly have the disease---the \textbf{positive predictive value}---is $99/5094 \approx 1.9\%$.
+\end{itemize}
+
+An excellent test with ``99\% sensitivity'' produces positive results of which approximately 98\% are false alarms! This is not the test's fault but an arithmetic trap: a rare disease has too few actual patients and too many healthy people. Even if the proportion of healthy people wrongly flagged is small, their absolute number can overwhelm the true patients. \textbf{The lower the base rate, the more questionable a positive result}---this is the chapter's most important sentence.
+\end{qiaoliang}
+
+This is why standard medical practice separates ``screening'' from ``diagnosis.'' First, an inexpensive, highly sensitive test selects possible cases, preferring false alarms to missed cases. Then an expensive, more precise method, such as biopsy or full-length gene sequencing, checks them again. The two-step approach raises the base rate for the second test: people entering that step have already passed the first screening, so their disease prevalence is no longer 1/1000 but much higher, and the same test's positive predictive value immediately looks better. You will soon get a hands-on feel for this idea in the experiment.
+
+\begin{tiaozhan}
+The calculation above is actually a special case of Bayes' theorem. In symbols,
+\[P(\text{disease} \mid \text{positive}) = \frac{P(\text{positive} \mid \text{disease}) \times P(\text{disease})}{P(\text{positive})}\]
+Here $P(\text{disease})$ is the base rate, and $P(\text{positive} \mid \text{disease})$ is sensitivity. The denominator $P(\text{positive})$ is the total probability of ``all positive results,'' adding true positives and false positives together. The theorem says: \textbf{how much new evidence (a positive result) updates your judgment depends on the strength of your initial judgment (the base rate)}. With the same evidence but a different starting point, the conclusion changes. Skipping these symbols will not interrupt the main argument, but if you remember ``conclusion = evidence times starting point,'' you have grasped the chapter's mathematical spirit.
+\end{tiaozhan}
+
+\section{Association, Causation, Risk, and Diagnosis}
+
+Even after answering ``How accurate is the test?'' two subtler traps remain.
+
+The first: \textbf{association is not causation}. How are risk sites for complex diseases found? Through ``genome-wide association studies'' (GWAS): recruit tens of thousands of patients and healthy people, compare the frequencies of hundreds of thousands of SNPs between the groups, and mark sites significantly more common among patients as ``associated with the disease.'' This powerful method, however, has only the word ``association'' in its dictionary. Ice-cream sales and drownings are strongly associated in summer, but both result from hot weather; neither causes the other. Likewise, an associated site may simply live next door to the actual disease-causing factor. Neighboring chromosome segments are often inherited together---the linkage discussed in Chapter 64---so the site may be a signpost, not the culprit. It may also mark population differences: a site could be common in northern Europeans, who happen to be taller on average, leading a careless analysis to award an innocent signpost the title ``height gene.'' Moving from association to causation requires a whole sequence of follow-up work, including cell and animal experiments, to verify the mechanism. Here we return to a point foreshadowed in Chapter 81: reading a sequence does not mean understanding its function.
+
+The second: \textbf{risk is not diagnosis}. A common report statement is ``Your risk is 1.3 times the average.'' This sounds frightening, but develop the habit of immediately asking, ``What is the average?'' If the average lifetime risk is 1\%, then 1.3 times that is 1.3\%---10 people per thousand become 13. Even doubling relative risk may move absolute risk by only a decimal fraction. The same rule applies to famous genes: women carrying certain mutations in \chem{BRCA1} do have a greatly increased lifetime risk of breast cancer, from approximately one in ten in the general population to approximately one in two or higher. This well-supported risk information deserves serious attention, but ``approximately half'' is still not a ``diagnosis'': a substantial proportion of carriers never develop the disease. Nor does lacking the mutation provide insurance, because most breast cancers occur in ordinary people without known mutations. Risk information helps you and your doctor decide whether screening should begin earlier or occur more often; its purpose is not to deliver a verdict.
+
+\begin{wuqu}
+``A positive test means I am ill, or will inevitably become ill.'' This is the most widespread misunderstanding about testing, and the chapter's first two sections provide two counterexamples. First, when the base rate is low, most positive results are false positives: in the example of 100,000 people, 98\% of those testing positive are actually healthy. Second, even a technically error-free test detecting a genuine mutation provides only a shift in probability for complex diseases. The converse also holds: a negative result does not mean you can stop worrying. A chip checks only marked sites; untested variants, undiscovered sites, environment, and chance remain in play. A test report is a conversation in the world of probability, not a judgment issued by a court.
+\end{wuqu}
+
+\section{Ancestry: A Pie Chart That Changes Itself}
+
+The most attractive part of a consumer report is often the colorful ancestry pie chart: a percentage northern Han Chinese, a percentage Southeast Asian, and perhaps even 2\% ``Neanderthal.'' It is also among the parts of this book most in need of quotation marks, because its production differs from all the tests above: \textbf{it measures almost no ``facts,'' performing statistical matching instead}.
+
+Here is the principle. A testing company first builds a ``reference population database,'' collecting thousands of DNA samples of known ancestry and compiling each group's SNP patterns. It then compares your SNP pattern with each population in the database, asks which group each segment of your sequence ``most resembles,'' and converts similarity into percentages. See the problem? The conclusion depends entirely on two things that people can change: \textbf{who is included in the reference database} and \textbf{which statistical model performs the comparison}. If the database contains almost no Central Asian samples, even genuine Central Asian ancestry can only be squeezed into the ``closest'' category. The same person can therefore receive two different pie charts from two companies. Even the same company's database update can make a years-old report change its face: not one letter of your DNA has changed, only the reference frame.
+
+A more fundamental boundary is that the pie chart says ``which groups \textbf{today} most resemble particular segments of your DNA,'' not ``where your ancestors lived thousands of years ago.'' Today's populations are snapshots after millennia of migration, intermarriage, separation, and reunion. Inferring history from a snapshot is inherently uncertain. Ancestry testing is an interesting demographic game and can sometimes help adopted people find biological relatives, but it is not a certificate of descent, much less an authority on ``who I am.''
+
+\section{A Family, a Lake, and a Counted Repeat}
+
+\begin{zhengju}
+One of genetic testing's most famous evidence stories began with a family tragedy. American neurologist Nancy Wexler's mother and three maternal aunts and uncles died of Huntington's disease, an inherited illness beginning in middle age: first involuntary movements of the hands and feet, then cognitive decline, and finally death a decade or more after onset. If either parent has the disease, each child has a 50\% chance of inheriting it. Nancy herself was a ``coin still spinning in the air.''
+
+Beginning in 1979, Wexler repeatedly led a team to the shores of Lake Maracaibo in Venezuela. Several villages there contained the world's largest Huntington's disease pedigree: an extended family of more than ten thousand people, many tracing their descent to a common ancestor two centuries earlier. The researchers went from house to house, drawing pedigrees, recording who was ill or healthy, and collecting blood. Their question was clear: without even knowing what the gene looked like, could they first locate its ``street address'' on a chromosome?
+
+The method came from linkage, discussed in Chapter 64. Since a disease-causing variant and its ``neighbors'' are often inherited together, find a visible neighbor. At the time, researchers used naturally occurring differences in DNA restriction-enzyme cutting sites (Chapter 82 will discuss these enzymes). If a cutting-site variant consistently appeared alongside the disease within affected families, the causal variant must live nearby. In 1983, the team found such a marker and located the disease gene on chromosome 4, although nobody yet knew which gene or protein it was. Suddenly, ``presymptomatic testing'' was possible: young people could know whether they carried it decades before symptoms began. But notice the honest part of this story: a linked marker is not the gene itself. Chromosomes exchange segments during inheritance through recombination, occasionally separating the marker from the disease variant, so early tests had a small proportion of false positives and false negatives. Researchers had to combine several markers and involve multiple family members to reduce error rates. Another full decade passed before an international team finally identified the gene itself in 1993: a stretch of repeated CAG triplets, normally repeated from the teens into the thirties, but repeated more than 40 times in patients. The more repeats, the earlier the disease generally began.
+
+This story leaves us with more than ``They found it.'' First, it shows a complete evidence chain: from pedigrees (observations), to linked markers (statistical associations), to gene sequence and repeat count (molecular mechanism). Every step asks, ``Could there be another explanation?'' Second, it forced an ethical question that still has no standard answer: if a disease cannot be cured, and testing can reveal but not change your future, do you want advance knowledge? People's choices were surprisingly divided. Many genuinely at risk weighed the options and chose \textbf{not to be tested}. The discussion around Huntington's testing established rules now widely used in medicine: genetic counseling before testing, the person's informed consent, and protection against misuse of results. Science provides the ability to test; society must set rules for whether to test and who may know.
+\end{zhengju}
+
+\section{Try It: Make Some ``False Positives''}
+
+\begin{shiyan}
+\textbf{Materials}: 100 equal-sized paper slips, an opaque bag, two small boxes or envelopes, and a pen. No biological materials are needed, and no real person's samples should be used---this is only a probability game.
+
+\textbf{Procedure}:
+\begin{enumerate}[itemsep=1pt]
+\item Make a ``population'': write ``ill'' on 2 slips and ``healthy'' on 98. Fold them and mix them in the bag. You have created a population with 2\% disease prevalence.
+\item Make a ``testing machine'': put 10 cards in the first box, 9 marked ``positive'' and 1 ``negative.'' This tests ``patients'' with 90\% sensitivity. Put 1 ``positive'' and 9 ``negative'' cards in the second box; this tests ``healthy people'' with 90\% specificity.
+\item Draw a population slip and, according to whether it says ``ill'' or ``healthy,'' draw a result card from the corresponding box. Look at it, record the result, return the card, and shake the box. Return the population slip too, so each person's test remains independent.
+\item Repeat at least 50 times. Several classmates can share the work and combine their data. Count just one thing: \textbf{of all the ``positive'' results, how many corresponded to slips actually marked ``ill''?}
+\end{enumerate}
+
+\textbf{What to observe}: theoretically, 100 tests encounter actual patients approximately 2 times, producing approximately 1.8 positive results, and healthy people approximately 98 times, producing approximately 9.8 false positives. Thus, of approximately 12 positive results, only approximately 2 represent actual patients. The positive predictive value is only approximately 15\%, although your testing machine boasts ``90\% sensitivity and specificity.''
+
+\textbf{Variation}: change the number of ``ill'' slips to 20, giving 20\% prevalence, and repeat. With the same testing machine, positive predictive value leaps to approximately 69\%. Doing this once will teach you more about ``base rates'' than reading the definition ten times.
+
+\textbf{Safety}: this experiment uses only paper and pen. Real genetic testing involves other people's unchangeable genetic information. Never collect or test anyone's biological sample without that person's consent.
+\end{shiyan}
+
+\section{Your Genetic Data Are Not Yours Alone}
+
+This last discussion is about boundaries rather than science, because what makes genetic testing special is the special nature of what it tests.
+
+First, \textbf{you cannot cancel compromised DNA}. A leaked password can be changed; a leaked fingerprint cannot. With a leaked genome, you do not even have the option of ``using another finger.'' It remains valid for life and contains information about your future before disease develops.
+
+Second, \textbf{it is inherently a ``shared file''}. Half your genome comes from your father and half from your mother, and each child carries half of yours. Uploading your own data partly discloses information about your parents, siblings, and children, who may never have consented. In 2018, American police used exactly this feature to solve the Golden State Killer case, unsolved for forty years. The perpetrator himself had never uploaded a sample; distant relatives had submitted data to a public genealogy database, and police followed the kinship network to identify him. Justice was served, but the controversy continues: each uploader inadvertently makes hundreds of distant relatives searchable.
+
+Third, \textbf{discrimination is a real risk}. If an employer knows an applicant carries a high-risk gene, might they refuse to hire? Might an insurer deny coverage or charge more? Some countries have prohibited genetic discrimination by law: the United States passed the Genetic Information Nondiscrimination Act in 2008. Chinese law also strictly protects personal information and human genetic resources, but legislation always trails technology, so awareness of self-protection remains necessary.
+
+Fourth, \textbf{informed consent is not a formality}. Before proper clinical genetic testing, a doctor or genetic counselor must explain what will and will not be tested, what unexpected findings may arise---for example, discovering that a father and child are not biologically related, an ``incidental finding'' much more common than people generally imagine---how long data will be retained, and whether they will be used for research. A test that supplies none of this information does not deserve your trust.
+
+All these principles come together in the practical advice called for at the end of this chapter's outline: \textbf{do not change your medical treatment yourself on the basis of any consumer genetic report}. Do not stop or increase medication, or independently decide for or against surgery. Consumer chips have limited coverage, positive predictive value depends on the base rate, and variants often remain of uncertain significance. Anything in a report that genuinely worries you belongs in a hospital's clinical confirmatory testing and genetic counseling services, not in a search engine or social-media circle.
+
+\section{Back to That Tube of Saliva}
+
+Let us fulfill the opening promise and reread those three statements.
+
+``Relatively weak alcohol metabolism'': this is a single-site assessment with a clear mechanism, differing aldehyde dehydrogenase activity. It is highly reliable and unusually capable of directly guiding behavior: flushing is not a low alcohol tolerance you can train away, but your body's alarm.
+
+``Disease risk 1.3 times the average'': this is a polygenic score based on population associations. It does not say you are ill, or even likely to become ill. It says your number has risen slightly for a disease whose base rate might be only a few percent. Should it change your lifestyle? Remember that avoiding late nights, exercising more, and not smoking are good advice regardless of your score. Their value does not require a genetic test to establish it.
+
+``Approximately 60 percent northern Han Chinese'': this is a statistical model's output, relative to one version of one company's reference database. It describes similarity, not proof of origin, and may change its answer when the database is updated next year.
+
+A tube of saliva does contain all your genetic information, but between ``containing information'' and ``answering questions'' lie testing technology, statistical models, base rates, and the interpreter's honesty. Genetic testing is powerful enough to predict a family's fate, yet ordinary enough to answer to four statistical rules. Learn to assess it, and neither the test nor its sellers will frighten or deceive you.
+
+\section{One Step to a Larger Scale}
+
+A recurring implication in this chapter deserves a pause: genes almost never determine their meaning alone. The same aldehyde dehydrogenase variant is inconsequential in a culture without drinking, but amplifies cancer risk in a culture that pressures people to drink. The same BRCA1 mutation can lead to very different outcomes in a healthcare system with regular breast screening and in a place without screening. Genes always ``coauthor'' outcomes with environment, population, and culture. In Chapter 86 we will expand this perspective to its largest scale, leaving individuals behind to see how entire ecosystems operate as networks of chemistry and information. Within the genome, too, humanity has understood only a small corner. How many unknown functions remain in the non-protein-coding sequences that occupy most of the genome? This is one of the unsolved mysteries confronted in the final chapter, Chapter 87.
+
+\section*{Exercises}
+
+\begin{sikaoti}
+\item A disease has a prevalence of 1/100 (one percent), and a test has 90\% sensitivity and 90\% specificity. Following this chapter's calculation for 100,000 people, draw a four-cell table and calculate the proportion of positive results that represent actual disease. Compare this with the chapter's 1/1000 example and explain the difference in your own words.
+\item A report says, ``Carriers of a certain variant have twice the ordinary risk of a disease.'' The ordinary lifetime risk is 0.5\%. Calculate carriers' absolute risk. Of 1,000 carriers, how many would you expect never to develop the disease?
+\item Draw an information-flow diagram: saliva $\rightarrow$ cells $\rightarrow$ DNA $\rightarrow$ genotyping chip $\rightarrow$ SNP data $\rightarrow$ statistical model $\rightarrow$ percentages in the report. At each arrow, write one way error or uncertainty could enter. Hint: at least six stages and six sources.
+\item Xiaoming's ancestry chart changes from ``70\% northern Han Chinese'' to ``62\% northern Han Chinese, 8\% Northeast Asian,'' although his DNA has not changed. Explain this using ``reference population database'' and ``statistical model,'' and explain why it cannot certify descent.
+\item Xiaohua secretly buys a genetic-testing kit, tests a toothbrush his father used, and posts his father's ``high-risk'' result in the family group chat. Using at least three principles from this chapter, identify what is wrong with this behavior.
+\item Suppose a future polygenic risk score identifies people at high risk of type 2 diabetes very accurately, but the disease still cannot be cured and can only be delayed through lifestyle intervention. Following the Huntington's disease ethical discussion, explain whether you would support offering this test to all secondary-school students, giving at least two reasons.
+\end{sikaoti}
