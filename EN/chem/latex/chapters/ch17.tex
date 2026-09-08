@@ -50,11 +50,11 @@ Plot the distance between two atoms against the system's total energy, and you g
 \draw[thick] plot[smooth] coordinates {(0.55,2.7) (0.8,1.1) (1.2,-0.3) (1.8,-0.9) (2.3,-1.0) (3.0,-0.72) (4.0,-0.34) (5.5,-0.12) (7.5,-0.03)};
 \draw[dashed] (2.3,-1.0) -- (2.3,0);
 \draw[<->] (2.75,-1.0) -- (2.75,0);
-\node at (3.7,-0.5) {Bond energy (depth)};
+\node[anchor=west] at (3.2,-1.2) {Bond energy (depth)};
 \node at (2.3,0.35) {Bond length};
 \node at (6.2,0.5) {Far apart: no interaction};
-\node at (1.0,2.2) {Too close:};
-\node at (1.0,1.75) {repulsion soars};
+\node[anchor=west] at (1.4,2.2) {Too close:};
+\node[anchor=west] at (1.4,1.75) {repulsion soars};
 \end{tikzpicture}
 \end{center}
 
@@ -66,7 +66,7 @@ Reading from right to left follows ``two atoms approaching'':
 \item \textbf{Far apart} (the right side): neither affects the other, so we set the system's energy to zero as our accounting baseline.
 \item \textbf{Drawing closer}: nucleus--electron attraction begins to dominate, and total energy \textbf{falls}. Like water running downhill, the atoms approach spontaneously---provided their excess energy can be carried away.
 \item \textbf{At the valley bottom}: at a particular distance, the balance of attraction and repulsion gives the lowest energy. This distance is the \textbf{bond length}; the energy needed to climb from the bottom back to zero (the valley's depth) is the \textbf{bond energy}.
-\item \textbf{Squeezing closer}: repulsion between nuclei and between electron clouds rises sharply. Total energy turns upward, and the curve becomes almost vertical. Atoms are not soft fruit you can squeeze at will.
+\item \textbf{Squeezing closer}: repulsion grows sharply between nuclei and between electron clouds. Total energy turns upward, and the curve becomes almost vertical. Atoms are not soft fruit you can squeeze at will.
 \end{itemize}
 
 So what exactly is a chemical bond? It is \textbf{not} a little stick tying two atoms together. It is the fact that, at a particular separation, the system sits at an energy minimum. To keep the atoms away from the valley bottom, you must keep paying (doing work); once they fall in, they stay there on their own.

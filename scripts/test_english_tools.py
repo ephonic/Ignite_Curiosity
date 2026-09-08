@@ -14,6 +14,15 @@ from assemble_liberal_arts import source_fragments, SOURCE
 
 
 class StructureTests(unittest.TestCase):
+    def test_only_exact_peptide_layout_wrap_is_normalized(self):
+        wrapped = check_english.WRAPPED_PEPTIDE
+        normalized = check_english.normalize_math_layout(wrapped)
+        self.assertNotIn("gathered", normalized)
+        self.assertIn(r"\chem{H_2O}", normalized)
+        for changed in (wrapped.replace("R_1", "R_3"),
+                        wrapped.replace("gathered", "aligned")):
+            self.assertEqual(check_english.normalize_math_layout(changed), changed)
+
     def test_only_explicit_source_glyph_examples_are_allowed(self):
         allowed = check_english.HAN_EXAMPLES["ch014.tex"]
         check = check_english.has_untranslated_han

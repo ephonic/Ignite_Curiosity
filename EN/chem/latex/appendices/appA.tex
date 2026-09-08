@@ -1,0 +1,364 @@
+\chapter[A First-Aid Kit for Chemical Symbols]{A First-Aid Kit\protect\\ for Chemical Symbols}
+
+\begin{kaichang}
+Imagine reading this sentence in the book: ``\chem{2H_2O_2} decomposes into \chem{2H_2O} and \chem{O_2}, catalyzed by catalase.'' Suddenly your brain stalls. What does the little 2 at the lower right mean? Why is there another large 2 in front? How can the letters on the right of the arrow equal those on the left?
+
+Do not panic. You are not stupid; the symbol system is communicating in code. Chemical notation is a highly compressed shorthand, packing four layers of information into one expression: composition, quantity, connectivity, and direction of change. With so much compression, failing to unpack it on the first attempt is perfectly normal.
+
+This appendix is your decompression toolkit. Instead of following a story, it is organized by where you get stuck. For element symbols, consult the first reference section; for formulas, the second; for balancing, moles, concentration, and pH calculations, go directly to the step-by-step methods near the end. Read it once to become acquainted, then keep it nearby for first aid whenever the main text trips you up.
+\end{kaichang}
+
+\section{Where the Symbols Came From}
+
+Before consulting the tables, spend a minute on the system's design. Its rules will then seem natural.
+
+Chemical notation solves a difficult problem: how can people speaking different languages discuss the same invisible atoms without arguing? The answer is a universal language of Latin letters. Each element receives one or two letters, its element symbol. Combine symbols by rules and you obtain a chemical formula; place arrows between formulas and you obtain a chemical equation. Each level carries more information, like letters becoming words and then sentences.
+
+Remember another convention used throughout this book: symbols keep accounts, not draw pictures. The letters and numbers in \chem{H_2O} say only that two hydrogen atoms and one oxygen atom form a group. They do \textbf{not} show its shape, bond angle, or atomic spacing. For shape, you need structural formulas and models; Appendix C explains what each molecular model preserves and sacrifices. Treat symbols as a ledger rather than a photograph, and they will not mislead you.
+
+Who devised this shorthand? Around 1813, Swedish chemist Berzelius introduced the standard element-symbol system. His reason was practical: chemists had used their own pictorial symbols, making readers learn a new system for every author, whereas Latin-letter codes could be read and written by literate people everywhere. For two centuries, the system has received patches without replacing its foundations. You are learning the notation used in laboratories worldwide, gaining the ability to converse in writing with chemists from any country.
+
+\section{Element Symbols: Chemistry's Alphabet}
+
+Element symbols follow just three rules:
+
+\begin{enumerate}[itemsep=2pt]
+\item A single letter is uppercase: \chem{H} (hydrogen), \chem{O} (oxygen), \chem{C} (carbon).
+\item With two letters, \textbf{the first is uppercase and the second lowercase}: \chem{Ca} is calcium; \chem{CA} and \chem{ca} are neither. Capitalization is not decoration: changing it changes the word.
+\item Some symbols come from Latin rather than Chinese or English names and therefore look ``illogical'': iron \chem{Fe} (ferrum), sodium \chem{Na} (natrium), potassium \chem{K} (kalium), copper \chem{Cu} (cuprum), silver \chem{Ag} (argentum), gold \chem{Au} (aurum), lead \chem{Pb} (plumbum), and mercury \chem{Hg} (hydrargyrum). These historical holdouts must become familiar; you cannot deduce them.
+\end{enumerate}
+
+This table collects the elements appearing most frequently in the book. You need not memorize them, just recognize them.
+
+\begin{table}[htbp]
+\centering
+\caption{Frequently encountered elements}
+\begin{tabular}{llll}
+\toprule
+Symbol & Name & Quick impression & Everyday examples \\
+\midrule
+\chem{H} & Hydrogen & Lightest element & \shortstack[l]{Water, acids,\\stellar fuel} \\
+\chem{C} & Carbon & Builds skeletons & Pencil cores, sugar, you \\
+\chem{N} & Nitrogen & Dominates air & Nearly four-fifths of air \\
+\chem{O} & Oxygen & \shortstack[l]{An active\\electron-grabber} & Breathing, rust, water \\
+\chem{P} & Phosphorus & \shortstack[l]{Key to life's\\bookkeeping} & Bones, ATP, DNA \\
+\chem{S} & Sulfur & Distinctive smell & Proteins, volcanoes \\
+\chem{Na} & Sodium & \shortstack[l]{Metal reacting\\violently with water} & Table salt (as ions) \\
+\chem{K} & Potassium & \shortstack[l]{Key to nerve\\signaling} & Bananas, nerve impulses \\
+\chem{Ca} & Calcium & Builder and messenger & Bones, lime, eggshells \\
+\chem{Mg} & Magnesium & Chlorophyll's heart & \shortstack[l]{Green leaves,\\magnesium tablets} \\
+\chem{Fe} & Iron & Changes valence readily & Blood, nails, rust \\
+\chem{Cu} & Copper & Familiar conductor & \shortstack[l]{Wires, pans for\\dorayaki pancakes} \\
+\chem{Zn} & Zinc & Common in enzymes & \shortstack[l]{Galvanized sheet,\\immunity} \\
+\chem{Cl} & Chlorine & \shortstack[l]{Settles after gaining\\an electron} & Table salt, disinfectants \\
+\chem{Si} & Silicon & Sand and chips & Glass, phone chips \\
+\chem{I} & Iodine & Thyroid raw material & \shortstack[l]{Iodized salt,\\iodine tincture} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{First aid: reading an unfamiliar element symbol}
+
+\begin{enumerate}[itemsep=2pt]
+\item Check the first letter: it must be uppercase. If there is a second, it must be lowercase.
+\item Find it in the periodic table (Appendix B), checking its name and position.
+\item Look at its column, or group. Elements in one column behave similarly, helping you guess its role in reactions.
+\item Ask whether it represents an atom, an elemental molecule, or an ion here. The same symbol plays different roles in different contexts: \chem{Cl} can mean the element chlorine or a chlorine atom, whereas table salt actually contains chloride ions, \chem{Cl^-}.
+\end{enumerate}
+
+\section{Formulas: Exact Ingredient Lists}
+
+Combine element symbols and a few numbers and you have a chemical formula. It answers the book's first recurring question: what is it made of, and how much of each component?
+
+There are just four rules:
+
+\begin{enumerate}[itemsep=2pt]
+\item \textbf{A subscript applies to the symbol immediately to its left}. \chem{H_2O} means two hydrogen atoms and one oxygen atom. The 2 belongs only to \chem{H}; no subscript after \chem{O} means 1. One water molecule contains 3 atoms altogether.
+\item \textbf{Parentheses package everything inside}. \chem{Ca(OH)_2} means 1 calcium, 2 oxygen, and 2 hydrogen atoms. The outside subscript 2 duplicates the entire \chem{OH} group. Expand parentheses before counting atoms.
+\item \textbf{Upper-right plus and minus signs indicate charge}. \chem{SO_4^{2-}} is sulfate: 1 sulfur and 4 oxygen atoms, with 2 extra electrons giving the whole group 2 negative charge units. Subscripts count atoms; superscripts count charge. Different information, different positions.
+\item \textbf{A large number before the formula counts ``portions''}. \chem{2H_2O} means 2 water molecules, totaling 4 hydrogen and 2 oxygen atoms. This coefficient applies to the whole formula, like ``times 2'' on a shopping list.
+\end{enumerate}
+
+\begin{wuqu}
+``The 2 in \chem{H_2O} means two oxygen atoms.'' No. A subscript applies only to the immediately preceding symbol, so this 2 belongs to hydrogen. Likewise, \chem{CO_2} means one carbon and two oxygen atoms, not two of each. Assign each subscript to its left-hand symbol before counting, and you will not miscount.
+\end{wuqu}
+
+Water of crystallization has another intimidating notation. An example is blue vitriol, \chem{CuSO_4\cdot 5H_2O}. The dot is neither multiplication nor a reaction. It says that five water molecules are regularly incorporated for each portion of copper sulfate in the crystal. Heating drives them out and turns the blue crystals white: water is a tenant in the crystal, not part of copper sulfate itself.
+
+\textbf{First aid: counting atoms in a formula}
+
+\begin{enumerate}[itemsep=2pt]
+\item Remove any leading coefficient and consider one portion first.
+\item Work left to right, recording each symbol's subscript, or 1 if none appears.
+\item For parentheses, multiply each enclosed atom's subscript by the outside subscript.
+\item For notation such as \chem{\cdot xH_2O}, record the water of crystallization separately.
+\item Add the counts for each element. If there is a leading coefficient, multiply all totals by it.
+\end{enumerate}
+
+Try \chem{3Ca(OH)_2}. Ignoring the coefficient gives \chem{Ca(OH)_2}: 1 calcium, with 1 oxygen and 1 hydrogen inside parentheses, multiplied by the outside 2 to give 2 of each. Multiply everything by 3: 3 calcium, 6 oxygen, and 6 hydrogen atoms, 15 altogether.
+
+Also distinguish two meanings used repeatedly in this book: \textbf{formulas mean somewhat different things for molecules and ionic compounds}. For molecules such as water and carbon dioxide, they record the actual atom counts per molecule: \chem{H_2O} means one molecule containing two hydrogen atoms and one oxygen atom. An ionic crystal such as table salt, however, contains no individual sodium chloride molecule, just an extensive alternating arrangement of sodium and chloride ions in a 1:1 ratio. \chem{NaCl} gives only \textbf{the simplest numerical ratio of the ions}. Diamond and graphite are both written \chem{C} because their atoms form large networks without individual molecules to count; we can only state composition. Ask whether a formula describes a molecule or a simplest ratio, and many puzzles vanish immediately.
+
+\section{Structural Formulas: Who Bonds to Whom?}
+
+A chemical formula states what is present and how much, not how it is connected. Yet Chapter 20 explained that molecular shape and connectivity determine behavior. Glucose and fructose share the formula \chem{C_6H_{12}O_6} but differ in sweetness because their connections differ. Structural formulas specifically show who is connected to whom.
+
+The basic convention is that \textbf{one short line represents one shared electron pair, a covalent bond}. Water is \chem{H-O-H}, oxygen reaching out two hands to hydrogen. Carbon dioxide is \chem{O=C=O}, with two lines indicating a double bond, two shared pairs. Nitrogen gas is $\chem{N}\equiv\chem{N}$, whose three lines show a strong triple bond. Each atom's usual number of ``hands'' is fairly fixed: hydrogen 1, oxygen 2, nitrogen 3, carbon 4. These hand counts translate Chapters 17--19's bonding rules into notation. Count hands in an unfamiliar structure and mistakes become easy to spot.
+
+Drawing every atom in a large organic molecule is exhausting, so chemists developed progressively shorter notation:
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Displayed structural formula}: every bond is drawn, as in an expanded version of ethanol's \chem{H_3C-CH_2-OH}. Clear, but space-consuming.
+\item \textbf{Condensed formula}: group hydrogens attached to a carbon, giving \chem{CH_3CH_2OH}. This is common for ethanol and acetic acid, \chem{CH_3COOH}.
+\item \textbf{Skeletal formula}: omit carbon letters and represent them by line ends and corners, leaving out hydrogen where possible. Most complex organic and biological molecules in the main text use this. Appendix C explains the full reading, including wedges and three-dimensional information. Here remember: \textbf{each line end and corner is a carbon, and any undrawn part of carbon's four hands is assumed filled by hydrogen}.
+\end{itemize}
+
+Why bother? Compare ethanol and dimethyl ether, both \chem{C_2H_6O}, identical ingredient lists. Ethanol's connectivity is \chem{CH_3-CH_2-OH}: oxygen sits at the carbon chain's end and carries hydrogen. Dimethyl ether is \chem{CH_3-O-CH_3}, with oxygen between two carbons. That small difference makes the former an intoxicating liquid in alcoholic drinks that mixes with water in any proportion, while the latter is a readily volatile gas at room temperature. Same formula need not mean same substance: \textbf{connectivity is part of identity}. That is the reason structural formulas exist, and the notational prelude to Chapter 20's shape--function relationship and Chapter 42's chirality story.
+
+\section{Reaction Arrows: Chemical Grammar}
+
+An equation is a sentence written in formulas, and its arrow is the verb. To read a sentence, find the verb; to read an equation, find the arrow and its surrounding annotations.
+
+\begin{table}[htbp]
+\centering
+\caption{Arrows and their companions}
+\begin{tabular}{ll}
+\toprule
+Notation & Meaning \\
+\midrule
+$\rightarrow$ & \shortstack[l]{Reaction proceeds this way: reactants left,\\products right} \\
+$\rightleftharpoons$ & \shortstack[l]{Both directions occur in dynamic equilibrium\\(Chapter 31)} \\
+Text above arrow & \shortstack[l]{Conditions such as heat, light, catalyst,\\or a particular enzyme} \\
+$\uparrow$ after a product & Substance leaves the system as a gas \\
+$\downarrow$ after a product & Substance leaves the system as a precipitate \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Here is a full sentence: ``\chem{2H_2O_2} $\xrightarrow{\text{catalase}}$ \chem{2H_2O} + \chem{O_2}\,$\uparrow$.'' Read it as two portions of hydrogen peroxide becoming two portions of water and one of oxygen, helped by catalase, with oxygen bubbling away. Read plus as ``and,'' the arrow as ``becomes,'' and coefficients as numbers of portions. The equation becomes ordinary language.
+
+\begin{wuqu}
+``Different substances on either side mean atoms were destroyed or created.'' No. Chemical reactions neither create nor destroy atoms; they \textbf{rearrange them}. This is why Chapter 26 calls equations reaction ledgers. Count the example: left, 4 hydrogen and 4 oxygen atoms; right, \chem{2H_2O} has 4 hydrogen and 2 oxygen, and \chem{O_2} adds 2 oxygen, again totaling 4 of each. The books balance. If an equation's atom counts disagree, nature has not performed a miracle; its writer has not finished balancing it.
+\end{wuqu}
+
+Notice the arrow's tone. A one-way arrow does not mean the reaction can only ever proceed that way, just that it mainly does under these conditions. Nor does $\rightleftharpoons$ mean everything stops: both directions continue at equal rates (Chapter 31). Catalysts and enzymes above the arrow provide an easier route; they \textbf{do not appear in the ledger}, are not consumed, and change only the speed of arrival, not the ultimate amount converted (Chapters 30 and 49).
+
+\textbf{First aid: reading an unfamiliar equation}
+
+\begin{enumerate}[itemsep=2pt]
+\item Find the arrow and distinguish reactants on the left from products on the right.
+\item Expand each formula into an atom list and check that each element's counts match across the equation.
+\item Look above and below the arrow for conditions: heating, catalysts, enzymes. They tell you how fast and what accelerates it, not whether it can happen.
+\item Look for $\uparrow$ and $\downarrow$, which explain bubbling and cloudiness.
+\item Finally ask whether breaking old bonds and forming new ones releases or absorbs energy overall. The equation itself does not state energy; return to Chapters 27 and 28 for that answer.
+\end{enumerate}
+
+\section{Common Ions at a Glance}
+
+Ions are atoms or groups with an unbalanced electron ledger: losing electrons gives positive cations; gaining them gives negative anions. Write charge at the upper right, number before sign, as in \chem{Ca^{2+}}. Omit a charge magnitude of 1: \chem{Na^+}, not \chem{Na^{1+}}.
+
+\begin{table}[htbp]
+\centering
+\caption{Common cations in this book}
+\begin{tabular}{lll}
+\toprule
+Symbol & Name & Where encountered \\
+\midrule
+\chem{H^+} & Hydrogen ion (proton) & Common to acids (Chapter 32) \\
+\chem{Na^+} & Sodium ion & \shortstack[l]{Table salt, body fluids,\\nerve signals} \\
+\chem{K^+} & Potassium ion & Nerve impulses' other half \\
+\chem{NH_4^+} & Ammonium ion & Fertilizers, metabolites \\
+\chem{Ca^{2+}} & Calcium ion & Bones, muscle-contraction signals \\
+\chem{Mg^{2+}} & Magnesium ion & Chlorophyll center, enzyme helper \\
+\chem{Fe^{2+}} & Iron(II) ion & Hemoglobin's oxygen-binding site \\
+\chem{Fe^{3+}} & Iron(III) ion & A main component of rust \\
+\chem{Cu^{2+}} & Copper(II) ion & Blue solutions, blue vitriol \\
+\chem{Zn^{2+}} & Zinc ion & Many enzymes' active sites \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Common anions in this book}
+\begin{tabular}{lll}
+\toprule
+Symbol & Name & Where encountered \\
+\midrule
+\chem{Cl^-} & Chloride ion & Table salt, stomach acid, body fluids \\
+\chem{OH^-} & Hydroxide ion & Common to bases (Chapter 32) \\
+\chem{O^{2-}} & Oxide ion & Metal-oxide crystals \\
+\chem{CO_3^{2-}} & Carbonate ion & Limestone, shells, soda \\
+\chem{HCO_3^-} & Hydrogen carbonate ion & Baking soda, blood buffering \\
+\chem{SO_4^{2-}} & Sulfate ion & Sulfate salts, blue vitriol \\
+\chem{NO_3^-} & Nitrate ion & Fertilizers, controversy over pickles \\
+\chem{PO_4^{3-}} & Phosphate ion & Bones, ATP, DNA backbone \\
+\chem{CH_3COO^-} & Acetate ion & One source of vinegar's sourness \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three reminders. First, \chem{Fe^{2+}} and \chem{Fe^{3+}} are the same element, iron, differing by just one electron yet greatly in properties. Charge is part of identity, not decoration. Second, several atoms sharing an overall charge, such as \chem{SO_4^{2-}}, form a polyatomic ion. In most reactions they \textbf{act together without splitting}, so you can count them as a unit when balancing. Third, ions never exist alone: a bottle of saltwater contains no pure \chem{Na^+}; equal negative charge always surrounds it, making the system electrically neutral. Forget this constraint in ionic equations or concentration calculations and you can invent a nonexistent bottle of charged water.
+
+Ionic charges can often be guessed from periodic-table position (Chapters 10 and 11). Group 1 metals have one outer electron; losing it leaves a filled inner shell, so they always form $+1$ ions. Group 2 similarly forms $+2$ ions. Group 17 lacks one outer electron and settles after gaining one, always forming $-1$ ions. Group 16, including oxygen and sulfur, lacks two and commonly forms $-2$ ions. Atoms have no wishes; these arrangements correspond to lower total energy (Chapters 11 and 18). Transition metals in the middle are less simple: \chem{Fe^{2+}} and \chem{Fe^{3+}}, and \chem{Cu^+} and \chem{Cu^{2+}}, all exist stably. Their changing valence supplies stories in Chapters 15 and 33. Instead of memorizing the entire table, learn that group predicts common charge, treating transition-metal variability as an exception, and halve your burden.
+
+\section{Functional Groups and Biomolecular Notation}
+
+An organic molecule may contain dozens of atoms, yet a few attached components often determine much of its behavior: functional groups, Chapter 37's reaction interfaces. Recognize the parts and you can predict much of its temperament.
+
+\begin{table}[htbp]
+\centering
+\caption{Common functional groups}
+\begin{tabular}{llll}
+\toprule
+Notation & Name & Behavior & Examples \\
+\midrule
+\chem{-OH} & Hydroxyl & \shortstack[l]{Hydrophilic; forms\\hydrogen bonds} & Alcohol, sugars \\
+\chem{-CHO} & Aldehyde & Easily oxidized & Glucose, fragrances \\
+\chem{-CO-} & Carbonyl & Polar reaction site & Acetone, sugars \\
+\chem{-COOH} & Carboxyl & \shortstack[l]{Releases \chem{H^+};\\acidic} & Vinegar, citric acid \\
+\chem{-NH_2} & Amino & \shortstack[l]{Accepts \chem{H^+};\\basic} & Amino acids, proteins \\
+\chem{-COO-} & \shortstack[l]{Ester bond\\(ester group)} & \shortstack[l]{Fragrance source;\\stitches in fats} & Fruit aromas, fats \\
+\chem{-PO_4^{2-}} & Phosphate & \shortstack[l]{Negative; involved\\in energy transfers} & ATP, DNA backbone \\
+\chem{-CH_3} & Methyl & \shortstack[l]{Inert marker;\\can serve as a tag} & Epigenetic marks \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The book's second half also uses the following biomolecular shorthand:
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Glucose}: \chem{C_6H_{12}O_6}. Recognize this formula: a photosynthetic product, respiratory fuel, and main character of Part VI.
+\item \textbf{General amino-acid formula}: a central carbon attached to \chem{-NH_2}, \chem{-COOH}, \chem{-H}, and a side chain usually called \chem{R}. All differences among the twenty amino acids reside in \chem{R} (Chapter 48).
+\item \textbf{ATP and ADP}: adenosine triphosphate and adenosine diphosphate. \chem{ATP} $\rightarrow$ \chem{ADP} + \chem{P_i} denotes ATP handing its terminal phosphate group to someone else. Remember, energy is not hidden in one special high-energy bond; release occurs because the products as a whole are more stable than the reactants. Chapter 50 unpacks this metaphor.
+\item \textbf{DNA's four letters}: A, T, G, and C abbreviate adenine, thymine, guanine, and cytosine. RNA replaces T with U, uracil. Pair A with T or U, and G with C (Chapter 66).
+\item \textbf{Single-letter amino-acid codes}: sequencing and genetics chapters use letters such as A, G, and S for amino acids. These and base letters belong to \textbf{two different dictionaries}. A means a base in DNA but alanine in a protein sequence; use context to distinguish them.
+\end{itemize}
+
+\section{Method One: Balancing Equations}
+
+Balancing supplies coefficients so each element's atom count agrees on both sides. One rule is inviolable: \textbf{change only leading coefficients, never formula subscripts}. Changing a subscript changes the substance and falsifies the accounts.
+
+For methane combustion, start with \chem{CH_4} + \chem{O_2} $\rightarrow$ \chem{CO_2} + \chem{H_2O}:
+
+\begin{enumerate}[itemsep=2pt]
+\item \textbf{List atoms}. Left: 1 carbon, 4 hydrogen, 2 oxygen. Right: 1 carbon, 2 hydrogen, 3 oxygen. Carbon already balances; leave it alone.
+\item \textbf{Start with an element appearing only once}. Hydrogen is 4 on the left and 2 on the right, so give \chem{H_2O} coefficient 2. The right now has 4 hydrogen and $2+2=4$ oxygen. Hydrogen balances.
+\item \textbf{Finish with elemental substances}. The right has 4 oxygen atoms; coefficient 2 before \chem{O_2} gives 4 on the left. Balanced.
+\item \textbf{Check everything}. \chem{CH_4} + \chem{2O_2} $\rightarrow$ \chem{CO_2} + \chem{2H_2O}: each side has 1 carbon, 4 hydrogen, and 4 oxygen. Done.
+\end{enumerate}
+
+Fractions sometimes appear. Balancing \chem{C_2H_6} + \chem{O_2} $\rightarrow$ \chem{CO_2} + \chem{H_2O} may require $\frac{7}{2}$ for oxygen. Keep the fraction while balancing, then multiply every coefficient by 2 to remove the denominator: \chem{2C_2H_6} + \chem{7O_2} $\rightarrow$ \chem{4CO_2} + \chem{6H_2O}. Coefficients must be integers because molecules react as whole units.
+
+Remember the order: \textbf{complex groups first, singly appearing elements next, elemental substances last}. Oxygen and hydrogen often occur in several formulas, making early adjustments awkward. An elemental substance such as \chem{O_2} appears in just one place and is easiest saved for the final adjustment.
+
+\section{Method Two: Mole Conversions}
+
+A mole is chemistry's dozen: eggs are counted by dozens, atoms and molecules by moles, except that one mole is \ud{6.02\times 10^{23}}{} entities, Avogadro's constant, whose measurement Chapter 5 explains. The bridge is \textbf{molar mass}, numerically equal to formula mass and expressed in \ud{}{g/mol}. Hydrogen is approximately \ud{1}{g/mol} and oxygen \ud{16}{g/mol}, giving water, \chem{H_2O}, $2\times1+16=18\ \ud{}{g/mol}$.
+
+\textbf{Three-step conversion: mass $\rightarrow$ moles $\rightarrow$ particles}
+
+\begin{enumerate}[itemsep=2pt]
+\item Write the formula and calculate molar mass $M$ by adding relative atomic masses weighted by subscripts.
+\item Amount of substance $n = \dfrac{m}{M}$: mass divided by molar mass, in mol.
+\item Particle count $N = n\times 6.02\times 10^{23}$. Reverse the steps for the opposite conversion: divide particles by Avogadro's constant for moles, then multiply by molar mass for mass.
+\end{enumerate}
+
+Example: how many moles and molecules are in \ud{36}{g} of water?
+
+\begin{enumerate}[itemsep=2pt]
+\item $M(\chem{H_2O}) = 18\ \ud{}{g/mol}$.
+\item $n = 36 \div 18 = 2\ \ud{}{mol}$.
+\item $N = 2\times 6.02\times 10^{23} = 1.2\times 10^{24}$ water molecules.
+\end{enumerate}
+
+Just \ud{36}{g} of water contains approximately $10^{24}$ molecules, far more than all the sand grains on Earth's beaches. That is why moles exist: they connect the uncountably tiny with the weighably large.
+
+\begin{qiaoliang}
+Balanced coefficients are precisely \textbf{mole ratios}. \chem{CH_4} + \chem{2O_2} $\rightarrow$ \chem{CO_2} + \chem{2H_2O} means 1 mol methane reacts with exactly 2 mol oxygen to produce 1 mol carbon dioxide and 2 mol water. Thus \ud{16}{g}, or 1 mol, of methane requires $2\times32=64$ \ud{}{g} of oxygen. Industrial raw-material requirements and laboratory product yields both use this relationship. Coefficients are not decoration; they are chemistry's exchange rates.
+\end{qiaoliang}
+
+\section{Method Three: Concentration}
+
+Concentration answers how much is dissolved in a solution. This book uses two common forms:
+
+\begin{itemize}[itemsep=2pt]
+\item \textbf{Mass concentration}: grams per unit volume, such as \ud{}{g/L}. The \ud{0.9}{\%} in physiological saline means \ud{0.9}{g} sodium chloride per \ud{100}{mL} solution, or \ud{9}{g/L}.
+\item \textbf{Amount concentration}: moles per unit volume, denoted $c$, in \ud{}{mol/L}. The formula is $c = \dfrac{n}{V}$, where $n$ is solute amount and $V$ is total solution volume in liters.
+\end{itemize}
+
+\textbf{Three steps to concentration}
+
+\begin{enumerate}[itemsep=2pt]
+\item Convert solute mass into moles using the second section's method: $n = m/M$.
+\item Convert volume into liters: \ud{250}{mL} = \ud{0.25}{L}.
+\item Substitute into $c = n/V$.
+\end{enumerate}
+
+Example: dissolve \ud{5.85}{g} of table salt in water to make \ud{500}{mL} solution. What is its concentration? Molar mass of $\chem{NaCl}$ is approximately $23+35.5=58.5\ \ud{}{g/mol}$, so $n=5.85\div58.5=0.1\ \ud{}{mol}$; $V=0.5\ \ud{}{L}$; and $c=0.1\div0.5=0.2\ \ud{}{mol/L}$.
+
+For dilution, remember: \textbf{adding water changes volume, not solute moles}. Thus $c_1V_1 = c_2V_2$. Take \ud{100}{mL} of the \ud{0.2}{mol/L} saltwater above and add water to \ud{400}{mL}. The new concentration is $c_2 = 0.2\times100/400 = 0.05\ \ud{}{mol/L}$. Medical preparations and agricultural nutrient solutions both depend on this equation. A tenfold dose difference can have entirely different consequences, so concentration is never trivial.
+
+\textbf{Translator safety note:} These are paper calculations, not instructions for preparing medical saline or medicines. Medical saline requires appropriate formulation and sterility; contaminated products can cause serious infection, as explained in \href{https://www.fda.gov/medical-devices/safety-communications/recall-certain-saline-and-sterile-water-medical-products-associated-nurse-assist-fda-safety}{FDA saline safety guidance}. The sodium hydroxide exercise below is also calculation-only: do not handle or dilute this corrosive chemical at home. See \href{https://www.cdc.gov/niosh/npg/npgd0565.html}{NIOSH sodium hydroxide hazards} and apply \href{https://institute.acs.org/acs-center/lab-safety/education-training/safer-experiments.html}{ACS chemical risk assessment} before any supervised practical activity.
+
+\section{Method Four: pH}
+
+pH is a logarithmic scale of hydrogen-ion concentration in aqueous solutions; Chapter 32 explains why:
+
+\[
+\mathrm{pH} = -\lg\,c(\chem{H^+})
+\]
+
+Here $c(\chem{H^+})$ is in \ud{}{mol/L}. A logarithmic scale compresses an enormous span: as \chem{H^+} concentration falls from \ud{1}{mol/L} to \ud{10^{-14}}{mol/L}, pH runs from 0 to 14.
+
+\textbf{Three steps to pH}
+
+\begin{enumerate}[itemsep=2pt]
+\item Establish \chem{H^+} concentration. In a dilute strong-acid solution, it can be approximated by the acid concentration.
+\item Take the common logarithm: if $c = 10^{-x}$, then $\lg c = -x$.
+\item Apply the minus sign: $\mathrm{pH} = -(-x) = x$.
+\end{enumerate}
+
+Example: lemon juice with $c(\chem{H^+}) = 10^{-2.3}\ \ud{}{mol/L}$ has pH 2.3. Notice the direction: each \textbf{decrease} of 1 in pH \textbf{increases} \chem{H^+} concentration tenfold. Lemon juice at approximately pH 2 has approximately $10^5$ times the hydrogen-ion concentration of pure water at approximately pH 7: a hundred thousand times, not a gentle five-point difference.
+
+\begin{table}[htbp]
+\centering
+\caption{Approximate pH of familiar liquids at $25\,^{\circ}\mathrm{C}$}
+\begin{tabular}{llll}
+\toprule
+Liquid & Approx. pH & Liquid & Approx. pH \\
+\midrule
+Gastric juice & 1.5--2 & Milk & 6.5 \\
+Lemon juice & 2--2.5 & Pure water & 7 \\
+Vinegar & 2.5--3 & Blood & 7.35--7.45 \\
+Orange juice & 3.5 & Seawater & 8.1 \\
+Acid rain (threshold) & Below 5.6 & Baking-soda solution & 8--9 \\
+Ordinary rain & 5.6 & Soapy water & 9--10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two points deserve a pause. Ordinary rain is already slightly acidic because atmospheric \chem{CO_2} dissolves to form carbonic acid. Acid rain therefore means pH below 5.6, not simply below 7: judgments require a natural baseline. Blood pH, meanwhile, is tightly maintained between 7.35 and 7.45 through bicarbonate and other buffers correcting deviations around the clock, Chapter 60's homeostasis. Claims that drinking alkaline water changes your body's constitution amount to claiming that a glass of water defeats this elaborate whole-body buffer system. Neither dose nor evidence adds up.
+
+\begin{wuqu}
+``pH 7 always means neutral.'' This holds only for pure water at $25\,^{\circ}\mathrm{C}$. Neutral means $c(\chem{H^+}) = c(\chem{OH^-})$, while water's ionization varies with temperature. At $100\,^{\circ}\mathrm{C}$, pure water has pH approximately 6.1 yet remains neutral because the two ion concentrations are equal. The pH ruler depends on temperature; 7 is its ordinary-temperature midpoint, not a universal constant. Equating pH below 7 with harmful is even more mistaken: gastric juice at approximately pH 2 is normal for digestion.
+\end{wuqu}
+
+The reverse calculation is equally common: given pH, $c(\chem{H^+}) = 10^{-\mathrm{pH}}$. Acid rain at pH 4.5 has \chem{H^+} concentration approximately $10^{-4.5}\ \ud{}{mol/L}$, or $3\times10^{-5}\ \ud{}{mol/L}$. This converts environmental-report pH values into actual particle concentrations.
+
+\section{Put the Tools Back in the Box}
+
+The system's whole secret fits one sentence: \textbf{symbols are shorthand for a ledger, and behind the ledger are real particles rearranging and energy flowing}. Whenever a formula leaves you bewildered, return to the five recurring questions: what is it made of? How is it connected? Which energy rules govern whether it can change? How fast? How is it used in life? Every main chapter addresses what notation alone cannot answer.
+
+Other first-aid kits are ready too: periodic trends in Appendix B, molecular-model drawing and reading in Appendix C, and genetic-information terms in Appendix D. Appendix F offers hints and answers when calculations go wrong.
+
+\section*{Exercises}
+
+\begin{sikaoti}
+\item Count the nitrogen, hydrogen, sulfur, and oxygen atoms in \chem{2(NH_4)_2SO_4}, ammonium sulfate fertilizer. Draw how you assign each subscript.
+\item Balance and check \chem{Fe} + \chem{O_2} $\rightarrow$ \chem{Fe_3O_4}, iron wire burning in oxygen. Count iron and oxygen on both sides afterward to verify the ledger.
+\item What is the molar mass of \chem{Na_2CO_3}? How many moles are in \ud{53}{g} sodium carbonate, and approximately how many \chem{Na^+} ions? Remember that each \chem{Na_2CO_3} supplies 2 \chem{Na^+} ions.
+\item \ud{4.0}{g} sodium hydroxide, \chem{NaOH}, with molar mass \ud{40}{g/mol}, is made into \ud{250}{mL} solution. What is its amount concentration? If \ud{50}{mL} is diluted to \ud{200}{mL}, what is the new concentration?
+\item Solution A has pH 3 and B pH 5. Which has higher \chem{H^+} concentration, and by what factor? If B is pure water at $60\,^{\circ}\mathrm{C}$, can you conclude that A is strongly acidic and B alkaline? Explain.
+\item Choose one biomolecular notation here---glucose, the general amino-acid formula, ATP, or DNA bases---and write a paragraph explaining which information it compresses and which it hides, as a script for explaining it to a classmate.
+\end{sikaoti}

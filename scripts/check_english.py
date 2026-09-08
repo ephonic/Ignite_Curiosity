@@ -77,6 +77,20 @@ def without_comments(text):
     return re.sub(r"(?<!\\)%[^\n]*", "", text)
 
 
+# Exact layout-only wrapping of the unchanged peptide equation. Do not exempt
+# arbitrary added math environments from the original structure comparison.
+WRAPPED_PEPTIDE = r"""\[\begin{gathered}
+\chem{H_2N{-}CH(R_1){-}COOH} + \chem{H_2N{-}CH(R_2){-}COOH} \\
+\rightarrow \chem{H_2N{-}CH(R_1){-}CO{-}NH{-}CH(R_2){-}COOH} + \chem{H_2O}
+\end{gathered}\]"""
+
+
+def normalize_math_layout(text):
+    unwrapped = WRAPPED_PEPTIDE.replace(r"\begin{gathered}", "").replace(
+        r"\end{gathered}", "").replace("\\\\\n", "\n")
+    return text.replace(WRAPPED_PEPTIDE, unwrapped)
+
+
 def has_untranslated_han(text, source, allowed=()):
     for example in allowed:
         if example in source:
@@ -101,7 +115,8 @@ def check_book(book, partial):
         original = without_comments(source.read_text(encoding="utf-8"))
         name = str(target.relative_to(ROOT))
         try:
-            english = without_comments(normalize_pagination(target.read_text(encoding="utf-8")))
+            english = without_comments(normalize_math_layout(
+                normalize_pagination(target.read_text(encoding="utf-8"))))
         except ValueError as error:
             errors.append(f"{name}: {error}")
             continue

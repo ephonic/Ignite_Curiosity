@@ -111,8 +111,8 @@ So far this chapter has really used just four symbols. Here they are together: a
 \node[draw,rounded corners] (N) at (11.6,0) {Particle count $N$};
 \draw[->,thick] (m) -- (n) node[midway,above] {$\div M$};
 \draw[->,thick] (n) -- (N) node[midway,above] {$\times N_{\mathrm{A}}$};
-\draw[->,thick,dashed] (n.south) to[bend right=20] node[midway,below] {$\times M$} (m.south);
-\draw[->,thick,dashed] (N.south) to[bend right=20] node[midway,below] {$\div N_{\mathrm{A}}$} (n.south);
+\draw[->,thick,dashed] (n.south) to[bend left=20] node[midway,below] {$\times M$} (m.south);
+\draw[->,thick,dashed] (N.south) to[bend left=20] node[midway,below] {$\div N_{\mathrm{A}}$} (n.south);
 \end{tikzpicture}
 \end{center}
 

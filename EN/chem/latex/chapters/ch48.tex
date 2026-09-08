@@ -81,7 +81,10 @@ Symbols arrive last. The general amino-acid formula writes the shared framework 
 
 Peptide-bond formation is written as condensation:
 
-\[\chem{H_2N{-}CH(R_1){-}COOH} + \chem{H_2N{-}CH(R_2){-}COOH} \rightarrow \chem{H_2N{-}CH(R_1){-}CO{-}NH{-}CH(R_2){-}COOH} + \chem{H_2O}\]
+\[\begin{gathered}
+\chem{H_2N{-}CH(R_1){-}COOH} + \chem{H_2N{-}CH(R_2){-}COOH} \\
+\rightarrow \chem{H_2N{-}CH(R_1){-}CO{-}NH{-}CH(R_2){-}COOH} + \chem{H_2O}
+\end{gathered}\]
 
 The new central \chem{{-}CO{-}NH{-}} is the peptide linkage, actually Chapter 37's amide linkage under its protein-context name. It tends to be planar and resists rotation, like little rigid steel plates along a chain; flexibility comes from their connecting joints. This ``semirigid chain'' constrains much of folding's geometry.
 
@@ -93,9 +96,9 @@ A simple diagram connects the four levels:
 \node[draw,rounded corners,align=center] (b) at (3.6,0) {Helices and\\sheets};
 \node[draw,rounded corners,align=center] (c) at (7.2,0) {Whole chain\\folds into a ball};
 \node[draw,rounded corners,align=center] (d) at (10.8,0) {Several chains\\form a machine};
-\draw[->,thick] (a) -- node[above=1pt]{\scriptsize Hydrogen bonds} (b);
-\draw[->,thick] (b) -- node[above=1pt]{\scriptsize Side-chain interactions} (c);
-\draw[->,thick] (c) -- node[above=1pt]{\scriptsize Assembly} (d);
+\draw[->,thick] (a) -- node[above=18pt]{\scriptsize \shortstack{Hydrogen\\bonds}} (b);
+\draw[->,thick] (b) -- node[above=18pt]{\scriptsize \shortstack{Side-chain\\interactions}} (c);
+\draw[->,thick] (c) -- node[above=18pt]{\scriptsize Assembly} (d);
 \node[anchor=north] at ([yshift=-4pt]a.south) {\scriptsize Primary};
 \node[anchor=north] at ([yshift=-4pt]b.south) {\scriptsize Secondary};
 \node[anchor=north] at ([yshift=-4pt]c.south) {\scriptsize Tertiary};

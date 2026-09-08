@@ -1,0 +1,196 @@
+\chapter[Evolution Is More Than Natural Selection]{Evolution Is More\protect\\ Than Natural Selection}
+
+\begin{kaichang}
+Find an opaque jar, put in 50 red marbles and 50 black ones, and shake it. Close your eyes and take a handful---just 10 marbles. Count them: are there five red and five black?
+
+Probably not. You might have six red and four black, or three red and seven black. You have no preference, and your fingers cannot recognize colors, yet your handful's proportions differ from the jar's. Record this ``score'' before drawing and replacing another handful. If you played generation after generation, allowing only 10 marbles per generation to ``survive'' and produce the next 10, what would the jar contain after hundreds of years and millions of generations?
+
+Do not rush to answer, ``Half and half in the end---that would be fair.'' By the chapter's end, you will discover another silent but powerful ``player'' beside Darwin: luck. Natural selection certainly matters, as Chapter 76 explained, but chance often deals the cards at evolution's table.
+\end{kaichang}
+
+\section{First Ask: What Counts as Evolution?}
+
+Last chapter gave a simple definition of evolution: \textbf{changes in a population's allele frequencies across generations}. Notice that the definition never mentions ``selection.'' It says frequencies change, not why.
+
+Think of water level. A lake might rise because heavy rain fell upstream, analogous to selection's directional environmental pressure, but changes could also involve opened sluices, irrigation pumps, or even waves on the measurement day. The changing level is a fact with many possible causes. Allele frequencies are similar: any mechanism that changes them is an evolutionary engine. Natural selection is only the most powerful and visible one.
+
+Biologists can identify at least these engines: \textbf{mutation} continually creates new variation; \textbf{genetic drift} makes frequencies fluctuate purely through sampling luck; \textbf{gene flow} carries alleles between populations; and \textbf{sexual selection} specifically changes the rules governing ``who leaves offspring.'' They often operate together, some pushing populations toward adaptation, others merely generating noise, and still others keeping a ``diary'' of that noise. We will take them apart one by one.
+
+A preliminary warning: these mechanisms are not ``opponents'' of Darwin's theory. They share the same foundations: Chapter 71's inheritance, Chapter 72's mutation, and Chapter 76's population perspective. Darwin drew the main beams of evolution's building; this chapter explores the remaining framework that makes it stand.
+
+\section{Mutation: The Source of All Variation}
+
+Without raw material, neither selection nor drift has anything to work with. Trace any allele far enough back, and it descends from a mutation.
+
+Chapter 72 examined mutation types: base substitutions, insertions, deletions, duplications, inversions, and translocations. Here we emphasize two often overlooked points.
+
+First, mutation is \textbf{random} in direction, not ``whatever the environment needs.'' Bacteria do not deliberately create resistance mutations because antibiotics are present in a dish. Such mutations continually arise at very low probabilities; antibiotics simply kill those without them and leave a lucky few. Chapter 76's peppered moths and resistant bacteria illustrated this filtering. Mutation writes the questions; selection grades the answers. The question writer does not know the answer key.
+
+Second, mutation is slow, but the numbers are huge. Consider a realistic order-of-magnitude estimate: the human genome contains about $3\times 10^{9}$ base pairs, with a mutation rate on the order of $10^{-8}$ per base per generation. Multiplying gives
+
+\[
+3\times 10^{9}\ \times\ 10^{-8}\ \approx\ 30
+\]
+
+Thus an average newborn carries a few dozen mutations absent from the parents. More precise measurements give about 60, accounting for both parents' contributions. Does that seem small? Multiply it by roughly 130 million births worldwide each year: humanity produces billions of new mutations \textbf{every generation}. At almost every genome position where an error can occur, someone acquires one each generation. Natural selection never needs to ``wait'' for variation; the shelves are always stocked.
+
+Most mutations fall into two baskets: neutral changes that do not alter survival or reproduction, such as changes in sequences with neither protein-coding nor regulatory roles, and harmful changes that disrupt normal function. Truly ``beneficial'' changes are rare, and benefit cannot be defined outside a specific environment: the sickle-cell-anemia allele can be a lifesaver in malaria regions but merely a disease elsewhere (Chapter 76). This is the evolutionary version of Chapter 72's conclusion: mutation is not simply error or innovation; it is material.
+
+\section{Drift: Luck Is an Evolutionary Force}
+
+Return to the marble jar. Let red marbles represent allele $A$ and black marbles allele $a$, with 50 of each giving equal frequencies. Drawing 10 as ``parents of the next generation'' is random sampling. The sampled ratio is rarely exactly half and half, so the next generation's frequency changes for no particular reason. Draw again, and it changes again. No ``survival of the fittest'' is involved, only probabilistic fluctuations, yet it satisfies evolution's definition: frequencies change. Biologists call this \textbf{genetic drift}.
+
+This may sound like an insignificant children's game. Consider a mathematical intuition. Seven heads in ten fair coin tosses is unremarkable; a 20\% deviation is ordinary. In 10,000 tosses, however, the heads fraction will almost certainly stay close to 50\%, rarely deviating by more than 1\%. Small samples give luck a louder voice; large samples average it out. That is the law of large numbers in everyday language.
+
+Replace ``number of coin tosses'' with ``number of individuals,'' and the conclusion transfers directly: \textbf{genetic drift is powerful in small populations and almost inaudible in large ones}. In an isolated bird population of a few dozen individuals, an allele may become common or even fixed at 100\% within a few generations simply because a few lucky birds lay more eggs. It may just as easily disappear unnoticed. None of this depends on whether it is ``useful.''
+
+\begin{qiaoliang}
+How large are sampling fluctuations? If allele $A$ has frequency $p$ and $N$ individuals are randomly sampled to produce the next generation, the next generation's frequency has an approximate standard deviation of
+\[
+\sqrt{\frac{p(1-p)}{N}}
+\]
+Try some numbers. With $p=0.5$ and a small population of $N=10$, the standard deviation is about $0.16$, making drift to $0.34$ or $0.66$ quite ordinary. With $N=10^{6}$, the standard deviation is only about $0.0005$, barely reaching the third decimal place. The same random process behaves quite differently at different population sizes. That is why conservation biology talks so much about ``population numbers'': fewer individuals make a gene pool resemble that jar sampled only a handful at a time.
+\end{qiaoliang}
+
+\begin{shiyan}
+\textbf{Bean Drift Simulation} (about 20 minutes, suitable for home)
+
+Materials: dry beans of two colors, 20 red beans and 20 mung beans; an opaque bag or small box; paper and a pen.
+
+Procedure:
+\begin{enumerate}[itemsep=1pt]
+\item Put 20 red and 20 green beans in the bag and mix. This is ``generation 0,'' with a red allele frequency of 50\%.
+\item Without looking, draw 10 beans, representing the ``individuals lucky enough to reproduce.''
+\item Count red beans and record the next generation's red frequency: six means 60\%, for example. Use that new ratio to ``rebuild'' a population of 20 beans, such as 12 red and eight green, and return it to the bag. The drawn beans may be returned once recorded.
+\item Repeat steps 2 and 3 for at least 10 generations and plot red frequency as a line graph.
+\item Extension: draw 20 beans and rebuild a population of 40, representing a larger population. Repeat and compare the two graphs.
+\end{enumerate}
+
+What to observe: does the small population's line jump around, perhaps losing all red beans or becoming entirely red? Is the large population steadier? Once one color reaches 100\%, can it reverse? (No: without mutation replenishing variation, a lost allele is gone forever.)
+
+Safety reminder: dry beans are not snacks; do not eat them. Put them away afterward to prevent young children or pets from swallowing them.
+\end{shiyan}
+
+\section{Founders and Bottlenecks: Two Faces of Drift}
+
+Small natural populations are not abstract numbers. They commonly arise in two dramatic ways.
+
+\textbf{Founder effect}: a few individuals leave a large population to settle new territory. The new gene pool copies that initial ``handful of marbles.'' However large and diverse the original population, the new one carries only its founders' alleles. A real example comes from Pingelap Atoll in the western Pacific: after a typhoon and famine in 1775, only about 20 people survived. One happened to carry a recessive allele causing achromatopsia, complete inability to see colors. In the general population, this allele's frequency is on the order of one in ten thousand; today, roughly one in ten Pingelap residents has achromatopsia. The gene was not ``suited'' to island life; it simply boarded the survivors' boat. North American Amish communities provide similar examples: descendants of a small number of European immigrants centuries ago have much higher frequencies of certain rare genetic diseases, again rooted in the small founding population.
+
+\textbf{Bottleneck effect}: a population stays in place but a catastrophe drastically ``filters'' it. The survivors' alleles become the species' entire remaining inheritance. Nineteenth-century hunting reduced northern elephant seals to a few dozen. Their numbers have since recovered to over a hundred thousand, yet they resemble close relatives: geneticists measuring protein variation find almost no individual differences. China's crested ibis is a closer example: in 1981, the world's last seven wild birds were found in Yang County, Shaanxi. Today's population has recovered to several thousand, all descendants of those seven. Numbers returned, but genetic diversity did not. This yields a core conservation principle: \textbf{protecting a species means protecting genetic diversity as well as individual numbers}. Reproduction can restore numbers; lost alleles require far slower mutation to accumulate again.
+
+The danger left by a bottleneck is practical: a low-diversity population resembles a team whose players all use the same tactic. A novel disease or abrupt environmental change may defeat the entire team. Worldwide crested ibis conservation now uses pedigrees, planned pairings, and exchanges between populations, all racing against founder effects.
+
+\section{Gene Flow: Bridges Between Populations}
+
+So far we have considered events within one population. But populations are not islands: when individuals migrate and reproduce in their new homes, their alleles migrate too. This is \textbf{gene flow}.
+
+Gene flow has many ``carriers.'' Migratory birds transport alleles thousands of kilometers; maple and maize pollen drifts across fields; returning salmon occasionally ``take the wrong door'' into a neighboring river. Humans need hardly be mentioned: every historical migration, trading journey, and ocean voyage involved large-scale gene flow. Almost no human population today is completely isolated.
+
+Its evolutionary effect can be summarized in one sentence: \textbf{gene flow makes populations more alike}. Fish in two ponds may face different environments and selection, but continued exchange of even a few individuals makes it difficult for their gene pools to diverge fully. Conversely, interrupt gene flow through rising mountains, advancing seas, or shifting rivers, and populations begin drifting and adapting independently, accumulating differences. That is the starting point for next chapter's speciation story; we will leave that connection waiting here.
+
+Humans can also use gene flow for ``emergency rescue,'' one of conservation biology's most elegant applications. In the 1990s, only twenty or thirty Florida panthers remained, with prolonged inbreeding producing heart defects, abnormal sperm, and kinked tails. In 1995, conservationists made a bold decision: introduce eight panthers from Texas. This was no reckless release of dangerous wildlife: the populations belonged to the same subspecies and had historically been connected. Their mixed offspring had markedly fewer defects, and numbers recovered. Gene flow from eight newcomers reconnected a deteriorating stagnant pool to a river. There is another side, however: immigrants can dilute hard-won local adaptations, called ``outbreeding depression.'' Every deliberate genetic rescue therefore requires assessment of how long the populations have been separated and how different they are.
+
+\section{Sexual Selection: Offspring Outweigh Longevity}
+
+Twelve years after publishing \emph{On the Origin of Species}, Darwin wrote another book to address a troubling problem: the peacock's tail. Its extravagant, cumbersome feathers seem bad for survival, hindering flight and concealment like an invitation to foxes. If ``survival of the fittest'' were the only rule, such tails should have vanished long ago.
+
+The answer is that \textbf{natural selection filters by offspring number, not by how comfortably an organism lives}. Even a shorter-lived male peacock may leave more offspring than plainer males if its tail attracts enough females, allowing alleles for ornamentation to spread. Female preference itself has a genetic basis, so preference and tail can reinforce one another over generations, becoming increasingly extravagant. This mechanism is \textbf{sexual selection}.
+
+Strictly speaking, many biologists treat sexual selection as part of natural selection, since both involve reproductive success. Discussing it separately still matters: \textbf{being selected does not necessarily mean being healthier, stronger, or better suited to the environment}. Stags' antlers weighing over ten kilograms, bowerbirds' courtship structures requiring weeks to build, and male deep-sea anglerfish that effectively ``marry into'' females' bodies are liabilities on the survival ledger but highly profitable on the reproductive ledger. Evolution adds up the total.
+
+Sexual selection can also influence the other mechanisms: when a few ``winning'' males monopolize mating opportunities, the number actually reproducing is far below the total population. This effectively shrinks the population and turns up drift's volume again. Evolution's engines never run in isolation.
+
+\section{Neutral Theory: Many Molecular Changes Do Not Matter}
+
+A strange question now emerges. In the 1960s, scientists first directly compared protein sequences between species and found far more accumulated molecular differences than ``survival of the fittest'' seemed able to explain. If selection preserved every difference, its ``workload'' was enormous: a population could not afford so much elimination of inferior types.
+
+In 1968, Japanese population geneticist Motoo Kimura proposed a then-radical answer: \textbf{the vast majority of molecular mutations are neither beneficial nor harmful, but neutral}. Their fate depends on drift, not selection. Chapter 72 makes this plausible: the genetic code is degenerate, so many base substitutions do not alter amino acids, producing silent mutations. The genome also contains extensive non-protein-coding sequence where changing letters leaves protein machinery unaware. Neutral variants rise and fall through drift and occasionally get lucky enough to become fixed. Most molecular evolution leaves its footprints this way.
+
+Neutral theory does not say ``selection is unimportant'' or ``traits are all random.'' Wings, eyes, and detoxifying enzymes clearly affect survival and reproduction and remain firmly subject to selection. Kimura's point was that at DNA-sequence resolution, many changes occur in selection's ``radar blind spot.'' Selection determines a novel's main plot; neutral drift determines countless punctuation marks between its lines.
+
+\begin{zhengju}
+How was neutral theory accepted and continually revised? The story deserves detail because it is almost a model of science at work.
+
+First came the question. In the early 1960s, Zuckerkandl and Pauling compared animal hemoglobin sequences and found a pattern: species separated longer had more sequence differences, accumulating at a roughly uniform pace like a ``ticking molecular clock.'' Why was evolution so punctual? If selection fixed every difference, rates should speed up and slow down with environmental changes rather than remaining so even.
+
+Next came explanations and alternatives. Kimura proposed in 1968 that if most fixed mutations were neutral, their fixation rate would equal the mutation rate. A relatively stable mutation rate would naturally produce an even clock. This was a clean, testable prediction. Objections followed: perhaps most mutations were mildly harmful and simply had not been removed yet; perhaps most protein-sequence changes had experienced selection whose reasons we could not recognize. Debate continued for more than a decade, with both sides comparing new sequences and improving statistical methods.
+
+Finally came revision and coexistence. Increasing genomic data showed that neutral theory explained broad patterns in noncoding regions and silent sites exceptionally well, while many proteins also bore traces of repeated selective ``sweeps'' or preservation. Today's textbooks present the mechanisms together: \textbf{neutral drift is background noise, and natural selection is the signal through it}. Molecular clocks have accordingly acquired qualifications: different genes and groups tick at different speeds and require calibration before use. In later life, Kimura said his theory supplemented Darwin at the molecular level rather than replacing him. Science works this way: no final winner, only increasingly clear boundaries.
+\end{zhengju}
+
+Although molecular clocks need calibration, they are already useful. Their logic is straightforward: if neutral mutations accumulate at a roughly stable rate, DNA differences between two species are proportional to time since their common ancestor split. Count the differences and divide by the rate to estimate the separation date. Comparisons mostly agree with fossils; disagreements often hide interesting stories, such as selection on a DNA segment or different mutation rates between groups. Chapter 78's phylogenetic trees will use this difference-counting skill again.
+
+\section{The Engines Side by Side}
+
+Compare the four forces discussed here, leaving aside mutation's separately covered role as supplier:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\toprule
+Mechanism & \shortstack[l]{How frequencies\\change} & \shortstack[l]{In small\\populations} & \shortstack[l]{Produces\\adaptation?} \\
+\midrule
+\shortstack[l]{Natural\\selection} & \shortstack[l]{Unequal reproductive\\success; directional} & \shortstack[l]{Still works, but noise\\can overwhelm it} & \shortstack[l]{Yes; adaptation's\\only source} \\
+\shortstack[l]{Genetic\\drift} & \shortstack[l]{Random sampling\\error; undirected} & Very powerful & \shortstack[l]{No, but can fix\\any variant} \\
+Gene flow & \shortstack[l]{Moves alleles\\between populations} & \shortstack[l]{Depends on\\migration amount} & \shortstack[l]{Indirectly: brings\\new variation} \\
+\shortstack[l]{Sexual\\selection} & \shortstack[l]{Unequal mating\\opportunities} & \shortstack[l]{Winners dominate;\\effective size shrinks} & \shortstack[l]{Reproductive adaptation;\\may not aid survival} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Notice the final column: \textbf{only selection produces adaptation} in this table, including sexual selection's awkward adaptations. Drift and gene flow merely change frequencies without regard to whether the direction is beneficial. This is the chapter's most important sentence: evolution is not adaptation; it encompasses much more.
+
+The graph below shows one possible bean-simulation result: an allele's frequency wanders through 30 generations purely by luck, eventually hitting 0 or 100\% and never returning. This is a representation: real populations have no axes, but their frequency fluctuations are equally unscripted.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+\draw[->] (0,0) -- (11,0) node[right] {Generation};
+\draw[->] (0,0) -- (0,4.4) node[above] {Frequency};
+\draw[dashed] (0,2) -- (10.5,2) node[right] {50\%};
+\draw (0,0) node[left] {0} (0,4) node[left] {100\%};
+\draw[thick] (0,2)--(0.7,2.3)--(1.4,1.9)--(2.1,2.2)--(2.8,1.6)--(3.5,1.8)--(4.2,1.3)--(4.9,1.5)--(5.6,1.0)--(6.3,1.2)--(7.0,0.7)--(7.7,0.9)--(8.4,0.4)--(9.1,0.2)--(9.8,0);
+\draw (9.8,0) node[below right] {Lost};
+\end{tikzpicture}
+\end{center}
+
+\section{When This Explanation Falls Short}
+
+The models have clear limits and honestly acknowledge three things.
+
+First, \textbf{real populations rarely satisfy any ideal assumption}. The bean simulation assumes constant population size, random mating, no migration, and no selection. Almost no natural population meets all four. A model's value is not resemblance but a baseline: turn off all other mechanisms and see what luck alone can do. The extent to which observations depart from that baseline provides evidence of other mechanisms.
+
+Second, \textbf{drift and selection are often entangled in real data}. An allele may rise because it confers an advantage, because it is lucky, or because it ``hitchhikes'' with a genuinely beneficial gene linked on the same chromosome. Distinguishing these requires large samples, many loci, and statistical models. Modern population genetics tackles this hard problem daily; there is no quick diagnostic shortcut.
+
+Third, \textbf{a molecular clock is not a metronome}. Genes tick at different speeds because of differing functional constraints; groups differ because short-generation species accumulate mutations faster; even the same gene can change pace over time. Dating requires cross-checking multiple genes and fossil calibration. Claims to calculate a ``precise split date'' from one gene deserve skepticism.
+
+\begin{wuqu}
+``Since evolution exists, every biological feature must have a use.'' This is an overextension of adaptationism and a widespread misconception. Counterexamples appear in this chapter: Pingelap achromatopsia serves no purpose; it reflects the luck of surviving a typhoon. Much worldwide variation in ABO blood-group frequencies can likewise be explained by drift and population history rather than environments ``needing'' different blood groups. Other traits are byproducts of adaptations or historical leftovers. For example, men have nipples despite not developing mammary glands because the same embryonic blueprint must build both sexes, and specifically deleting nipples might cost more than keeping them. The right question about any trait is not ``What is it for?'' but ``How might it have arisen?'' Selection, drift, gene flow, and historical chance are all candidates.
+\end{wuqu}
+
+\section{Back to the Marble Jar}
+
+Now to fulfill the opening promise. Start with 50 red and 50 black marbles and retain only 10 breeders each generation: eventually, the jar is almost certain to become all red or all black and stay that way, unless mutation supplies a new color. Neither color is ``better.'' Each sampling accumulates small pieces of luck, and luck has one final destination: \textbf{fixation}.
+
+Which color wins? We cannot predict. How long does drift take? Smaller populations get there faster. The jar models countless island species and disaster survivors over hundreds of millions of years. Many traits are not medals carefully awarded by the environment, but labels casually attached by luck. To understand a species, asking ``What did the environment select?'' is insufficient. Ask how many bottlenecks it passed through, where its ancestors migrated from, whom they bred with, and how small the population once became.
+
+\section{What Happens After Divergence?}
+
+We have watched frequencies rise and fall within populations. Now zoom out: if the bridge between two populations breaks and gene flow falls to zero, they drift, accumulate mutations, and face environmental selection independently. Differences build each generation until a threshold is reached: even if they meet again, they can no longer produce offspring. At that point, one tree has split into two branches that no longer intersect.
+
+That is next chapter's topic: how species separate. We will encounter questions subtler than ``Can they mate?'': ring species, hybrid zones, and bacteria that do not reproduce sexually at all. We will also use this chapter's tools: neutral theory's molecular clock and drift's lesson that divergence is not entirely adaptation. Then, in Chapter 79, we will return inside genomes to see how evolution copies, borrows, and modifies old parts to assemble life's new possibilities.
+
+\begin{tiaozhan}
+Drift has a quantitative result so elegant that it seems counterintuitive. In an ideal population of $N$ individuals and $2N$ gene copies, a neutral allele currently at frequency $p$ has exactly probability $p$ of eventual fixation. Rare variants can win, just with low probability. A new neutral mutation present in one copy has frequency $1/(2N)$ and therefore fixation probability $1/(2N)$. The number of new neutral mutations each generation equals the population's gene-copy count times the per-copy mutation rate $u$, giving $2Nu$. Multiply the two: neutral mutations fixed per generation $= 2Nu \times \frac{1}{2N} = u$. \textbf{Population size $N$ cancels out}: the neutral substitution rate equals the mutation rate, independently of population size. This is the mathematical foundation of a roughly uniform molecular clock and was Kimura's most persuasive argument. The derivation uses just one assumption: every copy has an equal chance of transmission. You can skip it without losing the main thread, but it is worth a glance. A quantity involving $N$ that ultimately cancels is among physics' and biology's loveliest surprises.
+\end{tiaozhan}
+
+\section*{Try It Yourself}
+
+\begin{sikaoti}
+\item Draw an information-flow diagram from ``DNA copying error'' through ``new allele enters the population,'' then branch into three paths: retained by selection, fixed by drift, and lost. Label each path's conditions: environment, population size, and luck. Which path can occur independently of the environment?
+\item Bird populations of 20 and 20,000 individuals each carry a neutral allele at 50\% frequency. Use the chapter's formula to estimate the next generation's frequency standard deviation in each. Explain why the small population is more likely to lose the allele within a few generations.
+\item Pingelap achromatopsia illustrates a founder effect, and Florida panther genetic rescue illustrates gene flow. Draw a marble-jar diagram for each, showing why allele frequencies changed. State beside the drawings that marbles are representations and real gene pools are much more complex than two colors.
+\item Someone says, ``The peacock's tail proves evolution makes organisms increasingly perfect.'' Write three sentences rebutting this using this and the previous chapter, including adaptation to the current environment and sexual selection.
+\item Kimura argued that most molecular evolutionary changes are neutral. Does that contradict ``giraffe necks were shaped by selection''? Design a thought experiment comparing rates of sequence-difference accumulation in coding regions and silent sites to test both claims with data.
+\item Crested ibises recovered from seven birds to several thousand. Why do conservationists still worry? Answer in terms of allele diversity and propose a feasible conservation measure.
+\end{sikaoti}

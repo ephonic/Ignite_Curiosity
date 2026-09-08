@@ -13,6 +13,12 @@
 \input{frontmatter/preface}
 \input{frontmatter/howtoread}
 \input{frontmatter/safety}
+% The complete English edition needs four-digit contents page numbers.
+% Keep the original fonts and leader style; widen only the page-number box.
+\makeatletter
+\renewcommand{\@pnumwidth}{2.2em}
+\renewcommand{\@tocrmarg}{3.2em}
+\makeatother
 \tableofcontents
 
 \mainmatter
@@ -133,7 +139,7 @@
 \input{chapters/ch86}
 \input{chapters/ch87}
 
-\backmatter
+% Appendices must remain numbered; backmatter would suppress their A--F labels.
 \appendix
 \input{appendices/appA}
 \input{appendices/appB}
@@ -142,4 +148,5 @@
 \input{appendices/appE}
 \input{appendices/appF}
 
+\backmatter
 \end{document}
