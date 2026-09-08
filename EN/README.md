@@ -1,16 +1,15 @@
 # Ignite Curiosity — English editions
 
 English translations of the four Chinese titles in this repository, with the
-same subject-directory structure. Mathematics, physics, and chemistry/biology are
-translated and their complete PDFs are included. Liberal arts remains in
-progress; its complete English PDF will be added after translation and verification.
+same subject-directory structure. All four books are translated, and their
+complete compiled PDFs are included beside their subject READMEs.
 
 | Directory | English title | Chinese source |
 |---|---|---|
 | [`math/`](math/) | *Igniting the Mathematical Spark* — [English PDF](math/Igniting_the_Mathematical_Spark.pdf) | [`../math/`](../math/) |
 | [`phy/`](phy/) | *Igniting the Physics Spark* — [English PDF](phy/Igniting_the_Physics_Spark.pdf) | [`../phy/`](../phy/) |
 | [`chem/`](chem/) | *Igniting the Chemistry and Biology Spark* (three volumes) — [English PDF](chem/Igniting_the_Chemistry_and_Biology_Spark.pdf) | [`../chem/`](../chem/) |
-| [`literal_arts/`](literal_arts/) | *Igniting the Liberal Arts Spark* (three volumes) | [`../literal_arts/`](../literal_arts/) |
+| [`literal_arts/`](literal_arts/) | *Igniting the Liberal Arts Spark* (three volumes) — [English PDF](literal_arts/Igniting_the_Liberal_Arts_Spark.pdf) | [`../literal_arts/`](../literal_arts/) |
 
 Each subject directory contains its English README, LaTeX sources in `latex/`,
 and, when complete, a compiled PDF beside the README. Original fonts, page
@@ -23,6 +22,10 @@ appendix numbering; these presentation fixes retain the original visual styles.
 Oversized tables may be split across pages with repeated headers, as approved
 by the contributor; these pagination fixes preserve the original table styles
 and all rows and are documented in each affected subject's README.
+Liberal arts also uses approved English line-breaking adjustments, compact
+navigation/running titles with full headings retained, and wider contents
+page-number boxes for its four-digit page count. Fonts, sizes, margins, and
+heading designs remain unchanged.
 Language-specific examples are translated with pronunciation guides and English
 glosses. Where character shapes are the subject, explicitly allowlisted original
 glyphs remain as examples; this does not exempt surrounding prose from translation.
@@ -61,6 +64,12 @@ Regenerate its Chinese comparison fragments from the selected source edition
 with that script's `--extract` option when reviewing future changes.
 
 ## Verification
+
+The complete PDFs contain 251 pages (mathematics), 783 pages (physics),
+1,054 pages (chemistry/biology), and 1,988 pages (liberal arts). All entrypoints,
+including the three standalone chemistry volumes, compile successfully with
+no missing inputs, missing glyphs, unresolved references, or overflow warnings.
+The liberal arts edition includes all 114 chapters and all 141 source fragments.
 
 From the repository root, require complete source coverage and unchanged
 LaTeX heading, environment, and reference structure:

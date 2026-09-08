@@ -156,3 +156,112 @@ These notes identify issues encountered while translating the Chinese source; th
 - The body-swap paragraph says copying leads to the “next” machine, but the next numbered experiment is memory loss; copying is third. Both numbering and connective are retained.
 - The claim that both duplicates' bodily-continuity ledgers qualify is philosophically contentious given that the Mars body is newly constructed. It remains part of the source's argument.
 - Greek, Confucian, and modern-individual blueprints are deliberately broad comparisons; the source's warning that traditions contain internal disagreement is preserved, as are its strong claims about digital mourning and autonomy.
+
+## Chapter 041 — Socratic questioning
+
+- The opening places execution a few days after sentencing, unlike Chapter 042's month. The source also places the counterproposal of a penalty after the death sentence, rather than distinguishing conviction from sentencing.
+- Juror eligibility, distribution of identification plaques, and speaking time are simplified. The final modern comparison says Athens gave the defendant a whole day's speech, without separating the day's proceedings from allocated speeches.
+- The invented agora exchange presents Spartan exposure of weak infants as a definite legal practice, without marking the evidentiary controversy. It remains part of the source's reconstruction.
+- The source's description of the Thirty's victims and population totals, and its inference that softer pleading would probably have saved Socrates, are retained historical interpretations rather than independently established particulars.
+- A sentence in the second explanation refers obscurely to “two tyrannical periods.” Its obscurity is retained instead of inventing a missing referent.
+- The mathematics counterexample says there is no prime divisible by seven, overlooking seven itself. Its abbreviated prime definition also does not expressly exclude one. Both source statements are retained.
+- Claims that Socrates never obtained any definition, that all online proceedings are unchanged except speed, and that any homework answer takes a machine three seconds are rhetorical generalisations in the source.
+
+## Chapter 042 — Plato and Aristotle
+
+- The triangle discussion does not consistently state the Euclidean assumptions behind its angle-sum claim, though its later explanation mentions parallel-line rules. Measurements, ideal objects, and theorem validity are sometimes conflated.
+- The apparent daily solar motion is contrasted simply with “the reverse,” without distinguishing Earth's rotation from its revolution.
+- In the empirical-truth drawer, the source suggests water in a pressure cooker might boil below 100 degrees. This is retained despite contradicting the usual elevated-pressure example.
+- The Confucius mediation paragraph reverses the surrounding Plato/Aristotle characterisations, attributing the corresponding worries about thinking and observing to the opposite sides. Both explicit names and arguments are retained.
+- The same Confucius quotation contains fourteen Chinese characters, but the source calls it twelve. Later it places his death only decades before composition of the cave allegory, creating another chronology problem.
+- The claim that Plato lived over thirty years after writing the cave, the wood-barrel Diogenes account, and the simplified history of Aristotelian biological classification are retained source details.
+- The introductory treatment of force-free bodies, final causes as wishes, and science retaining only efficient causes simplifies physical and philosophical distinctions. The translation does not silently repair it.
+- The medieval transmission paragraph foregrounds Arabic scholarship while omitting other routes of preservation and transmission. Its categorical framing remains alongside the chapter's broader anti-exclusivity argument.
+
+## Chapter 043 — Happiness
+
+- The opening retells the second discarded-utensil anecdote as bread eaten without a spoon. This is the supplied retelling, not a replacement from another version of the tradition.
+- The scene's heading says Athenian sunshine while its location is Corinth. Alexander is also described there as already conquering much of the known world, without resolving the meeting's usual chronology.
+- The Stoic account foregrounds tranquillity rather than clearly separating it from virtue's status, and describes the school as the longest-lived and farthest-travelling among the four without a defined comparison.
+- The advertising paragraph first says it switches between Layers Two and Three, then illustrates Layers One and Three. The inconsistent numbering is retained.
+- The subtraction explanation states suffering as a difference, then uses numerator and denominator language and reverses the apparent direction of the quantity to reduce. The complete source inconsistency is retained.
+- Money thresholds, adaptation times, recovery from disappointment, and the effects of modern psychological methods are broad source claims, not updated research findings or individual treatment predictions.
+- The identification of Kahneman's remembering self with the chapter's whole-life virtue layer conflates distinct evaluative constructs. Both the analogy and the chapter's own measurement cautions remain.
+- Nozick's experience machine is presented as unending pleasure rather than distinguishing every version of the original thought experiment; this is the source's stipulated scenario.
+
+## Chapter 044 — Justice above law
+
+- The palace narrative categorically calls David's actions legal and compliant with every rule, despite the surrounding account's covenantal prohibitions of adultery and murder. Its administrative-legality framing is retained, not asserted as an independent legal finding.
+- The Amos account describes small merchant weights without specifying the transaction or distinguishing undersized measures from inflated price weights. It also calls Judah foreign while identifying the prophet's southern origins; both supplied perspectives remain.
+- The translation preserves the source's contrast between ancient Near Eastern kings dispensing justice and Hebrew kings being judged, a broad interpretive contrast rather than a universal claim established across all ancient laws.
+- Aquinas is placed two thousand years after Antigone, an overlong interval. Antigone's position is also framed strongly as a kinship exception despite the discussion of universal unwritten obligations.
+- Legal positivism is presented as demanding procedural amendment rather than disobedience. This conflates a position about legal validity with positions about moral obligation and permissible resistance; the source's simplified two-camp debate is retained.
+- Civil disobedience is said to acquire its name after the described King episode, without recognising earlier usage. Claims about segregation's legality also compress distinctions between different laws and court decisions at that date.
+- The legal/just matrix retains its original `llX` columns and all four categories; layout remains subject to separate review.
+
+## Chapter 045 — Classical imperial order
+
+- The coin opening assigns spade-like money to Yan and describes a Zhao trader's knife coins categorically, simplifying regional and chronological coin distributions. Its Qin-to-early-Han duration and examples of nearly contemporary empires also compress substantially different chronologies.
+- The Lingqu example moves grain from Lingnan to northern fronts rather than explaining the canal's southern-conquest supply context. This source direction is retained.
+- The claim that no small state could build major irrigation or roads is a rhetorical absolute. The depiction of household registration as nearly fixing all status coexists with the source's later merit-rank and manumission examples.
+- The higher/lower-status Roman punishment division is presented as newly following the 212 citizenship grant, without distinguishing its earlier development.
+- Ashoka and Chen Sheng are described as about a century apart. The thirteenth edict's geographical distribution is also generalised as roadsides across the empire.
+- The source lists Kharoshthi alongside Greek and Aramaic as translated forms without distinguishing script from language, and treats Inca writing and wheels categorically.
+- The present-day benefits paragraph describes the gaokao as one nationwide paper and curricula as uniform, without regional variation. These source claims are retained rather than updated.
+- The source's clear distinction between excavated ordinary-corvee penalties, potential military rules, mobilisation rhetoric, and actual enforcement is preserved; no disputed late-arrival explanation is chosen as fact.
+
+## Chapter 046 — Studying religion
+
+- The Quanzhou street scenes are reconstructed descriptions. Claims about every image prohibition, donation-box absence, and the use of particular surviving mosque spaces are not independently verified architectural or doctrinal inventories.
+- The Japanese word for religion is described as newly coined in the nineteenth century, rather than distinguishing earlier lexical uses from its modern translation sense. The same historical paragraph includes modern church weddings without separating periods.
+- The seven scales are the chapter's adaptation of Ninian Smart, not his standard seven dimensions: scripture and institutions appear separately while material and narrative dimensions are not independently listed.
+- After explicitly rejecting binary classification, the text twice categorically excludes lucky-carp forwarding from religion. Both methodological claim and categorical examples remain.
+- The source initially describes Zilu as asking whether spirits exist, although the quoted Analects question asks how to serve them. Its subsequent interpretation treats this as an existence question; the discrepancy is retained.
+- The statement that supernatural claims cannot be publicly tested is broader than the later, carefully preserved distinction allowing investigation of observable harms and effects.
+- Survey percentages for Japanese religious identification, claims about almost universal funeral practice, and app-download figures lack dates or cited datasets in the source. They remain examples rather than updated findings.
+- The Buddhism/salvation and Confucian experience contrasts are simplified; the source's strong cautions against treating any religion as a single voice are preserved alongside them.
+
+## Chapter 047 — Myth
+
+- The rooftop dialogue says Mum made Dad memorise a poem when he was little. That family-role inconsistency is retained, as is the source's relative “last year” for Chang'e 6, anchoring its original scene rather than updating it.
+- The five-story `llllX` flood table retains every source cell. It simplifies details including paired Genesis animals, Manu's generation of humanity, and varying southern Chinese traditions; later comparison changes to Yu, who is not the Chinese example in the table.
+- Kuafu is described as catching the sun and later as pursuing what cannot be caught. Both source readings remain. Its literal forest name and subsequent peach-forest interpretation are also preserved separately.
+- The source infers late emergence of a creation story from late surviving written attestation, without distinguishing oral antiquity from attestation date.
+- The tablet chronology compares an excavated object with the Bible's composition without separating the age of a surviving copy from the age of a narrative tradition.
+- Malinowski's wartime research is described as being stranded in the islands. This is the source's compressed biographical framing.
+- Theoretical lenses are introduced as incompatible but later explicitly allowed to complement each other. Their stated limitations, especially the hypothetical status of Jung's collective unconscious, are retained.
+- The Day of the Dead origin, consumer and technological analogies, and assertions about ancient literal belief are broad interpretations, not exhaustive histories or forecasts.
+
+## Chapter 048 — Ritual
+
+- The definition makes unexplained purpose necessary to ritual authority, despite subsequent examples with clearly articulated meanings. This source tension is retained.
+- Ramadan is described without exemptions and people worldwide as waiting for the same sunset. The latter overlooks time zones; pilgrimage attendance and clothing descriptions likewise simplify variation and specify men only in the earlier passage.
+- The penalty-kick example has a player touching goalposts three times; it remains the source's example rather than a verified general sporting practice.
+- The quoted phrase about measuring feeling and establishing form contains five Chinese characters, while the source calls it four. The count is retained.
+- The four-layer section treats supernatural claims as subject to public testing, broader than Chapter 046's categorical bracketing. Its rain-causation example is distinguished in practice from non-testable metaphysical claims, but the source does not fully resolve the methodological difference.
+- The text generalises funeral duties and ancient coming-of-age customs from particular traditions. Liminality examples also compress distinctions among social rank, clothing, gender, and actual equality.
+- Psychological effects are source generalisations, not promises of universal benefit. Its explicit cautions about compulsory participation, humiliation, manipulation, and theoretical limits remain intact.
+
+## Chapter 049 — Judaism
+
+- The coffin scene begins in summer 70 CE under Titus, then has Yohanan meet Vespasian and receive news of Nero's death and Vespasian's accession. These events belong to differing years; the source's explicit later-legend caveat is retained.
+- The source names Talmud 56b's tractate “Gifts.” This is retained rather than silently replacing the title; the familiar Yohanan narrative is associated with Gittin, whose title concerns divorce documents.
+- The account of Cyrus's cylinder generalises returns and temple restoration to Judeans without distinguishing what the cylinder itself names from biblical accounts.
+- PaRDeS is introduced as a later summary, but its placement can suggest immediate post-70 origins; the translation preserves the later qualification. Avot 1:1 is also called an earliest Mishnah chapter without explaining textual chronology.
+- Minyan is simplified as a congregation rather than a quorum, and community reproduction shifts from ten men to ten households. Literacy rates and universally synchronised annual readings are broad generalisations across diverse periods and communities.
+- Orthodox observance of all 613 commandments is stated categorically despite commandments dependent on temple, office, or other conditions. Descriptions of Sabbath electricity and travel also simplify detailed practice.
+- Kaifeng's history is framed as assimilation through welcome and no harm, omitting additional disruptions and ongoing identities. The source's anti-determinist counterexample is preserved without converting it into a complete history.
+- Anderson's argument is simplified as requiring print, then extended to much older communities. The source does not distinguish his specific account of modern nationalism from every kind of imagined belonging.
+
+## Chapter 050 — Christianity
+
+- The fish-lamp recognition code and its possible appearance in Corinth in 56 CE are the source's illustrative reconstruction, not independently established first-century practice. The Last Supper is placed outside Jerusalem; this wording is retained.
+- The statements that all other failed prophetic movements vanished and that historians can establish the disciples' willingness to die are broad claims retained with the source's distinction between belief and historical evidence.
+- Peter and James are grouped against Paul on Gentile admission, simplifying the positions and chronology of the relevant narratives.
+- The introduction dates all twenty-seven New Testament writings to the first century; some, notably 2 Peter, are commonly dated later. Its public-domain statement is retained; English quotations are explicitly identified as translations of the source's Chinese Union Version quotations.
+- The Caesar passage is described as humanity's first such clear political boundary, a sweeping priority claim. Nicaea's formation of an empire-wide Christian boundary likewise compresses earlier and later developments.
+- The Edict of Milan is attributed to Constantine alone, omitting Licinius and earlier toleration. The consequences of establishment in 380 are compressed into immediate universal exclusion from high office and temple closure.
+- The church–sect framework is an ideal-type interpretation, not a universal sequence. The description of 1054 as a completed formal split compresses a long process.
+- Pentecostal and charismatic Christianity are placed outside Catholicism and Orthodoxy, overlooking renewal movements within them. Regional membership figures are unsourced, and “southern hemisphere” substitutes geography for the broader Global South, including numerous northern-hemisphere examples.
+- The Ethiopian church's name is retained as Ethiopian Orthodox; it belongs to the Oriental Orthodox communion, distinct from the Eastern Orthodox churches discussed earlier.
+- Assertions that no church in Europe or America and no Christian outside China knows Christmas Eve apple-giving are categorical source generalisations. The ping/ping'an wordplay is explained in pinyin without altering the example.

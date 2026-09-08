@@ -3,6 +3,14 @@
 \usepackage{tabularx}
 \usepackage[unicode,hidelinks]{hyperref}
 
+% English-only line breaking and four-digit contents page numbers.
+% Fonts, type sizes, page geometry, and heading designs remain unchanged.
+\emergencystretch=3em
+\makeatletter
+\renewcommand{\@pnumwidth}{2.3em}
+\renewcommand{\@tocrmarg}{3.3em}
+\makeatother
+
 \ctexset{
   chapter/name = {Chapter\space,},
   chapter/number = \arabic{chapter},

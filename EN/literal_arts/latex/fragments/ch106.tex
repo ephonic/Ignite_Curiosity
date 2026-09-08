@@ -1,0 +1,167 @@
+\chapter[Do Algorithms Know Us Better?]{Do Algorithms Know Us Better Than We Do?}
+\section{A Pane of Glass That Reads Minds}
+Pick up something utterly familiar: your phone. Light it up and open any video app.
+
+Without searching or typing, you find a row of videos waiting on the home page. First comes your usual kind of craft video, then highlights from the match you followed last week. The third is odd: a subject you never followed, with an inexplicably enticing title. Each downward swipe deals a fresh hand, like shuffled cards, and every hand suits your taste better.
+
+Stare at the screen for three seconds. This phone has never met you. It does not know your appearance, voice, or classroom row. Its manufacturer is thousands of miles away; its programmers are strangers. Yet what it offers often hits your present interest more accurately than your deskmate does. It even knows you feel low tonight, because you lingered on funny videos slightly longer than usual.
+
+This is neither magic nor someone spying from behind the phone. A recommendation system does one thing: predicts your next click from past behavior. Every click, pause, and swipe is recorded as a clue to the next click.
+
+Here is this chapter's problem. Why does a machine that has seen only your finger movements seem to understand you? Is the you it understands really you? What happens if it someday knows you better than you know yourself?
+
+\section{Saturday, 11:27 p.m.}
+Now enter a scene with me.
+
+Time: Saturday evening. Place: a bedroom in an ordinary apartment complex in a southern city. Air-conditioning units hum outside. Downstairs, the convenience store's shutter rattles shut, signaling 10:30.
+
+Fourteen-year-old A Li lies on her stomach on the bed. Her desk lamp is off; the phone alone lights her face blue. A charger is plugged into the bedside power strip, and the phone's back feels slightly hot.
+
+Three hours earlier, her reason for opening it was entirely legitimate: she needed a video explaining a difficult math homework problem. The eight-minute explanation was clear, and she understood. That should have ended the matter.
+
+But as it finished, another math video appeared automatically below, with a more exciting title: ``Exam Tricks Your Teacher Will Never Tell You.'' It was studying anyway, she thought, and tapped. Next came ``From Failing to the Top Ten with Just This Method.'' Then a student's account about funny school incidents, then a pet video. She paused a few extra seconds, and the system immediately understood: she was tired and wanted something light. For the next two hours, the screen became an endless slide, each video fitting her taste slightly better than the last, until her sense of time vanished.
+
+At 11:27, Mom knocked: ``Still awake?''
+
+A Li jerked as though caught, her hand shook, and she locked the screen. The room went completely dark. Suddenly she realized something that chilled her back: in more than three hours since looking up the problem, she had never once decided what she wanted to watch. She had simply not swiped away. She had selected none of the videos, yet genuinely enjoyed each.
+
+Mom returned to her room. A Li stared at the dark screen, faintly reflecting her face. A strange question arose: during those three hours, was I the one using the phone, or was it?
+
+Remember this bedroom. The rest of the chapter addresses the question floating in its darkness.
+
+\section{Understanding You or Training You?}
+First state the conflict without rushing to answer.
+
+A Li's mother has an explanation heard in countless homes: phones do it deliberately. Highly paid software engineers spend their days figuring out how to stop you putting them down. Recommended for you sounds pleasant, but really means finding where you itch. You think videos are free; actually, you are what is sold. Your time and attention are bundled for advertisers.
+
+A Li has another account, though she hesitates to tell Mom. Recommendations really help. Her interest in hand knitting is obscure; nobody in class understands it, but recommendations brought craftspeople from around the world before her. That exam-tricks video after her homework search really did help her monthly test score. Left alone among hundreds of millions of videos, she would find nothing worthwhile. Why call a tool that finds needles in oceans a villain?
+
+Behind these accounts lies a real question, not merely whether someone is disciplined:
+
+\textbf{What is the relationship between you and a recommendation system?}
+
+Is it an understanding librarian handing you suitable books, or a trainer gradually reshaping your tastes with perfectly chosen treats? Or are both happening: the better it understands you, the better it trains you, and the more it trains you, the more understanding it seems?
+
+If a librarian, three hours of viewing are entirely your responsibility. If a trainer, failure to control yourself needs rephrasing: you are fighting not laziness alone but thousands of engineers and a prediction machine armed with your own data. The contest is unequal from the start. If both, the trouble is greatest: helping you and exploiting you use the same data and technology, impossible to separate cleanly.
+
+Before continuing, choose a side: who mainly bears responsibility for those Saturday-night hours?
+
+\section{Two Voices at Their Strongest}
+Let us strengthen both arguments, then examine the same technology elsewhere.
+
+\textbf{Voice one: recommendation systems are the information age's finest servants.}
+
+Make A Li's case fully. This deserves care, because critics often dismiss recommendations' usefulness in passing, unfairly.
+
+There are at least three arguments. First, the problem is real and enormous: too much content, too little time. Nobody could exhaust the internet in several lifetimes. Without filtering, abundant information becomes no information. Recommendation systems do booksellers' and librarians' work at unimaginable scale. Second, they rescue niche interests. People who knit, restore old clocks, or study ancient coins once might never meet a fellow enthusiast. Algorithms gather kindred spirits scattered worldwide, reviving interests otherwise destined for lonely deaths. Third, they offer ordinary people opportunities. Once, creators needed publishers, television stations, or large companies to let them through the gate. Now an excellent craftsperson in a mountain village can reach millions through an algorithm. This substantial case concerns democratizing information distribution.
+
+\textbf{Voice two: you are not the customer; you are the product.}
+
+Mom's side has a complete argument too. Free apps charge no money, but companies need revenue. Advertisers supply it by buying time your eyes remain on screens. The product's true goal is therefore not satisfaction but staying. These often overlap, but differ. Satisfaction lets you put the phone down happily and sleep. Retention can leave you empty yet wanting one more video. American media researchers call this the attention economy: amid information abundance, scarce attention becomes a mineral to extract, contest, and trade. The mine is inside your head.
+
+This side identifies something subtler: the you a system learns may not be the person you want to become. Reason wants early sleep; fingers linger on funny videos. Systems follow fingers because their movements become recorded data, unlike your reason. They feed what you presently want to watch, not what benefits you long-term, serving impulses rather than aspirations.
+
+Around the world, the same logic appears, beyond any single country or app.
+
+American streaming platforms predict which series you will follow and songs you will repeat. Each year, music apps turn listening histories into annual reports that countless users share, half delighted and half surprised: the software remembers a period of repeating a song they themselves forgot. In rural Kenya and India, microcredit companies may bypass income documents many farmers lack and analyze phone records instead: whom you call, when you charge, and how regularly you top up. These help judge repayment reliability. Some people excluded by banks thereby obtain emergency money, but their ability to overcome difficulty partly depends on invisible, unchallengeable calculations. Across e-commerce platforms, ``People who bought this also bought'' quietly guides strangers' shopping every day.
+
+Algorithmic recommendation is thus not one company's invention but an era's infrastructure, like the electrical grid a century ago. The difference is that grids transmit electricity, while recommendations transmit things bearing a standpoint, constantly deciding what you see next. We need tools to take this apart.
+
+\section[Correlation, Causation, and Feedback]{Thinking Bridge: Correlation, Causation, and Feedback}
+Can we analyze why a system seems to know our preferences with a portable tool rather than intuition? Yes: a conceptual distinction and a loop diagram.
+
+\textbf{Part one: correlation is not causation.}
+
+Consider a classic example. Months with higher ice-cream sales also have more drowning deaths. Two numerical series rise and fall together: mathematically, they correlate. Does ice cream cause drowning? Of course not. A third factor lies behind both: hot weather increases ice-cream purchases and swimming. A common cause drives both, making them appear to drive one another.
+
+Remember this distinction; it punctures many data myths. Recommendation systems are essentially giant correlation machines. They do not understand why you enjoy crafts; they know that people who watched A will probably watch B too, perhaps eight times out of ten. That suffices for prediction, just as forecasts need not understand clouds' feelings. But it reveals a limit: systems know what people like you did, not what makes you who you are. Correlation can predict actions without reaching reasons.
+
+\textbf{Part two: profiles and feedback loops.}
+
+A profile sounds mysterious but is simple: records of what you watched, for how long, when you were online, and in which city are compressed into labels such as around fourteen, likes crafts, and active at night. This label list is your profile. It is not a portrait but a betting sheet: the system wagers on what someone bearing those labels will probably click.
+
+Now trace a loop. You open a craft video (action) $\rightarrow$ the system records a liking for crafts (profile update) $\rightarrow$ it supplies more craft videos (recommendation adjustment) $\rightarrow$ crafts surround you, making them most of your available choices (environmental change) $\rightarrow$ you click (new action) $\rightarrow$ the profile grows more certain you like crafts, and so on.
+
+See the loop's power? It does not merely \textbf{reflect} preferences; it \textbf{produces} them. On day one, your craft interest scores five. Three months later, with crafts occupying seventy percent of your view, it may have been fed up to nine. The system then presents data: look, she always loved crafts this much. Only part is true. You now genuinely love them, but cannot distinguish how much grew independently from how much the loop enlarged.
+
+This is a feedback loop, neither inherently good nor bad. Learning software uses it to identify weaknesses more accurately as you practice and supply more suitable problems: beneficial feedback. Short videos feed greater stimulation as you grow bored, and greater stimulation makes boredom easier. The same loop turns another way.
+
+Next time someone asks whether algorithms are good or bad, improve the discussion: first inspect which loop is turning, what goal enters it, and what kind of person comes out.
+
+\section[An Ancient Guide to Knowing People]{A Two-Thousand-Year-Old Guide to Knowing People}
+Now read a short primary source. Predicting and understanding people did not become difficult only with the internet.
+
+The ``Wei Zheng'' chapter of the Analects records Confucius saying:
+
+\begin{quote}
+The Master said, ``Look at what motivates a person, observe the path they follow, and examine where they find ease. Where can that person hide? Where can they hide?''
+\end{quote}
+In broad terms, examine motives, paths of action, and what brings peace of mind. Observed this way, where can someone conceal themselves?
+
+Read this as an ancient operating manual for knowing people. Interestingly, Confucius also uses behavioral data: deeds rather than words. In that sense, he and recommendation systems share a starting point: behavior is more reliable than self-description.
+
+But notice the progression. Looking at motives concerns an act; observing a path concerns a sequence, the choices someone makes along the way. Examining where they find ease reaches deeper: what makes their mind peaceful? On Confucius's scale, occasionally doing good differs from being at peace only when doing good.
+
+Compare this manual with a recommendation profile. Systems too observe paths: your history is a behavioral trail. But they cannot reach what gives you ease. Are you repeatedly watching late at night because you are content or too anxious to sleep? Three minutes of absorbed pleasure and three minutes of numb staring look identical in the data. Confucius's method requires an experienced, empathetic observer: to recognize another's peace, you must understand peace. An algorithm need understand nothing; it need only count.
+
+The point is not that Confucius is clever and machines clumsy. Understanding someone has always meant two things: predicting their next action, and grasping why they act and what brings them peace. Machines are approaching, even surpassing, humans in the first sense, with more behavioral data than all the students Confucius encountered in a lifetime. Whether those numbers count as understanding in the second sense remains unanswered.
+
+\section{One Evening, Three Explanations}
+Return to A Li's bedroom. We now have pieces for genuinely different explanations of one fact. Separate four levels: what happened---eight minutes of homework help followed by three hours of videos---is evidence, scarcely disputed. Why it happened is explanation, where accounts clash. A Li's sense that she simply failed to control herself is a participant's account. Whether we should blame her is a value judgment. We will compare explanations for why those three hours occurred.
+
+\textbf{Explanation one: failed self-control, an individual-responsi\-bility account.}
+
+This account is direct: tools are neutral; a knife can cut vegetables or hurt people, depending on its user. Recommendations merely put things there. Each click or swipe still belongs to A Li's fingers. Weak time management misuses tools; without short videos, someone lacking self-control would stay up with comics. This simple explanation restores agency: practicing self-control may help without waiting for companies to change. Its obvious limit is pretending the tug-of-war is evenly matched. One side is a developing fourteen-year-old brain, the other a system tuned by thousands of engineers using hundreds of millions of people's behavior. It knows when she is tired, which covers attract clicks, and which video is hardest to refuse at each moment. Calling this personal choice resembles describing an amateur chess player's loss to a top computer as merely an off day.
+
+\textbf{Explanation two: a designed outcome, an attention-economy account.}
+
+This account looks at system objectives rather than A Li. Platforms charge advertisers according to viewing time; engineers assess algorithms by viewing time; algorithms select what keeps people watching. Layer by layer, a boardroom report's target reaches her screen. Autoplay, endless scrolling, and precisely timed transitions are no accidents but experimentally measured optimal solutions. Here the three hours were designed, not chosen. Her weak self-control fuels normal system operation, rather than indicating malfunction. This sharp account explains why so many supposedly undisciplined people worldwide show identical symptoms. Yet it makes people passive conduits if taken as the whole story. A Li actively searched for help, saved useful knitting tutorials, and even recommended the app to classmates. Blaming everything on design misses these fragments of agency and risks a paralyzing conclusion: if everything is engineered, why struggle?
+
+\textbf{Explanation three: the need came first, a psychological-compensation account.}
+
+This asks more deeply: why eleven at night, and why endless viewing while math homework lies beside her? Perhaps those hours were surrendered, not stolen. A tense school day, frustrating homework, and a disagreement with a friend may create a need for somewhere undemanding and nonjudgmental to hide. Algorithms provide that refuge; previous generations hid in television or martial-arts novels. Here the algorithm is pain relief, not the illness. The cause is unseen exhaustion in her life. This adds the inner needs the other accounts overlook. Its limit is letting platforms off too easily. Pain relief also has addictive dosages. Turning a product that should suggest sleep into one exploiting late-night vulnerability cannot be excused merely as providing refuge.
+
+All three grasp part of the truth, none the whole. Methodologically, responsibility for behavior is often an allocation question, not multiple choice. How much goes to individual, design, and circumstances depends on what you intend the answer to do. To help A Li sleep tonight, the third may help most; to change platform rules, the second is strongest; to prompt her own change tomorrow, the first is most practical.
+
+\section[Is Predicted Freedom Still Free?]{Deeper Challenge: Is Predicted Freedom Still Free?}
+Now for the chapter's weightiest question. It concerns not only phones but one of philosophy's oldest problems, newly clothed by algorithms.
+
+Philosophers have debated for over two thousand years: \textbf{do humans have free will?} At one end, determinism says everything follows prior causes. Every choice inevitably results from genes, experience, and environment meeting, like a struck billiard ball rolling in a certain direction. The other end insists something in humans escapes complete causal confinement: at that moment, I truly could have done otherwise.
+
+This may sound like armchair speculation, but algorithms put it in everyone's pocket. Suppose a recommendation system knows you well enough to predict tomorrow evening's clicks, purchases, and votes, correctly every time. Are those decisions still yours?
+
+First dismantle an easily misread counterexample. Many instinctively equate prediction with control: if an algorithm predicts a choice, freedom has vanished. Slow down; these are different. Your best friend predicts you too: you always order wide noodles with hot pot, or say you do not care after a teacher criticizes you. Such predictions often hit the mark without seeming to cancel your freedom. Why? Your friend \textbf{reads} you without \textbf{pushing} you. Accurate prediction alone does not automatically destroy freedom. The problem begins when the predictor can quietly alter available options. Reading becomes herding. A friend's prediction is a weather forecast; an algorithm's comes with artificial rain. It predicts which door you approach while hiding several others beforehand.
+
+Compatibilist philosophers hold that freedom and causation need not conflict. Freedom means not uncaused choice, but choice \textbf{arising from your own wishes rather than external coercion}. Under this account, A Li's late-night viewing remains free---nobody holds a gun to her head---provided she wants to watch. Algorithms lodge a thorn in that condition: what if the desire itself has been fed daily by feedback? Compatibilism requires wishes to be your own, but whose is a wish carefully cultivated for three years? Here the algorithmic age opens a new crack in an ancient problem.
+
+Also clarify something often misunderstood: algorithmic bias. People imagine errors mean malicious programmers or bad code. Reality is often harder. Some years ago, a major American e-commerce company was found to have abandoned a recruiting system that systematically downgraded women, although nobody wrote an explicit instruction to discriminate. The problem lay in training data drawn from years of hiring records in a predominantly male industry. The machine faithfully learned historical prejudice as a rule. Media investigations have also identified differing error rates across ethnic groups in judicial assessment systems, with deeper disputes revealing several incompatible mathematical definitions of fairness. These examples point to three frequent sources of bias: old injuries in the data, company objectives such as viewing time instead of well-being, and institutions that adopt systems without reviewing them. Code is only the final link. Algorithmic neutrality is therefore empty language: a machine taught by history and directed toward profit inherits historical prejudices and corporate goals, executes them rapidly and thoroughly, and wears the cloak of objective numbers.
+
+Weigh compatibilism's measuring stick and its limit. Acting on your wishes defines freedom, but it does not tell us what remains when wishes are quietly cultivated. This ruler measures coercion, not herding.
+
+\section{The Loop in Every Corner of Life}
+This ancient problem of freedom now turns daily within ordinary life.
+
+At school, learning apps identify likely errors before you do and supply increasingly suitable practice: good feedback. Yet the same loop may keep you doing comfortably attainable problems, never plunging you into genuinely difficult water. At home, three family members scroll after dinner: Dad sees international affairs, Mom health and parenting, the child games and crafts. They share a roof but seem to inhabit different countries. Researchers call this an information cocoon: algorithms wrap each person in layers of their own spun silk, leaving only similar opinions visible. The cocoon is comfortable, but people in separate cocoons understand each other less and seem increasingly unreasonable to one another.
+
+In online debate, the loop turns faster. Emotional content attracts clicks and shares; algorithms faithfully learn this, carrying extreme voices farther while moderate ones sink. Nobody need order moderation suppressed; it simply produces fewer clicks. On city streets, delivery riders race under dispatch algorithms. Historical data say a journey takes fifteen minutes, overlooking today's rain, broken elevator, or security guard refusing entry. A living person's present speed is dictated by numbers squeezed from the past.
+
+Do not forget the good moments: navigation predicts congestion and saves half an hour, a music app offers a song that catches you during a terrible period, translation lets a grandmother understand her granddaughter's video from abroad. Technology turns loops. Their value depends on the objectives we put inside and who checks what comes out.
+
+Perhaps today's answer should therefore split in two. At predicting your next finger movement, algorithms increasingly outperform you. At understanding why you remain awake, what brings peace, and whom you want to become, their numbers fall far short. That second half matters most to human beings. The trouble is that something understanding only half of you is helping shape all of you.
+
+\section{For You: Would You Press the Off Button?}
+Return to the phone we began with.
+
+Imagine every app adding a button tomorrow. Press it and personalized recommendations stop permanently. The home page uses chronological or random order; no clicks are recorded and no profile built. The cocoon dissolves and the loop stops. The cost: no fellow enthusiasts arrive for obscure interests, finding one homework explanation requires inspecting twenty videos, and updates from your favorite craft creator sink beneath the information ocean.
+
+Would you press it?
+
+Answer with reasons. Before deciding, weigh the arguments again.
+
+For pressing: stop being herded, reclaim the next-viewing decision, dismantle the cocoon, and prevent others using your impulses against you.
+
+Against pressing: overload is real and filtering necessary. Niche enthusiasts' encounters, village artisans' opportunities, and targeted practice depend on this machine. Besides, turning recommendations off does not automatically free you. Years of feedback already shaped your taste; even when the loop stops, its bodily momentum remains.
+
+You also know the harder fact that accurate prediction need not cancel freedom, as friendship shows. The danger is prediction and manipulation in the same hand. Yet blaming algorithms for everything and blaming individuals for everything both evade the hardest question: what sort of person you want to become. No machine can answer that for you.
+
+How close, then, should a machine better at predicting us than we are be allowed to come? Who sets the distance: companies, governments, parents, or you? And if even drawing that line feels uninteresting beside another swipe, is that itself already an answer?

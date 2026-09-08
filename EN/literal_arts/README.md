@@ -3,18 +3,26 @@
 *A Humanities Tour for Middle School Students*
 
 English translation of the [Chinese liberal arts edition](../../literal_arts/README.md),
-in three volumes and 114 chapters. Translation is in progress; no complete
-English PDF is published yet.
+in three volumes and 114 chapters. The complete 1,988-page
+[English PDF](Igniting_the_Liberal_Arts_Spark.pdf) is included beside this README.
+All 141 source fragments are translated and assembled in their original order.
 
 The document class, fonts, packages, heading styles, volume-page macros, and
 table column styles are retained. Prose and visible labels are translated.
 With the contributor's approval, oversized tables may be divided at row
 boundaries with repeated headers so that content is not clipped by page edges.
 The recurring-objects table in `fragments/front004.tex`, thinking-tools
-table in `fragments/front005.tex`, and empire comparison in `fragments/ch034.tex`
+table in `fragments/front005.tex`, empire comparison in `fragments/ch034.tex`,
+and flood comparison in `fragments/ch047.tex`
 use this pagination fix. All original rows and column specifications remain.
 Their precisely marked, allowlisted boundaries are checked separately rather than
 being mistaken for a change to the book's content structure.
+The contributor also approved compact navigation/running titles (full headings
+remain), wider contents page-number boxes for four-digit page numbers, and
+English line-breaking adjustments. These retain the original fonts, sizes,
+margins, and heading designs. Other tables use local cell wraps and start
+without paragraph indentation, with normal paragraph separation before following
+prose; all original columns and rows remain.
 See [the English editions README](../README.md) for the exact Chinese source
 commit and the incremental-update workflow.
 
@@ -37,6 +45,8 @@ The builder requires Tectonic, validates the complete sources and compiler log,
 and places `Igniting_the_Liberal_Arts_Spark.pdf` beside this README. XeLaTeX
 also works on the assembled `latex/literal_book.tex`; Fandol fonts are supplied
 by the TeX distribution. Compiler checks must be followed by visual PDF review.
+The complete release build has no missing inputs, missing glyphs, unresolved
+references, or overfull horizontal/vertical boxes.
 
 During development, `python3 scripts/assemble_liberal_arts.py --check` validates
 only the available fragments and reports missing ones. A build with `--preview`

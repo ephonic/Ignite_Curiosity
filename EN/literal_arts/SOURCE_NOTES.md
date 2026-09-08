@@ -10,6 +10,17 @@ references below refer to the original generated
 [LaTeX source](../../literal_arts/latex/literal_book.tex), which the assembly
 script can split into comparison fragments.
 
+Additional chapter reviews:
+
+- [Chapters 20–50](SOURCE_NOTES_020_050.md)
+- [Chapters 51–56](SOURCE_NOTES_051_065.md)
+- [Chapters 57–59](SOURCE_NOTES_057_059.md)
+- [Chapters 60–63](SOURCE_NOTES_060_065.md)
+- [Chapters 64–65](SOURCE_NOTES_064_065.md)
+- [Chapters 66–85](SOURCE_NOTES_066_085.md)
+- [Chapters 86–100](SOURCE_NOTES_086_100.md)
+- [Chapters 101–114](SOURCE_NOTES_101_114.md)
+
 ## Chapter 1
 
 - The chapter describes the following “twenty-odd chapters,” although the
@@ -311,6 +322,28 @@ Tables are split at row boundaries with repeated headers:
 - `latex/fragments/front005.tex`: thinking tools, split after close reading.
 - `latex/fragments/ch034.tex`: five empires, split after Assyria (three rows
   followed by two). Long cells use explicit line breaks with all wording kept.
+- `latex/fragments/ch047.tex`: five flood traditions, split after Greece
+  (three rows followed by two) with the same five-column header repeated.
 
 All original rows remain, with the same `llX` or `llllX` column specifications
 and booktabs rules. Exact added boundaries are allowlisted in the checker.
+
+## English layout and glyph checks
+
+The contributor also approved layout-only adjustments for the expanded English
+edition: compact optional navigation/running titles retain the complete visible
+headings; a wider contents page-number box accommodates four digits; and modest
+emergency interword stretch permits English line breaking. Original document
+class, fonts, type sizes, page margins, heading designs, and colors remain.
+
+Full-width tables start without paragraph indentation. Additional explicit cell
+wraps in chapters 27, 31, 44, 47, 73, 97, and 111 retain all wording, rows,
+column specifications, and rules. The flood comparison includes visible line-end
+hyphenation of long names/words, not new spellings. Table continuation markers
+are verified against exact registered content.
+
+The Hawaiian name Hōkūleʻa uses an ASCII apostrophe for its otherwise unsupported
+ʻokina glyph in chapter 74; macrons remain. Chapter 96's not-equal signs use the
+existing mathematical font rather than unavailable text-font glyphs. Chapter 102
+retains only its six explicitly boxed Chinese character-construction examples;
+surrounding explanations are translated.

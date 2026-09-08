@@ -2,7 +2,7 @@
 
 > 一套写给初中生的学科漫游书：从初中知识出发，一路走到整座学科大厦的门口。
 
-English translations (in progress): [English editions in `EN/`](EN/README.md).
+Complete English translations and compiled PDFs: [English editions in `EN/`](EN/README.md).
 
 ## 这套书是怎么来的
 

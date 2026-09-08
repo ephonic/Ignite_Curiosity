@@ -21,6 +21,7 @@ HAN_EXAMPLES = {
     "ch014.tex": ("日", "山", "妈", "女", "马", "铜", "钅", "同", "喷嚏", "嚏"),
     "ch032.tex": ("卜",),
     "ch036.tex": ("習", "羽"),
+    "ch102.tex": ("口", "犬", "吠", "水", "目", "泪"),
 }
 ENVIRONMENT = re.compile(r"\\(begin|end)\{([^{}]+)\}")
 REFERENCE = re.compile(r"\\(label|ref|eqref|pageref|include|input)\{([^{}]+)\}")
@@ -37,19 +38,25 @@ STYLE = re.compile(
 # works in the assembled liberal-arts entrypoint. Fonts and column styles stay
 # unchanged, and every original row remains subject to the normal checks.
 PAGINATION_BLOCKS = {
+    "flood-comparison": (
+        "\\bottomrule\n\\end{tabularx}\n\n"
+        "\\noindent\n\\begin{tabularx}{\\linewidth}{llllX}\n\\toprule\n"
+        "Source & \\shortstack[l]{Who is\\\\ warned} & Survival & "
+        "\\shortstack[l]{Nature\\\\ of flood} & Afterwards \\\\\n\\midrule\n"
+    ),
     "recurring-objects": (
         "\\bottomrule\n\\end{tabularx}\n\n"
-        "\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
+        "\\noindent\n\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
         "Object & First seen & Later connections \\\\\n\\midrule\n"
     ),
     "thinking-tools": (
         "\\bottomrule\n\\end{tabularx}\n\n"
-        "\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
+        "\\noindent\n\\begin{tabularx}{\\linewidth}{llX}\n\\toprule\n"
         "Tool & First use & Main use \\\\\n\\midrule\n"
     ),
     "empire-comparison": (
         "\\bottomrule\n\\end{tabularx}\n\n"
-        "\\begin{tabularx}{\\linewidth}{llllX}\n\\toprule\n"
+        "\\noindent\n\\begin{tabularx}{\\linewidth}{llllX}\n\\toprule\n"
         "Empire & Money & \\shortstack[l]{Appoint-\\\\ments} & "
         "\\shortstack[l]{Routes and\\\\language} & Approach to difference \\\\\n"
         "\\midrule\n"

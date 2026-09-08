@@ -37,6 +37,14 @@ class StructureTests(unittest.TestCase):
         self.assertEqual("".join(text for _, text in fragments), SOURCE.read_text(encoding="utf-8"))
         self.assertEqual(sum(name.startswith("ch") for name, _ in fragments), 114)
 
+    def test_chinese_character_construction_examples_are_narrowly_allowed(self):
+        allowed = check_english.HAN_EXAMPLES["ch102.tex"]
+        source = "口犬吠水目泪"
+        examples = " ".join(r"\mbox{" + glyph + "}" for glyph in allowed)
+        self.assertFalse(check_english.has_untranslated_han(examples, source, allowed))
+        self.assertTrue(check_english.has_untranslated_han(examples + "未译", source, allowed))
+        self.assertTrue(check_english.has_untranslated_han(r"\mbox{神}", source, allowed))
+
     def test_only_exact_pagination_block_is_allowed(self):
         for name, content in check_english.PAGINATION_BLOCKS.items():
             with self.subTest(name=name):
