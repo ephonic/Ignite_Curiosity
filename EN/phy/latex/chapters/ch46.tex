@@ -1,0 +1,236 @@
+% Chapter 46: Operators and Matrices in Quantum Mechanics
+\chapter{Operators and Matrices in Quantum Mechanics}
+
+Three chapters assembled a complete predictor: quantum states describe systems in Chapter~43, Schrödinger evolves them in Chapter~44, and Born measurements produce probabilities and updated states in Chapter~45. One wrapper remains: what mathematical object is a state? However well written, $\psi(x)$ is merely one transcription. This chapter introduces the internal language, vectors and matrices, no later mathematical decoration. Discrete outcomes, incompatible quantities, and order-dependent questions become arithmetic a school student can understand. Operators, eigenstates, and commutation should become as familiar as velocity and acceleration.
+
+\step{A Counterintuitive Opening}
+
+Start with soup. Salt then sugar or sugar then salt tastes the same. Emails then messages or vice versa usually works similarly. Daily experience confirms a supposed axiom: order usually does not matter. Arithmetic agrees: $3\times5=5\times3$.
+
+Lay this book flat, cover up, spine left. Action A: rotate forward ninety degrees about the left--right horizontal axis until upright, cover facing you. Action B: rotate ninety degrees counterclockwise about the vertical axis. Try A then B and record the orientation. Reset and try B then A.
+
+Different results: first upright with spine down, second lying on the table with cover facing sideways. Same actions and start, different order and finish. Any three-dimensional object does this, yet we rarely notice.
+
+Do not dismiss it as mere geometry. In the 1920s, Heisenberg scrutinized atomic spectra under a microscope and found agreement demanded order-dependent multiplication of physical quantities. Unfamiliar with matrices, he reinvented their multiplication and worried physics had entered unknown territory. Ordinary books had demonstrated it daily without anyone connecting the facts. Rotations, polarizer order, and position--momentum uncertainty will prove aspects of one coin.
+
+\step{Make a Guess First}
+
+Write predictions as usual.
+
+First, give three everyday order-independent operations and three order-dependent ones. Examples: salt and sugar in soup commute; socks and shoes do not. Harder: is there a clean distinction, a property permitting interchangeable order?
+
+Second, recall Chapter~45's vertical, horizontal, and forty-five-degree polarizers. Compare vertical-then-diagonal with diagonal-then-vertical for a photon. If outcomes differ, did the question change, or the photon itself?
+
+Third, suppose quantities $A$ and $B$ really multiply order-dependently: $A$ then $B$ differs from $B$ then $A$. What follows for knowing $A$ and $B$ exactly together? No effect, or hidden danger? Record intuition for later comparison.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Two Book Rotations: Order Determines Outcome]
+\textbf{Materials}: a paperback or phone and a tabletop.
+
+\textbf{Step one}: lay the book cover up, spine left, the initial state.
+
+\textbf{Step two}: action A rotates it forward ninety degrees about its left--right axis until upright, cover toward you. Action B rotates it counterclockwise ninety degrees about vertical. Record where spine and cover point.
+
+\textbf{Step three}: restore the exact starting orientation, essential for a fair experiment. Perform B then A and record the finish.
+
+\textbf{Step four}: compare. One should stand spine down, the other lie sideways. If they match, check whether you inadvertently started both turns from the same orientation.
+
+\textbf{Record and think}: describe A-then-B and B-then-A outcomes. Neither book nor actions changed; only order did. Ordinary numbers cannot record rotations because numbers ignore order and rotations do not.
+\end{experiment}
+
+Upgrade when convenient: replace one right-angle turn by a half-turn or combine three actions. Order sensitivity gains more variations. You are handling the three-dimensional rotation group, a close relative of quantum spin's mathematics, revisited in Chapter~47.
+
+Paper offers a two-dimensional version: rotate an asymmetric triangle ninety degrees then mirror left--right, or reverse the operations, and obtain different endpoints.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+% ---------- First sequence: rotation then reflection ----------
+\begin{scope}
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (0,0) -- (1,0) -- (0,0.6) -- cycle;
+\node at (0.5,-0.35) {\footnotesize Initial};
+\end{scope}
+\begin{scope}[xshift=1.8cm]
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (1,0) -- (1,1) -- (0.4,0) -- cycle;
+\node at (0.5,-0.5) {\footnotesize \shortstack{Rotate\\$90^\circ$}};
+\end{scope}
+\begin{scope}[xshift=3.6cm]
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (0,0) -- (0,1) -- (0.6,0) -- cycle;
+\node at (0.5,-0.5) {\footnotesize \shortstack{Then\\mirror}};
+\end{scope}
+% ---------- Second sequence: reflection then rotation ----------
+\begin{scope}[xshift=5.6cm]
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (0,0) -- (1,0) -- (0,0.6) -- cycle;
+\node at (0.5,-0.35) {\footnotesize Initial};
+\end{scope}
+\begin{scope}[xshift=7.4cm]
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (1,0) -- (0,0) -- (1,0.6) -- cycle;
+\node at (0.5,-0.35) {\footnotesize Mirror};
+\end{scope}
+\begin{scope}[xshift=9.2cm]
+\draw (0,0) rectangle (1,1);
+\fill[gray!40] (1,1) -- (1,0) -- (0.4,1) -- cycle;
+\node at (0.5,-0.5) {\footnotesize \shortstack{Then rotate\\$90^\circ$}};
+\end{scope}
+% Arrows
+\draw[-{Stealth}] (1.15,0.5) -- (1.65,0.5);
+\draw[-{Stealth}] (2.95,0.5) -- (3.45,0.5);
+\draw[-{Stealth}] (6.75,0.5) -- (7.25,0.5);
+\draw[-{Stealth}] (8.55,0.5) -- (9.05,0.5);
+\end{tikzpicture}
+\end{center}
+
+\step{The Old Model Runs into Trouble}
+
+Classical physics assumes every quantity is a number: three for position or velocity, one for energy. Numbers offer commuting addition and multiplication, $a+b=b+a$ and $ab=ba$. Measurement simply reads them, so order is irrelevant, like height then weight or weight then height producing the same checkup.
+
+Trouble approaches from two directions.
+
+First, the rotation experiment. Real consecutive rotations cannot be recorded by orderless ordinary numbers. Nineteenth-century mathematicians invented matrices, numerical tables acting on vectors whose multiplication represents successive actions and naturally fails to commute. Geometry, not quantum mechanics, demanded them.
+
+Second, physics' earthquake. Chapter~45 showed vertical-then-forty-five-degree polarization questions differ from their reverse, including outcome distributions. If measurements merely copy prewritten numbers, copying order should not matter. Quantum quantities must instead operate on states, with rotation-like order sensitivity.
+
+A third crack prepares uncertainty. Classical position and momentum are independent exact numbers with arbitrarily knowable precision. Experiments instead show narrower electron position spreading momentum, already illustrated by Chapter~43's packets. Two ordinary numerical lists offer no reason; two noncommuting operations make it arithmetic, as the translator will show.
+
+\step{Inventing New Concepts}
+
+Design four new ledger pages as Heisenberg, Schrödinger, and Dirac did, intuition before names.
+
+\textbf{Page one: states are vectors, not necessarily spatial arrows.} A report card, Chinese85, math92, English78, is a score vector: a location in score space, not east or north. RGB gives color vectors; food, transport, and rent give expense vectors. Songs become vectors of rhythm, volume, vocal proportion, and bass, whose comparisons drive your recommended playlists. Vectors are suitable coordinates with consistent addition, not fundamentally arrows. Mark the analogy's limits: both score lists and quantum vectors describe states, but quantum components are generally complex and measurements change states, unlike reading grades. Quantum mechanics writes a system's present as an abstract \textbf{state vector}. A wavefunction $\psi(x)$ is its position-basis coordinate form, like one place described by latitude/longitude or three hundred meters north of a clock tower.
+
+\textbf{Page two: a basis is a chosen coordinate language.} Latitude/longitude and tower-distance/bearing give different numbers for the same place, different reference frameworks or \textbf{bases}. One photon likewise has coordinates in vertical/horizontal or forty-five/one-hundred-thirty-five-degree bases. Numbers change, state does not. Choosing a measurement mathematically chooses the state-vector expansion basis, giving Chapter~45's chosen question a precise counterpart.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1,>=Stealth]
+% Standard basis
+\draw[->] (0,0) -- (2.6,0) node[right] {$e_1$};
+\draw[->] (0,0) -- (0,2.6) node[above] {$e_2$};
+% Rotated basis
+\draw[->,thick,blue!60!black] (0,0) -- (30:2.8) node[right] {$e'_1$};
+\draw[->,thick,blue!60!black] (0,0) -- (120:2.8) node[above] {$e'_2$};
+% Vector v
+\draw[->,very thick,red!70!black] (0,0) -- (0.6,1.6) node[above right] {$v$};
+% Standard-basis projections
+\draw[dashed,gray] (0.6,1.6) -- (0.6,0);
+\draw[dashed,gray] (0.6,1.6) -- (0,1.6);
+% Projection onto e'_1, foot approximately (1.14,0.66)
+\draw[dashed,blue!60!black] (0.6,1.6) -- (1.14,0.66);
+\node at (3.1,2.4) {\footnotesize One arrow, two coordinate sets};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Page three: operators act on states.} Photo software supplies intuition. A photograph is a state; rotation, mirroring, brightening, or skin smoothing turns it into another, an \textbf{operator}. First, order matters: rotate then mirror or reverse them in your phone and results differ, like the book. Second, quantum operators are \textbf{linear}: act on a sum or act separately and add, with equal results. This preserves Chapter~43's superposition and all interference terms. Brightening exemplifies linearity, whereas cropping square does not: cropping a sum differs from summed crops. The analogy matches input operations and order; its limit is that operator action still determines a state, with randomness only at measurement. Do not identify operators with measurements.
+
+\textbf{Page four: eigenstates are unturned directions.} Most actions change states, but each favors special directions left unchanged except overall stretching, shrinking, reversal, or phase. Rotation about vertical leaves a vertical arrow untouched, its eigenstate with eigenvalue $1$. Mirroring a symmetric photograph also preserves it. These special states are \textbf{eigenstates}, their multipliers \textbf{eigenvalues}. Quantum mechanics cares because Chapter~45's definite possible results are an observable operator's eigenvalues, and postmeasurement states its eigenstates. Atomic lines are discrete because energy eigenvalues are discrete. Discreteness becomes the physical expression of arithmetic: only certain multipliers belong to unchanged directions.
+
+Together: states are vectors, observables operators, possible results eigenvalues, resulting states eigenstates. Whether operators exchange order, their \textbf{commutation}, decides whether quantities can have simultaneous definite values.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Quantum mechanics records states as abstract vectors and observables as operations. Special unturned eigenstates have eigenvalue multipliers, the only measurement outcomes. Noncommuting operations forbid simultaneous definite quantities: quantum strangeness directly translates vector arithmetic.
+\end{oneline}
+
+Like coordinate-paper bookkeeping, changing axes changes numbers, not accounts. Unlike cards with fixed answers, it records where operations send states, not hidden numerical labels. State vectors are not real spatial arrows or operators actual machines: they compress preparation, operation, and measurement mathematically.
+
+\step{The Mathematical Translator}
+
+Translate intuition symbolically. The main thread needs only table-times-arrow arithmetic; bridges and challenges go further.
+
+\textbf{Translation one: vectors and coordinates.} In a chosen two-component basis,
+\[
+|\psi\rangle=\begin{pmatrix} a \\ b \end{pmatrix},
+\]
+with possibly complex $a$ and $b$, amplitudes along the first and second basis vectors. Chapter~43 still assigns $|a|^2$ and $|b|^2$ probabilities, requiring $|a|^2+|b|^2=1$. Check $b=0$: the first basis state gives its outcome certainly. Coordinates $(1,0)$ and eigenstate coincide, consistently.
+
+\textbf{Translation two: operators as tables, multiplication as succession.} A two-component operator is a $2\times2$ table,
+\[
+\hat{A}=\begin{pmatrix} p & q \\ r & s \end{pmatrix},
+\]
+acting by row dot products: upper entry $pa+qb$, lower $ra+sb$. Successive operations multiply tables, with potentially different $\hat{A}\hat{B}$ and $\hat{B}\hat{A}$. The bridge calculates one example.
+
+\textbf{Translation three: the eigenvalue equation.} Unchanged direction with a multiplier becomes
+\[
+\hat{A}\,|\psi\rangle=\lambda\,|\psi\rangle,
+\]
+operator $\hat{A}$ acting on its $|\psi\rangle$ equals that state times $\lambda$. Test one, zero, reversal. For $\lambda=1$, transparent action like an axial arrow. For $\lambda=0$, annihilation to zero, as vertical polarization blocks horizontal light and Chapter~45's crossed sheets darken. For $\lambda=-1$, reversal, like antisymmetric standing waves changing sign under reflection. All have experimental counterparts.
+
+\textbf{Translation four: commutators and uncertainty.} The order difference is a \textbf{commutator}:
+\[
+[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}.
+\]
+Zero means exchangeable operations and a common eigenbasis with simultaneous definite quantities; either measurement order agrees. Nonzero brings trouble. Experiment and theory weld a foundational relation between position $\hat{x}$ and momentum $\hat{p}$:
+\[
+[\hat{x},\hat{p}]=i\hbar,
+\]
+with reduced Planck constant $\hbar\approx1.05\times10^{-34}\,\mathrm{J\cdot s}$ and imaginary unit $i$. They never commute, rigorously implying $\Delta x\,\Delta p\geq\hbar/2$, derived in the challenge. No instrument appears: uncertainty reflects noncommuting $\hat{x}$ and $\hat{p}$, not crude measurement. Perfect instruments change nothing.
+
+\textbf{Translation five: real magnitudes.} Why no everyday uncertainty? A pollen-scale fine dust grain of about $10^{-4}\,\mathrm{kg}$ localized to hair-scale $\Delta x\sim10^{-4}\,\mathrm{m}$ has at least $\hbar/(2\Delta x)\sim5\times10^{-31}\,\mathrm{kg\cdot m/s}$ momentum uncertainty, or $5\times10^{-27}\,\mathrm{m/s}$. Drifting a hair-width takes longer than the universe's age, observationally irrelevant. At the opposite extreme, electron confinement to $\Delta x\sim10^{-10}\,\mathrm{m}$ with mass $9.1\times10^{-31}\,\mathrm{kg}$ yields about $6\times10^{5}\,\mathrm{m/s}$, comparable to atomic speeds, directly controlling atomic size and stability. Two worlds separated by $\hbar$'s tiny $10^{-34}$. Formally let $\hbar\to0$: commutators vanish, all operators commute, and classical bookkeeping returns. The boundary behaves correctly.
+
+\textbf{Translation six: a definite account for averages.} Individual outcomes are random, but the average of ten thousand identical preparations is precisely predicted: the \textbf{expectation value}, probability-weighted eigenvalues. Like a die averaging $3.5$ from $1$ through $6$, quantum outcomes come from eigenvalue lists. In an eigenstate one outcome has probability $1$, all others $0$; expectation equals that eigenvalue with zero fluctuation, another expression of certainty. An expectation need not be a possible individual result: dice never show $3.5$. It belongs to repetitions, matching Chapter~45's promised proportions.
+
+\begin{mathbridge}
+\textbf{A fully calculable example.} Take two $2\times2$ tables:
+\[
+\hat{X}=\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\qquad
+\hat{Z}=\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\]
+Spend five worthwhile minutes calculating row products:
+\[
+\hat{X}\hat{Z}=\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix},\qquad
+\hat{Z}\hat{X}=\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix},
+\]
+opposite signs, $\hat{X}\hat{Z}=-\hat{Z}\hat{X}$, and $[\hat{X},\hat{Z}]=2\hat{X}\hat{Z}\neq0$. Order reverses the sign. For $\hat{Z}$ eigenstates, set $\hat{Z}\begin{pmatrix}a\\b\end{pmatrix}=\lambda\begin{pmatrix}a\\b\end{pmatrix}$, giving $a=\lambda a$ and $-b=\lambda b$: either $b=0,\lambda=1$ or $a=0,\lambda=-1$. Thus $\hat{Z}$ has basis eigenstates $(1,0)$ and $(0,1)$, eigenvalues $+1$ and $-1$. Similarly $\hat{X}$ has $(1,1)/\sqrt2$ and $(1,-1)/\sqrt2$, equal-weight combinations in $\hat{Z}$'s basis. A definite $\hat{X}$ state gives equal chances for $\hat{Z}$ outcomes. Noncommutation and incompatible certainty meet on paper. These are two Pauli matrices, not toys, starring in Chapter~47's spin.
+\end{mathbridge}
+
+\begin{challenge}
+\textbf{From commutators to uncertainty and infinite-dimensional hazards.} For any operators and state, define root-mean-square deviations $\Delta A$ and $\Delta B$. Apply Schwarz's inequality to $(\hat{A}-\langle\hat{A}\rangle)|\psi\rangle$ and $(\hat{B}-\langle\hat{B}\rangle)|\psi\rangle$ to obtain
+\[
+\Delta A\,\Delta B\geq\tfrac12\,\bigl|\langle[\hat{A},\hat{B}]\rangle\bigr|.
+\]
+Insert $[\hat{x},\hat{p}]=i\hbar$ for $\hbar/2$: Heisenberg follows from vector geometry, no instruments. Another hazard: position and momentum inhabit infinite-dimensional spaces with continuous spectra; eigenstates become distributions, Dirac $\delta$, not ordinary vectors. Their $\hat{x}$ and $\hat{p}$ domains cannot cover the whole space; $[\hat{x},\hat{p}]=i\hbar$ holds strictly only on a common domain. Physical conclusions remain, but naive claims that every symmetric operator has good eigenstates need repair, territory for a future functional-analysis book.
+\end{challenge}
+
+\step{The Model's Limits}
+
+Every elegant language has protective boundaries and swamps; operators are no exception.
+
+\textbf{Boundary one: Hamiltonians are not automatically total energy.} Chapter~44's $i\hbar\,\partial_t|\psi\rangle=\hat{H}|\psi\rangle$ uses $\hat{H}$ to generate time. Commonly, closed systems, workless constraints, and time-independent potential make $\hat{H}$ eigenvalues total energies, hence the name energy operator. This is conditional, not definitional. Programmed external fields can make $\hat{H}$ time-dependent, with no conserved total-energy eigenvalue. For magnetic charged particles, $\hat{H}$ contains canonical rather than mechanical momentum, complicating simple kinetic-plus-potential readings. Quantum mechanics generates evolution through Hamiltonians. Popular Hamiltonian quantum mechanics is no third theory beside Schrödinger and Heisenberg, merely emphasis on their shared $\hat{H}$ structure.
+
+\textbf{Boundary two: Schrödinger and Heisenberg pictures project one film differently.} Schrödinger evolves states with fixed operators; Heisenberg moves evolution into operators and holds states fixed. All expectations, probabilities, and spectra agree, beyond experimental distinction. Like following a pendulum's changing position versus holding its initial label fixed while reshaping the current-position ruler. Choose the convenient projector: often the former for spectra, the latter for conservation and perturbation. There an operator commuting with the Hamiltonian is time-independent: conserved quantities commute with $\hat{H}$, lining up energy, momentum, and angular momentum under one rule. They are not two quantum theories.
+
+\textbf{Boundary three: matrix and wave mechanics are coordinates of one theory.} Schrödinger proved their equivalence in1926. Wavefunction $\psi(x)$ is position-basis state coordinates; $-i\hbar\,\partial_x$ is momentum's same-basis appearance. A new map projection does not change Earth.
+
+\textbf{Boundary four: operators do not select interpretations.} Eigenvalues, commutators, and evolution form the shared core of Chapter~45's map. Measurement updates remain an additional rule; decoherence explains classical appearances but its sufficiency for measurement is disputed. Matrices supply the common playing field, not a referee's whistle.
+
+\textbf{Boundary five: complex is not mystical.} Complex components yield real probabilities, expectations, and observable eigenvalues, the arithmetic of Hermitian observables. Like AC phasors, intermediate phases yield real reported results.
+
+\step{Explaining the Opening Phenomenon}
+
+Return to your book. Order-dependent rotations are noncommuting operators, mathematically rotation-group generators; A-then-B and B-then-A give different matrix products. The book always demonstrated matrix multiplication without handing you its table.
+
+Quantum mechanics discovered, not invented, order sensitivity, and found it deeper. Numbers have $AB-BA=0$; book rotations have $AB-BA$ as a small-angle rotation; position and momentum have $[\hat{x},\hat{p}]=i\hbar$, tiny but never zero. Nature's basic objects seem not numbered labels but interacting operations; commuting numbers are special-case shadows. Classical physics missed this for centuries solely because $\hbar$ is tiny. The dust estimate compresses macroscopic noncommutation beyond twenty decimal places: seemingly commuting, microscopically matrices.
+
+The second guess is arithmetic too: projections along different polarization directions do not commute, so swapping them changes measurements and experiments. The bridge answered the third: noncommuting operators lack a complete common eigenbasis, so a definite state for one is necessarily a superposition for the other. Incompatible precision is a $2\times2$ multiplication property, not a technological declaration.
+
+Beyond explanation, this is engineering. Each qubit is a two-component state and each gate a unitary matrix: $X$ flips, $H$ makes equal superpositions, a chip a vast matrix workbook. NMR and medical MRI pulse sequences use spin operators and exponential evolution; atomic and molecular energy calculations seek large-matrix eigenvalues. Descriptive language becomes a production tool.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[If $\hbar$ Were 35 Septillion Times Larger]
+In $[\hat{x},\hat{p}]=i\hbar$, tiny $\hbar$ is the entire reason for classicality. Imagine $\hbar$ not $10^{-34}\,\mathrm{J\cdot s}$ but about $1\,\mathrm{J\cdot s}$. A $0.1\,\mathrm{kg}$ apple localized to one centimeter has at least several meters per second of velocity uncertainty. Clearly locate it and velocity clouds over; clearly photograph its speed and position spreads over the table. Can orbits exist? Planets need both position on the orbit and tangential momentum, mutually forbidden here, replacing Kepler ellipses with diffuse planetary clouds. Tables, orbits, and weather forecasts exist not by luck but because $\hbar$ makes $[\hat{x},\hat{p}]$ macroscopically near zero. Constants' sizes determine possible worlds.
+\end{thought}
+
+\begin{puzzles}
+\item \textbf{Common eigenstates.} Operator $\hat{A}$ has an $x$-axis arrow eigenstate; $\hat{B}$ a forty-five-degree arrow eigenstate. Suppose $\hat{A}$ and $\hat{B}$ commute. Argue for a common eigenbasis. Conversely, what does wholly mismatched eigendirections imply about $[\hat{A},\hat{B}]$? (Hint: take $\hat{A}$'s $|a\rangle$, examine $\hat{A}(\hat{B}|a\rangle)$, and use commutation to move $\hat{A}$ to the front. What does mismatch mean?)
+\item \textbf{Order's price.} One photon passes vertical then forty-five-degree tests; an identically prepared photon reverses them. Given equal-weight expansion of vertical in the diagonal basis, compare final forty-five-degree passing probabilities. Which step changes? (Hint: probabilities enter on reporting in a new basis; the first measurement already updates the state. Reopen Chapter~45's ledger.)
+\item \textbf{Why two pure readings fail to commute.} Height and weight seem independent, suggesting $A$-then-$B$ should always ignore order. Identify the hidden assumption and a quantum counterexample. (Hint: it assumes all operators share an eigenbasis and measurements preserve states. Recall $\hat{X}$ eigenstates in $\hat{Z}$'s basis.)
+\item \textbf{Two projectors.} A state rotates in Schrödinger's picture but is fixed in Heisenberg's. Refute the claim that Heisenberg is wrong because nothing evolves. Which experimental data can and cannot adjudicate? (Hint: only expectations and probabilities are observable; compare their expressions. Which object moves is bookkeeping.)
+\end{puzzles}
+
+Quantum mechanics has become a story of vectors and operations, not merely waves. Next comes spin, the purest two-component system, speaking Pauli matrices. Bases, eigenvalues, and noncommutation now face an uncompromising experimental test in Chapter~47.

@@ -90,7 +90,7 @@ Names must go onto paper. Chapter 6's free-body diagram now starts work: isolate
 \begin{center}
 \begin{tikzpicture}[>=Stealth,thick]
   \draw[fill=gray!15] (0,0) rectangle (2.2,1.4);
-  \node at (1.1,0.7) {Bookcase};
+  \node[right] at (2.4,1.4) {Bookcase};
   \draw (-0.8,0) -- (3.0,0);
   \draw[->,red!70!black] (0,0.7) -- (1.0,0.7) node[midway,above]{$F_{\text{push}}$};
   \draw[->,blue!70!black] (2.2,0.35) -- (1.2,0.35) node[midway,above]{$f_{\text{static}}$};
@@ -151,6 +151,10 @@ The inequality also supports a major automotive technology, anti-lock braking, A
 F_{\text{drag}}\approx \tfrac12\,\rho\, C_d\, A\, v^2 \qquad(\text{at higher speeds}),
 \]
 Here \(\rho\) is fluid density, \(A\) frontal area, and \(C_d\) a shape coefficient, small for streamlined objects and large for plates. What it describes: to clear the air ahead at speed \(v\), how much air must you push aside each second, and how hard? Why \(v^2\)? The air mass encountered per second is proportional to \(v\), and the speed imparted to each parcel also to \(v\). Multiply them and the square appears. Check: \(v=0\) means no drag; a stationary umbrella has no wind account. Double speed and drag quadruples, so cycling at twenty versus forty demands fourfold effort, not double, matching your legs' memory. Double area and drag doubles: try opening an umbrella while riding, in a safe open space. The motor industry has burned tonnes of petrol over this formula. At 120 kilometers per hour, most of a family car's engine power fights air, so designers streamline bodies, reduce \(C_d\) from 0.4 to the low 0.2s, and test front and rear in wind tunnels. Every tenth saved in \(C_d\) translates into a real range figure.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not ride while holding or opening an umbrella, even in an open area: this can impair steering and destabilize the bicycle. Use the paper-drop experiment or a video instead. \href{https://www.nhtsa.gov/road-safety/bicycle-safety}{NHTSA bicycle-safety guidance} recommends keeping both hands on the handlebars except when signaling and securing carried items.
+% END TRANSLATOR SAFETY NOTE
 
 \textbf{Terminal velocity: when the accounts balance.} A falling drop has downward weight \(mg\) and upward drag growing with speed. When drag equals gravity, net force and acceleration are zero and speed \emph{stops increasing}. The drop does not stop; it falls uniformly at that speed. Equate the forces:
 \[

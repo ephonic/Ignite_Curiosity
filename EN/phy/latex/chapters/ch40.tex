@@ -1,0 +1,287 @@
+% Chapter 40: Relativistic Energy and Momentum
+\chapter{Relativistic Energy and Momentum}
+
+Chapters 38 and 39 rewrote time and length: moving clocks slow, moving rulers shorten, and simultaneity depends on the observer. This chapter tackles something more tangible, energy and momentum. They are the ledgers used throughout mechanics, electromagnetism, and thermodynamics, and relativity requires new bookkeeping. After the revision, mass acquires a radically new meaning, one that explains why the Sun shines.
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Underground on the Swiss--French border sits a circular machine about 27 kilometers around: the Large Hadron Collider. Thousands of superconducting magnets drive protons around it, collecting energy from electric fields each lap. Engineers can give them as much as they like, provided they pay the electricity bill. More energy should mean more speed. Yet measurements hit an invisible wall: increasing proton energy from 450 billion to 6,500 billion electronvolts, more than tenfold, scarcely changes speed. Already at 99.999999\% of light speed, doubling energy again only reduces the shortfall from about 3 meters per second to 0.75. The accelerator pedal works, but the speedometer barely moves. The world's most expensive machine seems to protest: speed is not what you are adding.
+
+An older version concerns the Sun, pouring about \(3.8\times10^{26}\) joules into space every second. If it were a ball of premium coal, how long could it burn? Its mass is about \(2\times10^{30}\) kilograms; coal yields about \(3\times10^{7}\) joules per kilogram. Burning all of it releases about \(6\times10^{37}\) joules, enough at present brightness for roughly five thousand years, shorter than human civilization. Nineteenth-century physicist Kelvin considered slow contraction converting gravitational energy to heat, but obtained only tens of millions of years. Meanwhile geologists read billions of years of Earth history in rocks. Physics' ledger and the stones disagreed. What is the Sun burning?
+
+Engineers met this wall before recognizing it. In the 1930s, Lawrence invented the cyclotron: charged particles circle in a magnetic field and receive an electric push every half turn. Its design exploits a beautiful Newtonian coincidence: orbital period is independent of speed, so the electric rhythm can be fixed permanently. Above roughly twenty million electronvolts for protons, particles gradually fell behind the field and stopped gaining energy. The machine was sound, the assumption wrong: orbital period had quietly lengthened. This chapter makes the reason clear: momentum is \(\gamma mv\), not \(mv\); the extra \(\gamma\) changes the rhythm. Engineers responded by slowing field frequency along with the particles, creating the synchrocyclotron and raising energy another order of magnitude. Humanity encountered relativity in a machine's behavior, not a textbook, for the first time.
+
+The accelerator's stubborn speed and the Sun's enduring fuel seem unrelated, but are two faces of one law: relativistic energy and momentum.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Put intuition on the table before reading further. Judge these four claims by your first impression:
+
+First, doubling the accelerator's electricity bill enough times will eventually push protons beyond light speed.
+
+Second, the Sun must contain a super-fuel, one gram matching hundreds or thousands of tonnes of coal.
+
+Third, two spacecraft approaching at three-quarters light speed each see the other at one-and-a-half light speed: simply add velocities.
+
+Fourth, a stationary object has no energy; energy belongs only to motion.
+
+Write your answers and compare afterward. The second points in the right direction, but reality is stranger than super-fuel: the Sun burns no chemical substance but mass itself. The fourth is most thoroughly wrong: a stationary object carries the largest energy reserve of all.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Pushing a Car Toward Light Speed with a Calculator]
+No accelerator is needed: a square-root calculator, including your phone, recreates the invisible wall.
+
+Imagine a small car whose rest energy is one unit, \(mc^{2}\). Set a game rule: each button press adds one unit of momentum, precisely \(pc=mc^{2}\), increasing momentum times light speed through 1, 2, 3 units and onward.
+
+First use Newton's rule, \(v/c=pc/(mc^{2})\). Press away: one, two, three times light speed, effortlessly crossing the limit.
+
+Now use this chapter's relativistic rule, \(v/c=pc/E\), where \(E=\sqrt{(pc)^{2}+(mc^{2})^{2}}\). Calculate in succession:
+
+Momentum 1 unit: \(v/c=1/\sqrt{2}\approx0.71\);
+
+Momentum 2 units: \(v/c=2/\sqrt{5}\approx0.89\);
+
+Momentum 3 units: \(v/c=3/\sqrt{10}\approx0.95\);
+
+Momentum 10 units: \(v/c=10/\sqrt{101}\approx0.995\);
+
+Momentum 100 units: \(v/c\approx0.99995\).
+
+See the pattern? Momentum grows without bound, but speed stays one step from light speed as though drawn to a magnet. The square root explains it: denominator \(E\) exceeds numerator \(pc\) through the extra \((mc^{2})^{2}\) term, so \(v/c\) stays below 1. Arithmetic and square roots have reproduced what really happens in a giant collider.
+\end{experiment}
+
+\begin{mainline}
+Another kitchen experiment needs no instruments. Roll two equal lumps of modeling clay toward each other so they collide, stick, and stop. Both initially had kinetic energy; where did it go? Feel the clay: it has warmed. Kinetic energy became heat, nothing unusual. But save a question for later: does the combined lump weigh exactly the same as the two originals? Classical physics says yes without hesitation; relativity says no, though the difference is forever too small to weigh. That unweighable difference is this chapter's key.
+\end{mainline}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+Open the old ledger and find its four increasingly deep difficulties.
+
+First, direct velocity addition. Since Galileo, the rule was simple: a train at 100 kilometers per hour plus a passenger walking forward at 5 gives 105 from the ground. Near light speed, a ship at \(0.75c\) firing a projectile forward at \(0.75c\) would give \(1.5c\), violating Chapter 38's ban on superluminal transport of energy and information. Light is more embarrassing still: a forward beam should move at \(c+0.75c\), yet invariance insists everyone measures \(c\). The composition rule must change.
+
+Second, momentum conservation starts depending on the observer. Conservation is a pillar: a law conserved for A but not B is unacceptable. At low speeds, \(p=mv\) and Galilean transformations preserve conservation in every frame, as billiards can demonstrate. But once velocity transformations change, as the first difficulty requires, recalculation shows that keeping \(mv\) makes a collision conserve momentum in one frame but not another. Either abandon conservation or redefine momentum. Physicists chose the latter: conservation laws outrank formulas. Formulas may change; conservation must stay.
+
+Third, kinetic energy writes speed a blank check. Newton's \(\tfrac12 mv^{2}\) imposes no speed limit: sufficient energy buys any speed. The opening collider paid real money to prove otherwise, multiplying energy more than tenfold while speed barely budged.
+
+Fourth, quietest and deepest, mass and energy conservation keep unrelated books. Chemists balance mass before and after reactions; physics lets collision energy become heat. Clay sticks, kinetic energy disappears, and mass remains conserved. No exchange rate links the accounts. But if heat is energy and energy must go somewhere, why does the mass ledger ignore its flow entirely? Nineteenth-century physics operated with this unnoticed crack until Einstein pointed it out.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+Relativity repairs four cracks one at a time, then discovers they were one crack.
+
+First repair: velocity composition. Require just two things: return to \(u+v\) far below light speed, and leave light speed unchanged when it participates. Almost only one expression meets both:
+\[
+u'=\frac{u+v}{1+uv/c^{2}}
+\]
+It resembles two people passing something up an increasingly steep slope: on a gentle slope the increment survives; near vertical, near light speed, equal effort gains little height. It does not resemble an invisible hand pressing speed back down. No force acts here: two frames simply account differently for one motion.
+
+Test special cases immediately. At low speeds, \(u\) and \(v\) are far below \(c\), denominator term \(uv/c^{2}\) is nearly zero, and \(u+v\) returns, leaving daily life intact. Insert light, \(u=c\), to obtain \(u'=(c+v)/(1+v/c)=c\): light plus anything remains light speed. Reverse it, \(u=-c\), and \(u'=-c\), equally true leftward. Test the opening guess: \(0.75c\) plus \(0.75c\) gives \(1.5c/1.5625=0.96c\), below light speed, disqualifying intuition's one-and-a-half.
+
+Second repair: momentum. Requiring conservation in all inertial frames almost hands us the answer. Why elevate that requirement? Momentum conservation rests on deeper spatial uniformity: moving an experiment elsewhere leaves its outcome unchanged, making laws reliable. Humans choose frames; the world supplies symmetries. Formulas must therefore preserve conservation across frames, not vice versa. The nearly unique expression is
+\[
+p=\gamma mv,\qquad \gamma=\frac{1}{\sqrt{1-v^{2}/c^{2}}}
+\]
+Here \(m\) is invariant or rest mass, the object's own property measured in its frame and shared by all observers. Speed changes \(\gamma\), equal to 1 at rest and growing fiercely near light speed. We do not use the older increasing-mass language, which folds \(\gamma\) into mass. Easy to memorize, it invites endless trouble: imagining fast objects growing so heavy that gravity strengthens or they become black holes. They do not: in their own frame nothing has changed; the surrounding world moves rapidly. Assign change to \(\gamma\), invariance to mass, and the books stay clear.
+
+Third repair: energy. With the new momentum, ask where work goes when a force moves an object through a distance. Calculation answers
+\[
+E=\gamma mc^{2}
+\]
+This is total energy. Perform the crucial special-case check, \(v=0\): \(\gamma=1\), so
+\[
+E_{0}=mc^{2}
+\]
+A stationary object carries mass times light speed squared in energy. This rest energy is the true form of physics' most famous equation. Kinetic energy is no longer \(\tfrac12 mv^{2}\), but the remainder after subtracting rest energy:
+\[
+K=(\gamma-1)mc^{2}
+\]
+At low speeds it returns to \(\tfrac12 mv^{2}\), as the mathematical bridge verifies. At high speeds energy grows without limit while \(\gamma\) holds speed below light speed. This equation builds the invisible wall.
+
+Fourth repair: an exchange rate between mass and energy. \(E_{0}=mc^{2}\) does not really mean mass transforms into energy like the Monkey King's magical transformations. They are two accounts of the same thing, exchanged at \(c^{2}\). Wherever energy increases, mass increases; wherever energy decreases, mass decreases. A hot kettle of water outweighs the same cold water; a compressed spring outweighs a relaxed one; before cooling, collided clay outweighs the summed original lumps. Only scale differs: chemical mass changes are roughly billionths, beyond the finest balance, vindicating chemists' two-century conservation rule within their precision. Nuclear reactions involve roughly thousandths, measurable by instruments. Matter--antimatter annihilation redeems a full hundred percent.
+\end{mainline}
+
+\begin{mainline}
+A fifth gift drops out when the repairs are joined. Combine \(E=\gamma mc^{2}\) and \(p=\gamma mv\), eliminating \(v\):
+\[
+E^{2}=(pc)^{2}+(mc^{2})^{2}
+\]
+Look for three seconds: Pythagoras. Total energy is the hypotenuse; momentum times light speed and rest energy are the legs. Every object owns such a triangle, with fixed rest-energy base and motion-dependent momentum height. This picture resolves an apparent impossibility, the photon. Its rest mass is zero, collapsing the triangle into a flat line:
+\[
+E=pc
+\]
+No rest mass, yet energy and momentum remain. Light exerts measurable radiation pressure. In 1901, Lebedev suspended thin vanes on a fine thread in vacuum and illuminated them, measuring twisting consistent with Maxwell's pressure prediction. Light hitting things was already more than metaphor. To intuition's objection, how can massless things strike anything, the formula grants formal status: momentum need not depend on mass; it can depend directly on energy.
+\end{mainline}
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+Read mass not as amount of matter but as energy an object cannot shed even at rest. Total energy \(E\) and momentum \(p\) vary with observer, while \(E^{2}-(pc)^{2}=(mc^{2})^{2}\) is shared: rest mass is invariant worth, energy and momentum two frame-dependent projections of the same wealth.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+All the mathematics fits into \(\gamma=1/\sqrt{1-v^{2}/c^{2}}\). Build numerical intuition: at rest, \(\gamma=1\); at \(0.5c\), about 1.15; at \(0.9c\), about 2.3; at \(0.99c\), about 7.1. Collider protons reach \(\gamma\approx7000\). As \(v\) approaches \(c\) without limit, \(\gamma\) heads to infinity. Usually nearly invisible, it goes wild near light speed.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Axes
+  \draw[->] (0,0) -- (5.6,0) node[below right] {\(v/c\)};
+  \draw[->] (0,0) -- (0,4.6) node[left] {\(\gamma\)};
+  % Ticks
+  \foreach \x/\lab in {1/0.2,2/0.4,3/0.6,4/0.8,5/1.0}
+    \draw (\x,0.08) -- (\x,-0.08) node[below] {\lab};
+  \foreach \y/\lab in {1/1,2/2,3/4,4/6}
+    \draw (0.08,\y*0.6667) -- (-0.08,\y*0.6667) node[left] {\lab};
+  % Asymptote v=c
+  \draw[dashed] (5,0) -- (5,4.4);
+  % Sampled gamma curve
+  \draw[thick,domain=0:4.55,smooth,variable=\x,samples=60]
+    plot ({\x},{0.6667/sqrt(1-(\x/5)*(\x/5))});
+  \node at (3.1,3.1) {\(\gamma=\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\)};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+The second picture is the energy--momentum triangle: horizontal \(pc\), vertical \(mc^{2}\), hypotenuse \(E\). Acceleration holds the vertical side fixed while lengthening the horizontal one. The hypotenuse grows, but the rest-energy portion never changes. For a photon the vertical side vanishes and the hypotenuse lies along the horizontal.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.2,0);
+  \coordinate (C) at (4.2,2.6);
+  \draw[thick] (A) -- (B) -- (C) -- cycle;
+  \draw (3.9,0) -- (3.9,0.3) -- (4.2,0.3);
+  \node[below] at ($(A)!0.5!(B)$) {\(pc\)};
+  \node[right] at ($(B)!0.5!(C)$) {\(mc^{2}\)};
+  \node[above left] at ($(A)!0.5!(C)$) {\(E=\sqrt{(pc)^{2}+(mc^{2})^{2}}\)};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+Use special cases as a formula checkup. Zero speed: \(\gamma=1\), \(p=0\), \(E=mc^{2}\), and kinetic energy \(K=0\), all normal. Low speed: small \(v/c\) gives \(\gamma\approx1+\tfrac{v^{2}}{2c^{2}}\) and \(K\approx\tfrac12 mv^{2}\); Newton is an approximation, not a mistake. Approaching light speed: \(\gamma\) diverges, energy and momentum grow without bound, but speed cannot reach \(c\), so anything with rest mass cannot catch light. Zero rest mass: \(E=\gamma mc^{2}\) becomes infinity times zero and cannot be used directly. The triangle \(E^{2}=(pc)^{2}+(mc^{2})^{2}\) instead smoothly yields \(E=pc\). This is why we repeatedly call the triangle fundamental: it survives every limit.
+
+Build intuition for velocity composition too. Low speeds nearly add: 100 plus 5 kilometers per hour has corrections only beyond a dozen decimal places. Near light speed the denominator consumes increments: \(0.5c\) plus \(0.5c\) is \(0.8c\), not \(c\); \(0.9c\) plus \(0.9c\) is about \(0.994c\), not \(1.8c\); \(c\) plus \(c\) remains \(c\). Nearer the limit, the same extra unit buys less. The next sketch displays the opening guess's mistake.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  % Ground
+  \draw[thick] (-0.5,0) -- (9.5,0);
+  \foreach \x in {0,0.5,...,9} \draw (\x,0) -- (\x-0.15,-0.2);
+  \node[below] at (8.8,-0.2) {Ground};
+  % Spacecraft
+  \draw[fill=gray!15] (1.5,0.6) -- (3.5,0.6) -- (3.9,1.0) -- (3.5,1.4) -- (1.5,1.4) -- cycle;
+  \node at (2.6,1.0) {Ship};
+  \draw[->,thick] (2.6,1.7) -- (5.2,1.7) node[midway,above] {Ground-relative: \(0.75c\)};
+  % Projectile
+  \draw[->,thick] (3.9,1.0) -- (6.3,1.0) node[midway,above] {Ship-relative: \(0.75c\)};
+  % Compare results
+  \draw[->,thick,dashed] (0.6,-1.0) -- (8.4,-1.0) node[midway,below] {Intuitive sum: \(1.5c\) (impossible)};
+  \draw[->,thick] (0.6,-1.9) -- (6.0,-1.9) node[midway,below] {Velocity composition: \(0.96c\)};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+An easily missed detail: these formulas describe free objects' energy and momentum. If a system ejects material while moving, like rocket exhaust, you cannot apply \(p=\gamma mv\) to the rocket alone because \(m\) changes. The correct method always includes rocket and expelled gas in one system and applies total conservation. Newtonian rockets worked this way too; relativity merely adds \(\gamma\) to every momentum entry.
+\end{mainline}
+
+\begin{mathbridge}
+\textbf{1. Why kinetic energy returns to \(\tfrac12 mv^{2}\).} For small \(x=v^{2}/c^{2}\), the binomial expansion gives
+\[
+(1-x)^{-1/2}\approx 1+\frac{x}{2}+\frac{3x^{2}}{8}+\cdots
+\]
+Substitute into \(K=(\gamma-1)mc^{2}\):
+\[
+K\approx \frac12 mv^{2}+\frac{3mv^{4}}{8c^{2}}+\cdots
+\]
+The first term is Newtonian kinetic energy, the second its relativistic correction. For a car at 120 kilometers per hour, correction divided by leading term is order \(10^{-24}\), explaining why car engineers never need this chapter.
+
+\textbf{2. Where velocity composition comes from.} Frame \(S'\) moves at \(v\) relative to \(S\) along \(x\); in \(S'\), an object moves at \(u'\). Chapter 39's Lorentz transformations give
+\[
+x=\gamma(v)\,(x'+vt'),\qquad t=\gamma(v)\left(t'+\frac{vx'}{c^{2}}\right)
+\]
+Differentiate and divide:
+\[
+u=\frac{dx}{dt}=\frac{dx'+v\,dt'}{dt'+v\,dx'/c^{2}}=\frac{u'+v}{1+u'v/c^{2}}
+\]
+The denominator's \(u'v/c^{2}\) is no invented patch. It comes from the Lorentz term mixing space into time: relative simultaneity has climbed into velocity composition.
+
+\textbf{3. Deriving the energy--momentum relation.} From \(p=\gamma mv\) and \(E=\gamma mc^{2}\), calculate \((pc)^{2}=\gamma^{2}m^{2}v^{2}c^{2}\), then
+\[
+E^{2}-(pc)^{2}=\gamma^{2}m^{2}c^{4}(1-v^{2}/c^{2})=m^{2}c^{4}
+\]
+The final step uses \(\gamma^{2}(1-v^{2}/c^{2})=1\). The speed-independent right side expresses observer-independent rest mass algebraically.
+\end{mathbridge}
+
+\begin{challenge}
+Write \((E/c,\,p_x,\,p_y,\,p_z)\) as a four-dimensional object, four-momentum. Lorentz transformations act like ordinary rotations on position vectors, except these are hyperbolic rotations in spacetime. Rotations preserve length; Lorentz transformations preserve the spacetime-like length \(E^{2}-(pc)^{2}=(mc^{2})^{2}\). All our formulas gain one geometric interpretation: changing frames rotates the four-momentum arrow in spacetime, and changing energy and momentum are its new projections.
+
+This viewpoint dramatically simplifies velocity composition. Define rapidity \(\varphi\) through \(v=c\tanh\varphi\); the awkward formula becomes \(\varphi_{\text{combined}}=\varphi_1+\varphi_2\). Rapidities simply add! Velocities fail to reach light speed because hyperbolic angles can add indefinitely while \(\tanh\) never exceeds 1. Light speed is not a wall but a hyperbolic asymptote.
+
+This chapter also bridges to quantum theory. The nonrelativistic Schrödinger equation is first order in time, second in space, treating them unequally and inherently unable to accommodate \(E^{2}=(pc)^{2}+(mc^{2})^{2}\). Quantizing this relation directly yields the Klein--Gordon equation, with unavoidable negative-energy solutions. Dirac tried taking a square root of the quadratic relation, producing an equation first order in both space and time. Negative-energy solutions remained but were reinterpreted as antiparticles, confirmed by the cosmic-ray positron's discovery in 1932. The quantum chapters beginning at 42 will eventually return to this triangle.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+Every formula must state when it works or fails; these are no exception.
+
+Conditions: special relativity's default stage is inertial frames in flat spacetime, an excellent approximation on Earth, in laboratories, and in accelerators. Near strong gravity, black holes and neutron-star surfaces, or even GPS precision at the billionth level, gravity's effects on time and length matter. Our formulas require Chapter 41's general-relativistic language. This chapter is not wrong but the larger theory's gravity-off limit, just as Newton is this chapter's low-speed limit.
+
+Misuse one: mass increases with speed. We retain invariant mass and a separate \(\gamma\). One further objection: if motion makes an object heavy enough to become a black hole, should it become one in its own stationary frame? Black-hole status cannot depend on your viewpoint.
+
+Misuse two: one gram equals 25 million kilowatt-hours, so a gram of sand powers a city. Arithmetic is correct: one gram times \(c^{2}\) gives about \(9\times10^{13}\) joules, or 25 million kilowatt-hours. Redemption is the problem. No known process converts ordinary matter gram for gram into usable energy. Fission redeems roughly a thousandth, fusion seven thousandths; only matter--antimatter annihilation remains, and making a gram of antimatter costs much more energy than it releases. \(E=mc^{2}\) is an exchange rate, not an ATM.
+
+Misuse three: mass--energy equivalence belongs only to nuclear physics. Burning a tonne of coal releases about \(3\times10^{10}\) joules, corresponding to about one three-hundred-millionth of a kilogram lost. The coal-to-ash mass difference is real but unweighable. Equivalence governs every energy form; chemical fractions are simply so small that noticing them took a century.
+
+A further counterexample upsets intuition: system mass is not the sum of its parts' masses. Each photon has zero rest mass, but two traveling in opposite directions have zero total momentum and total energy \(2E\). The triangle gives system rest mass \(2E/c^{2}\), not zero. Likewise, light inside a box makes it heavier. Mass belongs to the whole, not a sum of component masses. Particle collisions repeatedly confirm this: the fireball from two protons may have far more mass than their rest masses combined. Kinetic energy contributes to system worth.
+
+Finally distinguish three levels, a rule throughout this book. Experimental facts include invariant light speed, accelerator energy--speed data, radiation pressure, PET photon pairs at 510,000 electronvolts, and nuclear-station mass deficits. They are reproducible. Mathematical models include \(\gamma\), velocity composition, and the energy--momentum triangle, organizing facts into calculable rules that reduce to Newton at low speed. Physical interpretations, mass as locked energy or energy and momentum as projections of one four-dimensional arrow, help thought but read the model rather than supply new facts. Keep the levels separate and a useful map will not be mistaken for the territory.
+\end{mainline}
+
+\step{Explaining the Opening Phenomenon}
+
+\begin{mainline}
+Return to the two mysteries.
+
+First, the accelerator's unresponsive pedal. Every energy increment enters \(E=\gamma mc^{2}\): increasing from 450 billion to 6,500 billion electronvolts raises \(\gamma\) from about 480 to 7000, with momentum rising alongside it. But speed is \(v=c\sqrt{1-1/\gamma^{2}}\). Once \(\gamma\) reaches thousands, \(1/\gamma^{2}\) under the root is tiny. Doubling energy moves speed less than another meter per second toward light. The machine still pushes; speed itself loses purchasing power near the limit. Energy is hard currency, speed increasingly cosmetic. Your calculator's curve is everyday business in the collider control room.
+
+Next, the Sun. In 1938, Bethe and others assembled its reaction chain: four hydrogen nuclei collide through a sequence yielding one helium nucleus. The initial four hydrogen nuclei outweigh the helium nucleus and emitted small particles by about seven thousandths. That mass has not disappeared but becomes light and heat at \(E=mc^{2}\). Divide the Sun's \(3.8\times10^{26}\) joules per second by \(c^{2}\): about 4.2 million tonnes of mass become light each second. Enormous until compared with \(2\times10^{30}\) kilograms total: ten billion years at that rate consumes only a few parts in ten thousand. The nineteenth-century quarrel between physics and rocks ends. The Sun is neither coal furnace nor shrinking balloon, but a bank slowly drawing down mass deposits sufficient for ten billion years. After 4.6 billion years it remains in its prime.
+
+Settle the kitchen clay too. Initial kinetic energy \(K\) becomes heat. Before cooling, the combined lump exceeds the originals' summed rest energies by \(K\) and their summed masses by \(K/c^{2}\). Heat dispersing into air takes the extra mass with it; the clay regains its original weight while air and room inherit the energy. The total books balance exactly: mass and energy never vanished, merely changed accounting categories.
+
+The same rate operates in power plants; make one final estimate. A million-kilowatt coal plant burns about three million tonnes annually, roughly a ten-thousand-tonne train each day. A nuclear plant of equal power generates about \(3\times10^{16}\) joules annually. At thermal efficiency around one-third it needs about \(10^{17}\) joules of fission energy; divide by \(c^{2}\) and the mass truly burned is only about 1 kilogram annually. A train versus a handbag captures the engineering significance of \(c^{2}\). Actual nuclear fuel deliveries exceed 1 kilogram: replacement loads are tens of tonnes of uranium assemblies because fission redeems only about a thousandth of fuel mass, with the rest leaving as spent fuel. The mass deficit is real, concentrated in that kilogram; engineering difficulties are real too, hidden in those tens of tonnes.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[You Are a Walking Power Station]
+An extreme estimate: at 60 kilograms, your rest energy is \(60\times(3\times10^{8})^{2}\approx5\times10^{18}\) joules. Global power stations generate about \(10^{20}\) joules annually. Sitting quietly, you contain nearly three weeks of their full output. As stressed, this is no ATM: energy is locked in nuclear mass and none can be withdrawn without equal antimatter. Conversely, that firm lock lets your nuclei survive billions of years intact. Mass is not just a deposit but a safe.
+
+Try another extreme. In 1991, a detector encountered a cosmic-ray proton with about \(3\times10^{20}\) electronvolts, roughly 50 joules in everyday units: a bowling ball falling off a table, packed into one proton. Its \(\gamma\) was about \(3\times10^{11}\). Traveling from that proton's perspective contracts the Milky Way into a thin pancake. In some corners of the universe, relativity is no gentle correction but the only grammar.
+
+One quiet thought experiment remains. Compress an ideal large spring, storing 100 joules. Its mass increases by about \(10^{-15}\) kilograms. How might you weigh that? Dust settling or falling off outweighs it a millionfold on a balance; measuring gravity loses it in Earth's fluctuating noise. Almost forever unmeasurable does not mean nonexistent. Confidence in equivalence rests not on one balance but on everything it explains: solar lifetime, nuclear bills, accelerator behavior, and PET photon energies all balance at the same exchange rate without exception.
+\end{thought}
+
+\begin{mainline}
+A working medical technology combines both protagonists, mass--energy equivalence and photon momentum. In positron emission tomography, PET, doctors inject a radiolabeled drug whose nuclei emit positrons, electrons' equal-mass antimatter twins. A positron travels a short distance through tissue before meeting an ordinary electron. They annihilate, redeeming all rest mass at \(E=mc^{2}\) into two gamma photons. Each carries about 510,000 electronvolts, one electron's rest energy. They depart exactly back-to-back because initial total momentum is nearly zero, and conservation permits neither a larger share. Detectors on opposite sides record the pair simultaneously and draw a line; thousands of intersecting lines locate a tumor. Each PET scan involves immense numbers of mass-to-light events inside the patient, whose accounts doctors read. Why antimatter exists and equations predict it belongs beyond this bridge, where quantum theory must shake hands with relativity.
+\end{mainline}
+
+\begin{puzzles}
+\item A fuel-free sailboat. Japan's IKAROS spacecraft unfurls about two hundred square meters of film and sails between planets on sunlight. How do photons with zero rest mass push it? Would an absorbing black sail produce more or less thrust than reflective silver? (Hint: zero rest mass is not zero momentum. For photons, \(E=pc\) and \(p=E/c\). At Earth's orbit sunlight supplies roughly 1400 watts per square meter; full absorption gives about \(5\times10^{-6}\) newtons per square meter. Mirror reflection reverses photon momentum, doubling the spacecraft's gain. Tiny thrust, but continuous for 365 days a year, and free.)
+\item The relative-speed illusion. Two ships each travel at \(0.8c\) relative to Earth in opposite directions. What speed does A measure for B? Why not \(1.6c\)? Does this reveal a loophole in the light-speed limit? (Hint: composition gives \(u'=(0.8c+0.8c)/(1+0.64)\approx0.976c\). B's speed relative to A must be measured in A's frame, requiring the corresponding transformation. Direct addition mixes coordinates. Whatever the frame, measured relative speed stays below \(c\), preserving causality.)
+\item The unweighable electricity bill. A 100-watt bulb runs for a year. What mass corresponds to its radiated energy? Why can weighing batteries, coal, or a power bank before and after charging never reveal that energy has mass? (Hint: a year is about \(3.2\times10^{7}\) seconds, giving \(3.2\times10^{9}\) joules. Dividing by \(c^{2}\) yields about \(3.5\times10^{-8}\) kilograms, thousands of times lighter than a dust grain. Everyday energy-related mass changes vanish in balance noise, explaining two centuries of chemical mass-conservation illusion.)
+\item Back-to-back photons. A particle called the \(\pi^{0}\) meson decays at rest into exactly two photons. Why must they depart oppositely with exactly equal energies? If the \(\pi^{0}\) decays while moving rapidly, are they still symmetric? (Hint: initial zero momentum requires zero final momentum, so photon momenta are equal and opposite. Since \(E=pc\), equal momenta mean equal energies. A moving decay has nonzero total momentum, unequal photon energies, and an angle no longer 180 degrees, yet both energy and momentum balance. PET and particle detectors infer the parent from that account.)
+\end{puzzles}

@@ -1,0 +1,190 @@
+% Chapter 48: When Two Quantum Systems Meet (Complete Chapter)
+\chapter{When Two Quantum Systems Meet}
+
+Through Chapter~47, our quantum accounts described one system at a time: a photon, a spin, a qubit. Real quantum systems never live alone: they collide, exchange energy, encounter the same measuring instrument, then go their separate ways. What happens to the accounts after two systems meet and separate? The answer contains quantum mechanics' deepest and most abused concept: entanglement. It lets particles thousands of kilometers apart share a coordination no classical arrangement can counterfeit, while inspiring science fiction to announce faster-than-light communication. We will make both claims precise: calculate what genuinely exceeds classical limits, and identify the exact line where the communication claim goes wrong.
+
+\step{A Counterintuitive Opening}
+
+Begin with something you can do today. Since~2016, IBM has put real quantum computers online for anyone registering a free account to use remotely. The simplest introductory program takes two qubits, applies two standard operations, one creating a superposition and one making them interact, whose names can wait, then measures them separately. Repeat a thousand times. Copy the results into two columns, one thousand results for each qubit.
+
+Now do two things. Cover the second column and inspect the first: a supremely random sequence, approximately half~0 and half~1, with no pattern that even resourceful statisticians can find. Then uncover and align the columns. Surprisingly, they agree almost entry for entry: where the first has~0, the second almost always has~0; likewise for~1. Only a handful of the thousand pairs disagree, attributable to machine noise.
+
+Consider how strange this is. Each column alone is textbook-perfect noise; together they are textbook-perfect synchronization. Two perfectly unpredictable coins have produced identical results a thousand times running. How did they arrange it?
+
+It gets harder. Such pairs exist outside that computer: a laser illuminating a special BBO crystal produces photon pairs with the same individually random, jointly synchronized relationship. Physicists have separated them across laboratories, tens of kilometers of fiber, and satellite-to-ground links, with correlations intact. They can even decide how to measure only after the particles have flown apart, leaving no time to agree on a strategy.
+
+Bar two facile explanations at the door. Perhaps both machines were manufactured very precisely? Two household electronic devices, even from one production batch, do not have matching random outputs; identical coins do not match more than a few times in ten thousand tosses. Perhaps an undiscovered radio link connects them? Shielding detectors, moving them underground, or putting them on satellites leaves the correlations unchanged. Moreover, any proposed link must pass a mathematical checkpoint it cannot clear. By the end, you will know what this coordination is, why it exceeds ordinary correlation, and why it still cannot mail a faster-than-light letter.
+
+\step{Make a Guess First}
+
+Before continuing, record specific guesses:
+
+First, the mechanism. (a) Each qubit has a random generator, but both received the same program during preparation, like a factory sealing identically numbered lottery tickets in separate envelopes: correlation from birth certificates. (b) They began independently, but measuring one instantly signals the other: ``I was measured and got~0; choose~0 too.'' The signal might be extremely or infinitely fast. (c) They were never two separate things, but halves of one whole; asking each qubit's independent state is itself illegitimate.
+
+Second, an application. Give the particles to Alice and Bob a thousand kilometers apart. Alice sends Morse code by measuring or not: measure this hour for a dot, abstain for a dash. Bob watches his random-number column. Can he tell whether Alice measured?
+
+Third, the limit. Does every classical arrangement with answers written at birth face a theoretical ceiling quantum pairs can exceed? If so, by how much: one percent, ten percent, or without any upper bound?
+
+Keep these three answers between the pages. Return afterward and locate the exact step where intuition lost.
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[The Bell Game: Finding the Birth-Certificate Ceiling]
+\textbf{Materials}: a friend, two coins or random-number-generating phones, paper, pencils, and two corners of a room.
+
+\textbf{Rules}: each round, flip your own coin to determine your question: heads means question~1, tails question~2. Independently write an answer, 0~or~1. There is one scoring rule: if both receive question~2, you win by giving \textbf{different} answers; for the other three question combinations, with at least one question~1, you win by giving the \textbf{same} answer.
+
+\textbf{How to play}: before starting, agree on any strategy: always answer~0; answer~0 to question~1 and~1 to question~2; even roll dice to choose answers. But after each round's coin flips, do not look at or speak to each other. Play forty rounds and count wins.
+
+\textbf{Task}: beat~75\%, meaning win more than thirty of forty rounds.
+\end{experiment}
+
+You will fail, for a reason. The best strategy is always giving the same number: it wins three question combinations and loses only when both receive question~2, exactly~75\%. Other strategies fare no better: any prewritten answer table satisfies at most three combinations. Random dice merely select among tables; the ceiling remains~75\%. This is arithmetic, not skill.
+
+Formally this is the CHSH game, named from four physicists' initials. Its second half allows each player an entangled particle, measured along a prearranged direction chosen for the question. Quantum mechanics then predicts winning probability \(\cos^2(\pi/8)\approx85\%\). The particles likewise cannot communicate once play starts. A photon pair quietly exceeds the~75\% ceiling your living-room strategies cannot breach, as laboratories have repeatedly shown. This quantifies the opening mystery.
+
+Pause to appreciate the design. Whether prewritten answer tables exist sounds philosophical, but the game turns it into markable arithmetic: four question combinations are the examination, answer tables the contestants' cards, and~75\% the inescapable ceiling. Einstein's and Bohr's camps disputed definite premeasurement properties for thirty years without agreement. Bell found an experimentally decidable prediction hidden in that dispute. Once philosophy becomes numbers, it acquires a referee.
+
+One more observation: independently generate long random phone sequences and align them. About~50\% of bits agree, without correlation. Randomness is commonplace; individual randomness combined with perfect matching is the remarkable part.
+
+\step{The Old Model Runs into Trouble}
+
+Give guess~(a) its proper name: a local hidden-variable model, or birth-certificate theory. Einstein, Podolsky, and Rosen's~1935 EPR paper sharpened the argument. Quantum mechanics assigns no definite individual states to separated particles, yet results correlate perfectly. Surely each particle must carry a complete answer table from birth for every possible measurement direction, with the two tables coordinated initially. Quantum theory misses them because it is incomplete, like a book containing only its summary. The model has two inseparable parts: answers exist beforehand, and separated particles leave each other undisturbed, so Alice's measurement choice cannot affect Bob.
+
+Birth certificates explain perfect correlation: install matching programs. Their fatal weakness appears with multiple measurement choices. Every round requires a complete advance answer table, and your experiment showed that no table wins the Bell game more than~75\% of the time. In~1964 Bell turned that observation into a theorem: prewritten answers plus no mutual disturbance bound correlations across measurement settings. That is Bell's inequality. Quantum predictions for entangled states exceed the ceiling by about fifteen percentage points. This is arithmetic disagreement, not philosophical taste; both cannot be right.
+
+Guess~(b), an instantaneous measurement signal, remains. It has two fatal wounds. First, experiments separate detectors and measure within windows so short that a coordinating signal would need many times light speed. Correlations persist at exactly the quantum prediction, neither more nor less. Second, theory rigorously proves that whatever Alice does to her particle, the distribution of Bob's data alone remains unchanged: the no-signaling theorem. Even if nature internally compares notes superluminally, it guarantees that no usable message can result. This subtle ``even if, nevertheless'' distinction returns under the model's limits.
+
+Put numbers on far apart and very brief. In~2015 a Delft University of Technology team placed entangled electron spins in laboratories~1.3 kilometers apart. Light needs
+\[
+\frac{1.3\times10^{3}\ \text{m}}{3\times10^{8}\ \text{m/s}}\approx4.3\times10^{-6}\ \text{s},
+\]
+but the measurements finished in about one microsecond, precluding light-speed consultation. Their Bell parameter was about~2.42, above the classical ceiling~2; loss and noise explain falling below quantum theory's \(2\sqrt2\approx2.83\). American and Austrian photon experiments reached the same conclusion that year, closing the last technical loopholes. Distribution later reached thousands of kilometers: in~2017 China's Micius satellite sent entangled photons to ground stations about~1200 kilometers apart, still violating Bell's inequality. The~2022 physics Nobel went to Clauser, Aspect, and Zeilinger for this progression from thought experiments to loophole-free tests. Birth certificates were defeated by rangefinders and stopwatches, not votes.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,scale=1.0]
+  \node[draw,circle,fill=orange!40,minimum size=9mm] (S) at (0,0) {Source};
+  \node[draw,fill=blue!15,minimum width=24mm,minimum height=11mm,align=center] (A) at (-4.6,0) {Alice's lab\\ Adjustable axis};
+  \node[draw,fill=blue!15,minimum width=24mm,minimum height=11mm,align=center] (B) at (4.6,0) {Bob's lab\\ Adjustable axis};
+  \draw[->,thick] (S) -- (A) node[midway,above]{Photon 1};
+  \draw[->,thick] (S) -- (B) node[midway,above]{Photon 2};
+  \draw[<->,dashed] (-4.6,-1.3) -- (4.6,-1.3)
+    node[midway,below,align=center]{1.3 km: light takes 4.3 \(\mu\)s; measurement about 1 \(\mu\)s\\ No time to consult};
+\end{tikzpicture}
+\caption{Bell tests hinge on timing, not elaborate equipment: measurements finish before any light-speed coordination could occur. Correlations persist above the classical bound.}
+\end{figure}
+
+\step{Inventing New Concepts}
+
+The old account's fault is an unexamined assumption: a joint state is just a combined list of subsystem states. Quantum possibilities multiply, not add. One bit has~2 possibilities; two have \(2\times2=4\); ten have~1024. Independently choosing then counting combinations defines the tensor product, an imposing name for elementary multiplication. Chapter~46 writes states as superpositions of all possibilities, so two qubits need four account columns, 00, 01, 10, and~11, each with an amplitude.
+
+Now the key step. Most four-column accounts can factor into Alice's account times Bob's: Alice certainly~0, Bob half-and-half, each independently describable. These are separable states. Others cannot factor at all, notably
+\[
+|\Phi^{+}\rangle=\frac{1}{\sqrt2}\big(|00\rangle+|11\rangle\big).
+\]
+Read it aloud: both~0 and both~1 each get half; 01~and~10 are empty. The whole is completely specified, without uncertainty in its state. Yet asking Alice's qubit alone gives half~0, half~1, pure randomness. A wholly definite whole with wholly indefinite parts has no classical counterpart: knowing everything about a pair of gloves includes knowing each glove. This inseparable joint state is entangled.
+
+Tensor multiplication has another formidable consequence. Columns double per qubit: a thousand for ten, about \(10^{30}\) for a hundred, \(10^{90}\) for three hundred, beyond the observable universe's atom count. Even using every atom as paper cannot transcribe a moderately sized quantum system's complete account. This is not rhetoric but quantum computing's genuine starting point: nature handles this enormous book effortlessly, while classical computers cannot even record it. The challenges examine why extracting and spending that wealth is difficult.
+
+Pin down what entanglement is not: an invisible connecting string, ongoing communication, or accidentally matching results. Identical twins' similar examination scores reflect shared genes and desks, classical correlation with answers determined beforehand. Entangled particles have no individual predetermined answers; only the joint account exists. Like gloves in separate boxes, opening one tells you about the other. Unlike gloves whose colors were fixed when packed, their correlations exceed every possible advance-packing arrangement. Your Bell game has guarded that boundary.
+
+The first theorem-level consequence is no-cloning: an unknown quantum state cannot be copied perfectly. Document copiers read then write each bit. Reading a qubit instead measures only one chosen question and rewrites the state; you never obtain the complete original to duplicate. The mathematical bridge gives a three-line proof. For now, no-cloning is not an engineering limitation but a direct consequence of linear superposition, a law on the same footing as energy conservation.
+
+\step{The Model in One Sentence}
+
+\begin{oneline}
+After interaction, two quantum systems can share an entangled state writable only jointly, not as independent files: the whole is completely definite, each part entirely random, and later-aligned measurements correlate beyond any classical prewritten-answer arrangement, yet cannot send even one bit faster than light.
+\end{oneline}
+
+Think of two word-for-word corresponding telegrams separately encrypted with one-time pads: each alone is noise, together they reveal content. Not telepathy, which implies thoughts flowing between people; nothing flows here. Nor two balls on one spring: each ball has a definite position at all times, whereas entangled parts lack even definite individual states.
+
+\step{The Mathematical Translator}
+
+Two main-thread accounts suffice. First, one side: in \(|\Phi^{+}\rangle\), Alice's probability of~0 sums the \(|00\rangle\) and \(|01\rangle\) probabilities, \(\tfrac12+0=\tfrac12\); similarly for Bob. Each column is perfectly random, explaining the opening noise. Second, aligned entries: both~0 has probability \(\tfrac12\), both~1 also \(\tfrac12\), and cross-combinations zero, ensuring entrywise agreement. Check a limit: shrink the \(|11\rangle\) coefficient to~0 and both become certainly~0, eliminating randomness and entanglement together. A zero coefficient marks the separable/entangled boundary.
+
+Experiments often use spin entanglement. In Chapter~47's language, two spins form the singlet
+\[
+|\Psi^{-}\rangle=\frac{1}{\sqrt2}\big(|{\uparrow\downarrow}\rangle-|{\downarrow\uparrow}\rangle\big).
+\]
+Same-axis measurements give opposite results. For measurement axes separated by \(\theta\), repeated trials give correlation
+\[
+E(\theta)=-\cos\theta .
+\]
+Our four questions: each side gets \(+1\) or \(-1\), and \(E(\theta)\) averages their product over many repetitions. Why this form? \(\cos\theta\) is how the directions' geometry enters; the minus sign follows the singlet's zero-total construction. It assumes ideal preparation and measurement with negligible decoherence. Real losses and noise reduce measured magnitudes, accounting for Delft's~2.42 versus \(2\sqrt2\). Check angles: \(\theta=0^\circ\) gives \(E=-1\), perfect anticorrelation; \(\theta=90^\circ\) gives \(E=0\), independent perpendicular questions; \(\theta=180^\circ\) gives \(E=+1\), reversal yielding perfect correlation. These anchors fit intuition; intermediate angles defeat classical models.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,scale=0.9]
+  % 1 bit
+  \node at (0,3.2) {\shortstack{1 bit:\\2 columns}};
+  \draw[fill=blue!15] (-0.8,1.6) rectangle (0.8,2.2); \node at (0,1.9) {0};
+  \draw[fill=blue!15] (-0.8,0.8) rectangle (0.8,1.4); \node at (0,1.1) {1};
+  % 2 bits
+  \node at (3.4,3.2) {\shortstack{2 bits:\\4 columns}};
+  \foreach \y/\t in {1.6/00, 0.8/01, 0.0/10, -0.8/11}{
+    \draw[fill=blue!25] (2.6,\y) rectangle (4.2,\y+0.6); \node at (3.4,\y+0.3) {\t};
+  }
+  % 3 bits
+  \node at (6.8,3.2) {\shortstack{3 bits:\\8 columns}};
+  \foreach \y/\t in {2.0/000, 1.3/001, 0.6/010, -0.1/011, -0.8/100, -1.5/101, -2.2/110, -2.9/111}{
+    \draw[fill=blue!35] (6.0,\y) rectangle (7.6,\y+0.55); \node at (6.8,\y+0.27) {\footnotesize \t};
+  }
+  \node[below] at (3.4,-1.5) {\shortstack{Possibilities multiply:\\\(2\to4\to8\)}};
+  \node[below] at (6.8,-3.6) {A full account assigns each column an amplitude};
+\end{tikzpicture}
+\caption{Tensor products multiply subsystem column counts, not add them. An entangled account cannot split into two smaller independent books.}
+\end{figure}
+
+\begin{mathbridge}
+\textbf{The algebraic verdict on inseparability.} Try forcing \(|\Phi^{+}\rangle\) into separate accounts. General individual states \(a|0\rangle+b|1\rangle\) and \(c|0\rangle+d|1\rangle\) multiply to
+\[
+(ac)|00\rangle+(ad)|01\rangle+(bc)|10\rangle+(bd)|11\rangle .
+\]
+To equal \(\tfrac{1}{\sqrt2}(|00\rangle+|11\rangle)\), we need \(ac=bd=\tfrac{1}{\sqrt2}\), both nonzero, and \(ad=bc=0\). But \(ad=0\) requires \(a\) or \(d\) zero, making \(ac\) or \(bd\) zero: contradiction. The four equations have no solution. Separability versus entanglement is precisely whether four coefficients can factor into pairwise products.
+
+\textbf{No-cloning in three lines.} Suppose a universal copier turns any \(|\psi\rangle\) into \(|\psi\rangle|\psi\rangle\). For \(|0\rangle\) it outputs \(|00\rangle\); for \(|1\rangle\), \(|11\rangle\). Linear quantum evolution therefore sends superposition \(\tfrac{1}{\sqrt2}(|0\rangle+|1\rangle)\) to the output superposition \(\tfrac{1}{\sqrt2}(|00\rangle+|11\rangle)\), entangled, not the desired \(\tfrac12(|0\rangle+|1\rangle)(|0\rangle+|1\rangle)\). Correct copying of every state violates linearity; obeying linearity miscopies superpositions. No machine can clone a completely unknown state.
+
+\textbf{Where the Bell game's~85\% comes from.} A conventional CHSH quantity \(S\) encodes wins and losses across the four question combinations. Classical strategies satisfy \(S\leq2\), equivalent to~75\% wins. Suitable question-dependent quantum measurement angles give \(S=2\sqrt2\), equivalent to \(\cos^2(\pi/8)\approx85\%\). An often overlooked elegance: \(2\sqrt2\) also bounds quantum theory itself. Even nature cannot win~100\%. Correlation strength has a floor and a ceiling.
+\end{mathbridge}
+
+\begin{challenge}
+\textbf{The CHSH inequality in one line.} Let Alice's prewritten answers be \(a,a'\in\{+1,-1\}\), Bob's \(b,b'\). Consider
+\[
+S=ab+ab'+a'b-a'b'=a(b+b')+a'(b-b').
+\]
+Whatever \(b,b'\), one of \((b+b')\) and \((b-b')\) is \(\pm2\), the other~0. Every round therefore has \(S=\pm2\), and every prewritten-answer average obeys \(|S|\leq2\). Singlet measurements using two sets of directions separated by \(45^\circ\) yield \(|S|=2\sqrt2>2\). Measuring \(S>2\) condemns the joint assumptions of locality and prewritten answers. Emphasize joint: rescuing either separately has its own price, opening the door to interpretations.
+
+\textbf{Formalizing random parts.} Looking only at Alice's half uses the reduced density matrix. For \(|\Phi^{+}\rangle\), Alice's reduced state is \(\rho_A=\tfrac12\big(|0\rangle\langle0|+|1\rangle\langle1|\big)\), maximally mixed and fifty-fifty along every measurement axis. No-signaling becomes one matrix calculation: whether Bob measures, and along which axis, leaves \(\rho_A\) unchanged. Entanglement entropy quantifies entanglement using this reduced state: a purer whole and more mixed parts mean deeper entanglement. The singlet is maximally entangled for two qubits, each half expressing maximal ignorance.
+\end{challenge}
+
+\step{The Model's Limits}
+
+Separate three piles. Experimental facts: hundreds of Bell tests over decades show stable violations, with post-2015 versions free of technical loopholes; one-sided data remain random and no-signaling unbroken; entanglement can be prepared, distributed, and maintained across thousands of kilometers, but decays with environmental disturbance. Mathematical model: tensor products, entangled states, and Born's rule predict with high precision. Conditions: nonrelativistic situations, fixed particle number, adequate environmental isolation. Boundaries: decoherence leaks entanglement to the environment, making macroscopic observable consequences disappear almost immediately; particle creation and annihilation require quantum field theory in Chapter~49. Interpretation: all interpretations agree that local statistics remain unchanged when the distant measurement occurs. Whether the joint account's update is a real instantaneous event receives different Copenhagen, many-worlds, Bohmian, and QBist stories, equally compatible with present tests. Calling superluminal influence experimentally proved mistakes interpretation for fact.
+
+List familiar misuses. Quantum communication is not faster-than-light communication: key distribution and teleportation require ordinary classical channels. One entangled particle does not carry all information about its partner or permit remote retrieval: its local account is random. Entanglement does not connect consciousness; no such column exists. A quantum computer is not simply \(2^{300}\) parallel classical computers; the challenges explain the overstatement.
+
+Finally connect neighboring chapters. Replace Bob's clean system with the environment, air molecules, thermal radiation, billions of instrument degrees of freedom, and Chapter~45's decoherence becomes environmental entanglement: the jointly writable account spreads across irretrievably many columns. Entanglement has not vanished but dispersed where records cannot be aligned or checked. Hence its laboratory fragility: fighting noise means preventing unwanted sharing of the account. Conversely, all this continues Chapter~45's measurement problem. Measurement deliberately establishes readable entanglement between system and instrument.
+
+\step{Explaining the Opening Phenomenon}
+
+Return to the cloud columns. Preparing \(|\Phi^{+}\rangle\) fixes the joint account while leaving each local one random, explaining perfect individual noise. Aligning results gives half~00, half~11, no cross-terms, explaining agreement. Separate the apparatus and choose directions at the last moment: correlations persist above the~75\% game ceiling, defeating factory programs. Distant signaling supplies neither evidence nor usable messages. Our model is not two coins making an agreement, but one coin recorded at two addresses.
+
+Now dismantle the Morse scheme. Whether Alice measures or not, Bob's sequence is statistically identical noise: no-signaling blocks the route. Changing her axis changes only correlations visible after aligning both records, never Bob's column alone. Reading information requires Alice's records sent by telephone, fiber, or carrier pigeon, none faster than light. Entanglement is coordination verifiable afterward, not an instantly delivered telegram.
+
+There is an unexpected gift: certifiable random numbers. Most computer randomness is algorithmic pseudorandomness, in principle predictable to someone knowledgeable. Entangled randomness comes with Bell's endorsement: exceeding classical correlations proves outcomes are not generated by any prewritten program, certifying randomness through natural law. Device-independent random generators have progressed from papers to products, tangible compensation from Bell's philosophical lawsuit.
+
+What use is unspendable coordination? Two operational answers. First, quantum key distribution: share entangled pairs, randomly choose measurement directions, and publicly compare a small sample for Bell-type correlations. Any intervening eavesdropper's measurement breaks entanglement and drives correlations below threshold, statistically exposing the intrusion. China's Beijing--Shanghai backbone applies this principle across two thousand kilometers of fiber. Second, quantum teleportation: Alice and Bob share an entangled pair; Alice jointly measures her particle and an unknown state to transfer, then classically sends two result bits. Bob applies the corresponding operation. Measurement destroys Alice's original and reconstructs it at Bob, respecting no-cloning, while the classical channel enforces light speed. In~2017 Micius teleported states from Earth to a satellite over a thousand kilometers away. In both uses entanglement supplies nonclassical correlations, while information must still travel step by step.
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[An Account Across a Galaxy]
+Send entangled photons to stations one light-year apart and agree to measure at noon on the same day next year. Correlations remain exact. Did they remember each other during the flight? There are no separate memories, only one joint state at two addresses. If Alice's station commander changes measurement direction just before noon, can she leave Bob a message? No: Bob's local statistics are independent of whether or how Alice measures. Correlations appear only after light-speed radio brings the records together. More unsettling: if the joint account updates upon measurement across a light-year, when did that happen? Chapter~39 allows moving observers to disagree about measurement order. No-signaling ensures observable consequences do not depend on where we date that update. Quantum theory and relativity coexist by allowing nonlocal internal accounts but requiring local outward consequences. Chapter~49 reopens the account's nature when sewing quantum mechanics to relativity.
+\end{thought}
+
+\begin{puzzles}
+\item Prove the Bell game's~75\% ceiling. Write each person's answers to questions~1 and~2, four numbers total, and show at least one of four question combinations loses. \emph{Hint}: identical constant answers win three combinations but lose double-question~2. Winning that case requires different answers, with exactly one person switching by question. Check the two combinations where exactly one gets question~2: one necessarily fails. Randomly choosing tables cannot help.
+\item Someone says no-cloning merely reflects today's poor instruments; future quantum photocopiers will work. Refute this, then explain what such a copier would imply. \emph{Hint}: copying plus entanglement plus two measurement bases makes a superluminal telegraph. Bob clones Alice's particle ten thousand times, measures half along each axis, and identifies her chosen basis. No-cloning and no-signaling support each other; remove either brick and quantum causality collapses.
+\item Your cloud data contain~5\% mismatches. A friend says entanglement makes mistakes too. Distinguish noise-induced mismatches from Alice changing axes and thereby changing Bob's sequence. Why does the first occur daily while the second has never been seen? \emph{Hint}: mismatches appear only upon alignment. All statistics of Bob's column, its 0/1 proportions and internal patterns, are independent of Alice's actions. Environmental damage and information transfer require completely different control experiments.
+\item Three hundred qubits need \(2^{300}\approx10^{90}\) columns, beyond the observable universe's roughly \(10^{80}\) atoms. Does that equal \(10^{90}\) simultaneous computers? Identify what is right and wrong. \emph{Hint}: classical computers cannot store the account, a genuine attraction. But one measurement reveals only one column; the others' work cannot be read. Quantum algorithms arrange interference to enlarge correct-answer columns and cancel wrong ones before measurement. This enormous account is a musical score, not a labor force.
+\end{puzzles}

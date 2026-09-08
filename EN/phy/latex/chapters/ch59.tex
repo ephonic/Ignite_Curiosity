@@ -1,0 +1,226 @@
+% Chapter 59: Gauge Symmetry and Interactions (Challenge Chapter)
+\chapter[Gauge Symmetry and Interactions]{Gauge Symmetry and Interactions (Challenge Chapter)}
+
+Chapter~57 clarified symmetry: make a change and the laws remain unchanged. Chapter~58 revealed its remarkable output: every continuous symmetry corresponds to a conservation law. Now we tighten the question as far as it goes. What if the change changes nothing at all, merely replacing a description? Move altitude's zero from sea level to your floor, or rotate a wavefunction's overall phase: should physics care? Saying no sounds trivial. Yet twentieth-century physicists discovered that treating this triviality as a strict design requirement could demand the frameworks of electromagnetic, weak, and strong interactions. This clue, gauge symmetry, is one of modern particle physics' deepest engines and our mountain to climb. This is a challenge chapter with more mathematics, but intuition still precedes symbols at every step.
+
+\step{A Counterintuitive Opening}
+
+\begin{mainline}
+Begin with a scene visible from a window: birds sit contentedly side by side on high-voltage transmission wires. Their voltage is tens of thousands, sometimes five hundred thousand volts; domestic sockets carry only 220 volts, yet injure people every year. What actually electrocutes? High voltage alone cannot explain why five hundred thousand volts leave birds unharmed while 220 can kill. Perhaps asking for voltage at a point is itself the wrong question: something else matters.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Never approach or touch power lines, towers, outlets, or exposed wiring to imitate this example or test whether you are insulated. Electricity can arc without direct contact. Observe birds only from a safe ordinary location; see \href{https://www.osha.gov/etools/poultry-processing/plant-wide-hazards/electrical-hazards}{OSHA electrical-hazard guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+Now a repeatedly verified laboratory oddity. Send electrons individually toward a double slit and familiar quantum interference fringes gradually accumulate. Behind the slits, in the middle of the region the electrons must traverse, hide a very thin solenoid. Its convenient property is to lock its magnetic field completely inside when current flows, leaving zero field everywhere outside. Electrons fly past on either side, with no detectable magnetic field anywhere along their paths. Nothing should change. Yet the instant the experimenter closes the switch, the fringes shift; opening it shifts them back. The electrons never enter a magnetic field or experience any force. How do they know the solenoid is on?
+
+This is the Aharonov--Bohm effect, predicted theoretically in 1959 and repeatedly confirmed by successive generations of experiments. In 1986, Akira Tonomura's Japanese team performed an almost unassailable version. A toroidal magnet replaced the solenoid, confining its field to a closed ring without leakage; a superconducting shield outside excluded any possibility of electrons entering the field region. The fringes still shifted. On one side, five hundred thousand volts beneath birds' feet seemingly do not exist; on the other, a field absent from electrons' paths has an effect. Together they ask which physical quantities are real and which are descriptive bookkeeping conventions. This chapter supplies the full answer.
+\end{mainline}
+
+\step{Make a Guess First}
+
+\begin{mainline}
+Before the reveal, record your own judgments. Intuitively, are these four statements true or false?
+
+First, a voltmeter measures voltage at a point.
+
+Second, birds survive power lines because their claws' horny layer insulates so well that current cannot enter their bodies.
+
+Third, where magnetic field is zero, no object can sense a magnet: without force, there can be no influence.
+
+Fourth, if the world agreed to move altitude's zero from sea level to Everest Base Camp, every mountain's height would change, forcing flood warnings, aircraft altimeters, and dam designs to be recalculated from scratch.
+
+Write your answers and compare them afterward. The first statement hides a deep wording flaw; the second is partly on track, but insulation has little to do with the real reason; the third is directly overturned by our central experiment. Which fourth-statement calculations need no revision, and which concepts do not depend on a zero at all, are precisely the first half's subject.
+\end{mainline}
+
+\step{Hands-on Experiment}
+
+\begin{experiment}[Does a Water Jet Notice a New Zero?]
+Take a large drinks bottle and make two similar-sized holes at different heights in its side. Tape a zero mark at the bottom, measure upward, and call the hole heights \(h_1\) and \(h_2\). Put the bottle on the floor, fill it with water, leave the top open, and observe the jets' ranges: the lower hole sprays farther, the upper one nearer. This seems natural: greater depth means greater pressure.
+
+Now the key operation: carry the whole bottle onto a one-meter-high chair, remove the zero tape, and stick it to the tabletop before measuring again. Both holes' altitudes have changed: some readers obtain increases of tens of centimeters, while others measuring from the tabletop get negative values. But watch the jets: their ranges have not changed in the slightest.
+
+Chapter~12 explained why. At depth \(d\), pressure exceeds surface pressure by \(\rho g d\). The pressure difference determining jet speed cares only about vertical distance below the water surface, not any taped zero. Move zero anywhere and every height reading gains or loses the same number, leaving differences unchanged. Physics cares about differences, never heights themselves. What you just tested has a formal name: gauge freedom in the zero of potential energy.
+\end{experiment}
+
+\begin{mainline}
+There is a zero-cost version. Open a phone barometer or altitude app, record a reading downstairs, climb to the roof, and record another. You will find two things. Different phone brands and apps can disagree on absolute altitude by more than ten meters because their zero conversions have different sources. Yet the height differences measured by two phones nearly coincide and match the building's actual height. Absolute readings are convention; differences are physics. Remember that sentence: we will apply it to quantum phase. Absolute phase is convention; phase differences are physics.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Do not access a roof, climb outside, or approach an unprotected edge for this activity. Compare readings on normally accessible indoor floors using stairs safely, or use supplied data. Roof edges and openings pose serious fall hazards; see \href{https://www.osha.gov/green-jobs/solar/falls}{OSHA roof-fall guidance}.
+% END TRANSLATOR SAFETY NOTE
+\end{mainline}
+
+\step{The Old Model Runs into Trouble}
+
+\begin{mainline}
+Lay out the old view and find where it leaks. There are three problems.
+
+First, the opening electron experiment challenges calling potential merely a bookkeeping tool. Chapter~20 frankly introduced the electric field as real because it pushes charges, and potential as a convenient terrain map, a ledger obtained by integrating the field. On that view, zero electric and magnetic fields along an electron's path should mean no effect. Yet the fringes move. The ledger gets up and influences reality; tool is no longer an adequate description.
+
+Second, the opposite claim, that potential is a real physical quantity, also fails. Design any experiment measuring absolute potential at one point, not a potential difference. You cannot. A voltmeter has two probes and always reads their difference. A bird survives by contacting one potential throughout its body; the bottle likewise responds only to height differences. No instrument or experiment can give absolute meaning to a point's voltage above infinity unless the measurement first adopts the convention that infinity is zero. Can something unmeasurable even in principle qualify as real?
+
+Third, the deepest problem lies between the first two. Chapters~43 and~44 described quantum states with phase-bearing wavefunctions, phase pictured as a clock hand. Two clues were planted. Rotate every wavefunction's phase hand throughout the universe by the same angle and no measurement changes: interference cares about relative, not absolute phase. This is structurally identical to shifting altitude zero. Yet relative phase between different paths is crucial, determining every bright and dark interference fringe. Now collide these ideas. If absolute phase is irrelevant, may each location choose its own zero---Beijing its own clock face, Shanghai another? If yes, a free particle's phase change traveling between them becomes undefined and the Schr\"odinger equation falls apart. If no, why should physics require a shared worldwide phase zero? The old model has no answer. Here the new concept enters.
+\end{mainline}
+
+\step{Inventing New Concepts}
+
+\begin{mainline}
+First distinguish two kinds of arbitrary change. This is the chapter's first watershed.
+
+Global gauge freedom means everyone changes together: subtract ten meters from all altitudes or rotate all phase hands thirty degrees. Even the description's texture is untouched; only labels shift together, so physics naturally stays unchanged. Chapter~58's Noether theorem waits to collect its fee: wavefunction invariance under overall phase rotation corresponds precisely to conserved electric charge. Charge conservation is no mysterious prohibition but absolute phase's unobservability in another form.
+
+Local gauge freedom lets each location change independently: Beijing rotates thirty degrees, Shanghai minus fifteen, Hangzhou not at all. This changes relations between neighboring places, not just labels, and relative phase is real interference physics. Demanding unchanged laws under arbitrary point-by-point zero choices seems almost unreasonable. Yet Weyl in 1929, following a different 1918 attempt, and Yang and Mills in 1954 pursued it and made a startling discovery. Insist on this demand and free-particle quantum theory fails: a new field must enter the equations, its value at each point providing the conversion rule between neighboring phase zeros. The requirement almost uniquely fixes its coupling to charged particles: it is the electromagnetic field. Electromagnetic interaction can be inferred from freely chosen phase zeros as a design principle, not merely explained after discovery. This is the gauge principle.
+
+What resembles it? Time zones. Each city chooses local time by its Sun, selecting its own zero, while airline timetables supply conversion rules: subtract departure time and time difference from arrival time to get the real Shanghai--Frankfurt flight duration. The electromagnetic vector potential \(\mathbf A\) is a cosmic time-zone conversion table. What does not resemble it? A standard clock in the sky forcing every city to synchronize. On the contrary, it accepts local freedom of zero and takes responsibility for comparisons between places.
+
+A warning must immediately supply a guardrail: gauge symmetry differs from Chapter~57's rotations and translations. Rotating an object produces another physical state, actually pointing elsewhere. A gauge transformation produces no new state, merely another description of the same one. Descriptive redundancy is therefore a more honest name. Yet Aharonov--Bohm warns against the opposite extreme, calling \(\mathbf A\) wholly fictional. The pointwise values of \(\mathbf A\) are redundant and changeable by gauge transformations, but its closed-loop integral---the enclosed magnetic flux---is real, measurable, and unalterable. Redundancy and reality coexist in one object: gauge theory's subtle strength.
+
+Following this clue yields modern physics' conceptual map. Electromagnetism has a single hand rotating on a dial, the mathematical \(U(1)\) group, mediated by massless photons over infinite range. Weak interactions use internal phase freedom of a two-component system, weak isospin, called \(SU(2)\), with three mediators: \(W^{+}\), \(W^{-}\), and \(Z\). Strong interactions rearrange quarks' three colors, forming \(SU(3)\), with eight gluons. Three forces, three local convention freedoms, three mediator families share one structural mold. This is no fantasy. \(W\) and \(Z\) were directly discovered at CERN's collider in 1983, with masses matching electroweak predictions. Confined gluons cannot appear alone, but their three-jet collision signature was confirmed in 1979. The map's biggest gap---why \(W\) and \(Z\) have mass and the weak force is short-ranged---is what Chapter~60's symmetry breaking fills.
+
+An attentive reader asks about gravity: why only three of the four interactions? Honestly, gravity has a different story. Chapter~41 will explain its deepest description as spacetime curvature rather than a force; its symmetry concerns spacetime coordinates, not internal phase. Efforts to include gravity in a gauge framework continue with partial success, but a complete quantum theory of gravity remains physics' largest unfinished construction site. This empty chair reappears on Chapter~61's whole-book map.
+\end{mainline}
+
+\step{A One-Sentence Model}
+
+\begin{oneline}
+Physical predictions must not depend on arbitrary descriptive choices: potential and wavefunction phase zeros can shift freely. Requiring laws to survive independent shifts at every point demands a field to convert between neighboring conventions. This demand produces electromagnetism and its weak and strong cousins. Pointwise field values are convention; loop fluxes and field strengths are inescapable physics.
+\end{oneline}
+
+\step{The Mathematical Translator}
+
+\begin{mainline}
+Picture phase first as a clock hand at each location. Its absolute reading is irrelevant; the angle between hands matters. At a double-slit screen point, brightness depends on the angle between hands arriving by paths one and two. Zero angle, with aligned hands, gives a bright fringe; half a turn, with opposite hands, gives a dark fringe.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  % First clock face
+  \draw[thick] (0,0) circle (0.9);
+  \draw[thick,->] (0,0) -- (35:0.85);
+  \node at (0,-1.3) {Phase hand at A};
+  % Second clock face
+  \draw[thick] (4.5,0) circle (0.9);
+  \draw[thick,->] (4.5,0) -- (110:0.85);
+  \node at (4.5,-1.3) {Phase hand at B};
+  % Conversion table
+  \draw[decorate,decoration={snake,amplitude=0.4mm}] (0.95,0.3) .. controls (2.2,1.4) .. (3.55,0.3);
+  \node[above] at (2.25,1.15) {Vector potential \(\mathbf A\): conversion between neighboring zeros};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+Now the central formula. A particle of charge \(q\) traveling from A to B gains an extra phase-hand rotation from vector potential \(\mathbf A\):
+\[
+\Delta\varphi=\frac{q}{\hbar}\int_{\text{path}}\mathbf A\cdot d\mathbf l
+\]
+Here \(\hbar\) is reduced Planck's constant; the integral accumulates the along-path component of \(\mathbf A\) piece by piece. What does this describe? How electromagnetism turns quantum phase. Why this form? It uniquely meets three demands: zero extra phase in the ordinary case of zero magnetic and electric fields along the path; unchanged conclusions for every closed comparison after a gauge change of zeros; and seamless connection to Chapter~20's potential differences. When valid? For charged particles moving where magnetic field is pointwise definable. When does it fail? As we will immediately see, paths forming a loop can give a nonzero answer even with zero field everywhere along them.
+
+Join two source-to-screen paths into a loop: relative phase is its loop integral. Stokes' theorem equates the vector potential's loop integral with magnetic flux \(\Phi\) through the enclosed surface. Thus
+\[
+\Delta\varphi_{\text{relative}}=\frac{q\Phi}{\hbar}
+\]
+The whole fringe pattern shifts by a fraction \(\Delta\varphi/2\pi=\Phi/\Phi_0\) of one spacing, where
+\[
+\Phi_0=\frac{h}{e}\approx4.14\times10^{-15}\ \text{webers}
+\]
+is the flux quantum: electron charge makes the flux for one full phase turn a natural unit.
+
+Immediately give the formula its customary checkup. Zero flux means zero relative phase and no shift, as with no solenoid. Very large flux gives large phase, but full turns return the hand to its original position, making fringe motion periodic: each additional flux quantum shifts the pattern by exactly one spacing. Reverse the current and flux, phase, and shift reverse. A small half-quantum flux gives a half-turn phase difference, exactly exchanging bright and dark fringes. Every prediction is directly checkable in a laboratory, the formula's awe-inspiring feature.
+\end{mainline}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  % Electron source
+  \fill (0,1) circle (0.08);
+  \node[left] at (-0.1,1) {Electron source};
+  % Double-slit barrier
+  \draw[thick] (1.5,0) -- (1.5,0.7);
+  \draw[thick] (1.5,0.85) -- (1.5,1.15);
+  \draw[thick] (1.5,1.3) -- (1.5,2);
+  % Solenoid
+  \draw[thick,fill=gray!20] (2.6,1) circle (0.22);
+  \node[below] at (2.6,-0.45) {\shortstack{Solenoid\\(field confined inside)}};
+  % Paths
+  \draw[thick] (0,1) -- (1.5,0.95) -- (4.5,0.55);
+  \draw[thick] (0,1) -- (1.5,1.05) -- (4.5,1.45);
+  \node[above] at (1.1,1.55) {Path two};
+  \node[below] at (1.1,0.42) {Path one};
+  % Screen
+  \draw[thick] (4.5,0.2) -- (4.5,1.8);
+  \node[below] at (4.5,0.2) {Detection screen};
+  % Fringes
+  \foreach \y in {0.45,0.7,0.95,1.2,1.45} \draw (4.62,\y) -- (5.1,\y);
+  \node[right] at (5.15,1.0) {Fringes};
+\end{tikzpicture}
+\end{center}
+
+\begin{mainline}
+Estimate with real numbers. A miniature solenoid of one-micrometer radius, one-seventieth a hair's diameter, contains only \(0.01\) tesla, about a tenth of an ordinary small magnet's surface field and easily attainable. Its confined flux is \(\Phi=B\pi r^{2}\approx0.01\times3.14\times10^{-12}\approx3\times10^{-14}\) webers. Dividing gives \(\Phi/\Phi_0\approx3\times10^{-14}/4.14\times10^{-15}\approx7.5\). Closing the switch shifts the pattern about seven and a half spacings, an enormous, unmistakable electron-microscope change. Meanwhile, measured magnetic field along the paths remains zero at every point. Zero force but nonzero effect precisely means sensing a magnet where field is zero: what is sensed is not field but flux the paths cannot enclose.
+\end{mainline}
+
+\begin{mathbridge}
+\textbf{1. Why phase is multiplication by a hand.} A phase factor is \(e^{i\theta}\); an overall turn multiplies the wavefunction by \(e^{i\theta_0}\). Interference comes from the squared modulus of \(\psi_1+\psi_2\). The overall factor disappears because \(|e^{i\theta_0}|=1\), making absolute phase unmeasurable, while \(e^{i(\theta_1-\theta_2)}\) survives in cross terms and determines brightness. This is the same algebra as altitude differences ignoring zero: differences are always observable.
+
+\textbf{2. Gauge transformations change two partners together.} Pointwise phase-zero changes mean \(\psi\to e^{iq\chi(\mathbf x)/\hbar}\psi\), for arbitrary \(\chi(\mathbf x)\). To preserve physics, vector potential simultaneously changes by \(\mathbf A\to\mathbf A+\nabla\chi\). Change either alone and equations change; change both and every observable stays untouched. Pointwise, \(\mathbf A\) changes, but in \(\oint\mathbf A\cdot d\mathbf l=\Phi\), integrating \(\nabla\chi\) around a loop returns to the start with zero contribution. Flux is hard currency immune to gauge changes. Potential \(V\) has a corresponding partner transformation; electromagnetism's arbitrary zero is its special case.
+
+\textbf{3. Minimal coupling: equations request their own revision.} The free Schr\"odinger equation expresses momentum as a derivative. Pointwise phase changes make ordinary derivatives leak the gradient of arbitrary \(\chi\), invalidating the equation. The remedy is almost forced: replace momentum by \(\mathbf p-q\mathbf A\), so the transformation of \(\mathbf A\) cancels the extra term. Minimal coupling automatically supplies every charged-particle electromagnetic interaction: Lorentz force, AB phase, and atomic emission selection rules all flow from one small replacement. Gauge principle's power in a sentence: forbid dependence on convention and the equations must grow an entire electromagnetism.
+\end{mathbridge}
+
+\begin{challenge}
+Imagine local phase zero as a dial hand: arbitrary pointwise choices rotate a dial at each point. These rotations form \(U(1)\), making electromagnetism a \(U(1)\) gauge theory. The real leap came in 1954: Yang and Mills replaced a single hand with internal rotations of a two-component quantum system, such as proton--neutron twins. These form \(SU(2)\). Dial rotations commute, but \(SU(2)\) rotations do not: first rotating about \(x\), then \(y\), differs from the reverse. Noncommutativity forces something absent in electromagnetism: mediating gauge particles themselves carry charge and interact directly. Strong interaction's \(SU(3)\) takes this to the extreme. Colored gluons entangle with one another, confining quarks forever inside protons while interactions weaken at shorter distances: asymptotic freedom, recognized by the 2004 Nobel Prize in Physics. The quiet photon is merely this family's least clingy member.
+
+Gauge structure and topology also predict together. In 1931, Dirac showed that even one magnetic monopole in the universe would require self-consistent wavefunction phase around it, quantizing the product of electric and magnetic charges. This would explain why every electric charge is an integer multiple of electron charge. Monopoles remain undiscovered, but the argument remains a beautiful theoretical model: without new experimental data, phase consistency alone pries open the deep puzzle of charge quantization.
+\end{challenge}
+
+\step{The Model's Limits}
+
+\begin{mainline}
+The gauge principle is powerful, but its boundaries must be clear lest it become a hat claimed to fit everything.
+
+First, it is a design principle, not a proof. It specifies interaction form---gauge fields and minimal coupling---but not strength: why this electromagnetic coupling constant, why \(U(1)\), \(SU(2)\), and \(SU(3)\) rather than other groups, or why three quark and lepton generations? These remain inputs, not outputs. Chapter~61 returns to the unknowns list.
+
+Second, classical physics has no indispensable need for this principle. Newtonian mechanics plus Lorentz force worked consistently for two hundred years without path integrals or phase. AB is purely quantum because phase enters only quantum theory. Presenting gauge theory as a patch classical physics already needed is dishonest; it is an heirloom discovered in the dowry of quantum theory's marriage to relativity.
+
+Third, typical misuses: ``Potentials are fictional mathematical tools.'' AB rejects this: fictional tools cannot move real fringes, and loop flux is hard currency. ``Gauge and rotational symmetry are both symmetries of the world.'' No: rotation can produce a distinguishable state, while gauge only changes description. Asking what the world becomes after a gauge transformation is meaningless because nothing changes. Confusing it with ordinary geometry wrongly suggests it directly yields conserved quantities like Noether's theorem. ``Gauge theory proves forces must exist.'' It does not. It says that after accepting quantum theory and local convention freedom, interactions, if present, must take gauge-field form. This is conditional, not an existence proof.
+
+Finally distinguish the book's three layers. Experimental facts: switching the solenoid shifts fringes; birds survive wires; reactions conserve charge; \(W\) mass is about eighty gigaelectronvolts. Anyone measuring finds the same. Mathematical models: potentials, gauge transformations, \(U(1)\), \(SU(2)\), \(SU(3)\), and minimal coupling organize facts into calculable rules. Interpretations: interaction as the price of descriptive freedom, or force as convention's bodyguard, help thought but are readings of models, not new facts. This distinction will rescue us again in symmetry breaking.
+\end{mainline}
+
+\step{Explaining the Opening Phenomena}
+
+\begin{mainline}
+Return to the bird. Current is driven by potential difference, not high voltage: Chapter~21's Ohm law has a voltage difference on the right. Both claws grip one wire, putting the body at one potential with almost zero claw-to-claw difference and body current, regardless of whether the wire is five hundred thousand or five million volts above ground. That five hundred thousand is a conventional difference relative to distant Earth, which is outside the bird's circuit. Danger arrives when a wing touches a pole, tower, or second wire of different phase, bridging two potentials with the body. A voltmeter likewise reads a difference between probes: measuring a point's voltage always assumes another reference zero. Arbitrary zero and real difference resolve the first mystery. This answers the second guess: insulation matters little; completing a circuit matters everything.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} This idealized bird explanation is not a safe method for touching energized equipment. Do not test it, rely on footwear, or bring objects near a line; hazardous currents and arcing can occur without the contact arrangement described here. See \href{https://www.osha.gov/etools/construction/electrical-incidents/}{OSHA electrical-incident prevention guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+Now electron and solenoid. Two paths meet at the screen and enclose a loop around the solenoid. With the switch open, enclosed flux is zero, leaving the original geometric relative phase and stationary fringes. Close it and flux becomes \(\Phi\), twisting phase by \(e\Phi/\hbar\) and shifting fringes by \(\Phi/\Phi_0\) spacings. Electrons remain in zero magnetic field with pointwise zero force; the old model was right there. But quantum stage directions are phase, not force, and phase follows enclosed flux, which does not disappear just because paths are field-free. Tonomura's 1986 shielding experiment still showed the predicted shift, replacing only-fields-are-real with field-strengths-plus-loop-fluxes as the complete picture. This also upgrades the opening's simpler language: absolute phase is unmeasurable, like the five hundred thousand volts under the bird; relative phase is measurable, like zero claw difference or fatal wing difference. Vector potential keeps the relative-phase account.
+
+This picture has become everyday hospital technology. A superconducting quantum interference device, SQUID, turns AB phase into an instrument. A superconducting loop's phase senses enclosed flux with flux-quantum graduations and resolution around one millionth of a quantum. Brain neurons generate fields of only about \(10^{-13}\) tesla, a billionth of Earth's field, yet SQUID arrays detect them through the skull, producing magnetoencephalograms to localize epileptic foci and study responses to sound and images. Yesterday's philosophical puzzle about electrons knowing a solenoid is on is today's doctor's routine examination order.
+\end{mainline}
+
+\step{Thought Experiments and Challenges}
+
+\begin{thought}[Charging Earth to a Billion Volts]
+Imagine a device raising the electrostatic potential of all Earth, including atmosphere, oceans, and you, by a billion volts relative to distant space. What happens? Nothing. Phones work, birds perch, and electrocardiograms beat normally because every circuit and cell senses only its internal differences, untouched by a common increase. This is global gauge freedom at planetary scale. Ask deeper: why is absolute potential undefinable? Assigning it requires carrying charge to infinity for comparison, and the universe offers no such infinity. Deeper still, Chapter~58 linked overall phase symmetry to charge conservation: charge cannot be created or destroyed, so even the raw material to raise the whole universe's zero cannot be assembled. Descriptive freedom and conservation's hard constraint are two sides of one coin.
+
+Try another extreme scale. Cosmologists hypothesize cosmic strings, threadlike scars left as the Big Bang cooled, thinner than a nucleus yet extending across galaxies. If they exist, a charged particle circling one could acquire a fixed phase shift even with no ordinary exterior field: a galaxy-scale Aharonov--Bohm effect. Astronomers have genuinely analyzed possible observational traces. Gauge thought begins with a water bottle and transmission wire, then asks its way to the universe's oldest scars.
+\end{thought}
+
+\begin{mainline}
+Finally let one phase hand point ahead. Gauge principle requires interaction mediators to be massless like photons, since mass terms break local zero freedom. Massless photons and infinite electromagnetic range fit. Yet weak \(W\) particles weigh about eighty gigaelectronvolts, corresponding to range only \(2\times10^{-18}\) meters, a thousandth of a proton's size. Hence the weak force hides in everyday life, appearing only in nuclear decay. How can a massless theory accommodate massive reality? Insert a direct \(W\) mass and high-energy predictions diverge; omit it and contradict experiment. This crack forced one of twentieth-century physics' most beautiful 1960s ideas: equations need not break their rules; symmetric equations can describe a world in an asymmetric state. Chapter~60 introduces spontaneous symmetry breaking and the mass-distributing Higgs field. Starting from descriptions independent of convention, we will see a world that preserves symmetric equations by settling into an asymmetric pose.
+\end{mainline}
+
+\begin{puzzles}
+\item Check the time-zone analogy. Where does vector potential as a conversion table, and local phase freedom as cities choosing local times, work or fail? Hint: local zeros can be independent, comparisons require conversion, and conclusions ignore zeros. At least two failures remain: time zones are discrete globally coordinated conventions, whereas gauge zeros are continuously arbitrary at every point; more importantly, a timetable is a paper rule, while a vector potential's loop integral is measurable physics. No airline timetable changes your watch's actual rate. A good analogy must be left behind halfway.
+\item Why \(h/2e\)? A superconducting ring admits flux only in integer multiples of \(h/2e\), not this chapter's \(h/e\). Where does the two come from, and what secret does it reveal? Hint: phase must be self-consistent around the ring, turning an integer number of full circles so the wavefunction has one value at each point. In the phase formula, superconducting \(q\) is not electron charge \(e\): carriers are electron Cooper pairs with \(q=2e\), giving \(h/2e\). This unobtrusive two is macroscopic proof of paired electrons.
+\item Design an absolute-potential experiment. Can a one-probe instrument truly measure potential at one point without secretly introducing a second reference? Hint: inspect each scheme---electrometer casing, voltmeter common terminal, oscilloscope ground, even Earth beneath the operator. Each serves as a second point. Every scheme secretly supplies a reference or reads a difference from the instrument. This is not inadequate precision: absolute potential is a descriptive convention, not a measurable object.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Keep this instrument-design puzzle on paper or in simulation. Do not probe outlets, mains wiring, power lines, or unfamiliar energized equipment, and never disconnect protective grounds. See \href{https://www.osha.gov/etools/construction/electrical-incidents/}{OSHA electrical-incident prevention guidance}.
+% END TRANSLATOR SAFETY NOTE
+
+\item The mass problem. Gauge principle requires massless mediators, but the observed massive \(W\) prompts Chapter~60. Roughly why does mediator mass shorten range? Hint: transmitting an interaction borrows a mediator between points. Borrowing mass \(M\) requires temporarily finding energy \(Mc^{2}\); quantum theory allows this account briefly, but longer borrowing costs more, limiting exchange to time about \(\hbar/(Mc)\). Multiply by light speed for range. Insert \(M\) about eighty gigaelectronvolts to get \(2\times10^{-18}\) meters. A massless photon can keep the account open indefinitely, giving infinite range.
+\end{puzzles}

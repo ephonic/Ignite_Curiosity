@@ -32,7 +32,15 @@ Materials: thick black card or aluminum foil, a sewing needle, a toothpick, tape
 
 Step one: make a three-hole pinhole camera. Pierce three holes side by side: a coarse toothpick hole about \(2\) millimeters wide; a normal needle hole about \(0.5\) millimeters; and a barely light-transmitting pinhole, about \(0.1\) to \(0.2\) millimeters, made by gently rotating the needle tip against the surface. Cover one tube end with the card and the other with tracing paper.
 
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Exclude the Sun from this observation; never look at it through the aperture or optical equipment. See \href{https://science.nasa.gov/eclipses/safety/}{NASA solar-viewing safety}.
+% END TRANSLATOR SAFETY NOTE
+
 Step two: point the tube toward bright outdoor scenery in daylight, or a desk lamp, admitting light through only one hole at a time. Compare images: the large hole is bright but blurred, the middle sharpest, and the tiny one dim and soft with fuzzy edges. Score brightness and sharpness separately. ``The middle hole gives the clearest image'' is the fact missed by the smaller-is-sharper prediction.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} Laser pointers are not toys. Use only a supervised demonstration with a properly labeled device; keep beams away from eyes, people, and reflective surfaces. Observe a diffuse screen, never the beam or aperture. See \href{https://www.fda.gov/radiation-emitting-products/alerts-and-notices/illuminating-facts-about-laser-pointers}{FDA laser-pointer guidance}.
+% END TRANSLATOR SAFETY NOTE
 
 Step three: in a dark room, aim the laser through the smallest hole onto a white wall two or three meters away. Instead of a red dot, a bright spot surrounded by concentric rings appears. Smaller holes give larger patterns; repeat with the coarse hole and the rings shrink almost to a point. Watch the rings for a full minute: how can straight-flying things draw circles outside the aperture?
 \end{experiment}
@@ -41,7 +49,7 @@ Take away three observations: an optimum exists; a tiny hole produces a pattern 
 
 \step{The Old Model Runs into Trouble}
 
-Let Chapter 33's rays defend themselves first. Their prediction is monotonic: decreasing diameter \(d\) proportionally decreases each point's geometrical blur, so sharpness only improves. There is no entry for optimal aperture, let alone rings. Why would straight-flying things turn outward around the hole? Rays explain coarse-hole blur but cannot explain tiny-hole blur. They are not wholly wrong, but we have reached a boundary of their jurisdiction.
+Let Chapter 33's rays defend themselves first. Their prediction is monotonic: decreasing diameter \(d\) decreases each point's geometrical blur in proportion to \(d\), so sharpness only improves. There is no entry for optimal aperture, let alone rings. Why would straight-flying things turn outward around the hole? Rays explain coarse-hole blur but cannot explain tiny-hole blur. They are not wholly wrong, but we have reached a boundary of their jurisdiction.
 
 Now let Chapter 35's waves respond. They know diffraction: waves spread after holes and rings are the resulting interference. But three embarrassments remain. First, what theorem produces their old friend, straight propagation? Why does sound bend around pillars while light insists on straightness? Second, where does Chapter 34's imaging fit in wave language? Why can glass gather spreading waves into a point? Third, why do two flashlights never produce stripes? Why do some waves qualify for interference and others not? Waves have a pocketful of phenomena but lack an overall map.
 
@@ -72,6 +80,10 @@ Now the central definition: \textbf{a ray is a normal to a wavefront}. Rays are 
 Chapter 35's Huygens construction now becomes a formal tool. Every front point emits hemispherical wavelets whose shared outer envelope gives the next front. Straight propagation, reflection, refraction, and aperture spreading can all be drawn with this compass and ruler. This is no extra hypothesis: when phase varies far more than amplitude within a wavelength, it follows from Maxwell's equations. A sketch appears in the challenge section.
 
 \textbf{Coherence and lasers}. Why do two flashlights on one wall never produce stripes? Countless atoms radiate independently, reshuffling the whole beam's phase at extremely short intervals. Fringe positions jump a quadrillion times per second, so eyes and film record only the thoroughly mixed average. Ordinary light has an extremely short \textbf{coherence length}, only micrometers; two beams must arrive nearly synchronously to recognize their kinship.
+
+% BEGIN TRANSLATOR SAFETY NOTE
+\textbf{Translator safety note:} The laser precautions above also apply here. Never direct a laser toward anyone or view its direct beam; use a supervised diffuse-screen demonstration. See \href{https://www.fda.gov/radiation-emitting-products/alerts-and-notices/illuminating-facts-about-laser-pointers}{FDA laser-pointer guidance}.
+% END TRANSLATOR SAFETY NOTE
 
 A laser is another species. For now, observe without explaining its origin. Shine a laser on a white wall: its spot is not uniform red but fine bright and dark grains that move as your head shifts. This is \textbf{speckle}: an uneven wall reflects innumerable wavelets with stable phase relations, which interfere before your eyes. An ordinary lamp produces none because its phases are too disorderly. Laser phases are unusually organized, with coherence lengths of tens of centimeters or more, making interference and diffraction effects visible to the eye. Why can lasers organize phases? That requires Chapter 55's microscopic account of light and atoms. Here retain the observation: highly phase-ordered waves exist, and coherence determines which waves can interfere stably.
 
@@ -115,7 +127,7 @@ Second, diffraction angle. Clip both sides of a front with an aperture of width 
   \node at (14:2.1) {$\theta$};
   \draw[very thick] (4.0,0.4) -- (4.0,3.4);
   \node at (4.0,3.6) {Distant screen};
-  \node at (2.0,-1.8) {Edge-wavelet path difference $\lambda$: cancellation in direction $\theta$};
+  \node at (2.0,-3.3) {\shortstack{Edge-wavelet path difference $\lambda$:\\cancellation in direction $\theta$}};
 \end{tikzpicture}
 \end{center}
 
@@ -133,7 +145,7 @@ Insert visible wavelength \(\lambda\approx 550\) nanometers and tube length \(L=
 
 \begin{center}
 \begin{tikzpicture}[scale=1.35,>=Stealth]
-  \draw[->] (0,0) -- (3.6,0) node[right] {Aperture $d$};
+  \draw[->] (0,0) -- (3.6,0) node[below right] {Aperture $d$};
   \draw[->] (0,0) -- (0,2.4) node[above] {Blur size};
   \draw[domain=0.05:3.2,smooth] plot (\x,{0.55*\x}) node[right] {Geometry $\sim d$};
   \draw[domain=0.35:3.2,smooth] plot (\x,{0.62/\x}) node[right] {Diffraction $\sim\lambda L/d$};

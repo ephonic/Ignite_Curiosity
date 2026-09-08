@@ -121,8 +121,8 @@ First express double-slit fringes mathematically. Let slit separation be \(d\), 
 \]
 The judging rule is already known: whole wavelengths give brightness, half-offset wavelengths darkness. Hence
 \[
-  d\sin\theta = m\lambda \ \text{(bright fringes)},\qquad
-  d\sin\theta = \left(m+\tfrac12\right)\lambda \ \text{(dark fringes)},\qquad m=0,1,2,\dots
+  d\sin\theta = m\lambda \ \text{(bright)},\qquad
+  d\sin\theta = \left(m+\tfrac12\right)\lambda \ \text{(dark)},\qquad m=0,1,2,\dots
 \]
 Read the terms: the left is ``how far the paths differ,'' the right ``how many wavelengths.'' The direction of a fringe is \(\theta\), and light's own ruler is \(\lambda\). At small angles, neighboring bright fringes are separated on the screen by
 \[
@@ -151,7 +151,7 @@ with central bright-fringe angular width about \(2\lambda/a\). Check: larger \(a
 \begin{center}
 \begin{tikzpicture}[scale=1.0]
   % Single-slit diffraction intensity
-  \draw[-{Stealth[length=2.5mm]}] (-4.2,0) -- (4.4,0) node[below left] {Screen position};
+  \draw[-{Stealth[length=2.5mm]}] (-4.2,0) -- (4.4,0) node[below right] {\shortstack{Screen\\position}};
   \draw[-{Stealth[length=2.5mm]}] (0,0) -- (0,2.4) node[below left] {Brightness};
   \draw[very thick,blue!70!black,smooth] plot coordinates {
     (-4.0,0.00) (-3.6,0.03) (-3.2,0.00) (-2.9,0.06) (-2.6,0.00)

@@ -1,22 +1,24 @@
 # Ignite Curiosity — English editions
 
 English translations of the four Chinese titles in this repository, with the
-same subject-directory structure. Mathematics is translated and its complete
-PDF is included. Translation and compilation of the other titles are in
+same subject-directory structure. Mathematics and physics are translated and their
+complete PDFs are included. Translation and compilation of the other titles are in
 progress; each complete English PDF is added after that book is translated
 and verified.
 
 | Directory | English title | Chinese source |
 |---|---|---|
 | [`math/`](math/) | *Igniting the Mathematical Spark* — [English PDF](math/Igniting_the_Mathematical_Spark.pdf) | [`../math/`](../math/) |
-| [`phy/`](phy/) | *Igniting the Physics Spark* | [`../phy/`](../phy/) |
+| [`phy/`](phy/) | *Igniting the Physics Spark* — [English PDF](phy/Igniting_the_Physics_Spark.pdf) | [`../phy/`](../phy/) |
 | [`chem/`](chem/) | *Igniting the Chemistry and Biology Spark* (three volumes) | [`../chem/`](../chem/) |
 | [`literal_arts/`](literal_arts/) | *Igniting the Liberal Arts Spark* (three volumes) | [`../literal_arts/`](../literal_arts/) |
 
 Each subject directory contains its English README, LaTeX sources in `latex/`,
 and, when complete, a compiled PDF beside the README. Original fonts, page
-geometry, colors, boxes, table definitions, and diagram settings are retained;
-visible labels and prose are translated into English.
+geometry, colors, boxes, table definitions, and diagram styles are retained;
+visible labels and prose are translated into English. Diagram labels may be
+wrapped or locally repositioned for legibility without changing plotted shapes,
+paths, or scales.
 Oversized tables may be split across pages with repeated headers, as approved
 by the contributor; these pagination fixes preserve the original table styles
 and all rows and are documented in each affected subject's README.
